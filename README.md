@@ -10,5 +10,5 @@ Mirror domains:
 4. [joko.rweb.site](https://joko.rweb.site) 
 5. [joko.is-a-good.dev](https://joko.is-a-good.dev) 
 6. [joko.part-of.my.id](https://joko.part-of.my.id)
-7. [joko.is-my.id)](https://joko.is-my.id) 
+7. [joko.is-my.id](https://joko.is-my.id) 
 8. [joko.is-not.cool](https://joko.is-not.cool) 
