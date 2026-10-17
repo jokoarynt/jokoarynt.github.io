@@ -162,6 +162,10 @@
       <span id=wr-rnd-wrapper>| <a id=wr-rnd href=# target=_top>random</a> </span>| 
       <a id=wr-next href=# target=_top>next &raquo;</a>
     </p>
+
+    <p>
+      <img src=https://raw.githubusercontent.com/jokoarynt/jokoarynt.github.io/main/nosmoking.gif/> <img id=foxwells-img src=https://foxwells.garden/img/foxwells.gif/>
+    </p>
   </div>
 
   <!-- more webring -->
@@ -266,6 +270,12 @@
       // text update
       document.getElementById('dropLabel').textContent = names[val] || 'Foxwells';
       
+      // toggle foxwells.gif visibility based on webring selection
+      const foxwellsImg = document.getElementById('foxwells-img');
+      if (foxwellsImg) {
+        foxwellsImg.style.display = (val === '1') ? 'inline' : 'none';
+      }
+
       // save memories
       localStorage.setItem('selectedWebring', val);
       
