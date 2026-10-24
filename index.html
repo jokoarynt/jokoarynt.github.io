@@ -172,6 +172,7 @@
   <div class=drop-menu id=dropMenu>
     <div onclick="changeWebring('1')">Foxwells</div>
     <div onclick="changeWebring('2')">Kanring</div>
+    <div onclick="changeWebring('3')">No AI</div>
   </div>
 
   <i style="position: fixed; inset: 0; pointer-events: none; background: url(data:image/webp;base64,UklGRhgAAABXRUJQVlA4TAsAAAAvAUAAEIiIP81GAAA);"></i>
@@ -232,26 +233,29 @@
       const names = {
         '1': 'Foxwells',
         '2': 'Kanring',
+        '3': 'No AI',
       };
 
       const sites = {
         '1': 'https://foxwells.garden/webring/',
-        '2': 'https://ring.kan.sh',
+        '2': 'https://riconstn.sh',
+        '3': 'https://baccyflap.com/noai',
       };
 
       const prevs = {
         '1': 'https://foxwells.garden/webring/?prv&s=jokoarynt',
         '2': 'https://ring.kan.sh/members/jokoarynt/prev',
-      };
+        '3': 'https://baccyflap.com/noai/?prv&s=jok',      };
 
       const rnds = {
         '1': 'https://foxwells.garden/webring/?rnd',
+        '3': 'https://baccyflap.com/noai/?rnd',
       };
 
       const nexts = {
         '1': 'https://foxwells.garden/webring/?nxt&s=jokoarynt',
         '2': 'https://ring.kan.sh/members/jokoarynt/next',
-      };
+        '3': 'https://baccyflap.com/noai/?nxt&s=jok',      };
 
       // different link
       document.getElementById('wr-site').href = sites[val] || sites['1'];
