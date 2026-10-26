@@ -1,0 +1,177 @@
+/* Main */
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: .81996em !important;
+    margin: 0;
+    touch-action: none;
+    overflow: hidden;
+}
+p {
+    margin: 0 0 .5rem;
+}
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+/* Container */
+#container {
+    width: 400px;
+    height: 333px;
+    background: #151515;
+    border-radius: 1em;
+    place-content: center;
+    position: relative;
+}
+
+/* User */
+#avatar {
+    image-rendering: pixelated;
+    height: 8em;
+    border-radius: 50%;
+}
+#user, .title {
+    position: relative;
+    margin: 0;
+}
+.social-icons {
+    display: inline-flex;
+    gap: 12px;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+}
+.social-icons svg {
+    width: 16px;
+    height: 16px;
+    fill: yellow;
+    transition: fill 0.3s ease, transform 0.2s ease;
+}
+.social-icons a:hover svg {
+    transform: scale(1.1);
+}
+.social-github:hover svg {
+    fill: #ffffff;
+}
+.social-discord:hover svg {
+    fill: #5865F2;
+}
+.social-telegram:hover svg {
+    fill: #229ED9;
+}
+
+/* Webring */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.drop-btn {
+    background: #1a1a1a;
+    color: yellow;
+    border: 1px solid #444;
+    border-radius: 0;
+    padding: 3px 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    box-sizing: border-box;
+}
+.drop-btn:hover {
+    border-color: yellow;
+}
+.drop-arrow {
+    font-size: 2em;
+    line-height: 1;
+}
+.drop-menu {
+    display: none;
+    background: #2a2a2a;
+    border: 1px dotted yellow;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    z-index: 99999;
+    text-align: left;
+    box-sizing: border-box;
+}
+.drop-menu.show {
+    display: block;
+}
+.drop-menu div {
+    padding: 6px 8px;
+    cursor: pointer;
+    color: #ddd;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.drop-menu div:hover {
+    background: #2a2a2a;
+    color: yellow;
+}
+.wr-site {
+    margin-left: 4px;
+    font-weight: bold;
+}
+
+/* Form */
+textarea {
+    width: 75%;
+    height: 75px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 0.9em;
+    resize: none;
+    box-sizing: border-box;
+}
+textarea:focus {
+    outline: none;
+    border-color: yellow;
+}
+textarea:read-only {
+    background: #111;
+    color: #aaa;
+}
+
+/* Converter */
+.converter-box {
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.btn {
+    width: fit-content;
+    background: #1a1a1a;
+    color: yellow;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+.btn:hover {
+    border-color: yellow;
+    background: #252525;
+    transform: scale(1.02);
+}
