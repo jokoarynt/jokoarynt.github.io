@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel=icon href=img/logo.png>
+  <link rel=stylesheet href=https://joko.my.id/style.css>
+  <title>BYOND Key to Ckey Converter</title>
+</head>
+<body>
+  <div id=container>
+    <h1 class=title>BYOND Key to Ckey Converter</h1>
+    
+    <div class=converter-box>
+      <textarea id=input placeholder="Enter BYOND keys, one per line"></textarea>
+      <button class=btn onclick=convertKeys()>Convert</button>
+      <textarea id=output placeholder="Converted ckeys" readonly></textarea>
+      <button class=btn onclick=copyToClipboard()>Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <i style="position: fixed; inset: 0; pointer-events: none; background: url(data:image/webp;base64,UklGRhgAAABXRUJQVlA4TAsAAAAvAUAAEIiIP81GAAA);"></i>
+
+  <script>
+    // logic
+    const convertKey = (key) => {
+      const keyReplacePattern = /[^\da-z]/g;
+      return key.toLowerCase().replaceAll(keyReplacePattern, "").trim();
+    };
+    
+    function convertKeys() {
+      const input = document.getElementById("input").value;
+      const lines = input.split("\n").map(line => convertKey(line));
+      document.getElementById("output").value = lines.join("\n");
+    }
+    
+    function copyToClipboard() {
+      const output = document.getElementById("output");
+      output.select();
+      navigator.clipboard.writeText(output.value);
+    }
+
+    // glow
+setInterval(() => {
+  const titleElements = document.querySelectorAll('.title');
+  titleElements.forEach(el => {
+    el.style.textShadow = `0 0 ${1.5 + Math.sin(+new Date / 300)}em yellow`;
+  });
+}, 50);
+
+
+    // no zoom
+    document.addEventListener('gesturestart', e => e.preventDefault());
+    document.addEventListener('touchmove', e => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+
+    // 3d tilt
+    const container = document.getElementById('container');
+    
+    window.addEventListener('pointermove', e => {
+      if (container) {
+        container.style.transform = `perspective(900px) rotateX(${(e.y - innerHeight / 2) / -20}deg) rotateY(${(e.x - innerWidth / 2) / 20}deg)`;
+      }
+    });
+  </script>
+</body>
+</html>
