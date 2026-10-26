@@ -159,6 +159,10 @@ textarea:read-only {
     background: #111;
     color: #aaa;
 }
+textarea::placeholder {
+    color: #fff;
+    opacity: 1;
+}
 
 /* Converter */
 .converter-box {
