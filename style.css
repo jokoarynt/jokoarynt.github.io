@@ -39,6 +39,7 @@ a {
     image-rendering: pixelated;
     height: 8em;
     border-radius: 50%;
+    margin-bottom: 1.5rem;
 }
 #user, .title {
     position: relative;
@@ -47,7 +48,7 @@ a {
     font-size: 1.7em;
 }
 . title {
-margin: 0 0 16px 0;
+margin: 0 0 16px !important;
 }
 .social-icons {
     display: inline-flex;
