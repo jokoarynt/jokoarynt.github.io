@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel=icon href=img/logo.png>
+  <link rel=stylesheet href=style.css>
+  <title>Fluffy Tongue Converter</title>
+</head>
+<body>
+  <div id=container>
+    <h1 class=title>Fluffy Tongue Converter</h1>
+    
+    <div class=converter-box>
+      <textarea id=input placeholder="Enter text to uwuify...">hello world! I'm a handsome boy! </textarea>
+      <button class=btn onclick=uwuifyShit()>Convert</button>
+      <textarea id=output placeholder="Converted text..." readonly></textarea>
+      <button class=btn onclick=copyToClipboard()>Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <i style="position: fixed; inset: 0; pointer-events: none; background: url(data:image/webp;base64,UklGRhgAAABXRUJQVlA4TAsAAAAvAUAAEIiIP81GAAA);"></i>
+
+  <script>
+    // logic
+    const uwuifyMapping = new Map([
+      ["ove", "uv"],
+      ["ne", "nye"],
+      ["nu", "nyu"],
+      ["na", "nya"],
+      ["no", "nyo"],
+      ["r", "w"],
+      ["l", "w"],
+    ]);
+
+    const uwuifyRegex = new RegExp(
+      [...uwuifyMapping.keys()].map(str => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"),
+      "gi"
+    );
+
+    const matchCase = (original, replacement) => {
+      if (original === original.toUpperCase()) return replacement.toUpperCase();
+      if (original[0] === original[0].toUpperCase()) return replacement.charAt(0).toUpperCase() + replacement.slice(1);
+      return replacement;
+    };
+
+    const uwuifyText = (text = "") =>
+      text.replace(uwuifyRegex, match => matchCase(match, uwuifyMapping.get(match.toLowerCase())));
+
+    function uwuifyShit() {
+      const input = document.getElementById("input").value;
+      document.getElementById("output").value = uwuifyText(input);
+    }
+
+    function copyToClipboard() {
+      const output = document.getElementById("output");
+      output.select();
+      navigator.clipboard.writeText(output.value);
+    }
+
+    // glow
+    setInterval(() => {
+      const userEl = document.getElementById('user');
+      if (userEl) userEl.style.textShadow = `0 0 ${1.5 + Math.sin(+new Date / 300)}em yellow`;
+    }, 50);
+
+    // no zoom
+    document.addEventListener('gesturestart', e => e.preventDefault());
+    document.addEventListener('touchmove', e => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+
+    // 3d tilt
+    const container = document.getElementById('container');
+    
+    window.addEventListener('pointermove', e => {
+      if (container) {
+        container.style.transform = `perspective(900px) rotateX(${(e.y - innerHeight / 2) / -20}deg) rotateY(${(e.x - innerWidth / 2) / 20}deg)`;
+      }
+    });
+  </script>
+</body>
+</html>
