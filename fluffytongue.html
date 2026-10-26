@@ -12,9 +12,9 @@
     <h1 class=title>Fluffy Tongue Converter</h1>
     
     <div class=converter-box>
-      <textarea id=input placeholder="Enter text to uwuify...">hello world! I'm a handsome boy! </textarea>
+      <textarea id=input placeholder="Enter text to uwuify...">Input your text here....</textarea>
       <button class=btn onclick=uwuifyShit()>Convert</button>
-      <textarea id=output placeholder="Converted text..." readonly></textarea>
+      <textarea id=output placeholder="Converted text...." readonly></textarea>
       <button class=btn onclick=copyToClipboard()>Copy to Clipboard</button>
     </div>
   </div>
@@ -59,10 +59,13 @@
     }
 
     // glow
-    setInterval(() => {
-      const userEl = document.getElementById('user');
-      if (userEl) userEl.style.textShadow = `0 0 ${1.5 + Math.sin(+new Date / 300)}em yellow`;
-    }, 50);
+setInterval(() => {
+  const titleElements = document.querySelectorAll('.title');
+  titleElements.forEach(el => {
+    el.style.textShadow = `0 0 ${1.5 + Math.sin(+new Date / 300)}em yellow`;
+  });
+}, 50);
+
 
     // no zoom
     document.addEventListener('gesturestart', e => e.preventDefault());
