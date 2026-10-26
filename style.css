@@ -38,7 +38,9 @@ a {
 }
 #user, .title {
     position: relative;
-    margin: 0;
+    margin: 0 0 16px 0;
+    color: #fff;
+    font-size: 1.5em;
 }
 .social-icons {
     display: inline-flex;
