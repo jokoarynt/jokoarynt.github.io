@@ -1,3 +1,5 @@
+/* Update: 27-10-26 */
+
 /* Main */
 body {
     height: 100vh;
@@ -100,6 +102,7 @@ margin-bottom: .75rem !important;
     justify-content: space-between;
     gap: 6px;
     box-sizing: border-box;
+    min-width: 72px;
 }
 .drop-btn:hover {
     border-color: yellow;
