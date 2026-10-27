@@ -84,6 +84,16 @@ margin-bottom: .75rem !important;
 }
 
 /* Webring */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -123,6 +133,7 @@ margin-bottom: .75rem !important;
 }
 .drop-menu.show {
     display: block;
+    animation: fadeInDown 444.4ms ease;
 }
 .drop-menu div {
     padding: 6px 8px;
