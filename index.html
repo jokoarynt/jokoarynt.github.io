@@ -51,6 +51,7 @@
     <div onclick="changeWebring('1')">Foxwells</div>
     <div onclick="changeWebring('2')">Kanring</div>
     <div onclick="changeWebring('3')">No AI</div>
+    <div onclick="changeWebring('4')">Octo Ring</div>
   </div>
 
   <i style="position: fixed; inset: 0; pointer-events: none; background: url(data:image/webp;base64,UklGRhgAAABXRUJQVlA4TAsAAAAvAUAAEIiIP81GAAA);"></i>
@@ -112,28 +113,33 @@
         '1': 'Foxwells',
         '2': 'Kanring',
         '3': 'No AI',
+        '4': 'Octo Ring',
       };
 
       const sites = {
         '1': 'https://foxwells.garden/webring/',
         '2': 'https://ring.kan.sh',
         '3': 'https://baccyflap.com/noai',
+        '4': 'https://octo-ring.com/',
       };
 
       const prevs = {
         '1': 'https://foxwells.garden/webring/?prv&s=jokoarynt',
         '2': 'https://ring.kan.sh/members/jokoarynt/prev',
-        '3': 'https://baccyflap.com/noai/?prv&s=jok',      };
+        '3': 'https://baccyflap.com/noai/?prv&s=jok',
+      '4': 'https://octo-ring.com/p/jokoarynt/prev',};
 
       const rnds = {
         '1': 'https://foxwells.garden/webring/?rnd',
         '3': 'https://baccyflap.com/noai/?rnd',
+        '4': 'https://octo-ring.com/p/jokoarynt/random',
       };
 
       const nexts = {
         '1': 'https://foxwells.garden/webring/?nxt&s=jokoarynt',
         '2': 'https://ring.kan.sh/members/jokoarynt/next',
-        '3': 'https://baccyflap.com/noai/?nxt&s=jok',      };
+        '3': 'https://baccyflap.com/noai/?nxt&s=jok',
+      '4': 'https://octo-ring.com/p/jokoarynt/next',};
 
       // different link
       document.getElementById('wr-site').href = sites[val] || sites['1'];
