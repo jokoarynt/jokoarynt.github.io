@@ -89,7 +89,7 @@ a:hover {
   fill: scale(1.1);
 }
 .social-github:hover svg {
-  fill: #ffffff;
+  fill: #000;
 }
 .social-discord:hover svg {
   fill: #5865F2;
