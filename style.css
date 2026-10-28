@@ -1,86 +1,101 @@
-/* Update: 27-10-26 */
+/* Update: 28-10-26 */
 
 /* Main */
 body {
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    background: #0a0a0a;
-    color: #fff;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: .81996em !important;
-    margin: 0;
-    touch-action: none;
-    overflow: hidden;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #0a0a0a;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: .81996em !important;
+  margin: 0;
+  touch-action: none;
+  overflow: hidden;
 }
 p {
-    margin: 0 0 .5rem;
+  margin: 0 0 .5rem;
+}
+@keyframes blink-item {
+  from {
+    background: none;
+    color: yellow;
+  }
+  to {
+    background: yellow;
+    color: #000;
+  }
 }
 a {
-    color: yellow;
-    text-decoration: none;
+  color: yellow;
+  text-decoration: none;
+}
+a:hover {
+  animation: blink-item 1s infinite steps(2,jump-none);
+  padding: 2px;
+  border-radius: 5%;
 }
 
 /* Container */
 #container {
-    width: 400px;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    background: #151515;
-    border-radius: 1em;
-    place-content: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 400px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background: #151515;
+  border-radius: 1em;
+  place-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* User */
 #avatar {
-    image-rendering: pixelated;
-    height: 8em;
-    border-radius: 50%;
-    margin-bottom: .75rem !important;
+  image-rendering: pixelated;
+  height: 8em;
+  border-radius: 50%;
+  margin-bottom: .75rem !important;
 }
 #user, .title {
-    position: relative;
-    margin: 0;
-    color: #fff;
-    font-size: 1.7em;
+  position: relative;
+  margin: 0;
+  color: #fff;
+  font-size: 1.7em;
 }
 .title {
-margin-bottom: .75rem !important;
+  margin-bottom: .75rem !important;
 }
 .social-icons {
-    display: inline-flex;
-    gap: 12px;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  display: inline-flex;
+  gap: 12px;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 .social-icons a {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 .social-icons svg {
-    width: 16px;
-    height: 16px;
-    fill: yellow;
-    transition: fill 0.3s ease, transform 0.2s ease;
+  width: 16px;
+  height: 16px;
+  fill: yellow;
+  transition: fill 0.3s ease, transform 0.2s ease;
 }
 .social-icons a:hover svg {
-    transform: scale(1.1);
+  fill: scale(1.1);
 }
 .social-github:hover svg {
-    fill: #ffffff;
+  fill: #ffffff;
 }
 .social-discord:hover svg {
-    fill: #5865F2;
+  fill: #5865F2;
 }
 .social-telegram:hover svg {
-    fill: #229ED9;
+  fill: #229ED9;
 }
 
 /* Webring */
@@ -95,111 +110,111 @@ margin-bottom: .75rem !important;
   }
 }
 .dropdown {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 .drop-btn {
-    background: #1a1a1a;
-    color: yellow;
-    border: 1px solid #444;
-    border-radius: 0;
-    padding: 3px 8px;
-    font-size: 0.9em;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    box-sizing: border-box;
-    min-width: 72px;
+  background: #1a1a1a;
+  color: yellow;
+  border: 1px solid #444;
+  border-radius: 0;
+  padding: 3px 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  box-sizing: border-box;
+  min-width: 72px;
 }
 .drop-btn:hover {
-    border-color: yellow;
+  border-color: yellow;
 }
 .drop-arrow {
-    font-size: 2em;
-    line-height: 1;
+  font-size: 2em;
+  line-height: 1;
 }
 .drop-menu {
-    display: none;
-    background: #2a2a2a;
-    border: 1px dotted yellow;
-    border-radius: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
-    z-index: 99999;
-    text-align: left;
-    box-sizing: border-box;
+  display: none;
+  background: #2a2a2a;
+  border: 1px dotted yellow;
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+  z-index: 99999;
+  text-align: left;
+  box-sizing: border-box;
 }
 .drop-menu.show {
-    display: block;
-    animation: fadeInDown 444.4ms ease;
+  display: block;
+  animation: fadeInDown 444.4ms ease;
 }
 .drop-menu div {
-    padding: 6px 8px;
-    cursor: pointer;
-    color: #ddd;
-    font-size: 0.9em;
-    white-space: nowrap;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: #ddd;
+  font-size: 0.9em;
+  white-space: nowrap;
 }
 .drop-menu div:hover {
-    background: #2a2a2a;
-    color: yellow;
+  background: #2a2a2a;
+  color: yellow;
 }
 .wr-site {
-    margin-left: 4px;
-    font-weight: bold;
+  margin-left: 4px;
+  font-weight: bold;
 }
 
 /* Form */
 textarea {
-    width: 75%;
-    height: 75px;
-    background: #1a1a1a;
-    color: #fff;
-    border: 1px solid #444;
-    border-radius: 6px;
-    padding: 8px;
-    font-family: inherit;
-    font-size: 0.9em;
-    resize: none;
-    box-sizing: border-box;
+  width: 75%;
+  height: 75px;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 0.9em;
+  resize: none;
+  box-sizing: border-box;
 }
 textarea:focus {
-    outline: none;
-    border-color: yellow;
+  outline: none;
+  border-color: yellow;
 }
 textarea:read-only {
-    background: #111;
-    color: #aaa;
+  background: #111;
+  color: #aaa;
 }
 textarea::placeholder {
-    color: #fff;
-    opacity: 1;
+  color: #fff;
+  opacity: 1;
 }
 
 /* Converter */
 .converter-box {
-     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .btn {
-    width: fit-content;
-    background: #1a1a1a;
-    color: yellow;
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 6px 16px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: bold;
+  width: fit-content;
+  background: #1a1a1a;
+  color: yellow;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: bold;
 }
 .btn:hover {
-    border-color: yellow;
-    background: #252525;
-    transform: scale(1.02);
+  border-color: yellow;
+  background: #252525;
+  transform: scale(1.02);
 }
