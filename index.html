@@ -52,6 +52,8 @@
     <div onclick="changeWebring('2')">Kanring</div>
     <div onclick="changeWebring('3')">No AI</div>
     <div onclick="changeWebring('4')">Octo Ring</div>
+    <div onclick="changeWebring('5')">Tokuring</div>
+    <div onclick="changeWebring('6')">Roboring</div>
   </div>
 
   <i style="position: fixed; inset: 0; pointer-events: none; background: url(data:image/webp;base64,UklGRhgAAABXRUJQVlA4TAsAAAAvAUAAEIiIP81GAAA);"></i>
@@ -114,6 +116,8 @@
         '2': 'Kanring',
         '3': 'No AI',
         '4': 'Octo Ring',
+        '5': 'Tokuring',
+        '6': 'Roboring',
       };
 
       const sites = {
@@ -121,25 +125,33 @@
         '2': 'https://ring.kan.sh',
         '3': 'https://baccyflap.com/noai',
         '4': 'https://octo-ring.com/',
+        '5': 'https://tokuring.nekoweb.org',
+        '6': 'https://stellophiliac.github.io/roboring/',
       };
 
       const prevs = {
         '1': 'https://foxwells.garden/webring/?prv&s=jokoarynt',
         '2': 'https://ring.kan.sh/members/jokoarynt/prev',
         '3': 'https://baccyflap.com/noai/?prv&s=jok',
-      '4': 'https://octo-ring.com/p/jokoarynt/prev',};
+        '4': 'https://octo-ring.com/p/jokoarynt/prev',
+        '5': 'https://tokuring.nekoweb.org?action=previous',
+        '6': 'https://stellophiliac.github.io/roboring/jokoarynt/previous',      };
 
       const rnds = {
         '1': 'https://foxwells.garden/webring/?rnd',
         '3': 'https://baccyflap.com/noai/?rnd',
         '4': 'https://octo-ring.com/p/jokoarynt/random',
+        '5': 'https://tokuring.nekoweb.org?action=random',
       };
 
       const nexts = {
         '1': 'https://foxwells.garden/webring/?nxt&s=jokoarynt',
         '2': 'https://ring.kan.sh/members/jokoarynt/next',
         '3': 'https://baccyflap.com/noai/?nxt&s=jok',
-      '4': 'https://octo-ring.com/p/jokoarynt/next',};
+        '4': 'https://octo-ring.com/p/jokoarynt/next',
+        '5': 'https://tokuring.nekoweb.org?action=next',
+        '6': 'https://stellophiliac.github.io/roboring/jokoarynt/next',
+      };
 
       // different link
       document.getElementById('wr-site').href = sites[val] || sites['1'];
@@ -148,7 +160,7 @@
 
       // no random
       const rndWrapper = document.getElementById('wr-rnd-wrapper');
-      if (val === '2') {
+      if (val === '2' || val === '6') {
         rndWrapper.style.display = 'none';
       } else {
         rndWrapper.style.display = 'inline';
