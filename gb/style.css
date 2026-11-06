@@ -1,0 +1,59 @@
+/* Giscus Custom Theme - Menyesuaikan style.css Anda */
+body {
+  font-family: monospace, sans-serif !important;
+  color: var(--color-fg-default, #000);
+  background: transparent !important;
+}
+
+/* Variabel warna dasar terang */
+main {
+  --color-canvas-default: var(--card-bg, #fff);
+  --color-canvas-subtle: var(--bg-color, #f4f4f0);
+  --color-border-default: var(--border-color, #000);
+  --color-border-muted: var(--border-color, #000);
+  --color-fg-default: var(--text-color, #000);
+  --color-fg-muted: #555;
+  --color-accent-fg: #000;
+  --color-accent-emphasis: var(--accent-color, #dcd6f7);
+  --color-btn-text: #000;
+  --color-btn-bg: var(--accent-color, #dcd6f7);
+  --color-btn-border: var(--border-color, #000);
+  --color-btn-hover-bg: #c5bde8;
+  --color-btn-hover-border: var(--border-color, #000);
+}
+
+/* Kotak input dan tombol komentar agar mirip gaya retro/brutalist */
+textarea, input, button {
+  font-family: monospace, sans-serif !important;
+  border: 2px solid var(--border-color, #000) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+textarea:focus {
+  outline: none;
+  background: var(--color-canvas-default);
+}
+
+/* Tombol Kirim (Comment button) */
+button[type="submit"] {
+  background: var(--accent-color, #dcd6f7) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  box-shadow: 2px 2px 0 var(--shadow-color, #000) !important;
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(2px);
+  box-shadow: none !important;
+}
+
+/* Kotak Komentar */
+.timeline-comment {
+  border: 2px solid var(--border-color, #000) !important;
+  border-radius: 8px !important;
+  background: var(--color-canvas-default) !important;
+  box-shadow: 3px 3px 0 var(--shadow-color, #000);
+  margin-bottom: 15px;
+}
