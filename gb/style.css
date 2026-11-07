@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Giscus Custom Theme - Clean Retro / Brutalist Style (joko.my.id)
+   Giscus Custom Theme - Solid Background (joko.my.id)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -60,21 +60,28 @@ main.dark {
 }
 
 /* --------------------------------------------------------------------------
-   2. FIX TEKS TRANSPARAN / PUTIH DI MODE TERANG (Point #1)
+   2. BACKGROUND SOLID (TIDAK TRANSPARAN) & FIX TEKS
    -------------------------------------------------------------------------- */
-body, main, 
+body {
+  font-family: monospace, sans-serif !important;
+  color: var(--color-fg-default) !important;
+  background-color: var(--site-card-bg) !important;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+
+main {
+  font-family: monospace, sans-serif !important;
+  background-color: var(--site-card-bg) !important;
+  color: var(--color-fg-default) !important;
+  border-radius: 8px !important;
+}
+
+/* Memastikan seluruh teks internal Giscus mengikuti warna mode aktif */
 .gsc-comment-content, 
 .gsc-comment-header,
 .gsc-comment-author,
 .gsc-reply-content,
-.gsc-upvote-button,
-.gsc-homepage-link {
-  font-family: monospace, sans-serif !important;
-  color: var(--color-fg-default) !important;
-  background-color: transparent !important;
-}
-
-/* Memaksa elemen teks internal Giscus menggunakan variabel warna aktif */
 .gsc-comment-text, 
 .gsc-comment-text *,
 .gsc-reactions-count,
@@ -85,16 +92,11 @@ span[data-target*="text"],
 }
 
 /* --------------------------------------------------------------------------
-   3. SEMBUNYIKAN STATISTIK & POWERED BY GISCUS (Point #3)
+   3. SEMBUNYIKAN STATISTIK & POWERED BY GISCUS
    -------------------------------------------------------------------------- */
-/* Menyembunyikan header atas (Counter/Statistik komentar) */
 .gsc-header,
 .gsc-comments-count,
-.gsc-comment-count {
-  display: none !important;
-}
-
-/* Menyembunyikan footer bawah (Powered by Giscus) */
+.gsc-comment-count,
 .gsc-footer,
 footer,
 .gsc-homepage-link,
@@ -125,7 +127,6 @@ textarea:focus, input:focus {
   box-shadow: 2px 2px 0 var(--site-shadow) !important;
 }
 
-/* Tombol Kirim / Submit */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -152,7 +153,7 @@ button[type="submit"]:hover,
 }
 
 /* --------------------------------------------------------------------------
-   5. KARTU KOMENTAR (Timeline Comment)
+   5. KARTU KOMENTAR
    -------------------------------------------------------------------------- */
 .gsc-comment,
 .gsc-comment-box {
@@ -171,38 +172,28 @@ button[type="submit"]:hover,
 }
 
 /* --------------------------------------------------------------------------
-   6. FIX KOTAK "PICK YOUR REACTION" (Point #2 - Tidak Transparan)
+   6. KOTAK "PICK YOUR REACTION" & POPOVER (Solid / Tidak Transparan)
    -------------------------------------------------------------------------- */
-/* Popover/Kotak Pilihan Reaksi Emoticon */
 .gsc-reactions-popover,
-.gsc-reactions-popover *,
 .gsc-popover,
 div[class*="popover"],
-div[role="tooltip"],
-div[class*="Reactions"] {
+div[role="tooltip"] {
   background-color: var(--site-card-bg) !important;
-  opacity: 1 !important;
-}
-
-/* Pembungkus utama popup reaksi */
-.gsc-reactions-popover,
-div[class*="popover"] {
   border: 2px solid var(--site-border) !important;
   box-shadow: 4px 4px 0 var(--site-shadow) !important;
   border-radius: 8px !important;
   padding: 8px !important;
+  opacity: 1 !important;
 }
 
-/* Tombol Reaksi Individual */
-.gsc-reaction-button,
-button[class*="reaction"] {
+.gsc-reaction-button {
   background-color: var(--site-card-bg) !important;
   border: 1.5px solid var(--site-border) !important;
+  color: var(--color-fg-default) !important;
   border-radius: 6px !important;
 }
 
-.gsc-reaction-button:hover,
-button[class*="reaction"]:hover {
+.gsc-reaction-button:hover {
   background-color: var(--site-accent) !important;
   color: #000000 !important;
 }
