@@ -152,7 +152,7 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* ATURAN TIMESTAMP MUTLAK (Pesan utama & Pesan balasan secara seragam) */
+/* ATURAN TIMESTAMP MUTLAK (TIDAK BOLD / NORMAL) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -162,7 +162,7 @@ button[type="submit"]:hover,
 .timeline-comment-header a[href*="#issuecomment-"],
 .timeline-comment-header a[href*="#discussioncomment-"],
 .gsc-reply .gsc-comment-header time,
-.gsc-reply .gsc-comment-header a,
+.gsc-reply .gsc-comment-header a:not(.gsc-comment-author):not(.author),
 .gsc-replies time,
 .gsc-replies a.Link--secondary,
 .gsc-replies a[href*="#issuecomment-"],
@@ -172,14 +172,15 @@ button[type="submit"]:hover,
 .gsc-reply a[href*="#issuecomment-"],
 .gsc-reply a[href*="#discussioncomment-"] {
   font-size: 0.7rem !important;
-  font-weight: normal !important;
+  font-weight: 400 !important;
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
   color: var(--color-fg-muted) !important;
+  -webkit-text-stroke: 0px transparent !important;
 }
 
-/* ATURAN NAMA USER / AUTHOR (PALING BOLD: 900, text-shadow tipis neo-brutalist) */
+/* ATURAN NAMA USER / AUTHOR (PALING BOLD: 900 + text-stroke tebal agar sangat pekat) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -187,14 +188,13 @@ button[type="submit"]:hover,
 .gsc-comment-header a[data-hovercard-type="user"],
 .gsc-comment-header a.Link--primary,
 .gsc-comment-header strong,
-.timeline-comment-header strong,
-.gsc-comment-header a {
+.timeline-comment-header strong {
   font-size: 0.9rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
   text-decoration: none !important;
-  -webkit-text-stroke: 0.4px var(--color-fg-default) !important;
+  -webkit-text-stroke: 0.6px var(--color-fg-default) !important;
 }
 
 /* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
