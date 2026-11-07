@@ -66,8 +66,8 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="https://joko.my.id/gb/gb.css?v=9"
-              data-dark-theme="https://joko.my.id/gb/gb.css?dark=1"
+              data-theme="./gb.css?v=10"
+              data-dark-theme="./gb.css?dark=1"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -115,7 +115,7 @@
     <div class="disabled-item" onclick="changeWebring('0')">Webring</div>
     <div onclick="changeWebring('1')">Foxwells</div>
     <div onclick="changeWebring('2')">Kanring</div>
-    <div onclick="changeWebring('3')", onclick="changeWebring('3')">No AI</div>
+    <div onclick="changeWebring('3')">No AI</div>
     <div onclick="changeWebring('4')">Octo Ring</div>
     <div onclick="changeWebring('5')">Tokukatsu</div>
     <div onclick="changeWebring('6')">Roboring</div>
@@ -131,7 +131,7 @@
 
     function updateGiscusTheme() {
       const isNight = document.documentElement.getAttribute('data-theme') === 'night';
-      const themeUrl = isNight ? 'https://joko.my.id/gb/gb.css?dark=1' : 'https://joko.my.id/gb/gb.css?v=9';
+      const themeUrl = isNight ? './gb.css?dark=1' : './gb.css?v=10';
       
       if (isNight) {
         document.documentElement.setAttribute('data-color-mode', 'dark');
