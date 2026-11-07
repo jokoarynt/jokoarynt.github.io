@@ -25,7 +25,7 @@
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"] {
-  --color-canvas-default: #121212 !important;
+  --color-canvas-default: #1e1e1e !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
@@ -38,14 +38,14 @@ main.dark,
   --neo-border: 2px solid #ffffff;
   --neo-shadow: 3px 3px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
-  --neo-bg: #121212 !important;
+  --neo-bg: #1e1e1e !important;
   --neo-accent: #dcd6f7;
 }
 
 body, main {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
-  background: var(--color-canvas-default) !important;
+  background: transparent !important;
 }
 
 /* Sembunyikan Statistik & Powered by Giscus */
