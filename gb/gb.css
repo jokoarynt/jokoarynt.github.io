@@ -25,7 +25,7 @@
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"] {
-  --color-canvas-default: #1e1e1e !important;
+  --color-canvas-default: #121212 !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
