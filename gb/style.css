@@ -1,31 +1,31 @@
 /* ==========================================================================
-   Giscus Custom Theme - Full Variables & Styling Sync (joko.my.id)
+   Giscus Custom Theme - Fix & Complete Style (joko.my.id)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. ROOT VARIABLES (Light & Dark Mode)
    -------------------------------------------------------------------------- */
 
-/* Light Mode (Default) */
+/* Light Mode (Default) - Memastikan teks hitam dan background putih */
 main {
-  --color-canvas-default: #ffffff;
-  --color-canvas-subtle: #f4f4f0;
-  --color-border-default: #000000;
-  --color-border-muted: #000000;
-  --color-fg-default: #000000;
-  --color-fg-muted: #555555;
-  --color-fg-subtle: #777777;
-  --color-accent-fg: #000000;
-  --color-accent-emphasis: #dcd6f7;
+  --color-canvas-default: #ffffff !important;
+  --color-canvas-subtle: #f4f4f0 !important;
+  --color-border-default: #000000 !important;
+  --color-border-muted: #000000 !important;
+  --color-fg-default: #000000 !important;
+  --color-fg-muted: #555555 !important;
+  --color-fg-subtle: #777777 !important;
+  --color-accent-fg: #000000 !important;
+  --color-accent-emphasis: #dcd6f7 !important;
   
-  /* Button Specific Variables */
-  --color-btn-text: #000000;
-  --color-btn-bg: #dcd6f7;
-  --color-btn-border: #000000;
-  --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: #000000;
+  /* Button Variables */
+  --color-btn-text: #000000 !important;
+  --color-btn-bg: #dcd6f7 !important;
+  --color-btn-border: #000000 !important;
+  --color-btn-hover-bg: #c5bde8 !important;
+  --color-btn-hover-border: #000000 !important;
   
-  /* Custom Variables dari Site Theme */
+  /* Custom Site Theme Variables */
   --site-border-color: #000000;
   --site-shadow-color: #000000;
   --site-accent-color: #dcd6f7;
@@ -35,24 +35,24 @@ main {
 /* Dark Mode */
 main[data-color-mode="dark"],
 main.dark {
-  --color-canvas-default: #1e1e1e;
-  --color-canvas-subtle: #121212;
-  --color-border-default: #ffffff;
-  --color-border-muted: #ffffff;
-  --color-fg-default: #ffffff;
-  --color-fg-muted: #aaaaaa;
-  --color-fg-subtle: #888888;
-  --color-accent-fg: #ffffff;
-  --color-accent-emphasis: #dcd6f7;
+  --color-canvas-default: #1e1e1e !important;
+  --color-canvas-subtle: #121212 !important;
+  --color-border-default: #ffffff !important;
+  --color-border-muted: #ffffff !important;
+  --color-fg-default: #ffffff !important;
+  --color-fg-muted: #aaaaaa !important;
+  --color-fg-subtle: #888888 !important;
+  --color-accent-fg: #ffffff !important;
+  --color-accent-emphasis: #dcd6f7 !important;
   
-  /* Button Specific Variables (Dark) */
-  --color-btn-text: #000000;
-  --color-btn-bg: #dcd6f7;
-  --color-btn-border: #ffffff;
-  --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: #ffffff;
+  /* Button Variables (Dark) */
+  --color-btn-text: #000000 !important;
+  --color-btn-bg: #dcd6f7 !important;
+  --color-btn-border: #ffffff !important;
+  --color-btn-hover-bg: #c5bde8 !important;
+  --color-btn-hover-border: #ffffff !important;
 
-  /* Custom Variables dari Site Theme (Dark) */
+  /* Custom Site Theme Variables (Dark) */
   --site-border-color: #ffffff;
   --site-shadow-color: #ffffff;
   --site-accent-color: #dcd6f7;
@@ -60,9 +60,9 @@ main.dark {
 }
 
 /* --------------------------------------------------------------------------
-   2. GLOBAL BODY & TEXT VISIBILITY FIX
+   2. GLOBAL TEXT & CONTAINER STYLING
    -------------------------------------------------------------------------- */
-body {
+body, main {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
   background: transparent !important;
@@ -70,31 +70,24 @@ body {
   padding: 0 !important;
 }
 
-main {
-  font-family: monospace, sans-serif !important;
-  background: transparent !important;
+/* Memaksa seluruh teks dan elemen di dalam Giscus mengikuti warna tema */
+main p, main span, main div, main label, main a {
   color: var(--color-fg-default) !important;
 }
 
-/* Memastikan seluruh teks di dalam giscus mengikuti warna mode yang aktif */
-main p, main span, main div, main label {
-  color: var(--color-fg-default);
-}
-
 /* --------------------------------------------------------------------------
-   3. HIDE UNWANTED ELEMENTS (Powered by Giscus & Stats Header)
+   3. SEMBUYIKAN STATISTIK & FOOTER ("Powered by Giscus")
    -------------------------------------------------------------------------- */
-/* Menyembunyikan footer / tulisan Powered by Giscus */
-.giscus-footer,
-footer,
-a[href*="giscus.app"] {
+/* Menyembunyikan header statistik / jumlah komentar di atas form */
+.gsc-header,
+.gsc-comment-count {
   display: none !important;
 }
 
-/* Menyembunyikan header statistik / jumlah komentar di atas form */
-.giscus-header,
-.gh-header,
-main > div:first-child:has(.giscus-counter) {
+/* Menyembunyikan footer / tulisan Powered by Giscus */
+.gsc-footer,
+footer,
+a[href*="giscus.app"] {
   display: none !important;
 }
 
@@ -134,7 +127,8 @@ button {
 }
 
 button[type="submit"], 
-.btn-primary {
+.btn-primary,
+.gsc-button {
   background-color: var(--site-accent-color) !important;
   color: #000000 !important;
   border: 2px solid var(--site-border-color) !important;
@@ -144,7 +138,8 @@ button[type="submit"],
 }
 
 button[type="submit"]:hover, 
-.btn-primary:hover {
+.btn-primary:hover,
+.gsc-button:hover {
   transform: translateY(2px) !important;
   box-shadow: none !important;
 }
@@ -153,7 +148,7 @@ button[type="submit"]:hover,
    6. TIMELINE & COMMENT BOXES
    -------------------------------------------------------------------------- */
 .timeline-comment,
-.gisc-comment {
+.gsc-comment {
   border: 2px solid var(--site-border-color) !important;
   border-radius: 8px !important;
   background-color: var(--site-card-bg) !important;
@@ -164,7 +159,7 @@ button[type="submit"]:hover,
 }
 
 .timeline-comment-header,
-.gisc-comment-header {
+.gsc-comment-header {
   background-color: var(--color-canvas-subtle) !important;
   border-bottom: 2px solid var(--site-border-color) !important;
   color: var(--color-fg-muted) !important;
@@ -173,7 +168,7 @@ button[type="submit"]:hover,
 }
 
 .timeline-comment-body,
-.gisc-comment-body {
+.gsc-comment-body {
   color: var(--color-fg-default) !important;
   font-size: 0.85rem !important;
   line-height: 1.4 !important;
@@ -181,25 +176,28 @@ button[type="submit"]:hover,
 }
 
 /* --------------------------------------------------------------------------
-   7. REACTION BOX FIX (Non-Transparent)
+   7. REACTION BOX & POPOVER FIX (Non-Transparent)
    -------------------------------------------------------------------------- */
-.gisc-reactions,
-.gisc-reactions-content,
-div[class*="reaction"],
-popover-contents {
+.gsc-reactions-popover,
+.Popover,
+.Popover-message,
+div[class*="popover"],
+div[class*="reaction"] {
   background-color: var(--site-card-bg) !important;
-  border-color: var(--site-border-color) !important;
+  border: 2px solid var(--site-border-color) !important;
+  box-shadow: 3px 3px 0 var(--site-shadow-color) !important;
   color: var(--color-fg-default) !important;
+  opacity: 1 !important;
 }
 
-.gisc-reaction-button {
+.gsc-reaction-button {
   background-color: var(--site-card-bg) !important;
   border: 1.5px solid var(--site-border-color) !important;
   color: var(--color-fg-default) !important;
   border-radius: 6px !important;
 }
 
-.gisc-reaction-button:hover {
+.gsc-reaction-button:hover {
   background-color: var(--site-accent-color) !important;
   color: #000000 !important;
 }
