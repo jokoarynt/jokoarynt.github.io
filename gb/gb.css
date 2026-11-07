@@ -152,21 +152,6 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* ATURAN NAMA USER / AUTHOR (Font size normal 0.9rem & BOLD MUTLAK) */
-.gsc-comment-author,
-.gsc-comment-header .gsc-comment-author,
-.gsc-comment-header a.author,
-.timeline-comment-header .author,
-.gsc-comment-header a[data-hovercard-type="user"],
-.gsc-comment-header a:not([class]),
-.gsc-comment-header > a:first-child {
-  font-size: 0.9rem !important;
-  font-weight: 700 !important;
-  font-family: monospace, sans-serif !important;
-  color: var(--color-fg-default) !important;
-  text-decoration: none !important;
-}
-
 /* ATURAN TIMESTAMP MUTLAK (Pesan utama & Pesan balasan secara seragam) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
@@ -192,6 +177,24 @@ button[type="submit"]:hover,
   border-bottom: none !important;
   box-shadow: none !important;
   color: var(--color-fg-muted) !important;
+}
+
+/* ATURAN NAMA USER / AUTHOR (PALING BOLD: 900, text-shadow tipis neo-brutalist) */
+.gsc-comment-author,
+.gsc-comment-header .gsc-comment-author,
+.gsc-comment-header a.author,
+.timeline-comment-header .author,
+.gsc-comment-header a[data-hovercard-type="user"],
+.gsc-comment-header a.Link--primary,
+.gsc-comment-header strong,
+.timeline-comment-header strong,
+.gsc-comment-header a {
+  font-size: 0.9rem !important;
+  font-weight: 900 !important;
+  font-family: monospace, sans-serif !important;
+  color: var(--color-fg-default) !important;
+  text-decoration: none !important;
+  -webkit-text-stroke: 0.4px var(--color-fg-default) !important;
 }
 
 /* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
