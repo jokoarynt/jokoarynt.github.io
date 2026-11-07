@@ -66,8 +66,7 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="./gb.css?v=11"
-              data-dark-theme="./gb.css?dark=1"
+              data-theme="https://joko.my.id/gb/gb.css?v=6"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -131,10 +130,13 @@
 
     function updateGiscusTheme() {
       const isNight = document.documentElement.getAttribute('data-theme') === 'night';
-      const themeUrl = isNight ? './gb.css?dark=1' : './gb.css?v=11';
-      
       const iframe = document.querySelector('iframe.giscus-frame');
       if (iframe) {
+        // KUNCI PERBAIKAN: Menambahkan &dark atau &light pada URL
+        const themeUrl = isNight 
+          ? 'https://joko.my.id/gb/gb.css?v=6&dark' 
+          : 'https://joko.my.id/gb/gb.css?v=6&light';
+          
         iframe.contentWindow.postMessage({
           giscus: {
             setConfig: {
