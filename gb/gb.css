@@ -83,10 +83,11 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Kartu Pesan */
+/* Kartu Pesan & Balasan secara Universal */
 .gsc-comment,
 .timeline-comment,
-.gsc-reply {
+.gsc-reply,
+div[class*="comment"] {
   background-color: var(--neo-bg) !important;
   border: 1.5px solid var(--color-border-default) !important;
   border-radius: 8px !important;
@@ -146,17 +147,20 @@ button[type="submit"]:hover,
 
 .gsc-comment-header,
 .gsc-comment-box-header,
-.timeline-comment-header {
+.timeline-comment-header,
+div[class*="header"] {
   background-color: var(--color-canvas-subtle) !important;
   border-bottom: 1.5px solid var(--color-border-default) !important;
   color: var(--color-fg-muted) !important;
   padding: 10px 14px !important;
 }
 
-/* 1. STYLE NAMA PROFILE: Bold + Underline putus-putus */
+/* 1. NAMA PROFILE (Pesan Utama & Balasan): Bold + Underline putus-putus */
 .gsc-comment-author,
 .timeline-comment-header .author,
-.gsc-comment-header a[href^="https://github.com/"] {
+.gsc-comment-header a[href^="https://github.com/"],
+.timeline-comment-header a[href^="https://github.com/"],
+div[class*="header"] a[href^="https://github.com/"] {
   font-weight: bold !important;
   text-decoration: underline dashed !important;
   text-decoration-thickness: 1px !important;
@@ -164,7 +168,7 @@ button[type="submit"]:hover,
   color: var(--color-fg-default) !important;
 }
 
-/* 2. TIMESTAMP PESAN UTAMA & PESAN BALASAN: Font kecil, non-bold, tanpa underline */
+/* 2. TIMESTAMP (Pesan Utama & Balasan secara mutlak): Font kecil, non-bold, tanpa underline */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -173,8 +177,8 @@ button[type="submit"]:hover,
 .timeline-comment-header a.Link--secondary,
 .timeline-comment-header a[href*="#issuecomment-"],
 .timeline-comment-header a[href*="#discussioncomment-"],
-.gsc-reply time,
-.gsc-reply .gsc-comment-header time {
+div[class*="header"] time,
+div[class*="header"] a[href*="#"] {
   font-size: 0.7rem !important;
   font-weight: normal !important;
   text-decoration: none !important;
