@@ -25,21 +25,21 @@
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"] {
-  --color-canvas-default: #1e1e1e !important;
-  --color-canvas-subtle: #121212 !important;
+  --color-canvas-default: #121212 !important;
+  --color-canvas-subtle: #1a1a1a !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
   --color-fg-muted: #cccccc !important;
   --color-fg-subtle: #aaaaaa !important;
   --color-accent-fg: #ffffff !important;
-  --color-accent-emphasis: #dcd6f7 !important;
+  --color-accent-emphasis: #333333 !important;
   
   --neo-border: 2px solid #ffffff;
   --neo-shadow: 3px 3px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
-  --neo-bg: #1e1e1e !important;
-  --neo-accent: #dcd6f7;
+  --neo-bg: #121212 !important;
+  --neo-accent: #2a2a2a !important;
 }
 
 body, main {
@@ -125,7 +125,7 @@ button[type="submit"],
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
   background-color: var(--neo-accent) !important;
-  color: #000000 !important;
+  color: var(--color-fg-default) !important;
   border: var(--neo-border) !important;
   border-radius: 6px !important;
   box-shadow: var(--neo-shadow) !important;
@@ -138,8 +138,24 @@ button[type="submit"]:hover,
 .gsc-button:hover {
   transform: translate(2px, 2px) !important;
   box-shadow: var(--neo-shadow-hover) !important;
-  background-color: #c5bde8 !important;
-  color: #000000 !important;
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
+}
+
+/* Penyesuaian khusus tombol saat Dark Mode aktif */
+[data-color-mode="dark"] button.gsc-comment-box-write-btn,
+[data-color-mode="dark"] button[type="submit"],
+[data-color-mode="dark"] .gsc-button-primary,
+[data-color-mode="dark"] .gsc-button {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+[data-color-mode="dark"] button[type="submit"]:hover,
+[data-color-mode="dark"] .gsc-button-primary:hover,
+[data-color-mode="dark"] .gsc-button:hover {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
 }
 
 .gsc-comment-header,
@@ -304,7 +320,7 @@ div[role="tooltip"] {
 
 .gsc-reaction-button:hover {
   background-color: var(--neo-accent) !important;
-  color: #000000 !important;
+  color: var(--color-fg-default) !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
