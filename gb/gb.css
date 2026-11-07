@@ -180,7 +180,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0px transparent !important;
 }
 
-/* ATURAN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN - UKURAN H3 / SANGAT BOLD) */
+/* ATURAN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN - UKURAN FONT H4 / 1rem & PALING BOLD) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -199,7 +199,7 @@ button[type="submit"]:hover,
 .gsc-replies .gsc-comment-header a.author,
 .gsc-replies a[data-hovercard-type="user"],
 .gsc-replies a.Link--primary {
-  font-size: 1.15rem !important;
+  font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
