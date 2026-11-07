@@ -1,80 +1,232 @@
-/* Giscus Custom Theme - Mendukung Light & Dark Mode */
-body {
-  font-family: monospace, sans-serif !important;
-  color: var(--color-fg-default, #000);
-  background: transparent !important;
-}
+/* ==========================================================================
+   Giscus Custom Theme - Full Variables & Styling Sync (joko.my.id)
+   ========================================================================== */
 
-/* Light Mode Variables */
+/* --------------------------------------------------------------------------
+   1. ROOT VARIABLES (Light & Dark Mode)
+   -------------------------------------------------------------------------- */
+
+/* Light Mode (Default) - Menyesuaikan :root di style.min.css */
 main {
-  --color-canvas-default: #fff;
+  --color-canvas-default: #ffffff;
   --color-canvas-subtle: #f4f4f0;
-  --color-border-default: #000;
-  --color-border-muted: #000;
-  --color-fg-default: #000;
-  --color-fg-muted: #555;
-  --color-accent-fg: #000;
+  --color-border-default: #000000;
+  --color-border-muted: #000000;
+  --color-fg-default: #000000;
+  --color-fg-muted: #555555;
+  --color-fg-subtle: #777777;
+  --color-accent-fg: #000000;
   --color-accent-emphasis: #dcd6f7;
-  --color-btn-text: #000;
+  
+  /* Button Specific Variables */
+  --color-btn-text: #000000;
   --color-btn-bg: #dcd6f7;
-  --color-btn-border: #000;
+  --color-btn-border: #000000;
   --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: #000;
+  --color-btn-hover-border: #000000;
+  --color-btn-active-bg: #b0a4e3;
+  --color-btn-active-border: #000000;
+  --color-btn-primary-text: #000000;
+  --color-btn-primary-bg: #dcd6f7;
+  --color-btn-primary-border: #000000;
+  --color-btn-primary-hover-bg: #c5bde8;
+  
+  /* Custom Variables dari Site Theme */
+  --site-border-color: #000000;
+  --site-shadow-color: #000000;
+  --site-accent-color: #dcd6f7;
+  --site-card-bg: #ffffff;
 }
 
-/* Dark Mode Variables */
+/* Dark Mode - Menyesuaikan [data-theme=night] di style.min.css */
 main[data-color-mode="dark"],
 main.dark {
   --color-canvas-default: #1e1e1e;
   --color-canvas-subtle: #121212;
-  --color-border-default: #fff;
-  --color-border-muted: #fff;
-  --color-fg-default: #fff;
-  --color-fg-muted: #aaa;
-  --color-accent-fg: #fff;
+  --color-border-default: #ffffff;
+  --color-border-muted: #ffffff;
+  --color-fg-default: #ffffff;
+  --color-fg-muted: #aaaaaa;
+  --color-fg-subtle: #888888;
+  --color-accent-fg: #ffffff;
   --color-accent-emphasis: #dcd6f7;
-  --color-btn-text: #000;
+  
+  /* Button Specific Variables (Dark) */
+  --color-btn-text: #000000;
   --color-btn-bg: #dcd6f7;
-  --color-btn-border: #fff;
+  --color-btn-border: #ffffff;
   --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: #fff;
+  --color-btn-hover-border: #ffffff;
+  --color-btn-active-bg: #b0a4e3;
+  --color-btn-active-border: #ffffff;
+  --color-btn-primary-text: #000000;
+  --color-btn-primary-bg: #dcd6f7;
+  --color-btn-primary-border: #ffffff;
+  --color-btn-primary-hover-bg: #c5bde8;
+
+  /* Custom Variables dari Site Theme (Dark) */
+  --site-border-color: #ffffff;
+  --site-shadow-color: #ffffff;
+  --site-accent-color: #dcd6f7;
+  --site-card-bg: #1e1e1e;
 }
 
-/* Styling Input & Tombol Komentar */
-textarea, input, button {
+/* --------------------------------------------------------------------------
+   2. GLOBAL BODY & CONTAINER STYLING
+   -------------------------------------------------------------------------- */
+body {
   font-family: monospace, sans-serif !important;
-  border: 2px solid var(--color-border-default) !important;
+  color: var(--color-fg-default) !important;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main {
+  font-family: monospace, sans-serif !important;
+  background: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. FORM INPUTS & TEXTAREA (Retro / Brutalist Look)
+   -------------------------------------------------------------------------- */
+textarea, 
+input[type="text"], 
+input[type="email"] {
+  font-family: monospace, sans-serif !important;
+  font-size: 0.85rem !important;
+  color: var(--color-fg-default) !important;
+  background-color: var(--site-card-bg) !important;
+  border: 2px solid var(--site-border-color) !important;
   border-radius: 6px !important;
+  padding: 8px 10px !important;
   box-shadow: none !important;
-  background-color: var(--color-canvas-default) !important;
-  color: var(--color-fg-default) !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
 }
 
-textarea:focus, input:focus {
-  outline: none;
-  background: var(--color-canvas-default) !important;
+textarea:focus, 
+input[type="text"]:focus, 
+input[type="email"]:focus {
+  outline: none !important;
+  background-color: var(--site-card-bg) !important;
+  border-color: var(--site-border-color) !important;
+  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
 }
 
-/* Tombol Kirim Komentar */
-button[type="submit"] {
-  background: var(--color-btn-bg) !important;
-  color: var(--color-btn-text) !important;
+/* --------------------------------------------------------------------------
+   4. BUTTON STYLING (Kirim, Reaksi, Preview)
+   -------------------------------------------------------------------------- */
+button {
+  font-family: monospace, sans-serif !important;
   font-weight: bold !important;
-  box-shadow: 2px 2px 0 var(--color-border-default) !important;
-  transition: transform .1s ease, box-shadow .1s ease;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease !important;
 }
 
-button[type="submit"]:hover {
-  transform: translateY(2px);
+/* Tombol Submit / Primary Button */
+button[type="submit"], 
+.btn-primary {
+  background-color: var(--site-accent-color) !important;
+  color: #000000 !important;
+  border: 2px solid var(--site-border-color) !important;
+  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
+  padding: 5px 12px !important;
+}
+
+button[type="submit"]:hover, 
+.btn-primary:hover {
+  transform: translateY(2px) !important;
   box-shadow: none !important;
+  background-color: #c5bde8 !important;
+  color: #000000 !important;
 }
 
-/* Kotak Item Komentar */
-.timeline-comment {
-  border: 2px solid var(--color-border-default) !important;
-  border-radius: 8px !important;
-  background: var(--color-canvas-default) !important;
-  box-shadow: 3px 3px 0 var(--color-border-default);
-  margin-bottom: 15px;
+/* Tombol Sekunder / Standard Button */
+.btn {
+  background-color: var(--site-card-bg) !important;
   color: var(--color-fg-default) !important;
+  border: 2px solid var(--site-border-color) !important;
+  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
+}
+
+.btn:hover {
+  transform: translateY(2px) !important;
+  box-shadow: none !important;
+  background-color: var(--site-accent-color) !important;
+  color: #000000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. TIMELINE & COMMENT BOXES (Kartu Komentar)
+   -------------------------------------------------------------------------- */
+.timeline-comment,
+.gisc-comment {
+  border: 2px solid var(--site-border-color) !important;
+  border-radius: 8px !important;
+  background-color: var(--site-card-bg) !important;
+  box-shadow: 3px 3px 0 var(--site-shadow-color) !important;
+  margin-bottom: 16px !important;
+  color: var(--color-fg-default) !important;
+  overflow: hidden !important;
+}
+
+/* Header Komentar (Nama Penulis & Waktu) */
+.timeline-comment-header,
+.gisc-comment-header {
+  background-color: var(--color-canvas-subtle) !important;
+  border-bottom: 2px solid var(--site-border-color) !important;
+  color: var(--color-fg-muted) !important;
+  font-weight: bold !important;
+  padding: 8px 12px !important;
+}
+
+/* Teks dan Link di dalam Komentar */
+.timeline-comment-body,
+.gisc-comment-body {
+  color: var(--color-fg-default) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  padding: 12px !important;
+}
+
+.timeline-comment-body a,
+.gisc-comment-body a {
+  color: var(--color-fg-default) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+.timeline-comment-body a:hover,
+.gisc-comment-body a:hover {
+  background-color: var(--site-accent-color) !important;
+  color: #000000 !important;
+  padding: 1px 3px !important;
+  text-decoration: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. REACTION BUTTONS & BADGES
+   -------------------------------------------------------------------------- */
+.gisc-social-reaction-summary-item,
+.gisc-reaction-button {
+  border: 1.5px solid var(--site-border-color) !important;
+  border-radius: 6px !important;
+  background-color: var(--site-card-bg) !important;
+  color: var(--color-fg-default) !important;
+}
+
+.gisc-reaction-button:hover {
+  background-color: var(--site-accent-color) !important;
+  color: #000000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. PAGINATION & FOOTER INFO
+   -------------------------------------------------------------------------- */
+.pagination-loader-container,
+.gisc-footer {
+  font-family: monospace, sans-serif !important;
+  color: var(--color-fg-muted) !important;
+  border-color: var(--site-border-color) !important;
 }
