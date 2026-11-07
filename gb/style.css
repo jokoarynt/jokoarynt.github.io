@@ -1,46 +1,66 @@
-/* Giscus Custom Theme - Menyesuaikan style.css Anda */
+/* Giscus Custom Theme - Mendukung Light & Dark Mode */
 body {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default, #000);
   background: transparent !important;
 }
 
-/* Variabel warna dasar terang */
+/* Light Mode Variables */
 main {
-  --color-canvas-default: var(--card-bg, #fff);
-  --color-canvas-subtle: var(--bg-color, #f4f4f0);
-  --color-border-default: var(--border-color, #000);
-  --color-border-muted: var(--border-color, #000);
-  --color-fg-default: var(--text-color, #000);
+  --color-canvas-default: #fff;
+  --color-canvas-subtle: #f4f4f0;
+  --color-border-default: #000;
+  --color-border-muted: #000;
+  --color-fg-default: #000;
   --color-fg-muted: #555;
   --color-accent-fg: #000;
-  --color-accent-emphasis: var(--accent-color, #dcd6f7);
+  --color-accent-emphasis: #dcd6f7;
   --color-btn-text: #000;
-  --color-btn-bg: var(--accent-color, #dcd6f7);
-  --color-btn-border: var(--border-color, #000);
+  --color-btn-bg: #dcd6f7;
+  --color-btn-border: #000;
   --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: var(--border-color, #000);
+  --color-btn-hover-border: #000;
 }
 
-/* Kotak input dan tombol komentar agar mirip gaya retro/brutalist */
+/* Dark Mode Variables */
+main[data-color-mode="dark"],
+main.dark {
+  --color-canvas-default: #1e1e1e;
+  --color-canvas-subtle: #121212;
+  --color-border-default: #fff;
+  --color-border-muted: #fff;
+  --color-fg-default: #fff;
+  --color-fg-muted: #aaa;
+  --color-accent-fg: #fff;
+  --color-accent-emphasis: #dcd6f7;
+  --color-btn-text: #000;
+  --color-btn-bg: #dcd6f7;
+  --color-btn-border: #fff;
+  --color-btn-hover-bg: #c5bde8;
+  --color-btn-hover-border: #fff;
+}
+
+/* Styling Input & Tombol Komentar */
 textarea, input, button {
   font-family: monospace, sans-serif !important;
-  border: 2px solid var(--border-color, #000) !important;
+  border: 2px solid var(--color-border-default) !important;
   border-radius: 6px !important;
   box-shadow: none !important;
+  background-color: var(--color-canvas-default) !important;
+  color: var(--color-fg-default) !important;
 }
 
-textarea:focus {
+textarea:focus, input:focus {
   outline: none;
-  background: var(--color-canvas-default);
+  background: var(--color-canvas-default) !important;
 }
 
-/* Tombol Kirim (Comment button) */
+/* Tombol Kirim Komentar */
 button[type="submit"] {
-  background: var(--accent-color, #dcd6f7) !important;
-  color: #000 !important;
+  background: var(--color-btn-bg) !important;
+  color: var(--color-btn-text) !important;
   font-weight: bold !important;
-  box-shadow: 2px 2px 0 var(--shadow-color, #000) !important;
+  box-shadow: 2px 2px 0 var(--color-border-default) !important;
   transition: transform .1s ease, box-shadow .1s ease;
 }
 
@@ -49,11 +69,12 @@ button[type="submit"]:hover {
   box-shadow: none !important;
 }
 
-/* Kotak Komentar */
+/* Kotak Item Komentar */
 .timeline-comment {
-  border: 2px solid var(--border-color, #000) !important;
+  border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   background: var(--color-canvas-default) !important;
-  box-shadow: 3px 3px 0 var(--shadow-color, #000);
+  box-shadow: 3px 3px 0 var(--color-border-default);
   margin-bottom: 15px;
+  color: var(--color-fg-default) !important;
 }
