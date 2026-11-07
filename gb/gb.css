@@ -151,7 +151,12 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* Ukuran font waktu diperkecil, non-bold, dan underline dashed dengan jarak */
+/* Waktu pesan utama & balasan: diperkecil, non-bold, dan underline dashed berjarak */
+.gsc-comment-header *,
+.timeline-comment-header * {
+  font-weight: normal !important;
+}
+
 .gsc-comment-header time,
 .gsc-comment-header a,
 .timeline-comment-header time,
