@@ -144,7 +144,10 @@ button[type="submit"]:hover,
 
 .gsc-comment-header,
 .gsc-comment-box-header,
-.timeline-comment-header {
+.timeline-comment-header,
+.gsc-reply .gsc-comment-header,
+.gsc-replies .gsc-comment-header,
+.gsc-comment-replies .gsc-comment-header {
   background-color: var(--color-canvas-subtle) !important;
   border-bottom: 1.5px solid var(--color-border-default) !important;
   color: var(--color-fg-muted) !important;
@@ -172,7 +175,7 @@ button[type="submit"]:hover,
 .gsc-reply a[href*="#issuecomment-"],
 .gsc-reply a[href*="#discussioncomment-"],
 .gsc-comment-replies time,
-.gsc-comment-replies a {
+.gsc-comment-replies a:not(.gsc-comment-author):not(.author):not([data-hovercard-type="user"]):not(.Link--primary) {
   font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -182,7 +185,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0px transparent !important;
 }
 
-/* ATURAN NAMA USER / AUTHOR (SELURUH PESAN UTAMA & PESAN BALASAN - UKURAN H4 & PALING BOLD) */
+/* ATURAN UNIVERSAL NAMA USER / AUTHOR (PESAN UTAMA & PESAN BALASAN DISAMAKAN RATA 100%) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -205,7 +208,11 @@ button[type="submit"]:hover,
 .gsc-comment-replies a.author,
 .gsc-comment-replies a[data-hovercard-type="user"],
 .gsc-comment-replies a.Link--primary,
-.gsc-comment-replies strong {
+.gsc-comment-replies strong,
+.gsc-comment-header > a:first-of-type,
+.gsc-reply .gsc-comment-header > a:first-of-type,
+.gsc-replies .gsc-comment-header > a:first-of-type,
+.gsc-comment-replies .gsc-comment-header > a:first-of-type {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
