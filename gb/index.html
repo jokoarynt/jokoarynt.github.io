@@ -55,23 +55,8 @@
     <h1 style="font-size: 2rem; margin: 0 0 0.3rem; font-family: 'Lobster', cursive; font-weight: normal;">Guestbook</h1>
     <p style="font-size: 0.85rem; margin-bottom: 1rem;">Tinggalkan pesan atau jejak kunjungan Anda!</p>
     
-    <div style="width: 100%; text-align: left; box-sizing: border-box; padding: 0 5px;">
-      <script src="https://giscus.app/client.js"
-              data-repo="jokoarynt/jokoarynt.github.io"
-              data-repo-id="R_kgDOU21zaA"
-              data-category="General"
-              data-category-id="DIC_kwDOU21zaM4DKhFr"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="1"
-              data-input-position="top"
-              data-theme="https://joko.my.id/gb/gb.css?v=6"
-              data-lang="en"
-              crossorigin="anonymous"
-              async>
-      </script>
-    </div>
+    <!-- Wadah Giscus yang akan diisi script secara dinamis -->
+    <div id="giscus-container" style="width: 100%; text-align: left; box-sizing: border-box; padding: 0 5px;"></div>
 
     <!-- Menu Bar Bawah (Footer) -->
     <nav class="bottom-navbar">
@@ -122,38 +107,53 @@
 
   <script src="/script.min.js"></script>
   <script>
-    // Atur tema Giscus sebelum dimuat jika mode malam aktif
-    (function() {
-      const isNight = document.documentElement.getAttribute('data-theme') === 'night';
-      const scriptTag = document.querySelector('script[src*="giscus.app/client.js"]');
-      if (scriptTag && isNight) {
-        scriptTag.setAttribute('data-theme', 'https://joko.my.id/gb/gb.css?v=6&dark=true');
-      }
-    })();
+    // Fungsi untuk mengecek apakah mode malam sedang aktif (mendukung html atau body)
+    function checkNightMode() {
+      return document.documentElement.getAttribute('data-theme') === 'night' || 
+             document.body.getAttribute('data-theme') === 'night';
+    }
 
+    // Fungsi untuk memuat Giscus secara dinamis sesuai tema aktif
+    function loadGiscus() {
+      const container = document.getElementById('giscus-container');
+      if (!container) return;
+
+      container.innerHTML = ''; // Bersihkan elemen giscus sebelumnya
+
+      const isNight = checkNightMode();
+      const themeUrl = isNight ? 'https://joko.my.id/gb/gb.css?v=6&dark=true' : 'https://joko.my.id/gb/gb.css?v=6';
+
+      const script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.setAttribute('data-repo', 'jokoarynt/jokoarynt.github.io');
+      script.setAttribute('data-repo-id', 'R_kgDOU21zaA');
+      script.setAttribute('data-category', 'General');
+      script.setAttribute('data-category-id', 'DIC_kwDOU21zaM4DKhFr');
+      script.setAttribute('data-mapping', 'pathname');
+      script.setAttribute('data-strict', '0');
+      script.setAttribute('data-reactions-enabled', '1');
+      script.setAttribute('data-emit-metadata', '1');
+      script.setAttribute('data-input-position', 'top');
+      script.setAttribute('data-theme', themeUrl);
+      script.setAttribute('data-lang', 'en');
+      script.crossOrigin = 'anonymous';
+      script.async = true;
+
+      container.appendChild(script);
+    }
+
+    // Muat Giscus saat halaman pertama kali siap
+    window.addEventListener('DOMContentLoaded', () => {
+      loadGiscus();
+    });
+
+    // Intersep fungsi toggleTheme bawaan dari script.min.js
     const originalToggleTheme = window.toggleTheme;
     window.toggleTheme = function() {
       if (originalToggleTheme) originalToggleTheme();
-      updateGiscusTheme();
+      // Beri jeda singkat agar script.min.js sempat mengubah atribut tema
+      setTimeout(loadGiscus, 50);
     };
-
-    function updateGiscusTheme() {
-      const isNight = document.documentElement.getAttribute('data-theme') === 'night';
-      const iframe = document.querySelector('iframe.giscus-frame');
-      if (iframe) {
-        iframe.contentWindow.postMessage({
-          giscus: {
-            setConfig: {
-              theme: isNight ? 'https://joko.my.id/gb/gb.css?v=6&dark=true' : 'https://joko.my.id/gb/gb.css?v=6'
-            }
-          }
-        }, 'https://giscus.app');
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(updateGiscusTheme, 1500);
-    });
   </script>
 </body>
 </html>
