@@ -21,7 +21,7 @@ main {
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode */
+/* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark {
   --color-canvas-default: #1e1e1e !important;
@@ -70,7 +70,6 @@ textarea, input {
   border-radius: 6px !important;
   box-shadow: none !important;
   padding: 10px !important;
-  transition: transform 0.1s ease, box-shadow 0.1s ease !important;
 }
 
 textarea:focus, input:focus {
@@ -93,7 +92,6 @@ button[type="submit"],
   box-shadow: var(--neo-shadow) !important;
   padding: 6px 14px !important;
   cursor: pointer !important;
-  transition: transform 0.1s ease, box-shadow 0.1s ease !important;
 }
 
 button[type="submit"]:hover,
@@ -105,7 +103,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Comment Cards */
+/* Comment Cards & Box (overflow: visible agar popover reaksi tidak terpotong) */
 .gsc-comment,
 .gsc-comment-box {
   background-color: var(--neo-bg) !important;
@@ -114,7 +112,7 @@ button[type="submit"]:hover,
   box-shadow: var(--neo-shadow) !important;
   margin-bottom: 20px !important;
   color: var(--color-fg-default) !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 .gsc-comment-header {
@@ -132,7 +130,7 @@ button[type="submit"]:hover,
   font-family: monospace, sans-serif !important;
 }
 
-/* Reaction Popover */
+/* Reaction Popover (Solid & Tidak Tertutupi) */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
@@ -144,6 +142,8 @@ div[role="tooltip"] {
   padding: 10px !important;
   opacity: 1 !important;
   color: var(--color-fg-default) !important;
+  z-index: 999999 !important;
+  position: absolute !important;
 }
 
 .gsc-reaction-button {
