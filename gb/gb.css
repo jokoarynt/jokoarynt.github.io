@@ -117,6 +117,23 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: var(--color-fg-default) !important;
 }
 
+/* Paksa Background Gelap Mutlak untuk Mode Malam (Night) */
+main[data-color-mode="dark"] .gsc-comment-box,
+main.dark .gsc-comment-box,
+[data-color-mode="dark"] .gsc-comment-box,
+main[data-color-mode="dark"] .gsc-comment,
+main.dark .gsc-comment,
+[data-color-mode="dark"] .gsc-comment,
+main[data-color-mode="dark"] textarea,
+main.dark textarea,
+[data-color-mode="dark"] textarea,
+main[data-color-mode="dark"] input,
+main.dark input,
+[data-color-mode="dark"] input {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
 /* Buttons */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
@@ -185,8 +202,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0px transparent !important;
 }
 
-/* ATURAN TARGET EKSTRIM UNTUK SEMUA ELEMEN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN) */
-.gsc-comment-header a,
+/* ATURAN UNIVERSAL NAMA USER / AUTHOR (PESAN UTAMA DAN SELURUH PESAN BALASAN DISAMAKAN 100%) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -195,72 +211,42 @@ button[type="submit"]:hover,
 .gsc-comment-header a.Link--primary,
 .gsc-comment-header strong,
 .timeline-comment-header strong,
-.gsc-reply a,
 .gsc-reply .gsc-comment-author,
 .gsc-reply .gsc-comment-header a.author,
 .gsc-reply .timeline-comment-header .author,
 .gsc-reply .gsc-comment-header a[data-hovercard-type="user"],
 .gsc-reply .gsc-comment-header a.Link--primary,
 .gsc-reply .gsc-comment-header strong,
-.gsc-replies a,
 .gsc-replies .gsc-comment-author,
 .gsc-replies .gsc-comment-header a.author,
 .gsc-replies a[data-hovercard-type="user"],
 .gsc-replies a.Link--primary,
-.gsc-comment-replies a,
 .gsc-comment-replies .gsc-comment-author,
 .gsc-comment-replies a.author,
 .gsc-comment-replies a[data-hovercard-type="user"],
 .gsc-comment-replies a.Link--primary,
 .gsc-comment-replies strong,
-[class*="reply"] a,
 [class*="reply"] .gsc-comment-author,
 [class*="reply"] a.author,
 [class*="reply"] a[data-hovercard-type="user"],
 [class*="reply"] a.Link--primary,
 [class*="reply"] strong,
-[class*="replies"] a,
 [class*="replies"] .gsc-comment-author,
 [class*="replies"] a.author,
 [class*="replies"] a[data-hovercard-type="user"],
 [class*="replies"] a.Link--primary,
-[class*="replies"] strong {
+[class*="replies"] strong,
+.gsc-comment-header > a:first-of-type,
+.gsc-reply .gsc-comment-header > a:first-of-type,
+.gsc-replies .gsc-comment-header > a:first-of-type,
+.gsc-comment-replies .gsc-comment-header > a:first-of-type,
+[class*="reply"] .gsc-comment-header > a:first-of-type {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
   text-decoration: none !important;
   -webkit-text-stroke: 0.8px var(--color-fg-default) !important;
-}
-
-/* KEMBALIKAN TIMESTAMP AGAR TIDAK IKUT MENJADI BOLD / IKUT TERKENA SELEKTOR UNIVERSAL ATAS */
-.gsc-comment-header time,
-.gsc-comment-header a.Link--secondary,
-.gsc-comment-header a[href*="#issuecomment-"],
-.gsc-comment-header a[href*="#discussioncomment-"],
-.timeline-comment-header time,
-.timeline-comment-header a.Link--secondary,
-.timeline-comment-header a[href*="#issuecomment-"],
-.timeline-comment-header a[href*="#discussioncomment-"],
-.gsc-reply time,
-.gsc-reply a.Link--secondary,
-.gsc-reply a[href*="#issuecomment-"],
-.gsc-reply a[href*="#discussioncomment-"],
-.gsc-replies time,
-.gsc-replies a.Link--secondary,
-.gsc-replies a[href*="#issuecomment-"],
-.gsc-replies a[href*="#discussioncomment-"],
-.gsc-comment-replies time,
-.gsc-comment-replies a.Link--secondary,
-[class*="reply"] time,
-[class*="replies"] time {
-  font-size: 0.7rem !important;
-  font-weight: 400 !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  color: var(--color-fg-muted) !important;
-  -webkit-text-stroke: 0px transparent !important;
 }
 
 /* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
