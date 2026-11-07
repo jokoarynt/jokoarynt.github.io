@@ -151,20 +151,24 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* Timestamp (Waktu pesan utama & balasan): kecil, non-bold, tanpa underline */
+/* ATURAN TIMESTAMP MUTLAK (Pesan utama & Balasan): Kecil, Non-Bold, Tanpa Underline */
+.gsc-comment-header .gsc-comment-author + *,
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
-.gsc-comment-header a[class*="Link"],
+.gsc-comment-header a[href*="#issuecomment-"],
+.gsc-comment-header a[href*="#discussioncomment-"],
 .timeline-comment-header time,
 .timeline-comment-header a {
   font-size: 0.7rem !important;
   font-weight: normal !important;
   text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-/* Underline dashed berjarak hanya untuk URL di dalam isi pesan */
-.gsc-comment-text a,
-.markdown-body a {
+/* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
+.gsc-comment-text a:not([class]),
+.markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
   text-decoration-thickness: 1px !important;
   text-underline-offset: 4px !important;
