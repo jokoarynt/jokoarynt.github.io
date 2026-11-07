@@ -1,104 +1,74 @@
 /* ==========================================================================
-   Giscus Custom Theme - Fixed Text Visibility (joko.my.id)
+   Giscus Custom Theme - Matching index.html & style.min.css Style
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. COLOR VARIABLES & THEME ROOT (Light & Dark Mode)
-   -------------------------------------------------------------------------- */
-
-/* Light Mode (Default) */
+/* Light Mode (Default) - Menyesuaikan :root di style.min.css[span_3](start_span)[span_3](end_span) */
 main {
-  /* GitHub Primer Token Baru (Penting untuk teks agar terlihat) */
+  --color-canvas-default: #ffffff !important;
+  --color-canvas-subtle: #f4f4f0 !important;
+  --color-border-default: #000000 !important;
+  --color-border-muted: #000000 !important;
+  --color-fg-default: #000000 !important;
+  --color-fg-muted: #555555 !important;
+  --color-accent-emphasis: #dcd6f7 !important;
+  
   --fgColor-default: #000000 !important;
   --fgColor-muted: #555555 !important;
   --bgColor-default: #ffffff !important;
   --bgColor-muted: #f4f4f0 !important;
   --borderColor-default: #000000 !important;
-  
-  /* Variabel Lama (Fallback) */
-  --color-fg-default: #000000 !important;
-  --color-fg-muted: #555555 !important;
-  --color-canvas-default: #ffffff !important;
-  --color-canvas-subtle: #f4f4f0 !important;
-  --color-border-default: #000000 !important;
-  --color-border-muted: #000000 !important;
-  
-  /* Button & Site Custom Vars */
+
+  /* Button Variables */
   --color-btn-text: #000000 !important;
   --color-btn-bg: #dcd6f7 !important;
   --color-btn-border: #000000 !important;
   --color-btn-hover-bg: #c5bde8 !important;
-  
+  --color-btn-hover-border: #000000 !important;
+
+  /* Site Custom Variables */
+  --site-card: #ffffff;
   --site-border: #000000;
   --site-shadow: #000000;
   --site-accent: #dcd6f7;
-  --site-card-bg: #ffffff;
 }
 
-/* Dark Mode */
+/* Dark Mode - Menyesuaikan [data-theme=night] di style.min.css[span_4](start_span)[span_4](end_span) */
 main[data-color-mode="dark"],
 main.dark {
-  /* GitHub Primer Token Baru (Dark) */
+  --color-canvas-default: #1e1e1e !important;
+  --color-canvas-subtle: #121212 !important;
+  --color-border-default: #ffffff !important;
+  --color-border-muted: #ffffff !important;
+  --color-fg-default: #ffffff !important;
+  --color-fg-muted: #aaaaaa !important;
+  --color-accent-emphasis: #dcd6f7 !important;
+
   --fgColor-default: #ffffff !important;
   --fgColor-muted: #aaaaaa !important;
   --bgColor-default: #1e1e1e !important;
   --bgColor-muted: #121212 !important;
   --borderColor-default: #ffffff !important;
 
-  /* Variabel Lama (Fallback Dark) */
-  --color-fg-default: #ffffff !important;
-  --color-fg-muted: #aaaaaa !important;
-  --color-canvas-default: #1e1e1e !important;
-  --color-canvas-subtle: #121212 !important;
-  --color-border-default: #ffffff !important;
-  --color-border-muted: #ffffff !important;
-  
   --color-btn-text: #000000 !important;
   --color-btn-bg: #dcd6f7 !important;
   --color-btn-border: #ffffff !important;
   --color-btn-hover-bg: #c5bde8 !important;
+  --color-btn-hover-border: #ffffff !important;
 
+  --site-card: #1e1e1e;
   --site-border: #ffffff;
   --site-shadow: #ffffff;
   --site-accent: #dcd6f7;
-  --site-card-bg: #1e1e1e;
 }
 
-/* --------------------------------------------------------------------------
-   2. GLOBAL BODY & TEXT COLOR OVERRIDE
-   -------------------------------------------------------------------------- */
-body {
+/* Global Typography & Background */
+body, main {
   font-family: monospace, sans-serif !important;
-  color: var(--fgColor-default) !important;
-  background-color: var(--site-card-bg) !important;
-  margin: 0 !important;
-  padding: 10px !important;
-}
-
-main {
-  font-family: monospace, sans-serif !important;
-  background-color: var(--site-card-bg) !important;
-  color: var(--fgColor-default) !important;
-  border-radius: 8px !important;
-}
-
-/* Memaksa seluruh teks internal Giscus membaca warna teks aktif */
-.gsc-comment-content, 
-.gsc-comment-header,
-.gsc-comment-author,
-.gsc-reply-content,
-.gsc-comment-text, 
-.gsc-comment-text *,
-.gsc-reactions-count,
-.gsc-reaction-count,
-span[data-target*="text"],
-.markdown-body {
+  background-color: var(--bgColor-default) !important;
   color: var(--fgColor-default) !important;
 }
 
-/* --------------------------------------------------------------------------
-   3. SEMBUNYIKAN STATISTIK & POWERED BY GISCUS
-   -------------------------------------------------------------------------- */
+/* Sembunyikan Statistik & Powered by Giscus */
 .gsc-header,
 .gsc-comments-count,
 .gsc-comment-count,
@@ -109,29 +79,26 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   4. KOTAK INPUT / TEXTAREA & TOMBOL
-   -------------------------------------------------------------------------- */
+/* Textarea & Inputs (Gaya Brutalist & Retro) */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
 textarea, input {
   font-family: monospace, sans-serif !important;
   font-size: 0.85rem !important;
+  background-color: var(--site-card) !important;
   color: var(--fgColor-default) !important;
-  background-color: var(--site-card-bg) !important;
   border: 2px solid var(--site-border) !important;
   border-radius: 6px !important;
-  padding: 8px 10px !important;
   box-shadow: none !important;
+  padding: 8px 10px !important;
 }
 
 textarea:focus, input:focus {
   outline: none !important;
-  background-color: var(--site-card-bg) !important;
-  border-color: var(--site-border) !important;
   box-shadow: 2px 2px 0 var(--site-shadow) !important;
 }
 
+/* Buttons (Menyerupai tombol navigasi di index.html) */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -143,7 +110,7 @@ button[type="submit"],
   border: 2px solid var(--site-border) !important;
   border-radius: 6px !important;
   box-shadow: 2px 2px 0 var(--site-shadow) !important;
-  padding: 5px 14px !important;
+  padding: 6px 12px !important;
   cursor: pointer !important;
   transition: transform 0.1s ease, box-shadow 0.1s ease !important;
 }
@@ -154,45 +121,49 @@ button[type="submit"]:hover,
   transform: translateY(2px) !important;
   box-shadow: none !important;
   background-color: #c5bde8 !important;
-  color: #000000 !important;
 }
 
-/* --------------------------------------------------------------------------
-   5. KARTU KOMENTAR
-   -------------------------------------------------------------------------- */
+/* Comment Cards (Timeline comment dengan border & shadow tebal) */
 .gsc-comment,
 .gsc-comment-box {
+  background-color: var(--site-card) !important;
   border: 2px solid var(--site-border) !important;
   border-radius: 8px !important;
-  background-color: var(--site-card-bg) !important;
   box-shadow: 3px 3px 0 var(--site-shadow) !important;
   margin-bottom: 16px !important;
-  overflow: hidden !important;
+  color: var(--fgColor-default) !important;
 }
 
 .gsc-comment-header {
   background-color: var(--bgColor-muted) !important;
   border-bottom: 2px solid var(--site-border) !important;
+  color: var(--fgColor-muted) !important;
+  font-weight: bold !important;
   padding: 8px 12px !important;
 }
 
-/* --------------------------------------------------------------------------
-   6. KOTAK "PICK YOUR REACTION" & POPOVER (Solid)
-   -------------------------------------------------------------------------- */
+.gsc-comment-text,
+.gsc-comment-text *,
+.markdown-body {
+  color: var(--fgColor-default) !important;
+}
+
+/* Reaction Popover (Solid, tidak transparan) */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
 div[role="tooltip"] {
-  background-color: var(--site-card-bg) !important;
+  background-color: var(--site-card) !important;
   border: 2px solid var(--site-border) !important;
   box-shadow: 4px 4px 0 var(--site-shadow) !important;
   border-radius: 8px !important;
   padding: 8px !important;
   opacity: 1 !important;
+  color: var(--fgColor-default) !important;
 }
 
 .gsc-reaction-button {
-  background-color: var(--site-card-bg) !important;
+  background-color: var(--site-card) !important;
   border: 1.5px solid var(--site-border) !important;
   color: var(--fgColor-default) !important;
   border-radius: 6px !important;
