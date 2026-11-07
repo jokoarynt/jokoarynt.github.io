@@ -24,7 +24,8 @@
 /* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark,
-[data-color-mode="dark"] {
+[data-color-mode="dark"],
+@media (prefers-color-scheme: dark) {
   --color-canvas-default: #121212 !important;
   --color-canvas-subtle: #1a1a1a !important;
   --color-border-default: #ffffff !important;
@@ -138,22 +139,6 @@ button[type="submit"]:hover,
 .gsc-button:hover {
   transform: translate(2px, 2px) !important;
   box-shadow: var(--neo-shadow-hover) !important;
-  background-color: #3a3a3a !important;
-  color: #ffffff !important;
-}
-
-/* Penyesuaian khusus tombol saat Dark Mode aktif */
-[data-color-mode="dark"] button.gsc-comment-box-write-btn,
-[data-color-mode="dark"] button[type="submit"],
-[data-color-mode="dark"] .gsc-button-primary,
-[data-color-mode="dark"] .gsc-button {
-  background-color: #2a2a2a !important;
-  color: #ffffff !important;
-}
-
-[data-color-mode="dark"] button[type="submit"]:hover,
-[data-color-mode="dark"] .gsc-button-primary:hover,
-[data-color-mode="dark"] .gsc-button:hover {
   background-color: #3a3a3a !important;
   color: #ffffff !important;
 }
