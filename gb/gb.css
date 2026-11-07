@@ -170,7 +170,9 @@ button[type="submit"]:hover,
 .gsc-reply time,
 .gsc-reply a.Link--secondary,
 .gsc-reply a[href*="#issuecomment-"],
-.gsc-reply a[href*="#discussioncomment-"] {
+.gsc-reply a[href*="#discussioncomment-"],
+.gsc-comment-replies time,
+.gsc-comment-replies a {
   font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -180,7 +182,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0px transparent !important;
 }
 
-/* ATURAN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN - UKURAN FONT H4 / 1rem & PALING BOLD) */
+/* ATURAN NAMA USER / AUTHOR (SELURUH PESAN UTAMA & PESAN BALASAN - UKURAN H4 & PALING BOLD) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -198,7 +200,12 @@ button[type="submit"]:hover,
 .gsc-replies .gsc-comment-author,
 .gsc-replies .gsc-comment-header a.author,
 .gsc-replies a[data-hovercard-type="user"],
-.gsc-replies a.Link--primary {
+.gsc-replies a.Link--primary,
+.gsc-comment-replies .gsc-comment-author,
+.gsc-comment-replies a.author,
+.gsc-comment-replies a[data-hovercard-type="user"],
+.gsc-comment-replies a.Link--primary,
+.gsc-comment-replies strong {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
