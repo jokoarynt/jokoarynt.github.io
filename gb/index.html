@@ -6,34 +6,31 @@
   <link rel="icon" href="/img/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="/style.min.css" rel="stylesheet">
-  <style>
-    /* --- Styling Khusus Halaman Guestbook (Bisa discroll & selaras index.html) --- */
-body.gb {
-  height: auto !important;
-  min-height: 100vh !important;
-  display: block !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  padding: 40px 0;
-}
-
-body.gb #container {
-  width: 450px !important;
-  max-width: 90vw !important;
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
-  margin: 0 auto !important;
-  padding: 15px 15px 1.8rem 15px !important;
-}
-
-/* Penyesuaian elemen Giscus agar warnanya sama persis dengan style situs */
-body.gb .giscus-frame {
-  width: 100% !important;
-}
-
-    </style>
   <title>Guestbook - Joko Ariyanto</title>
+  <style>
+    /* Styling layout & auto-centering khusus halaman guestbook */
+    body.gb {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 20px 10px;
+      box-sizing: border-box;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+    }
+
+    body.gb #container {
+      width: 450px !important;
+      max-width: 92vw !important;
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+      margin: auto !important; /* Otomatis menyesuaikan tengah, menyusut ke atas jika konten panjang */
+    }
+  </style>
 </head>
 <body class="gb">
   <div id="container">
@@ -70,8 +67,7 @@ body.gb .giscus-frame {
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="light"
-              data-dark-theme="dark"
+              data-theme="https://joko.my.id/gb/gb.css"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -140,7 +136,7 @@ body.gb .giscus-frame {
         iframe.contentWindow.postMessage({
           giscus: {
             setConfig: {
-              theme: isNight ? 'dark' : 'light'
+              theme: 'https://joko.my.id/gb/gb.css'
             }
           }
         }, 'https://giscus.app');
