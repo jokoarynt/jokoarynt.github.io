@@ -21,41 +21,25 @@
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Night Mode / Terdeteksi dari URL yang mengandung kata 'dark') */
+/* Dark Mode (Night Mode) - Hanya Background yang Diubah Menjadi Gelap Penuh */
 main[data-color-mode="dark"],
 main.dark,
-[data-color-mode="dark"],
-@media (prefers-color-scheme: dark) {
+[data-color-mode="dark"] {
   --color-canvas-default: #121212 !important;
-  --color-canvas-subtle: #1a1a1a !important;
+  --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
   --color-fg-muted: #cccccc !important;
   --color-fg-subtle: #aaaaaa !important;
-  --color-accent-fg: #ffffff !important;
-  --color-accent-emphasis: #333333 !important;
+  --color-accent-fg: #000000 !important;
+  --color-accent-emphasis: #dcd6f7 !important;
   
   --neo-border: 2px solid #ffffff;
   --neo-shadow: 3px 3px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
-  --neo-bg: #121212 !important;
-  --neo-accent: #2a2a2a !important;
-}
-
-/* PAKSA ELEMEN KOTAK PESAN GISCUS JADI GELAP TOTAL */
-[data-color-mode="dark"] .gsc-comment-box,
-[data-color-mode="dark"] .color-canvas-default,
-[data-color-mode="dark"] .color-canvas-subtle,
-[data-color-mode="dark"] .gsc-comment,
-[data-color-mode="dark"] textarea,
-[data-color-mode="dark"] input,
-[data-color-mode="dark"] .gsc-comment-box-textarea,
-.dark .gsc-comment-box,
-.dark .gsc-comment {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-  border-color: #ffffff !important;
+  --neo-bg: #121212 !important; /* Background kotak pesan & kartu jadi gelap pekat */
+  --neo-accent: #dcd6f7 !important; /* Warna tombol dikembalikan seperti semula */
 }
 
 body, main {
@@ -133,7 +117,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: var(--color-fg-default) !important;
 }
 
-/* Buttons */
+/* Buttons (Kembali seperti semula dengan aksen ungu muda) */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -141,7 +125,7 @@ button[type="submit"],
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
   background-color: var(--neo-accent) !important;
-  color: var(--color-fg-default) !important;
+  color: #000000 !important;
   border: var(--neo-border) !important;
   border-radius: 6px !important;
   box-shadow: var(--neo-shadow) !important;
@@ -154,8 +138,8 @@ button[type="submit"]:hover,
 .gsc-button:hover {
   transform: translate(2px, 2px) !important;
   box-shadow: var(--neo-shadow-hover) !important;
-  background-color: #3a3a3a !important;
-  color: #ffffff !important;
+  background-color: #c5bde8 !important;
+  color: #000000 !important;
 }
 
 .gsc-comment-header,
@@ -320,7 +304,7 @@ div[role="tooltip"] {
 
 .gsc-reaction-button:hover {
   background-color: var(--neo-accent) !important;
-  color: var(--color-fg-default) !important;
+  color: #000000 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
