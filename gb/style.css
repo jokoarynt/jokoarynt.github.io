@@ -2,13 +2,8 @@
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. ROOT VARIABLES (Light & Dark Mode Palettes)
-   -------------------------------------------------------------------------- */
-
 /* Light Mode (Default) */
 main {
-  /* GitHub Primer Variables */
   --color-canvas-default: #ffffff !important;
   --color-canvas-subtle: #f4f4f0 !important;
   --color-border-default: #000000 !important;
@@ -19,7 +14,6 @@ main {
   --color-accent-fg: #000000 !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
-  /* Neo-Brutalist Custom Properties */
   --neo-border: 2px solid #000000;
   --neo-shadow: 3px 3px 0px #000000;
   --neo-shadow-hover: 1px 1px 0px #000000;
@@ -27,10 +21,9 @@ main {
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Menyesuaikan tema night situs) */
+/* Dark Mode */
 main[data-color-mode="dark"],
 main.dark {
-  /* GitHub Primer Variables */
   --color-canvas-default: #1e1e1e !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
@@ -41,7 +34,6 @@ main.dark {
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
-  /* Neo-Brutalist Custom Properties (Dark) */
   --neo-border: 2px solid #ffffff;
   --neo-shadow: 3px 3px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
@@ -49,18 +41,13 @@ main.dark {
   --neo-accent: #dcd6f7;
 }
 
-/* --------------------------------------------------------------------------
-   2. GLOBAL TYPOGRAPHY & CONTAINER
-   -------------------------------------------------------------------------- */
 body, main {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
   background: transparent !important;
 }
 
-/* --------------------------------------------------------------------------
-   3. HIDE UNWANTED GISCUS ELEMENTS
-   -------------------------------------------------------------------------- */
+/* Sembunyikan Statistik & Powered by Giscus */
 .gsc-header,
 .gsc-comments-count,
 .gsc-comment-count,
@@ -71,9 +58,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   4. FORM INPUTS & TEXTAREA (Neo-Brutalist Box)
-   -------------------------------------------------------------------------- */
+/* Textarea & Inputs (Neo-Brutalist Box) */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
 textarea, input {
@@ -94,9 +79,7 @@ textarea:focus, input:focus {
   transform: translate(-2px, -2px) !important;
 }
 
-/* --------------------------------------------------------------------------
-   5. BUTTONS (Sharp Retro Shadow Buttons)
-   -------------------------------------------------------------------------- */
+/* Buttons */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -122,9 +105,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* --------------------------------------------------------------------------
-   6. COMMENT CARDS (Timeline & Composing Box)
-   -------------------------------------------------------------------------- */
+/* Comment Cards */
 .gsc-comment,
 .gsc-comment-box {
   background-color: var(--neo-bg) !important;
@@ -151,9 +132,7 @@ button[type="submit"]:hover,
   font-family: monospace, sans-serif !important;
 }
 
-/* --------------------------------------------------------------------------
-   7. REACTION POPOVER & BUTTONS (Solid Neo-Brutalist Popups)
-   -------------------------------------------------------------------------- */
+/* Reaction Popover */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
