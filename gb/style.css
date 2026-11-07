@@ -1,176 +1,66 @@
 /* ==========================================================================
-   Giscus Custom Theme - Original Style & Colors
+   Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ROOT VARIABLES (Light & Dark Mode Palettes)
+   -------------------------------------------------------------------------- */
 
 /* Light Mode (Default) */
 main {
-  --color-canvas-default: #ffffff;
-  --color-canvas-subtle: #f4f4f0;
-  --color-border-default: #000000;
-  --color-border-muted: #000000;
-  --color-fg-default: #000000;
-  --color-fg-muted: #555555;
-  --color-fg-subtle: #777777;
-  --color-accent-fg: #000000;
-  --color-accent-emphasis: #dcd6f7;
+  /* GitHub Primer Variables */
+  --color-canvas-default: #ffffff !important;
+  --color-canvas-subtle: #f4f4f0 !important;
+  --color-border-default: #000000 !important;
+  --color-border-muted: #000000 !important;
+  --color-fg-default: #000000 !important;
+  --color-fg-muted: #333333 !important;
+  --color-fg-subtle: #555555 !important;
+  --color-accent-fg: #000000 !important;
+  --color-accent-emphasis: #dcd6f7 !important;
   
-  --color-btn-text: #000000;
-  --color-btn-bg: #dcd6f7;
-  --color-btn-border: #000000;
-  --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: #000000;
-  --color-btn-active-bg: #b0a4e3;
-  --color-btn-active-border: #000000;
-  --color-btn-primary-text: #000000;
-  --color-btn-primary-bg: #dcd6f7;
-  --color-btn-primary-border: #000000;
-  --color-btn-primary-hover-bg: #c5bde8;
-  
-  --site-border-color: #000000;
-  --site-shadow-color: #000000;
-  --site-accent-color: #dcd6f7;
-  --site-card-bg: #ffffff;
+  /* Neo-Brutalist Custom Properties */
+  --neo-border: 2px solid #000000;
+  --neo-shadow: 3px 3px 0px #000000;
+  --neo-shadow-hover: 1px 1px 0px #000000;
+  --neo-bg: #ffffff;
+  --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode */
+/* Dark Mode (Menyesuaikan tema night situs) */
 main[data-color-mode="dark"],
 main.dark {
-  --color-canvas-default: #1e1e1e;
-  --color-canvas-subtle: #121212;
-  --color-border-default: #ffffff;
-  --color-border-muted: #ffffff;
-  --color-fg-default: #ffffff;
-  --color-fg-muted: #aaaaaa;
-  --color-fg-subtle: #888888;
-  --color-accent-fg: #ffffff;
-  --color-accent-emphasis: #dcd6f7;
+  /* GitHub Primer Variables */
+  --color-canvas-default: #1e1e1e !important;
+  --color-canvas-subtle: #121212 !important;
+  --color-border-default: #ffffff !important;
+  --color-border-muted: #ffffff !important;
+  --color-fg-default: #ffffff !important;
+  --color-fg-muted: #cccccc !important;
+  --color-fg-subtle: #aaaaaa !important;
+  --color-accent-fg: #ffffff !important;
+  --color-accent-emphasis: #dcd6f7 !important;
   
-  --color-btn-text: #000000;
-  --color-btn-bg: #dcd6f7;
-  --color-btn-border: #ffffff;
-  --color-btn-hover-bg: #c5bde8;
-  --color-btn-hover-border: #ffffff;
-  --color-btn-active-bg: #b0a4e3;
-  --color-btn-active-border: #ffffff;
-  --color-btn-primary-text: #000000;
-  --color-btn-primary-bg: #dcd6f7;
-  --color-btn-primary-border: #ffffff;
-  --color-btn-primary-hover-bg: #c5bde8;
-
-  --site-border-color: #ffffff;
-  --site-shadow-color: #ffffff;
-  --site-accent-color: #dcd6f7;
-  --site-card-bg: #1e1e1e;
+  /* Neo-Brutalist Custom Properties (Dark) */
+  --neo-border: 2px solid #ffffff;
+  --neo-shadow: 3px 3px 0px #ffffff;
+  --neo-shadow-hover: 1px 1px 0px #ffffff;
+  --neo-bg: #1e1e1e;
+  --neo-accent: #dcd6f7;
 }
 
-/* Global Typography */
-body {
+/* --------------------------------------------------------------------------
+   2. GLOBAL TYPOGRAPHY & CONTAINER
+   -------------------------------------------------------------------------- */
+body, main {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
   background: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
-main {
-  font-family: monospace, sans-serif !important;
-  background: transparent !important;
-}
-
-/* Form Inputs & Textarea */
-textarea, 
-input[type="text"], 
-input[type="email"] {
-  font-family: monospace, sans-serif !important;
-  font-size: 0.85rem !important;
-  color: var(--color-fg-default) !important;
-  background-color: var(--site-card-bg) !important;
-  border: 2px solid var(--site-border-color) !important;
-  border-radius: 6px !important;
-  padding: 8px 10px !important;
-  box-shadow: none !important;
-  transition: border-color 0.2s ease, background-color 0.2s ease !important;
-}
-
-textarea:focus, 
-input[type="text"]:focus, 
-input[type="email"]:focus {
-  outline: none !important;
-  background-color: var(--site-card-bg) !important;
-  border-color: var(--site-border-color) !important;
-  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
-}
-
-/* Buttons */
-button {
-  font-family: monospace, sans-serif !important;
-  font-weight: bold !important;
-  border-radius: 6px !important;
-  cursor: pointer !important;
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease !important;
-}
-
-button[type="submit"], 
-.btn-primary {
-  background-color: var(--site-accent-color) !important;
-  color: #000000 !important;
-  border: 2px solid var(--site-border-color) !important;
-  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
-  padding: 5px 12px !important;
-}
-
-button[type="submit"]:hover, 
-.btn-primary:hover {
-  transform: translateY(2px) !important;
-  box-shadow: none !important;
-  background-color: #c5bde8 !important;
-  color: #000000 !important;
-}
-
-/* Timeline & Comment Boxes */
-.timeline-comment,
-.gisc-comment {
-  border: 2px solid var(--site-border-color) !important;
-  border-radius: 8px !important;
-  background-color: var(--site-card-bg) !important;
-  box-shadow: 3px 3px 0 var(--site-shadow-color) !important;
-  margin-bottom: 16px !important;
-  color: var(--color-fg-default) !important;
-  overflow: hidden !important;
-}
-
-.timeline-comment-header,
-.gisc-comment-header {
-  background-color: var(--color-canvas-subtle) !important;
-  border-bottom: 2px solid var(--site-border-color) !important;
-  color: var(--color-fg-muted) !important;
-  font-weight: bold !important;
-  padding: 8px 12px !important;
-}
-
-.timeline-comment-body,
-.gisc-comment-body {
-  color: var(--color-fg-default) !important;
-  font-size: 0.85rem !important;
-  line-height: 1.4 !important;
-  padding: 12px !important;
-}
-
-/* Reaction Buttons & Popover */
-.gisc-social-reaction-summary-item,
-.gisc-reaction-button {
-  border: 1.5px solid var(--site-border-color) !important;
-  border-radius: 6px !important;
-  background-color: var(--site-card-bg) !important;
-  color: var(--color-fg-default) !important;
-}
-
-.gisc-reaction-button:hover {
-  background-color: var(--site-accent-color) !important;
-  color: #000000 !important;
-}
-
-/* Sembunyikan Statistik & Powered by Giscus */
+/* --------------------------------------------------------------------------
+   3. HIDE UNWANTED GISCUS ELEMENTS
+   -------------------------------------------------------------------------- */
 .gsc-header,
 .gsc-comments-count,
 .gsc-comment-count,
@@ -179,4 +69,115 @@ footer,
 .gsc-homepage-link,
 a[href*="giscus.app"] {
   display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. FORM INPUTS & TEXTAREA (Neo-Brutalist Box)
+   -------------------------------------------------------------------------- */
+textarea.gsc-comment-box-textarea,
+input.gsc-comment-box-textarea,
+textarea, input {
+  font-family: monospace, sans-serif !important;
+  font-size: 0.85rem !important;
+  color: var(--color-fg-default) !important;
+  background-color: var(--neo-bg) !important;
+  border: var(--neo-border) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  padding: 10px !important;
+  transition: transform 0.1s ease, box-shadow 0.1s ease !important;
+}
+
+textarea:focus, input:focus {
+  outline: none !important;
+  box-shadow: var(--neo-shadow) !important;
+  transform: translate(-2px, -2px) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. BUTTONS (Sharp Retro Shadow Buttons)
+   -------------------------------------------------------------------------- */
+button.gsc-comment-box-write-btn,
+button[type="submit"],
+.gsc-button-primary,
+.gsc-button {
+  font-family: monospace, sans-serif !important;
+  font-weight: bold !important;
+  background-color: var(--neo-accent) !important;
+  color: #000000 !important;
+  border: var(--neo-border) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--neo-shadow) !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  transition: transform 0.1s ease, box-shadow 0.1s ease !important;
+}
+
+button[type="submit"]:hover,
+.gsc-button-primary:hover,
+.gsc-button:hover {
+  transform: translate(2px, 2px) !important;
+  box-shadow: var(--neo-shadow-hover) !important;
+  background-color: #c5bde8 !important;
+  color: #000000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. COMMENT CARDS (Timeline & Composing Box)
+   -------------------------------------------------------------------------- */
+.gsc-comment,
+.gsc-comment-box {
+  background-color: var(--neo-bg) !important;
+  border: var(--neo-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--neo-shadow) !important;
+  margin-bottom: 20px !important;
+  color: var(--color-fg-default) !important;
+  overflow: hidden !important;
+}
+
+.gsc-comment-header {
+  background-color: var(--color-canvas-subtle) !important;
+  border-bottom: var(--neo-border) !important;
+  color: var(--color-fg-muted) !important;
+  font-weight: bold !important;
+  padding: 10px 14px !important;
+}
+
+.gsc-comment-text,
+.gsc-comment-text *,
+.markdown-body {
+  color: var(--color-fg-default) !important;
+  font-family: monospace, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. REACTION POPOVER & BUTTONS (Solid Neo-Brutalist Popups)
+   -------------------------------------------------------------------------- */
+.gsc-reactions-popover,
+.gsc-popover,
+div[class*="popover"],
+div[role="tooltip"] {
+  background-color: var(--neo-bg) !important;
+  border: var(--neo-border) !important;
+  box-shadow: 4px 4px 0px var(--color-border-default) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  opacity: 1 !important;
+  color: var(--color-fg-default) !important;
+}
+
+.gsc-reaction-button {
+  background-color: var(--neo-bg) !important;
+  border: var(--neo-border) !important;
+  color: var(--color-fg-default) !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+}
+
+.gsc-reaction-button:hover {
+  background-color: var(--neo-accent) !important;
+  color: #000000 !important;
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
