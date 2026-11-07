@@ -7,34 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="/style.min.css" rel="stylesheet">
   <title>Guestbook - Joko Ariyanto</title>
-  <style>
-    /* Mengubah layout agar halaman bisa discroll memanjang ke bawah */
-    body {
-      height: auto !important;
-      min-height: 100vh !important;
-      display: block !important;
-      overflow-y: auto !important;
-      padding: 30px 0;
-    }
-    #container {
-      width: 450px !important;
-      max-width: 90vw !important;
-      height: auto !important;
-      max-height: none !important;
-      overflow: visible !important;
-      margin: 0 auto !important;
-      padding: 15px 15px 1.8rem 15px !important;
-    }
-    .giscus-container {
-      width: 100%;
-      text-align: left;
-      box-sizing: border-box;
-      padding: 0 5px;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
-<body>
+<body class="gb">
   <div id="container">
     <nav class="navbar">
       <div class="nav-left">
@@ -69,7 +43,8 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="https://jokoarynt.github.io/gb/style.css"
+              data-theme="light"
+              data-dark-theme="dark"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -120,12 +95,12 @@
     <div onclick="changeWebring('3')">No AI</div>
     <div onclick="changeWebring('4')">Octo Ring</div>
     <div onclick="changeWebring('5')">Tokukatsu</div>
-    <div onclick="changeWebring('6')|changeWebring('6')">Roboring</div>
+    <div onclick="changeWebring('6')">Roboring</div>
   </div>
 
   <script src="/script.min.js"></script>
   <script>
-    // Sinkronisasi pergantian theme situs dengan Giscus (menggunakan custom CSS gb.css)
+    // Sinkronisasi tombol theme situs dengan Giscus (light/dark)
     const originalToggleTheme = window.toggleTheme;
     window.toggleTheme = function() {
       if (originalToggleTheme) originalToggleTheme();
@@ -136,11 +111,10 @@
       const isNight = document.documentElement.getAttribute('data-theme') === 'night';
       const iframe = document.querySelector('iframe.giscus-frame');
       if (iframe) {
-        // Mengirim pesan ke iframe Giscus untuk menyesuaikan atribut tema/mode warna
         iframe.contentWindow.postMessage({
           giscus: {
             setConfig: {
-              theme: 'https://joko.my.id/gb/gb.css'
+              theme: isNight ? 'dark' : 'light'
             }
           }
         }, 'https://giscus.app');
