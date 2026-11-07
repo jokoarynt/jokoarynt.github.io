@@ -6,6 +6,33 @@
   <link rel="icon" href="/img/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="/style.min.css" rel="stylesheet">
+  <style>
+    /* --- Styling Khusus Halaman Guestbook (Bisa discroll & selaras index.html) --- */
+body.gb {
+  height: auto !important;
+  min-height: 100vh !important;
+  display: block !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 40px 0;
+}
+
+body.gb #container {
+  width: 450px !important;
+  max-width: 90vw !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  margin: 0 auto !important;
+  padding: 15px 15px 1.8rem 15px !important;
+}
+
+/* Penyesuaian elemen Giscus agar warnanya sama persis dengan style situs */
+body.gb .giscus-frame {
+  width: 100% !important;
+}
+
+    </style>
   <title>Guestbook - Joko Ariyanto</title>
 </head>
 <body class="gb">
@@ -32,7 +59,7 @@
     <h1 style="font-size: 2rem; margin: 0 0 0.3rem; font-family: 'Lobster', cursive; font-weight: normal;">Guestbook</h1>
     <p style="font-size: 0.85rem; margin-bottom: 1rem;">Tinggalkan pesan atau jejak kunjungan Anda!</p>
     
-    <div class="giscus-container">
+    <div style="width: 100%; text-align: left; box-sizing: border-box; padding: 0 5px;">
       <script src="https://giscus.app/client.js"
               data-repo="jokoarynt/jokoarynt.github.io"
               data-repo-id="R_kgDOU21zaA"
@@ -100,7 +127,6 @@
 
   <script src="/script.min.js"></script>
   <script>
-    // Sinkronisasi tombol theme situs dengan Giscus (light/dark)
     const originalToggleTheme = window.toggleTheme;
     window.toggleTheme = function() {
       if (originalToggleTheme) originalToggleTheme();
