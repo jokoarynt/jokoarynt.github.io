@@ -21,25 +21,25 @@
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Night Mode) - Hanya Background yang Diubah Menjadi Gelap Penuh */
+/* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"] {
-  --color-canvas-default: #121212 !important;
+  --color-canvas-default: #1e1e1e !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
   --color-fg-muted: #cccccc !important;
   --color-fg-subtle: #aaaaaa !important;
-  --color-accent-fg: #000000 !important;
+  --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
   --neo-border: 2px solid #ffffff;
   --neo-shadow: 3px 3px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
-  --neo-bg: #121212 !important; /* Background kotak pesan & kartu jadi gelap pekat */
-  --neo-accent: #dcd6f7 !important; /* Warna tombol dikembalikan seperti semula */
+  --neo-bg: #1e1e1e !important;
+  --neo-accent: #dcd6f7;
 }
 
 body, main {
@@ -117,7 +117,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: var(--color-fg-default) !important;
 }
 
-/* Buttons (Kembali seperti semula dengan aksen ungu muda) */
+/* Buttons */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -307,4 +307,47 @@ div[role="tooltip"] {
   color: #000000 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
+}
+
+/* ==========================================================================
+   PERBAIKAN KOTAK PESAN (FORM, TABS, BOTTOM BAR) - TAMBAHAN BARU
+   ========================================================================== */
+
+/* Memastikan seluruh bagian kotak pesan mengikuti background gelap/terang */
+.gsc-comment-box,
+.gsc-comment-box-form,
+.gsc-comment-box-tabs,
+.gsc-comment-box-bottom,
+.gsc-comment-box-tab-btn,
+.color-canvas-default,
+.color-canvas-subtle {
+  background-color: var(--neo-bg) !important;
+  color: var(--color-fg-default) !important;
+  border-color: var(--color-border-default) !important;
+}
+
+/* Tabs (Write / Preview) */
+.gsc-comment-box-tabs {
+  border-bottom: var(--neo-border) !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+/* Tombol Tab yang sedang aktif */
+.gsc-comment-box-tab-btn[aria-selected="true"] {
+  background-color: var(--neo-accent) !important;
+  color: #000000 !important;
+  border-bottom: 2px solid var(--color-border-default) !important;
+}
+
+/* Bottom Bar (Tempat tombol Sign out & Comment) */
+.gsc-comment-box-bottom {
+  border-top: var(--neo-border) !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+/* Warna teks placeholder di dalam textarea */
+.gsc-comment-box-textarea::placeholder {
+  color: var(--color-fg-subtle) !important;
 }
