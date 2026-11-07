@@ -37,7 +37,7 @@ main.dark {
   --neo-border: 2px solid #ffffff;
   --neo-shadow: 3px 3px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
-  --neo-bg: #1e1e1e;
+  --neo-bg: #1e1e1e !important;
   --neo-accent: #dcd6f7;
 }
 
@@ -61,6 +61,7 @@ a[href*="giscus.app"] {
 /* Textarea & Inputs (Neo-Brutalist Box) */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
+.gsc-comment-box textarea,
 textarea, input {
   font-family: monospace, sans-serif !important;
   font-size: 0.85rem !important;
@@ -72,10 +73,12 @@ textarea, input {
   padding: 10px !important;
 }
 
-textarea:focus, input:focus {
+textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   outline: none !important;
   box-shadow: var(--neo-shadow) !important;
   transform: translate(-2px, -2px) !important;
+  background-color: var(--neo-bg) !important;
+  color: var(--color-fg-default) !important;
 }
 
 /* Buttons */
@@ -103,8 +106,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Comment Cards & Box (overflow: visible agar popover reaksi tidak terpotong) */
-.gsc-comment,
+/* Comment Box & Form Utama */
 .gsc-comment-box {
   background-color: var(--neo-bg) !important;
   border: var(--neo-border) !important;
@@ -115,7 +117,19 @@ button[type="submit"]:hover,
   overflow: visible !important;
 }
 
-.gsc-comment-header {
+/* Comment Cards */
+.gsc-comment {
+  background-color: var(--neo-bg) !important;
+  border: var(--neo-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--neo-shadow) !important;
+  margin-bottom: 20px !important;
+  color: var(--color-fg-default) !important;
+  overflow: visible !important;
+}
+
+.gsc-comment-header,
+.gsc-comment-box-header {
   background-color: var(--color-canvas-subtle) !important;
   border-bottom: var(--neo-border) !important;
   color: var(--color-fg-muted) !important;
