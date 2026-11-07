@@ -162,12 +162,21 @@ button[type="submit"]:hover,
 .timeline-comment-header a[href*="#issuecomment-"],
 .timeline-comment-header a[href*="#discussioncomment-"],
 .gsc-reply .gsc-comment-header time,
-.gsc-reply .gsc-comment-header a {
+.gsc-reply .gsc-comment-header a,
+.gsc-replies time,
+.gsc-replies a.Link--secondary,
+.gsc-replies a[href*="#issuecomment-"],
+.gsc-replies a[href*="#discussioncomment-"],
+.gsc-reply time,
+.gsc-reply a.Link--secondary,
+.gsc-reply a[href*="#issuecomment-"],
+.gsc-reply a[href*="#discussioncomment-"] {
   font-size: 0.7rem !important;
   font-weight: normal !important;
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
+  color: var(--color-fg-muted) !important;
 }
 
 /* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
