@@ -185,7 +185,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0px transparent !important;
 }
 
-/* ATURAN UNIVERSAL NAMA USER / AUTHOR (PESAN UTAMA DAN SELURUH PESAN BALASAN MUTLAK DISAMAKAN 100%) */
+/* ATURAN UNIVERSAL NAMA USER / AUTHOR (PESAN UTAMA DAN SELURUH PESAN BALASAN DISAMAKAN 100%) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
