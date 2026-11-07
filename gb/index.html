@@ -56,7 +56,7 @@
     <p style="font-size: 0.85rem; margin-bottom: 1rem;">Tinggalkan pesan atau jejak kunjungan Anda!</p>
     
     <div style="width: 100%; text-align: left; box-sizing: border-box; padding: 0 5px;">
-      <!-- Gunakan ?v=8 agar cache browser ter-reset -->
+      <!-- PERHATIKAN: Gunakan ?light di sini, bukan versi kustom -->
       <script src="https://giscus.app/client.js"
               data-repo="jokoarynt/jokoarynt.github.io"
               data-repo-id="R_kgDOU21zaA"
@@ -67,7 +67,7 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="https://joko.my.id/gb/gb.css?v=8"
+              data-theme="https://joko.my.id/gb/gb.css?light"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -123,17 +123,15 @@
 
   <script src="/script.min.js"></script>
   <script>
-    // Fungsi untuk mengirim pembaruan tema ke iframe Giscus
     function updateGiscusTheme() {
       const isNight = document.documentElement.getAttribute('data-theme') === 'night';
       const iframe = document.querySelector('iframe.giscus-frame');
       
       if (iframe) {
-        // Trik: Gunakan ?v=8&dark agar Giscus mendeteksi kata kunci 'dark' di akhir URL
-        // sekaligus mem-bypass cache browser.
+        // GUNAKAN FORMAT ?dark ATAU ?light SAJA
         const themeUrl = isNight 
-          ? 'https://joko.my.id/gb/gb.css?v=8&dark' 
-          : 'https://joko.my.id/gb/gb.css?v=8&light';
+          ? 'https://joko.my.id/gb/gb.css?dark' 
+          : 'https://joko.my.id/gb/gb.css?light';
           
         iframe.contentWindow.postMessage({
           giscus: {
@@ -142,25 +140,24 @@
             }
           }
         }, 'https://giscus.app');
-      } else {
-        // Jika iframe Giscus belum dirender oleh GitHub, coba lagi dalam 300ms
-        setTimeout(updateGiscusTheme, 300);
       }
     }
 
-    // Jalankan saat halaman selesai dimuat
+    // Gunakan MutationObserver untuk mendeteksi perubahan tema secara instan
     window.addEventListener('DOMContentLoaded', () => {
-      // Panggil pertama kali untuk memastikan tema sesuai saat load
-      updateGiscusTheme();
-      
-      // Tambahkan event listener langsung ke tombol tema
-      const themeBtn = document.getElementById('themeBtn');
-      if (themeBtn) {
-        themeBtn.addEventListener('click', () => {
-          // Beri jeda 100ms agar script.min.js selesai mengganti atribut data-theme di <html>
-          setTimeout(updateGiscusTheme, 100); 
+      // Set awal setelah iframe dimuat
+      setTimeout(updateGiscusTheme, 1500);
+
+      // Pantau perubahan atribut data-theme di tag <html>
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+            updateGiscusTheme();
+          }
         });
-      }
+      });
+      
+      observer.observe(document.documentElement, { attributes: true });
     });
   </script>
 </body>
