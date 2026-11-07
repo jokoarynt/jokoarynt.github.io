@@ -21,7 +21,7 @@
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Night Mode) - Agresif menimpa seluruh background form dan kotak */
+/* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"] {
@@ -56,6 +56,14 @@ body, main {
 footer,
 .gsc-homepage-link,
 a[href*="giscus.app"] {
+  display: none !important;
+}
+
+/* Sembunyikan jumlah reaction dan tombol reaksi khusus di atas form textarea */
+.gsc-comment-box .gsc-reactions,
+.gsc-comment-box .gsc-reactions-count,
+.gsc-comment-box .gsc-reaction-button,
+.gsc-comment-box-reactions {
   display: none !important;
 }
 
@@ -137,7 +145,7 @@ button[type="submit"]:hover,
   font-family: monospace, sans-serif !important;
 }
 
-/* Reaction Popover (Solid & Tidak Tertutupi) */
+/* Reaction Popover (Solid & Tidak Tertutupi) pada Komentar */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
