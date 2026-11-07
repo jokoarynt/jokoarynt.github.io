@@ -84,9 +84,7 @@ a[href*="giscus.app"] {
 }
 
 /* Kartu Pesan */
-.gsc-comment,
-.timeline-comment,
-.gsc-reply {
+.gsc-comment {
   background-color: var(--neo-bg) !important;
   border: 1.5px solid var(--color-border-default) !important;
   border-radius: 8px !important;
@@ -150,21 +148,11 @@ button[type="submit"]:hover,
   background-color: var(--color-canvas-subtle) !important;
   border-bottom: 1.5px solid var(--color-border-default) !important;
   color: var(--color-fg-muted) !important;
+  font-weight: bold !important;
   padding: 10px 14px !important;
 }
 
-/* 1. STYLE NAMA PROFILE: Bold + Underline putus-putus */
-.gsc-comment-author,
-.timeline-comment-header .author,
-.gsc-comment-header a[href^="https://github.com/"] {
-  font-weight: bold !important;
-  text-decoration: underline dashed !important;
-  text-decoration-thickness: 1px !important;
-  text-underline-offset: 4px !important;
-  color: var(--color-fg-default) !important;
-}
-
-/* 2. TIMESTAMP PESAN UTAMA & PESAN BALASAN: Font kecil, non-bold, tanpa underline */
+/* ATURAN TIMESTAMP MUTLAK (Pesan utama & Pesan balasan secara seragam) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -173,8 +161,8 @@ button[type="submit"]:hover,
 .timeline-comment-header a.Link--secondary,
 .timeline-comment-header a[href*="#issuecomment-"],
 .timeline-comment-header a[href*="#discussioncomment-"],
-.gsc-reply time,
-.gsc-reply .gsc-comment-header time {
+.gsc-reply .gsc-comment-header time,
+.gsc-reply .gsc-comment-header a {
   font-size: 0.7rem !important;
   font-weight: normal !important;
   text-decoration: none !important;
