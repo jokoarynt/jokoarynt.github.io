@@ -152,12 +152,14 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* ATURAN NAMA USER / AUTHOR (Font size normal .9rem & Bold mutlak) */
+/* ATURAN NAMA USER / AUTHOR (Font size normal 0.9rem & BOLD MUTLAK) */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
 .timeline-comment-header .author,
-.gsc-comment-header a[href^="https://github.com/"] {
+.gsc-comment-header a[data-hovercard-type="user"],
+.gsc-comment-header a:not([class]),
+.gsc-comment-header > a:first-child {
   font-size: 0.9rem !important;
   font-weight: 700 !important;
   font-family: monospace, sans-serif !important;
