@@ -1,20 +1,20 @@
 /* ==========================================================================
-   Giscus Custom Theme - Fix & Complete Style (joko.my.id)
+   Giscus Custom Theme - Clean Retro / Brutalist Style (joko.my.id)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. ROOT VARIABLES (Light & Dark Mode)
+   1. COLOR VARIABLES & THEME ROOT
    -------------------------------------------------------------------------- */
 
-/* Light Mode (Default) - Memastikan teks hitam dan background putih */
+/* Light Mode (Default) */
 main {
   --color-canvas-default: #ffffff !important;
   --color-canvas-subtle: #f4f4f0 !important;
   --color-border-default: #000000 !important;
   --color-border-muted: #000000 !important;
   --color-fg-default: #000000 !important;
-  --color-fg-muted: #555555 !important;
-  --color-fg-subtle: #777777 !important;
+  --color-fg-muted: #444444 !important;
+  --color-fg-subtle: #666666 !important;
   --color-accent-fg: #000000 !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
@@ -25,10 +25,10 @@ main {
   --color-btn-hover-bg: #c5bde8 !important;
   --color-btn-hover-border: #000000 !important;
   
-  /* Custom Site Theme Variables */
-  --site-border-color: #000000;
-  --site-shadow-color: #000000;
-  --site-accent-color: #dcd6f7;
+  /* Site Theme Custom Vars */
+  --site-border: #000000;
+  --site-shadow: #000000;
+  --site-accent: #dcd6f7;
   --site-card-bg: #ffffff;
 }
 
@@ -52,152 +52,157 @@ main.dark {
   --color-btn-hover-bg: #c5bde8 !important;
   --color-btn-hover-border: #ffffff !important;
 
-  /* Custom Site Theme Variables (Dark) */
-  --site-border-color: #ffffff;
-  --site-shadow-color: #ffffff;
-  --site-accent-color: #dcd6f7;
+  /* Site Theme Custom Vars (Dark) */
+  --site-border: #ffffff;
+  --site-shadow: #ffffff;
+  --site-accent: #dcd6f7;
   --site-card-bg: #1e1e1e;
 }
 
 /* --------------------------------------------------------------------------
-   2. GLOBAL TEXT & CONTAINER STYLING
+   2. FIX TEKS TRANSPARAN / PUTIH DI MODE TERANG (Point #1)
    -------------------------------------------------------------------------- */
-body, main {
+body, main, 
+.gsc-comment-content, 
+.gsc-comment-header,
+.gsc-comment-author,
+.gsc-reply-content,
+.gsc-upvote-button,
+.gsc-homepage-link {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
-  background: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  background-color: transparent !important;
 }
 
-/* Memaksa seluruh teks dan elemen di dalam Giscus mengikuti warna tema */
-main p, main span, main div, main label, main a {
+/* Memaksa elemen teks internal Giscus menggunakan variabel warna aktif */
+.gsc-comment-text, 
+.gsc-comment-text *,
+.gsc-reactions-count,
+.gsc-reaction-count,
+span[data-target*="text"],
+.markdown-body {
   color: var(--color-fg-default) !important;
 }
 
 /* --------------------------------------------------------------------------
-   3. SEMBUYIKAN STATISTIK & FOOTER ("Powered by Giscus")
+   3. SEMBUNYIKAN STATISTIK & POWERED BY GISCUS (Point #3)
    -------------------------------------------------------------------------- */
-/* Menyembunyikan header statistik / jumlah komentar di atas form */
+/* Menyembunyikan header atas (Counter/Statistik komentar) */
 .gsc-header,
+.gsc-comments-count,
 .gsc-comment-count {
   display: none !important;
 }
 
-/* Menyembunyikan footer / tulisan Powered by Giscus */
+/* Menyembunyikan footer bawah (Powered by Giscus) */
 .gsc-footer,
 footer,
+.gsc-homepage-link,
 a[href*="giscus.app"] {
   display: none !important;
 }
 
 /* --------------------------------------------------------------------------
-   4. FORM INPUTS & TEXTAREA (Retro / Brutalist Look)
+   4. KOTAK INPUT / TEXTAREA & TOMBOL
    -------------------------------------------------------------------------- */
-textarea, 
-input[type="text"], 
-input[type="email"] {
+textarea.gsc-comment-box-textarea,
+input.gsc-comment-box-textarea,
+textarea, input {
   font-family: monospace, sans-serif !important;
   font-size: 0.85rem !important;
   color: var(--color-fg-default) !important;
   background-color: var(--site-card-bg) !important;
-  border: 2px solid var(--site-border-color) !important;
+  border: 2px solid var(--site-border) !important;
   border-radius: 6px !important;
   padding: 8px 10px !important;
   box-shadow: none !important;
 }
 
-textarea:focus, 
-input[type="text"]:focus, 
-input[type="email"]:focus {
+textarea:focus, input:focus {
   outline: none !important;
   background-color: var(--site-card-bg) !important;
-  border-color: var(--site-border-color) !important;
-  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
+  border-color: var(--site-border) !important;
+  box-shadow: 2px 2px 0 var(--site-shadow) !important;
 }
 
-/* --------------------------------------------------------------------------
-   5. BUTTON STYLING
-   -------------------------------------------------------------------------- */
-button {
+/* Tombol Kirim / Submit */
+button.gsc-comment-box-write-btn,
+button[type="submit"],
+.gsc-button-primary,
+.gsc-button {
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
-  border-radius: 6px !important;
-  cursor: pointer !important;
-}
-
-button[type="submit"], 
-.btn-primary,
-.gsc-button {
-  background-color: var(--site-accent-color) !important;
+  background-color: var(--site-accent) !important;
   color: #000000 !important;
-  border: 2px solid var(--site-border-color) !important;
-  box-shadow: 2px 2px 0 var(--site-shadow-color) !important;
-  padding: 5px 12px !important;
+  border: 2px solid var(--site-border) !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0 var(--site-shadow) !important;
+  padding: 5px 14px !important;
+  cursor: pointer !important;
   transition: transform 0.1s ease, box-shadow 0.1s ease !important;
 }
 
-button[type="submit"]:hover, 
-.btn-primary:hover,
+button[type="submit"]:hover,
+.gsc-button-primary:hover,
 .gsc-button:hover {
   transform: translateY(2px) !important;
   box-shadow: none !important;
+  background-color: #c5bde8 !important;
+  color: #000000 !important;
 }
 
 /* --------------------------------------------------------------------------
-   6. TIMELINE & COMMENT BOXES
+   5. KARTU KOMENTAR (Timeline Comment)
    -------------------------------------------------------------------------- */
-.timeline-comment,
-.gsc-comment {
-  border: 2px solid var(--site-border-color) !important;
+.gsc-comment,
+.gsc-comment-box {
+  border: 2px solid var(--site-border) !important;
   border-radius: 8px !important;
   background-color: var(--site-card-bg) !important;
-  box-shadow: 3px 3px 0 var(--site-shadow-color) !important;
+  box-shadow: 3px 3px 0 var(--site-shadow) !important;
   margin-bottom: 16px !important;
-  color: var(--color-fg-default) !important;
   overflow: hidden !important;
 }
 
-.timeline-comment-header,
 .gsc-comment-header {
   background-color: var(--color-canvas-subtle) !important;
-  border-bottom: 2px solid var(--site-border-color) !important;
-  color: var(--color-fg-muted) !important;
-  font-weight: bold !important;
+  border-bottom: 2px solid var(--site-border) !important;
   padding: 8px 12px !important;
 }
 
-.timeline-comment-body,
-.gsc-comment-body {
-  color: var(--color-fg-default) !important;
-  font-size: 0.85rem !important;
-  line-height: 1.4 !important;
-  padding: 12px !important;
-}
-
 /* --------------------------------------------------------------------------
-   7. REACTION BOX & POPOVER FIX (Non-Transparent)
+   6. FIX KOTAK "PICK YOUR REACTION" (Point #2 - Tidak Transparan)
    -------------------------------------------------------------------------- */
+/* Popover/Kotak Pilihan Reaksi Emoticon */
 .gsc-reactions-popover,
-.Popover,
-.Popover-message,
+.gsc-reactions-popover *,
+.gsc-popover,
 div[class*="popover"],
-div[class*="reaction"] {
+div[role="tooltip"],
+div[class*="Reactions"] {
   background-color: var(--site-card-bg) !important;
-  border: 2px solid var(--site-border-color) !important;
-  box-shadow: 3px 3px 0 var(--site-shadow-color) !important;
-  color: var(--color-fg-default) !important;
   opacity: 1 !important;
 }
 
-.gsc-reaction-button {
+/* Pembungkus utama popup reaksi */
+.gsc-reactions-popover,
+div[class*="popover"] {
+  border: 2px solid var(--site-border) !important;
+  box-shadow: 4px 4px 0 var(--site-shadow) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+}
+
+/* Tombol Reaksi Individual */
+.gsc-reaction-button,
+button[class*="reaction"] {
   background-color: var(--site-card-bg) !important;
-  border: 1.5px solid var(--site-border-color) !important;
-  color: var(--color-fg-default) !important;
+  border: 1.5px solid var(--site-border) !important;
   border-radius: 6px !important;
 }
 
-.gsc-reaction-button:hover {
-  background-color: var(--site-accent-color) !important;
+.gsc-reaction-button:hover,
+button[class*="reaction"]:hover {
+  background-color: var(--site-accent) !important;
   color: #000000 !important;
 }
