@@ -83,7 +83,7 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Kartu Pesan (Border dipertipis menjadi 1.5px) */
+/* Kartu Pesan */
 .gsc-comment {
   background-color: var(--neo-bg) !important;
   border: 1.5px solid var(--color-border-default) !important;
@@ -151,11 +151,16 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* Hapus underline URL pada waktu pesan dibuat */
-.gsc-comment-header a,
+/* Ukuran font waktu diperkecil & Underline dashed dengan jarak (tidak mepet) */
 .gsc-comment-header time,
-.gsc-comment-header .Link--secondary {
-  text-decoration: none !important;
+.gsc-comment-header a {
+  font-size: 0.72rem !important;
+}
+
+.gsc-comment-header a {
+  text-decoration: underline dashed !important;
+  text-decoration-thickness: 1.2px !important;
+  text-underline-offset: 4px !important;
 }
 
 .gsc-comment-text,
