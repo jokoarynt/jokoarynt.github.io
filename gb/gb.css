@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Light Mode (Default) */
-main {
+:root, main {
   --color-canvas-default: #ffffff !important;
   --color-canvas-subtle: #f4f4f0 !important;
   --color-border-default: #000000 !important;
@@ -21,10 +21,10 @@ main {
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Night Mode) - Memaksa seluruh background form menjadi gelap */
+/* Dark Mode (Night Mode) - Agresif menimpa seluruh background form dan kotak */
 main[data-color-mode="dark"],
 main.dark,
-main[data-theme="dark"] {
+[data-color-mode="dark"] {
   --color-canvas-default: #1e1e1e !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
@@ -59,10 +59,11 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Memaksa Kotak Komentar & Form Utama Berwarna Gelap di Night Mode */
-main[data-color-mode="dark"] .gsc-comment-box,
-main.dark .gsc-comment-box,
-.gsc-comment-box {
+/* Memaksa Kotak Komentar & Form Utama Berwarna Gelap */
+.gsc-comment-box,
+.gsc-comment,
+.color-canvas-default,
+.color-canvas-subtle {
   background-color: var(--neo-bg) !important;
   border: var(--neo-border) !important;
   border-radius: 8px !important;
@@ -118,17 +119,6 @@ button[type="submit"]:hover,
   box-shadow: var(--neo-shadow-hover) !important;
   background-color: #c5bde8 !important;
   color: #000000 !important;
-}
-
-/* Comment Cards */
-.gsc-comment {
-  background-color: var(--neo-bg) !important;
-  border: var(--neo-border) !important;
-  border-radius: 8px !important;
-  box-shadow: var(--neo-shadow) !important;
-  margin-bottom: 20px !important;
-  color: var(--color-fg-default) !important;
-  overflow: visible !important;
 }
 
 .gsc-comment-header,
