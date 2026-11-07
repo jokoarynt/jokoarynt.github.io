@@ -45,7 +45,7 @@ main.dark,
 body, main {
   font-family: monospace, sans-serif !important;
   color: var(--color-fg-default) !important;
-  background: transparent !important;
+  background: var(--color-canvas-default) !important;
 }
 
 /* Sembunyikan Statistik & Powered by Giscus */
