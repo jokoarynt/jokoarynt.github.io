@@ -18,7 +18,7 @@
   --neo-accent: #dcd6f7;
 }
 
-/* 2. DARK MODE (NIGHT MODE) - Target semua kemungkinan atribut dari Giscus */
+/* 2. DARK MODE (NIGHT MODE) */
 html[data-color-mode="dark"],
 html.dark,
 body[data-color-mode="dark"],
@@ -52,10 +52,6 @@ body, main {
 .gsc-comment-box .gsc-reactions, .gsc-comment-box .gsc-reactions-summary, .gsc-comment-box .gsc-comment-box-reactions, .gsc-comment-box-reactions, .gsc-comment-box svg.octicon-smiley, .gsc-comment-box [aria-label*="reaction"], .gsc-comment-box [class*="reaction"] {
   display: none !important;
 }
-
-/* ==========================================================================
-   PERBAIKAN TOTAL: KOTAK PESAN (FORM, TABS, TEXTAREA)
-   ========================================================================== */
 
 /* Kotak Komentar Utama */
 .gsc-comment-box, .color-canvas-default, .color-canvas-subtle {
@@ -106,7 +102,7 @@ body, main {
   background-color: transparent !important;
 }
 
-/* Textarea & Inputs (Paksa Gelap) */
+/* Textarea & Inputs */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
 .gsc-comment-box textarea,
@@ -133,7 +129,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: var(--color-fg-subtle) !important;
 }
 
-/* Buttons (Comment, Sign Out) */
+/* Buttons */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -213,15 +209,26 @@ button[type="submit"]:hover,
 }
 
 /* ==========================================================================
-   FORCE DARK MODE (TAMBAHAN) - Memastikan tidak ada yang tersisa putih
+   FORCE DARK MODE (ANTI-GAGAL)
    ========================================================================== */
 html[data-color-mode="dark"] .gsc-comment-box,
 html[data-color-mode="dark"] .gsc-comment-box-form,
 html[data-color-mode="dark"] .gsc-comment-box-tabs,
 html[data-color-mode="dark"] .gsc-comment-box-bottom,
 html[data-color-mode="dark"] .gsc-comment,
-html[data-color-mode="dark"] textarea.gsc-comment-box-textarea {
-  background-color: #1e1e1e !important;
-  color: #ffffff !important;
-  border-color: #ffffff !important;
+html[data-color-mode="dark"] textarea,
+html[data-color-mode="dark"] input {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+html[data-color-mode="dark"] .gsc-comment-box {
+    border: 2px solid #ffffff !important;
+    box-shadow: 3px 3px 0px #ffffff !important;
+}
+
+html[data-color-mode="dark"] .gsc-comment-box-tab-btn[aria-selected="true"] {
+    background-color: #dcd6f7 !important;
+    color: #000000 !important;
 }
