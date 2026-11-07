@@ -70,15 +70,25 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar & Form Utama */
+/* Kotak Komentar Utama (Form) */
 .gsc-comment-box,
-.gsc-comment,
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: var(--neo-bg) !important;
   border: var(--neo-border) !important;
   border-radius: 8px !important;
   box-shadow: var(--neo-shadow) !important;
+  margin-bottom: 20px !important;
+  color: var(--color-fg-default) !important;
+  overflow: visible !important;
+}
+
+/* Kartu Pesan (Border dipertipis menjadi 1.5px) */
+.gsc-comment {
+  background-color: var(--neo-bg) !important;
+  border: 1.5px solid var(--color-border-default) !important;
+  border-radius: 8px !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 20px !important;
   color: var(--color-fg-default) !important;
   overflow: visible !important;
@@ -135,10 +145,17 @@ button[type="submit"]:hover,
 .gsc-comment-header,
 .gsc-comment-box-header {
   background-color: var(--color-canvas-subtle) !important;
-  border-bottom: var(--neo-border) !important;
+  border-bottom: 1.5px solid var(--color-border-default) !important;
   color: var(--color-fg-muted) !important;
   font-weight: bold !important;
   padding: 10px 14px !important;
+}
+
+/* Hapus underline URL pada waktu pesan dibuat */
+.gsc-comment-header a,
+.gsc-comment-header time,
+.gsc-comment-header .Link--secondary {
+  text-decoration: none !important;
 }
 
 .gsc-comment-text,
