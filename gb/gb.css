@@ -152,6 +152,19 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
+/* ATURAN NAMA USER / AUTHOR (Font size normal .9rem & bold) */
+.gsc-comment-author,
+.gsc-comment-header .gsc-comment-author,
+.gsc-comment-header a.author,
+.timeline-comment-header .author,
+.gsc-comment-header a[href^="https://github.com/"] {
+  font-size: 0.9rem !important;
+  font-weight: bold !important;
+  font-family: monospace, sans-serif !important;
+  color: var(--color-fg-default) !important;
+  text-decoration: none !important;
+}
+
 /* ATURAN TIMESTAMP MUTLAK (Pesan utama & Pesan balasan secara seragam) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
