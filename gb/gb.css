@@ -151,15 +151,19 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* Ukuran font waktu diperkecil & Underline dashed dengan jarak (tidak mepet) */
+/* Ukuran font waktu diperkecil, non-bold, dan underline dashed dengan jarak */
 .gsc-comment-header time,
-.gsc-comment-header a {
-  font-size: 0.72rem !important;
+.gsc-comment-header a,
+.timeline-comment-header time,
+.timeline-comment-header a {
+  font-size: 0.7rem !important;
+  font-weight: normal !important;
 }
 
-.gsc-comment-header a {
+.gsc-comment-header a,
+.timeline-comment-header a {
   text-decoration: underline dashed !important;
-  text-decoration-thickness: 1.2px !important;
+  text-decoration-thickness: 1px !important;
   text-underline-offset: 4px !important;
 }
 
