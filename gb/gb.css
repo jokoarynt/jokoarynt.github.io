@@ -196,14 +196,13 @@ button[type="submit"]:hover,
   box-shadow: none !important;
   color: var(--color-fg-muted) !important;
   -webkit-text-stroke: 0px transparent !important;
+  animation: none !important;
 }
 
-/* ANIMASI GRADASI RGB UNTUK USERNAME (PESAN UTAMA & BALASAN) */
-@keyframes rgbGradientText {
-  0% { color: #ff0000; -webkit-text-stroke: 0.8px #ff0000; }
-  33% { color: #00ff00; -webkit-text-stroke: 0.8px #00ff00; }
-  66% { color: #0000ff; -webkit-text-stroke: 0.8px #0000ff; }
-  100% { color: #ff0000; -webkit-text-stroke: 0.8px #ff0000; }
+/* ANIMASI LORENG BERJALAN SEPERTI ZEBRA (STRripes BERGERAK) PADA USERNAME */
+@keyframes zebraStripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
 }
 
 /* ATURAN TARGET EKSTRIM UNTUK SEMUA ELEMEN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN) */
@@ -250,38 +249,14 @@ button[type="submit"]:hover,
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
   text-decoration: none !important;
-  animation: rgbGradientText 4s linear infinite !important;
-}
-
-/* KEMBALIKAN TIMESTAMP AGAR TIDAK IKUT MENJADI BOLD / IKUT TERKENA SELEKTOR UNIVERSAL ATAS */
-.gsc-comment-header time,
-.gsc-comment-header a.Link--secondary,
-.gsc-comment-header a[href*="#issuecomment-"],
-.gsc-comment-header a[href*="#discussioncomment-"],
-.timeline-comment-header time,
-.timeline-comment-header a.Link--secondary,
-.timeline-comment-header a[href*="#issuecomment-"],
-.timeline-comment-header a[href*="#discussioncomment-"],
-.gsc-reply time,
-.gsc-reply a.Link--secondary,
-.gsc-reply a[href*="#issuecomment-"],
-.gsc-reply a[href*="#discussioncomment-"],
-.gsc-replies time,
-.gsc-replies a.Link--secondary,
-.gsc-replies a[href*="#issuecomment-"],
-.gsc-replies a[href*="#discussioncomment-"],
-.gsc-comment-replies time,
-.gsc-comment-replies a.Link--secondary,
-[class*="reply"] time,
-[class*="replies"] time {
-  font-size: 0.7rem !important;
-  font-weight: 400 !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  color: var(--color-fg-muted) !important;
-  -webkit-text-stroke: 0px transparent !important;
-  animation: none !important;
+  
+  /* Efek Loreng Berjalan (Zebra Stripes Gradient) */
+  background: linear-gradient(135deg, #000000 25%, #ffffff 25%, #ffffff 50%, #000000 50%, #000000 75%, #ffffff 75%, #ffffff 100%) !important;
+  background-size: 40px 40px !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 0.2px rgba(0,0,0,0.2) !important;
+  animation: zebraStripes 1.5s linear infinite !important;
 }
 
 /* Underline dashed berjarak tidak mepet teks untuk URL/link di dalam isi pesan */
