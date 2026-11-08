@@ -128,7 +128,7 @@ a[href*="giscus.app"] {
   }
 }
 
-/* PADDING & JARAK PADA PESAN BALASAN (REPLIES) - Dibuat tipis */
+/* PADDING & JARAK PADA PESAN BALASAN (REPLIES) */
 .gsc-replies,
 .gsc-comment-replies,
 .gsc-reply,
@@ -136,7 +136,7 @@ a[href*="giscus.app"] {
 [class*="replies"] {
   margin-top: 4px !important;
   padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  padding-bottom: 3px !important;
 }
 
 /* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
@@ -217,7 +217,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* TIMESTAMP - Memastikan underline benar-benar hilang total */
+/* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -227,10 +227,15 @@ button[type="submit"]:hover,
 .timeline-comment-header a[href*="#issuecomment-"],
 .timeline-comment-header a[href*="#discussioncomment-"],
 .gsc-reply time,
+.gsc-reply a.Link--secondary,
 .gsc-replies time,
+.gsc-replies a.Link--secondary,
 .gsc-comment-replies time,
+.gsc-comment-replies a.Link--secondary,
 [class*="reply"] time,
-[class*="replies"] time {
+[class*="reply"] a,
+[class*="replies"] time,
+[class*="replies"] a {
   font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -250,13 +255,19 @@ button[type="submit"]:hover,
 .timeline-comment-header a[href*="#issuecomment-"]:hover,
 .timeline-comment-header a[href*="#discussioncomment-"]:hover,
 .gsc-reply time:hover,
+.gsc-reply a.Link--secondary:hover,
 .gsc-replies time:hover,
+.gsc-replies a.Link--secondary:hover,
 .gsc-comment-replies time:hover,
+.gsc-comment-replies a.Link--secondary:hover,
 [class*="reply"] time:hover,
-[class*="replies"] time:hover {
+[class*="reply"] a:hover,
+[class*="replies"] time:hover,
+[class*="replies"] a:hover {
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 /* NAMA USER / AUTHOR */
