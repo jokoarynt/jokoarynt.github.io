@@ -308,10 +308,13 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Panah ke Atas (Upvote / Like) */
+/* Tombol Panah ke Atas (Upvote / Like) & Tombol Reactions */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
-button:has(svg.octicon-arrow-up) {
+button:has(svg.octicon-arrow-up),
+button[aria-label*="reaction"],
+button[aria-label*="Reaction"],
+.gsc-reactions-button {
   background-color: var(--neo-accent) !important;
   border: var(--neo-border) !important;
   color: #000000 !important;
@@ -322,7 +325,10 @@ button:has(svg.octicon-arrow-up) {
 
 button[aria-label*="Upvote"]:hover,
 button[aria-label*="upvote"]:hover,
-button:has(svg.octicon-arrow-up):hover {
+button:has(svg.octicon-arrow-up):hover,
+button[aria-label*="reaction"]:hover,
+button[aria-label*="Reaction"]:hover,
+.gsc-reactions-button:hover {
   background-color: #c5bde8 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
