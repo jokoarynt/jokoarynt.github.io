@@ -105,13 +105,13 @@ a[href*="giscus.app"] {
   overflow: hidden !important;
 }
 
-/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 2.5px */
+/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px */
 @media (max-width: 767px) {
   .gsc-comment,
   .gsc-comment-box,
   .color-canvas-default,
   .color-canvas-subtle {
-    margin-bottom: 2.5px !important;
+    margin-bottom: 1.25px !important;
   }
 }
 
