@@ -298,11 +298,13 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* HANYA Tombol Pemicu Reaksi (Button) yang diberi warna Ungu & Neo-Brutalist */
+/* Tombol Reaksi, Tombol Like, dan Tombol Beri Reaksi diberi gaya Ungu Neo-Brutalist */
 .gsc-reactions-button,
 button[aria-label*="reaction"],
 button[aria-label*="Like"],
-button[aria-label*="like"] {
+button[aria-label*="like"],
+.gsc-comment-reactions-button,
+button.js-details-target[aria-label*="reaction"] {
   background-color: var(--neo-accent) !important;
   border: var(--neo-border) !important;
   color: #000000 !important;
@@ -315,14 +317,15 @@ button[aria-label*="like"] {
 .gsc-reactions-button:hover,
 button[aria-label*="reaction"]:hover,
 button[aria-label*="Like"]:hover,
-button[aria-label*="like"]:hover {
+button[aria-label*="like"]:hover,
+.gsc-comment-reactions-button:hover {
   background-color: #c5bde8 !important;
   color: #000000 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
 
-/* DAFTAR EMOTICON DI DALAM POPOVER DIKEMBALIKAN NORMAL (TANPA WARNA UNGU & TANPA BORDER) */
+/* Daftar Emoticon di dalam Popover Reaksi dikembalikan normal tanpa warna ungu/border */
 .gsc-reactions-popover button,
 .gsc-popover button,
 div[class*="popover"] button {
