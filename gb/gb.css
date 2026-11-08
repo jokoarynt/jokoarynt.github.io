@@ -45,12 +45,14 @@ html[data-theme="night"] div {
   --neo-accent: #dcd6f7;
 }
 
-/* PAKSA SELURUH TEKS, COUNTER, DAN HEADER DI ATAS FORM TEXTAREA MENJADI PUTIH DALAM MODE GELAP */
+/* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
 [data-color-mode="dark"] .gsc-comment-box,
 [data-color-mode="dark"] .gsc-comment-box *,
-[data-color-mode="dark"] .gsc-comments-count,
-[data-color-mode="dark"] .gsc-comment-count,
 [data-color-mode="dark"] .gsc-comment-box-header,
+[data-color-mode="dark"] .gsc-comment-box-header *,
+[data-color-mode="dark"] .gsc-reactions-count,
+[data-color-mode="dark"] [class*="reaction"],
+[data-color-mode="dark"] [class*="count"],
 main.dark .gsc-comment-box *,
 html[data-theme="night"] .gsc-comment-box * {
   color: #ffffff !important;
@@ -71,7 +73,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
+/* Sembunyikan total reaksi dan ikon emoji khusus jika disembunyikan */
 .gsc-comment-box .gsc-reactions,
 .gsc-comment-box .gsc-reactions-summary,
 .gsc-comment-box .gsc-comment-box-reactions,
