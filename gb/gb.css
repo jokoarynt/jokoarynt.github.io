@@ -218,7 +218,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR & TOMBOL TAB WRITE/PREVIEW DI ATAS TEXTAREA */
+/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA */
 .gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
@@ -248,6 +248,16 @@ button[type="submit"]:hover,
   border-radius: 0 !important;
   background: transparent !important;
   background-color: transparent !important;
+}
+
+/* BORDER BAWAH KHUSUS TOMBOL PREVIEW */
+.gsc-comment-box button[role="tab"]:nth-child(2),
+.gsc-comment-box .tabnav-tab:nth-child(2),
+.gsc-comment-box [class*="tab"]:nth-child(2),
+.gsc-comment-box a[role="tab"]:nth-child(2),
+.gsc-comment-box button[aria-selected="true"],
+.gsc-comment-box [aria-selected="true"] {
+  border-bottom: 1.7px solid var(--color-border-default) !important;
 }
 
 .gsc-comment-box button[role="tab"]::before,
