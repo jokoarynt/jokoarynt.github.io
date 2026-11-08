@@ -32,6 +32,17 @@
       box-shadow: 5px 5px 0px var(--shadow-color, #000000) !important;
       border-radius: 12px !important;
     }
+
+    /* Perbaikan agar sudut navbar menyatu dengan border card utama */
+    body.gb #container .navbar {
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+    }
+
+    body.gb #container .bottom-navbar {
+      border-bottom-left-radius: 9px;
+      border-bottom-right-radius: 9px;
+    }
   </style>
 </head>
 <body class="gb">
