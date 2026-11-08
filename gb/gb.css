@@ -15,7 +15,7 @@
   --color-accent-emphasis: #dcd6f7 !important;
   
   --neo-border: 1.7px solid #000000;
-  --neo-shadow: 4px 4px 0px #000000;
+  --neo-shadow: 6px 6px 0px #000000;
   --neo-shadow-hover: 1px 1px 0px #000000;
   --neo-bg: #e4e4e4;
   --neo-accent: #dcd6f7;
@@ -39,7 +39,7 @@ html[data-theme="night"] div {
   --color-accent-emphasis: #dcd6f7 !important;
   
   --neo-border: 1.7px solid #ffffff;
-  --neo-shadow: 4px 4px 0px #ffffff;
+  --neo-shadow: 6px 6px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #3a3a3a !important;
   --neo-accent: #dcd6f7;
@@ -83,25 +83,27 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Border 1.7px, Shadow Kanan-Bawah, & Sudut Membulat Sempurna */
+/* Kotak Komentar Utama (Form) dengan Shadow Kanan yang Jelas & Sudut Membulat Sempurna */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: var(--color-canvas-default) !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 4px 4px 0px var(--color-border-default) !important;
+  box-shadow: 6px 6px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
+  margin-right: 6px !important;
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Background Abu-abu, Border 1.7px, Shadow Kanan-Bawah, & Sudut Membulat Sempurna */
+/* KARTU PESAN: Shadow Kanan Terlihat Jelas & Sudut Kanan Bawah Tidak Lancip */
 .gsc-comment {
   background-color: var(--color-canvas-default) !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 4px 4px 0px var(--color-border-default) !important;
+  box-shadow: 6px 6px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
+  margin-right: 6px !important;
   overflow: visible !important;
 }
 
