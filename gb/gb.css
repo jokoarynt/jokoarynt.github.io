@@ -128,15 +128,15 @@ a[href*="giscus.app"] {
   }
 }
 
-/* PADDING & JARAK PADA PESAN BALASAN (REPLIES) */
+/* PADDING & JARAK PADA PESAN BALASAN (REPLIES) - Dibuat tipis */
 .gsc-replies,
 .gsc-comment-replies,
 .gsc-reply,
 [class*="reply"],
 [class*="replies"] {
   margin-top: 4px !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
 }
 
 /* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
@@ -217,7 +217,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* TIMESTAMP */
+/* TIMESTAMP - Memastikan underline benar-benar hilang total */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -256,6 +256,7 @@ button[type="submit"]:hover,
 [class*="replies"] time:hover {
   text-decoration: none !important;
   text-decoration-line: none !important;
+  border-bottom: none !important;
 }
 
 /* NAMA USER / AUTHOR */
@@ -276,7 +277,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0.8px #000000 !important;
 }
 
-/* Underline dashed untuk link teks */
+/* Underline dashed untuk link teks di dalam isi komentar */
 .gsc-comment-text a:not([class]),
 .markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
@@ -284,7 +285,7 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* TEKS DI DALAM PESAN HITAM */
+/* TEKS DI DALAM PESAN */
 .gsc-comment-content,
 .gsc-comment-text,
 .gsc-comment-body,
