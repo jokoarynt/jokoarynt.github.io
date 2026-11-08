@@ -19,6 +19,9 @@
   --neo-shadow-hover: 1px 1px 0px #000000;
   --neo-bg: #ffffff;
   --neo-accent: #dcd6f7;
+  
+  /* Variabel warna abu-abu tipis untuk pesan (Light Mode) */
+  --msg-text-color: #777777;
 }
 
 /* Dark Mode (Night Mode) */
@@ -34,7 +37,7 @@ html[data-theme="night"] div {
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
   --color-fg-muted: #ffffff !important;
-  --color-fg-subtle: #b0b0b0 !important;
+  --color-fg-subtle: #ffffff !important;
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
@@ -43,6 +46,9 @@ html[data-theme="night"] div {
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #1e1e1e !important;
   --neo-accent: #dcd6f7;
+  
+  /* Variabel warna abu-abu tipis untuk pesan (Dark Mode) */
+  --msg-text-color: #a0a0a0;
 }
 
 /* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
@@ -285,11 +291,12 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* Warna Abu-abu Tipis pada Isi Pesan */
+/* TEKS ISI PESAN DIATUR MENJADI ABU-ABU TIPIS */
 .gsc-comment-text,
 .gsc-comment-text *,
-.markdown-body {
-  color: var(--color-fg-subtle) !important;
+.markdown-body,
+.markdown-body * {
+  color: var(--msg-text-color) !important;
   font-family: monospace, sans-serif !important;
 }
 
