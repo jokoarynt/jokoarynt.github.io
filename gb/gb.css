@@ -136,7 +136,7 @@ a[href*="giscus.app"] {
 [class*="replies"] {
   margin-top: 4px !important;
   padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  padding-bottom: 0 !important;
 }
 
 /* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
