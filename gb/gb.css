@@ -292,18 +292,23 @@ button[type="submit"]:hover,
 }
 
 /* NAMA USER / AUTHOR (Disamakan total untuk pesan utama & balasan) */
-.gsc-comment-header .gsc-comment-author,
+.gsc-comment-author,
 .gsc-comment-header a.author,
 .timeline-comment-header .author,
 .gsc-comment-header a[data-hovercard-type="user"],
 .gsc-comment-header a.Link--primary,
 .gsc-comment-header strong,
 .timeline-comment-header strong,
-[class*="comment"] .gsc-comment-author,
-[class*="comment"] a.author,
-[class*="comment"] a[data-hovercard-type="user"],
-[class*="comment"] a.Link--primary,
-[class*="comment"] strong,
+.gsc-reply .gsc-comment-author,
+.gsc-reply a.author,
+.gsc-reply a[data-hovercard-type="user"],
+.gsc-reply a.Link--primary,
+.gsc-reply strong,
+.gsc-replies .gsc-comment-author,
+.gsc-replies a.author,
+.gsc-replies a[data-hovercard-type="user"],
+.gsc-replies a.Link--primary,
+.gsc-replies strong,
 [class*="reply"] .gsc-comment-author,
 [class*="reply"] a.author,
 [class*="reply"] a[data-hovercard-type="user"],
@@ -313,7 +318,11 @@ button[type="submit"]:hover,
 [class*="replies"] a.author,
 [class*="replies"] a[data-hovercard-type="user"],
 [class*="replies"] a.Link--primary,
-[class*="replies"] strong {
+[class*="replies"] strong,
+.gsc-comment-header a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary),
+.gsc-reply a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary),
+.gsc-replies a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary),
+[class*="reply"] a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary) {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
