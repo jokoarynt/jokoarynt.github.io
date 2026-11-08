@@ -239,23 +239,11 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Tombol Write (Tab Pertama) - Tanpa border bawah */
-.gsc-comment-box button[role="tab"]:first-child,
-.gsc-comment-box .tabnav-tab:first-child,
-.gsc-comment-box [class*="tab"]:first-child,
-.gsc-comment-box a[role="tab"]:first-child {
-  border: none !important;
-  border-bottom: none !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* BORDER BAWAH TIPIS KHUSUS TOMBOL PREVIEW (Tab Kedua) */
-.gsc-comment-box button[role="tab"]:nth-child(2),
-.gsc-comment-box .tabnav-tab:nth-child(2),
-.gsc-comment-box [class*="tab"]:nth-child(2),
-.gsc-comment-box a[role="tab"]:nth-child(2) {
+/* BERIKAN BORDER BAWAH TIPIS PADA KEDUA TOMBOL WRITE & PREVIEW */
+.gsc-comment-box button[role="tab"],
+.gsc-comment-box .tabnav-tab,
+.gsc-comment-box [class*="tab"],
+.gsc-comment-box a[role="tab"] {
   border: none !important;
   border-bottom: 1.7px solid var(--color-border-default) !important;
   border-radius: 0 !important;
