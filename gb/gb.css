@@ -96,8 +96,13 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
-.gsc-comment {
+/* KARTU PESAN & REPLIES: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
+.gsc-comment,
+.gsc-reply,
+.gsc-replies,
+.gsc-comment-replies,
+[class*="reply"],
+[class*="replies"] {
   background-color: #ebebeb !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
@@ -107,9 +112,11 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
+/* Memaksa seluruh elemen pembungkus di dalam kartu pesan & balasan agar mengikuti lengkungan sudut */
 .gsc-comment > div,
 .gsc-comment-box > div,
+.gsc-reply > div,
+.gsc-replies > div,
 .gsc-comment-content,
 .gsc-comment-box-main,
 .gsc-comment-body,
@@ -122,6 +129,11 @@ a[href*="giscus.app"] {
 @media (max-width: 767px) {
   .gsc-comment,
   .gsc-comment-box,
+  .gsc-reply,
+  .gsc-replies,
+  .gsc-comment-replies,
+  [class*="reply"],
+  [class*="replies"],
   .color-canvas-default,
   .color-canvas-subtle {
     margin-bottom: 1.25px !important;
@@ -149,7 +161,7 @@ a[href*="giscus.app"] {
   margin: 0 !important;
 }
 
-/* Padding seragam di semua sisi pada bodi pesan dan balasan (replies) */
+/* Padding seragam dan rata di semua sisi pada bodi pesan dan balasan (replies) */
 .gsc-comment-content,
 .gsc-comment-body,
 .markdown-body,
@@ -160,7 +172,7 @@ a[href*="giscus.app"] {
 [class*="replies"] .gsc-comment-content {
   border-top: none !important;
   margin-top: 0 !important;
-  padding: 12px 14px !important;
+  padding: 14px !important;
 }
 
 /* Textarea & Inputs */
@@ -212,7 +224,7 @@ button[type="submit"]:hover,
 }
 
 /* Tombol Sign in with GitHub & Link Sign out */
-.gsc- социального-reaction-button,
+.gsc-social-reaction-button,
 a.gsc-header-button,
 button.gsc-header-button,
 a[href*="github.com/login"],
