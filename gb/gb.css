@@ -198,6 +198,14 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0px transparent !important;
 }
 
+/* ANIMASI GRADASI RGB UNTUK USERNAME (PESAN UTAMA & BALASAN) */
+@keyframes rgbGradientText {
+  0% { color: #ff0000; -webkit-text-stroke: 0.8px #ff0000; }
+  33% { color: #00ff00; -webkit-text-stroke: 0.8px #00ff00; }
+  66% { color: #0000ff; -webkit-text-stroke: 0.8px #0000ff; }
+  100% { color: #ff0000; -webkit-text-stroke: 0.8px #ff0000; }
+}
+
 /* ATURAN TARGET EKSTRIM UNTUK SEMUA ELEMEN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN) */
 .gsc-comment-header a,
 .gsc-comment-author,
@@ -241,9 +249,8 @@ button[type="submit"]:hover,
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
-  color: var(--color-fg-default) !important;
   text-decoration: none !important;
-  -webkit-text-stroke: 0.8px var(--color-fg-default) !important;
+  animation: rgbGradientText 4s linear infinite !important;
 }
 
 /* KEMBALIKAN TIMESTAMP AGAR TIDAK IKUT MENJADI BOLD / IKUT TERKENA SELEKTOR UNIVERSAL ATAS */
@@ -274,14 +281,15 @@ button[type="submit"]:hover,
   box-shadow: none !important;
   color: var(--color-fg-muted) !important;
   -webkit-text-stroke: 0px transparent !important;
+  animation: none !important;
 }
 
-/* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
+/* Underline dashed berjarak tidak mepet teks untuk URL/link di dalam isi pesan */
 .gsc-comment-text a:not([class]),
 .markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
-  text-decoration-thickness: 1px !important;
-  text-underline-offset: 4px !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 6px !important;
 }
 
 .gsc-comment-text,
