@@ -218,7 +218,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN BORDER PADA TOOLBAR / KOTAK M ▾ DI ANTARA TOMBOL SIGN & TEXTAREA */
+/* HILANGKAN BORDER & BACKGROUND PADA TOOLBAR / KOTAK M ▾ DI ATAS TEXTAREA */
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
 .gsc-comment-box .Box-header,
@@ -227,7 +227,9 @@ button[type="submit"]:hover,
 .gsc-comment-box [class*="toolbar"],
 .gsc-comment-box [class*="tabnav"],
 .gsc-comment-box [class*="Box-header"],
-.gsc-comment-box-main > div:first-of-type {
+.gsc-comment-box-main > div:first-of-type,
+.gsc-comment-box .form-actions + div,
+.gsc-comment-box [role="tablist"] {
   border: none !important;
   border-top: none !important;
   border-bottom: none !important;
