@@ -28,6 +28,9 @@
       max-height: none !important;
       overflow: visible !important;
       margin: auto auto !important;
+      border: 3px solid var(--border-color, #000000) !important;
+      box-shadow: 5px 5px 0px var(--shadow-color, #000000) !important;
+      border-radius: 12px !important;
     }
   </style>
 </head>
@@ -66,7 +69,7 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="https://joko.my.id/gb/gb.css?v=99"
+              data-theme="https://joko.my.id/gb/gb.css?v=16"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -132,12 +135,10 @@
       const isNight = document.documentElement.getAttribute('data-theme') === 'night';
       const iframe = document.querySelector('iframe.giscus-frame');
       if (iframe) {
-        // Kirim penanda versi & mode agar file CSS dimuat ulang secara tepat tanpa cache lama
-        const themeUrl = `https://joko.my.id/gb/gb.css?v=99&dark=${isNight}`;
         iframe.contentWindow.postMessage({
           giscus: {
             setConfig: {
-              theme: themeUrl
+              theme: 'https://joko.my.id/gb/gb.css?v=16'
             }
           }
         }, 'https://giscus.app');
