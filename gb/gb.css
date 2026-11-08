@@ -20,8 +20,8 @@
   --neo-bg: #ffffff;
   --neo-accent: #dcd6f7;
   
-  /* Warna abu-abu tipis untuk isi pesan (Light Mode) */
-  --msg-text-color: #666666 !important;
+  /* Background abu-abu untuk kartu pesan */
+  --msg-bg-color: #e4e4e4 !important;
 }
 
 /* Dark Mode (Night Mode) */
@@ -47,8 +47,8 @@ html[data-theme="night"] div {
   --neo-bg: #1e1e1e !important;
   --neo-accent: #dcd6f7;
   
-  /* Warna abu-abu tipis untuk isi pesan (Dark Mode) */
-  --msg-text-color: #aaaaaa !important;
+  /* Background abu-abu untuk kartu pesan (Dark Mode) */
+  --msg-bg-color: #2b2b2b !important;
 }
 
 /* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
@@ -102,14 +102,13 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Kartu Pesan */
+/* KARTU PESAN: Background diubah menjadi abu-abu */
 .gsc-comment {
-  background-color: var(--neo-bg) !important;
+  background-color: var(--msg-bg-color) !important;
   border: 1.5px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 20px !important;
-  color: var(--color-fg-default) !important;
   overflow: visible !important;
 }
 
@@ -291,7 +290,7 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* SELEKTOR ULTRA-AGRESIF UNTUK ISI PESAN GISCUS */
+/* WARNA TEKS PESAN DIPAKSA MENJADI HITAM (#000000) */
 .gsc-comment-content,
 .gsc-comment-text,
 .gsc-comment-body,
@@ -300,7 +299,7 @@ button[type="submit"]:hover,
 .markdown-body li,
 .markdown-body blockquote,
 .markdown-body span {
-  color: var(--msg-text-color) !important;
+  color: #000000 !important;
   font-family: monospace, sans-serif !important;
 }
 
