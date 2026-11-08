@@ -66,7 +66,7 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="https://joko.my.id/gb/gb.css?v=11"
+              data-theme="https://joko.my.id/gb/gb.css?v=99"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -132,10 +132,8 @@
       const isNight = document.documentElement.getAttribute('data-theme') === 'night';
       const iframe = document.querySelector('iframe.giscus-frame');
       if (iframe) {
-        const themeUrl = isNight 
-          ? 'https://joko.my.id/gb/gb.css?v=11&mode=dark' 
-          : 'https://joko.my.id/gb/gb.css?v=11&mode=light';
-
+        // Kirim penanda versi & mode agar file CSS dimuat ulang secara tepat tanpa cache lama
+        const themeUrl = `https://joko.my.id/gb/gb.css?v=99&dark=${isNight}`;
         iframe.contentWindow.postMessage({
           giscus: {
             setConfig: {
