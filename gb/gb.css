@@ -128,6 +128,16 @@ a[href*="giscus.app"] {
   }
 }
 
+/* PENGURANGAN PADDING/JARAK ATAS PADA PESAN BALASAN (REPLIES) */
+.gsc-replies,
+.gsc-comment-replies,
+.gsc-reply,
+[class*="reply"],
+[class*="replies"] {
+  margin-top: 4px !important;
+  padding-top: 0 !important;
+}
+
 /* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
 .gsc-comment-header,
 .gsc-comment-box-header,
