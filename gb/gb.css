@@ -211,13 +211,16 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Tombol Sign in with GitHub */
-.gsc-social-reaction-button,
+/* Tombol Sign in with GitHub & Link Sign out */
+.gsc- социального-reaction-button,
 a.gsc-header-button,
 button.gsc-header-button,
 a[href*="github.com/login"],
 button:has(.octicon-mark-github),
-.gsc-auth-link {
+.gsc-auth-link,
+a.gsc-comment-box-logout,
+.gsc-comment-box-logout a,
+a[href*="logout"] {
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
   background-color: #bfbfbf !important;
@@ -240,7 +243,10 @@ a.gsc-header-button:hover,
 button.gsc-header-button:hover,
 a[href*="github.com/login"]:hover,
 button:has(.octicon-mark-github):hover,
-.gsc-auth-link:hover {
+.gsc-auth-link:hover,
+a.gsc-comment-box-logout:hover,
+.gsc-comment-box-logout a:hover,
+a[href*="logout"]:hover {
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
   background-color: #a8a8a8 !important;
@@ -327,7 +333,7 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Reaksi Utama */
+/* Tombol Reaksi Utama (Upvote, dll) */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
