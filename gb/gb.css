@@ -234,9 +234,9 @@ button[type="submit"]:hover,
 .gsc-comment-replies time,
 .gsc-comment-replies a.Link--secondary,
 [class*="reply"] time,
-[class*="reply"] a,
+[class*="reply"] a.Link--secondary,
 [class*="replies"] time,
-[class*="replies"] a {
+[class*="replies"] a.Link--secondary {
   font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -262,16 +262,16 @@ button[type="submit"]:hover,
 .gsc-comment-replies time:hover,
 .gsc-comment-replies a.Link--secondary:hover,
 [class*="reply"] time:hover,
-[class*="reply"] a:hover,
+[class*="reply"] a.Link--secondary:hover,
 [class*="replies"] time:hover,
-[class*="replies"] a:hover {
+[class*="replies"] a.Link--secondary:hover {
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
 
-/* NAMA USER / AUTHOR */
+/* NAMA USER / AUTHOR (Pesan Utama & Pesan Balasan Dibuat Identik) */
 .gsc-comment-header a,
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
@@ -280,7 +280,19 @@ button[type="submit"]:hover,
 .gsc-comment-header a[data-hovercard-type="user"],
 .gsc-comment-header a.Link--primary,
 .gsc-comment-header strong,
-.timeline-comment-header strong {
+.timeline-comment-header strong,
+.gsc-reply .gsc-comment-author,
+.gsc-reply .gsc-comment-header a,
+.gsc-reply .gsc-comment-header a.Link--primary,
+.gsc-reply .gsc-comment-header strong,
+.gsc-replies .gsc-comment-author,
+.gsc-replies .gsc-comment-header a,
+.gsc-replies .gsc-comment-header a.Link--primary,
+.gsc-replies .gsc-comment-header strong,
+[class*="reply"] .gsc-comment-author,
+[class*="reply"] .gsc-comment-header a,
+[class*="replies"] .gsc-comment-author,
+[class*="replies"] .gsc-comment-header a {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
