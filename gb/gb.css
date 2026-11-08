@@ -71,7 +71,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru jika memang ingin disembunyikan */
+/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
 .gsc-comment-box .gsc-reactions,
 .gsc-comment-box .gsc-reactions-summary,
 .gsc-comment-box .gsc-comment-box-reactions,
