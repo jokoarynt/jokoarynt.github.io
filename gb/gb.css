@@ -83,26 +83,34 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Border 1.7px & Sudut Kanan Bawah Tidak Lancip */
+/* Kotak Komentar Utama (Form) dengan Border 1.7px & Sudut Membulat Sempurna */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: var(--color-canvas-default) !important;
   border: 1.7px solid var(--color-border-default) !important;
-  border-radius: 8px 8px 8px 8px !important;
+  border-radius: 8px !important;
   box-shadow: 3px 3px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
   overflow: hidden !important;
 }
 
-/* KARTU PESAN: Background Abu-abu, Border 1.7px, & Sudut Kanan Bawah Tidak Lancip */
+/* KARTU PESAN: Background Abu-abu, Border 1.7px, & Sudut Membulat Sempurna Tanpa Lancip */
 .gsc-comment {
   background-color: var(--color-canvas-default) !important;
   border: 1.7px solid var(--color-border-default) !important;
-  border-radius: 8px 8px 8px 8px !important;
+  border-radius: 8px !important;
   box-shadow: 3px 3px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
   overflow: hidden !important;
+}
+
+/* Pastikan semua elemen pembungkus di dalam komentar ikut terpotong rapi */
+.gsc-comment > div,
+.gsc-comment-box > div,
+.gsc-comment-content,
+.gsc-comment-box-main {
+  border-radius: inherit !important;
 }
 
 /* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px */
