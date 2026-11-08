@@ -239,13 +239,15 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* BERIKAN BORDER BAWAH TIPIS PADA KEDUA TOMBOL WRITE & PREVIEW */
+/* BERIKAN BORDER BAWAH TIPIS SECARA PAKSA PADA TOMBOL WRITE DAN PREVIEW */
 .gsc-comment-box button[role="tab"],
 .gsc-comment-box .tabnav-tab,
 .gsc-comment-box [class*="tab"],
 .gsc-comment-box a[role="tab"] {
-  border: none !important;
   border-bottom: 1.7px solid var(--color-border-default) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
   border-radius: 0 !important;
   background: transparent !important;
   background-color: transparent !important;
