@@ -83,7 +83,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) */
+/* Kotak Komentar Utama (Form) - Jarak dipersempit */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
@@ -91,17 +91,17 @@ a[href*="giscus.app"] {
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 3px 3px 0px var(--color-border-default) !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
   overflow: hidden !important;
 }
 
-/* KARTU PESAN: Background Abu-abu & Sudut Menyatu */
+/* KARTU PESAN: Background Abu-abu & Sudut Menyatu - Jarak dipersempit */
 .gsc-comment {
   background-color: var(--color-canvas-default) !important;
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 3px 3px 0px var(--color-border-default) !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
   overflow: hidden !important;
 }
 
