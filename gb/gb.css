@@ -218,6 +218,21 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
+/* HAPUS BORDER PADA KOTAK M ▾ (MARKDOWN HELPER/TOOLBAR) DI ANTARA TOMBOL SIGN & TEXTAREA */
+.gsc-comment-box markdown-toolbar,
+.gsc-comment-box .markdown-toolbar,
+.gsc-comment-box a[href*="writing-and-formatting"],
+.gsc-comment-box a[href*="markdown"],
+.gsc-comment-box [class*="markdown"],
+.gsc-comment-box [class*="toolbar"],
+.gsc-comment-box-main markdown-toolbar,
+.gsc-comment-box-main .markdown-toolbar {
+  border: none !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
