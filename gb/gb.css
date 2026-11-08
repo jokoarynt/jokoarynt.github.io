@@ -1,3 +1,4 @@
+gb.css
 /* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
@@ -40,6 +41,16 @@ main.dark,
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #1e1e1e !important;
   --neo-accent: #dcd6f7;
+}
+
+/* Warna teks jumlah reactions di atas form textarea dalam mode gelap */
+[data-color-mode="dark"] .gsc-comment-box .gsc-reactions-count,
+[data-color-mode="dark"] .gsc-comment-box-header,
+[data-color-mode="dark"] .gsc-comment-box .Counter,
+[data-color-mode="dark"] .gsc-comment-box [class*="reaction"],
+main[data-color-mode="dark"] .gsc-comment-box .gsc-reactions-count,
+main[data-color-mode="dark"] .gsc-comment-box-header {
+  color: #ffffff !important;
 }
 
 body, main {
