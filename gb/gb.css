@@ -218,7 +218,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN SEMUA BORDER PADA DIV/TOOLBAR/HEADER DI ANTARA SIGN-IN & TEXTAREA */
+/* HILANGKAN BORDER KOTAK UTAMA TOOLBAR, LALU BERIKAN BORDER TIPIS BAWAH PADA TOMBOL WRITE & PREVIEW */
 .gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
@@ -235,6 +235,17 @@ button[type="submit"]:hover,
   border-right: none !important;
   border-width: 0 !important;
   box-shadow: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.gsc-comment-box button[role="tab"],
+.gsc-comment-box .tabnav-tab,
+.gsc-comment-box [class*="tab"],
+.gsc-comment-box a[role="tab"] {
+  border: none !important;
+  border-bottom: 1.7px solid var(--color-border-default) !important;
+  border-radius: 0 !important;
   background: transparent !important;
   background-color: transparent !important;
 }
