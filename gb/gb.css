@@ -1,3 +1,4 @@
+gb.css
 /* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
@@ -21,18 +22,19 @@
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Night Mode) */
+/* Dark Mode (Night Mode) - Ditargetkan secara luas untuk mencakup semua atribut tema */
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"],
 html[data-theme="night"] main,
+html[data-theme="night"] body,
 html[data-theme="night"] div {
   --color-canvas-default: #1e1e1e !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
-  --color-fg-muted: #ffffff !important; /* Diubah jadi putih agar teks reaksi/header ikut putih */
+  --color-fg-muted: #ffffff !important;
   --color-fg-subtle: #ffffff !important;
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #dcd6f7 !important;
@@ -44,12 +46,13 @@ html[data-theme="night"] div {
   --neo-accent: #dcd6f7;
 }
 
-/* Paksa seluruh teks jumlah reaksi, header, dan counter menjadi putih mutlak dalam mode gelap */
+/* PAKSA SELURUH TEKS DI DALAM KOTAK KOMENTAR MENJADI PUTIH PADA MODE GELAP */
+[data-color-mode="dark"] .gsc-comment-box,
 [data-color-mode="dark"] .gsc-comment-box *,
+main.dark .gsc-comment-box,
 main.dark .gsc-comment-box *,
-[data-color-mode="dark"] div[class*="reaction"],
-[data-color-mode="dark"] span[class*="count"],
-[data-color-mode="dark"] .gsc-comment-box-header {
+html[data-theme="night"] .gsc-comment-box,
+html[data-theme="night"] .gsc-comment-box * {
   color: #ffffff !important;
 }
 
@@ -294,6 +297,7 @@ button[type="submit"]:hover,
 .gsc-popover,
 div[class*="popover"],
 div[role="tooltip"] {
+  background-image: none !important;
   background-color: var(--neo-bg) !important;
   border: var(--neo-border) !important;
   box-shadow: 4px 4px 0px var(--color-border-default) !important;
