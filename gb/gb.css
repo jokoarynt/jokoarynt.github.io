@@ -218,7 +218,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN BORDER KOTAK UTAMA TOOLBAR, LALU BERIKAN BORDER TIPIS BAWAH PADA TOMBOL WRITE & PREVIEW */
+/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA */
 .gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
@@ -239,15 +239,41 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
+/* HILANGKAN BORDER PADA TOMBOL WRITE & PREVIEW, TAMBAHKAN IKON SVG */
 .gsc-comment-box button[role="tab"],
 .gsc-comment-box .tabnav-tab,
 .gsc-comment-box [class*="tab"],
 .gsc-comment-box a[role="tab"] {
   border: none !important;
-  border-bottom: 1.7px solid var(--color-border-default) !important;
+  border-bottom: none !important;
   border-radius: 0 !important;
   background: transparent !important;
   background-color: transparent !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+/* Menambahkan SVG Ikon Tulis (Write) */
+.gsc-comment-box button[role="tab"]:first-child::before,
+.gsc-comment-box .tabnav-tab:first-child::before,
+.gsc-comment-box [class*="tab"]:first-child::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='14' height='14'%3E%3Cpath fill='%23000000' d='M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm1.414 1.06a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086ZM11.189 6.25 9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.249.249 0 0 0 .108-.064l6.286-6.286Z'%3E%3C/path%3E%3C/svg%3E");
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 1;
+}
+
+/* Menambahkan SVG Ikon Pratinjau (Preview) */
+.gsc-comment-box button[role="tab"]:nth-child(2)::before,
+.gsc-comment-box .tabnav-tab:nth-child(2)::before,
+.gsc-comment-box [class*="tab"]:nth-child(2)::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='14' height='14'%3E%3Cpath fill='%23000000' d='M8 2c1.981 0 3.71.953 4.86 2.5-.15.201-.304.398-.46.591-.986-1.196-2.454-1.941-4.4-1.941-1.946 0-3.414.745-4.4 1.941-.156-.193-.31-.39-.46-.591C4.29 2.953 6.019 2 8 2Zm0 1.5c1.47 0 2.766.626 3.69 1.637-.924 1.011-2.22 1.637-3.69 1.637-1.47 0-2.766-.626-3.69-1.637C5.234 4.126 6.53 3.5 8 3.5Zm0 5.25a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Zm0-1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8 10.5c-2.43 0-4.632.96-6.32 2.68a.75.75 0 0 0 1.04 1.08C4.195 12.871 6.002 12 8 12c1.998 0 3.805.871 5.28 2.26a.75.75 0 0 0 1.04-1.08C12.632 11.46 10.43 10.5 8 10.5Z'%3E%3C/path%3E%3C/svg%3E");
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 1;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
