@@ -226,8 +226,12 @@ button[type="submit"]:hover,
 .gsc-comment-box [class*="markdown"],
 .gsc-comment-box [class*="toolbar"],
 .gsc-comment-box-main markdown-toolbar,
-.gsc-comment-box-main .markdown-toolbar {
-  border: 1.7px solid transparent !important;
+.gsc-comment-box-main .markdown-toolbar,
+.gsc-comment-box-main [class*="markdown"],
+.gsc-comment-box-main [class*="toolbar"] {
+  border: none !important;
+  border-color: transparent !important;
+  border-width: 0 !important;
   box-shadow: none !important;
   background: transparent !important;
 }
