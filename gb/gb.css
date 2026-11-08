@@ -181,7 +181,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: #000000 !important;
 }
 
-/* Buttons */
+/* Buttons (Submit, Write, dll.) */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -200,6 +200,42 @@ button[type="submit"],
 button[type="submit"]:hover,
 .gsc-button-primary:hover,
 .gsc-button:hover {
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  background-color: #a8a8a8 !important;
+  color: #000000 !important;
+}
+
+/* Tombol Sign in with GitHub */
+.gsc-social-reaction-button,
+a.gsc-header-button,
+button.gsc-header-button,
+a[href*="github.com/login"],
+button:has(.octicon-mark-github),
+.gsc-auth-link {
+  font-family: monospace, sans-serif !important;
+  font-weight: bold !important;
+  background-color: #bfbfbf !important;
+  color: #000000 !important;
+  border: 1.7px solid var(--color-border-default) !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease !important;
+}
+
+.gsc-social-reaction-button:hover,
+a.gsc-header-button:hover,
+button.gsc-header-button:hover,
+a[href*="github.com/login"]:hover,
+button:has(.octicon-mark-github):hover,
+.gsc-auth-link:hover {
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
   background-color: #a8a8a8 !important;
