@@ -1,4 +1,3 @@
-gb.css
 /* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
@@ -22,7 +21,7 @@ gb.css
   --neo-accent: #dcd6f7;
 }
 
-/* Dark Mode (Night Mode) - Ditargetkan secara luas untuk mencakup semua atribut tema */
+/* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"],
@@ -46,12 +45,13 @@ html[data-theme="night"] div {
   --neo-accent: #dcd6f7;
 }
 
-/* PAKSA SELURUH TEKS DI DALAM KOTAK KOMENTAR MENJADI PUTIH PADA MODE GELAP */
+/* PAKSA SELURUH TEKS, COUNTER, DAN HEADER DI ATAS FORM TEXTAREA MENJADI PUTIH DALAM MODE GELAP */
 [data-color-mode="dark"] .gsc-comment-box,
 [data-color-mode="dark"] .gsc-comment-box *,
-main.dark .gsc-comment-box,
+[data-color-mode="dark"] .gsc-comments-count,
+[data-color-mode="dark"] .gsc-comment-count,
+[data-color-mode="dark"] .gsc-comment-box-header,
 main.dark .gsc-comment-box *,
-html[data-theme="night"] .gsc-comment-box,
 html[data-theme="night"] .gsc-comment-box * {
   color: #ffffff !important;
 }
@@ -64,8 +64,6 @@ body, main {
 
 /* Sembunyikan Statistik & Powered by Giscus */
 .gsc-header,
-.gsc-comments-count,
-.gsc-comment-count,
 .gsc-footer,
 footer,
 .gsc-homepage-link,
@@ -73,7 +71,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
+/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru jika memang ingin disembunyikan */
 .gsc-comment-box .gsc-reactions,
 .gsc-comment-box .gsc-reactions-summary,
 .gsc-comment-box .gsc-comment-box-reactions,
