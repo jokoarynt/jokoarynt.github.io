@@ -4,7 +4,7 @@
 
 /* Light Mode (Default) */
 :root, main {
-  --color-canvas-default: #dcdcdc !important;  
+  --color-canvas-default: #ebebeb !important;  
   --color-canvas-subtle: #d0d0d0 !important;  
   --color-border-default: #000000 !important;
   --color-border-muted: #000000 !important;
@@ -12,13 +12,13 @@
   --color-fg-muted: #000000 !important;
   --color-fg-subtle: #000000 !important;
   --color-accent-fg: #000000 !important;
-  --color-accent-emphasis: #dcd6f7 !important;
+  --color-accent-emphasis: #bfbfbf !important;
   
   --neo-border: 1.7px solid #000000;
   --neo-shadow: 2px 2px 0px #000000;
   --neo-shadow-hover: 1px 1px 0px #000000;
   --neo-bg: #e4e4e4;
-  --neo-accent: #dcd6f7;
+  --neo-accent: #bfbfbf;
 }
 
 /* Dark Mode (Night Mode) */
@@ -36,13 +36,13 @@ html[data-theme="night"] div {
   --color-fg-muted: #000000 !important;
   --color-fg-subtle: #000000 !important;
   --color-accent-fg: #ffffff !important;
-  --color-accent-emphasis: #dcd6f7 !important;
+  --color-accent-emphasis: #bfbfbf !important;
   
   --neo-border: 1.7px solid #ffffff;
   --neo-shadow: 2px 2px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #3a3a3a !important;
-  --neo-accent: #dcd6f7;
+  --neo-accent: #bfbfbf;
 }
 
 /* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
@@ -83,11 +83,11 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Shadow Proporsional & Sudut Membulat Sempurna */
+/* Kotak Komentar Utama (Form) dengan Warna #ebebeb */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
-  background-color: var(--color-canvas-default) !important;
+  background-color: #ebebeb !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
@@ -96,9 +96,9 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Shadow Proporsional, Sudut Kanan Bawah Tidak Lancip */
+/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
-  background-color: var(--color-canvas-default) !important;
+  background-color: #ebebeb !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
@@ -128,7 +128,7 @@ a[href*="giscus.app"] {
   }
 }
 
-/* Header Kotak Pesan & Balasan: Menyatu dengan Border Body Card */
+/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
@@ -137,7 +137,7 @@ a[href*="giscus.app"] {
 .gsc-comment-replies .gsc-comment-header,
 [class*="reply"] .gsc-comment-header,
 [class*="replies"] .gsc-comment-header {
-  background-color: var(--neo-accent) !important;
+  background-color: #bfbfbf !important;
   border-bottom: 1.7px solid var(--color-border-default) !important;
   color: #000000 !important;
   font-weight: bold !important;
@@ -188,7 +188,7 @@ button[type="submit"],
 .gsc-button {
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
-  background-color: var(--neo-accent) !important;
+  background-color: #bfbfbf !important;
   color: #000000 !important;
   border: var(--neo-border) !important;
   border-radius: 6px !important;
@@ -202,7 +202,7 @@ button[type="submit"]:hover,
 .gsc-button:hover {
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
-  background-color: #c5bde8 !important;
+  background-color: #a8a8a8 !important;
   color: #000000 !important;
 }
 
@@ -293,7 +293,7 @@ button:has(svg.octicon-arrow-up),
 button[aria-label*="reaction"],
 button[aria-label*="Reaction"],
 .gsc-reactions-button {
-  background-color: var(--neo-accent) !important;
+  background-color: #bfbfbf !important;
   border: var(--neo-border) !important;
   color: #000000 !important;
   border-radius: 6px !important;
@@ -307,7 +307,7 @@ button:has(svg.octicon-arrow-up):hover,
 button[aria-label*="reaction"]:hover,
 button[aria-label*="Reaction"]:hover,
 .gsc-reactions-button:hover {
-  background-color: #c5bde8 !important;
+  background-color: #a8a8a8 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
