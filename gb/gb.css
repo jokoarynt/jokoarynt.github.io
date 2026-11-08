@@ -226,10 +226,15 @@ button[type="submit"]:hover,
 .timeline-comment-header a[href*="#issuecomment-"],
 .timeline-comment-header a[href*="#discussioncomment-"],
 .gsc-reply time,
+.gsc-reply .gsc-comment-header a,
 .gsc-replies time,
+.gsc-replies .gsc-comment-header a,
 .gsc-comment-replies time,
+.gsc-comment-replies .gsc-comment-header a,
 [class*="reply"] time,
-[class*="replies"] time {
+[class*="reply"] .gsc-comment-header a,
+[class*="replies"] time,
+[class*="replies"] .gsc-comment-header a {
   font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
