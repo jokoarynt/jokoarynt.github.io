@@ -107,15 +107,6 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* ATUR PADDING PESAN BALASAN (REPLIES) AGAR SAMA SEMUA (ATAS, KANAN, BAWAH, KIRI) */
-.gsc-reply,
-.gsc-replies,
-.gsc-comment-replies,
-[class*="reply"],
-[class*="replies"] {
-  padding: 12px !important;
-}
-
 /* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
 .gsc-comment > div,
 .gsc-comment-box > div,
