@@ -96,13 +96,8 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN & REPLIES: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
-.gsc-comment,
-.gsc-reply,
-.gsc-replies,
-.gsc-comment-replies,
-[class*="reply"],
-[class*="replies"] {
+/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
+.gsc-comment {
   background-color: #ebebeb !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
@@ -112,11 +107,9 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Memaksa seluruh elemen pembungkus di dalam kartu pesan & balasan agar mengikuti lengkungan sudut */
+/* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
 .gsc-comment > div,
 .gsc-comment-box > div,
-.gsc-reply > div,
-.gsc-replies > div,
 .gsc-comment-content,
 .gsc-comment-box-main,
 .gsc-comment-body,
@@ -129,11 +122,6 @@ a[href*="giscus.app"] {
 @media (max-width: 767px) {
   .gsc-comment,
   .gsc-comment-box,
-  .gsc-reply,
-  .gsc-replies,
-  .gsc-comment-replies,
-  [class*="reply"],
-  [class*="replies"],
   .color-canvas-default,
   .color-canvas-subtle {
     margin-bottom: 1.25px !important;
@@ -161,26 +149,18 @@ a[href*="giscus.app"] {
   margin: 0 !important;
 }
 
-/* Padding bodi pesan utama */
+/* Padding bodi pesan utama dan balasan (replies) diratakan di semua sisi */
 .gsc-comment-content,
 .gsc-comment-body,
-.markdown-body {
-  border-top: none !important;
-  margin-top: 0 !important;
-  padding: 14px !important;
-}
-
-/* Padding isi dalam balasan (replies) disamakan rata di semua sisi */
+.markdown-body,
 .gsc-reply .gsc-comment-content,
 .gsc-replies .gsc-comment-content,
 .gsc-comment-replies .gsc-comment-content,
 [class*="reply"] .gsc-comment-content,
-[class*="replies"] .gsc-comment-content,
-.gsc-reply .gsc-comment-body,
-.gsc-replies .gsc-comment-body {
+[class*="replies"] .gsc-comment-content {
+  border-top: none !important;
+  margin-top: 0 !important;
   padding: 14px !important;
-  margin: 0 !important;
-  border: none !important;
 }
 
 /* Textarea & Inputs */
