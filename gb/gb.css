@@ -120,7 +120,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: var(--color-fg-default) !important;
 }
 
-/* Buttons */
+/* Buttons (Tombol Utama / Submit) */
 button.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
@@ -298,7 +298,28 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Biarkan tombol reaction di dalam popover/komentar kembali normal (tanpa paksaan warna ungu & border kustom) */
-.gsc-reaction-button {
+/* HANYA Tombol Like dan Reactions yang diberi warna Ungu & Gaya Neo-Brutalist */
+button.gsc-reaction-button,
+.gsc-reactions-button,
+button[aria-label*="reaction"],
+button[aria-label*="Like"],
+button[aria-label*="like"] {
+  background-color: var(--neo-accent) !important;
+  border: var(--neo-border) !important;
+  color: #000000 !important;
   border-radius: 6px !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  font-family: monospace, sans-serif !important;
+  cursor: pointer !important;
+}
+
+button.gsc-reaction-button:hover,
+.gsc-reactions-button:hover,
+button[aria-label*="reaction"]:hover,
+button[aria-label*="Like"]:hover,
+button[aria-label*="like"]:hover {
+  background-color: #c5bde8 !important;
+  color: #000000 !important;
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
