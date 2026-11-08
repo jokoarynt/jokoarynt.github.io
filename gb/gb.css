@@ -170,7 +170,83 @@ button[type="submit"]:hover,
   padding: 10px 14px !important;
 }
 
-/* KEMBALIKAN STYLE TIMESTAMP SEPERTI AWAL (NORMAL / GITHUB DEFAULT) */
+/* ATURAN TIMESTAMP MUTLAK (TIDAK BOLD / NORMAL) */
+.gsc-comment-header time,
+.gsc-comment-header a.Link--secondary,
+.gsc-comment-header a[href*="#issuecomment-"],
+.gsc-comment-header a[href*="#discussioncomment-"],
+.timeline-comment-header time,
+.timeline-comment-header a.Link--secondary,
+.timeline-comment-header a[href*="#issuecomment-"],
+.timeline-comment-header a[href*="#discussioncomment-"],
+.gsc-reply .gsc-comment-header time,
+.gsc-reply .gsc-comment-header a:not(.gsc-comment-author):not(.author):not([data-hovercard-type="user"]):not(.Link--primary),
+.gsc-replies time,
+.gsc-replies a.Link--secondary,
+.gsc-replies a[href*="#issuecomment-"],
+.gsc-replies a[href*="#discussioncomment-"],
+.gsc-comment-replies time,
+.gsc-comment-replies a:not(.gsc-comment-author):not(.author):not([data-hovercard-type="user"]):not(.Link--primary),
+[class*="reply"] time,
+[class*="replies"] time {
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  color: var(--color-fg-muted) !important;
+  -webkit-text-stroke: 0px transparent !important;
+}
+
+/* ATURAN TARGET EKSTRIM UNTUK SEMUA ELEMEN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN) */
+.gsc-comment-header a,
+.gsc-comment-author,
+.gsc-comment-header .gsc-comment-author,
+.gsc-comment-header a.author,
+.timeline-comment-header .author,
+.gsc-comment-header a[data-hovercard-type="user"],
+.gsc-comment-header a.Link--primary,
+.gsc-comment-header strong,
+.timeline-comment-header strong,
+.gsc-reply a,
+.gsc-reply .gsc-comment-author,
+.gsc-reply .gsc-comment-header a.author,
+.gsc-reply .timeline-comment-header .author,
+.gsc-reply .gsc-comment-header a[data-hovercard-type="user"],
+.gsc-reply .gsc-comment-header a.Link--primary,
+.gsc-reply .gsc-comment-header strong,
+.gsc-replies a,
+.gsc-replies .gsc-comment-author,
+.gsc-replies .gsc-comment-header a.author,
+.gsc-replies a[data-hovercard-type="user"],
+.gsc-replies a.Link--primary,
+.gsc-comment-replies a,
+.gsc-comment-replies .gsc-comment-author,
+.gsc-comment-replies a.author,
+.gsc-comment-replies a[data-hovercard-type="user"],
+.gsc-comment-replies a.Link--primary,
+.gsc-comment-replies strong,
+[class*="reply"] a,
+[class*="reply"] .gsc-comment-author,
+[class*="reply"] a.author,
+[class*="reply"] a[data-hovercard-type="user"],
+[class*="reply"] a.Link--primary,
+[class*="reply"] strong,
+[class*="replies"] a,
+[class*="replies"] .gsc-comment-author,
+[class*="replies"] a.author,
+[class*="replies"] a[data-hovercard-type="user"],
+[class*="replies"] a.Link--primary,
+[class*="replies"] strong {
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  font-family: monospace, sans-serif !important;
+  color: var(--color-fg-default) !important;
+  text-decoration: none !important;
+  -webkit-text-stroke: 0.8px var(--color-fg-default) !important;
+}
+
+/* KEMBALIKAN TIMESTAMP AGAR TIDAK IKUT MENJADI BOLD / IKUT TERKENA SELEKTOR UNIVERSAL ATAS */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -191,67 +267,21 @@ button[type="submit"]:hover,
 .gsc-comment-replies a.Link--secondary,
 [class*="reply"] time,
 [class*="replies"] time {
-  font-size: inherit !important;
-  font-weight: normal !important;
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  color: inherit !important;
+  color: var(--color-fg-muted) !important;
   -webkit-text-stroke: 0px transparent !important;
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  -webkit-text-fill-color: inherit !important;
-  animation: none !important;
 }
 
-/* ANIMASI LORENG BERJALAN RGB DENGAN EFEK BLINK PADA USERNAME */
-@keyframes rgbZebraBlinkLeftToRight {
-  0% { background-position: 0 0; opacity: 1; }
-  50% { background-position: -60px 0; opacity: 0.4; }
-  100% { background-position: -120px 0; opacity: 1; }
-}
-
-/* ATURAN TARGET EKSTRIM HANYA UNTUK SEMUA ELEMEN NAMA USER / AUTHOR */
-.gsc-comment-header a.gsc-comment-author,
-.gsc-comment-author,
-.gsc-comment-header a.author,
-.timeline-comment-header .author,
-.gsc-comment-header a[data-hovercard-type="user"],
-.gsc-comment-header a.Link--primary,
-.gsc-reply a.gsc-comment-author,
-.gsc-reply a.author,
-.gsc-reply a[data-hovercard-type="user"],
-.gsc-reply a.Link--primary,
-.gsc-replies a.gsc-comment-author,
-.gsc-replies a.author,
-.gsc-replies a[data-hovercard-type="user"],
-.gsc-replies a.Link--primary,
-.gsc-comment-replies a.gsc-comment-author,
-.gsc-comment-replies a.author,
-[class*="reply"] a.gsc-comment-author,
-[class*="reply"] a.author,
-[class*="replies"] a.gsc-comment-author,
-[class*="replies"] a.author {
-  font-size: 1rem !important;
-  font-weight: 900 !important;
-  font-family: monospace, sans-serif !important;
-  text-decoration: none !important;
-  
-  /* Gradasi Loreng RGB horizontal berjalan + blink */
-  background: linear-gradient(90deg, #ff0000 0%, #ff0000 20%, #00ff00 20%, #00ff00 40%, #0000ff 40%, #0000ff 60%, #ff0000 60%) !important;
-  background-size: 120px 100% !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.3) !important;
-  animation: rgbZebraBlinkLeftToRight 1.5s linear infinite !important;
-}
-
-/* Underline dashed berjarak tidak mepet teks untuk URL/link di dalam isi pesan */
+/* Underline dashed berjarak hanya untuk URL/link teks biasa di dalam isi pesan */
 .gsc-comment-text a:not([class]),
 .markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
-  text-decoration-thickness: 1.5px !important;
-  text-underline-offset: 6px !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 4px !important;
 }
 
 .gsc-comment-text,
