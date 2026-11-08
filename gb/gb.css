@@ -128,13 +128,14 @@ a[href*="giscus.app"] {
   }
 }
 
-/* PADDING & JARAK PADA PESAN BALASAN (REPLIES) */
+/* PADDING & MARGIN PADA PESAN BALASAN (REPLIES) */
 .gsc-replies,
 .gsc-comment-replies,
 .gsc-reply,
 [class*="reply"],
 [class*="replies"] {
   margin-top: 4px !important;
+  margin-bottom: 1px !important;
   padding-top: 2px !important;
   padding-bottom: 0 !important;
 }
