@@ -308,7 +308,7 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Panah ke Atas (Upvote / Like) & Tombol Reactions */
+/* Tombol Panah ke Atas (Upvote / Like) & Tombol Reactions Utama */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
@@ -332,4 +332,13 @@ button[aria-label*="Reaction"]:hover,
   background-color: #c5bde8 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
+}
+
+/* Pastikan daftar emoticon/pilihan reaksi di dalam popover tetap standar (tanpa warna ungu & tanpa border kustom) */
+.gsc-reactions-popover button,
+.gsc-popover button,
+div[class*="popover"] button {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
