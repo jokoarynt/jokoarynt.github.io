@@ -161,18 +161,26 @@ a[href*="giscus.app"] {
   margin: 0 !important;
 }
 
-/* Padding seragam dan rata di semua sisi pada bodi pesan dan balasan (replies) */
+/* Padding bodi pesan utama */
 .gsc-comment-content,
 .gsc-comment-body,
-.markdown-body,
+.markdown-body {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding: 14px !important;
+}
+
+/* Padding isi dalam balasan (replies) disamakan rata di semua sisi */
 .gsc-reply .gsc-comment-content,
 .gsc-replies .gsc-comment-content,
 .gsc-comment-replies .gsc-comment-content,
 [class*="reply"] .gsc-comment-content,
-[class*="replies"] .gsc-comment-content {
-  border-top: none !important;
-  margin-top: 0 !important;
+[class*="replies"] .gsc-comment-content,
+.gsc-reply .gsc-comment-body,
+.gsc-replies .gsc-comment-body {
   padding: 14px !important;
+  margin: 0 !important;
+  border: none !important;
 }
 
 /* Textarea & Inputs */
