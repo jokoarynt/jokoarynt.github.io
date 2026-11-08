@@ -239,32 +239,28 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Reset border untuk semua tombol tab Write & Preview */
-.gsc-comment-box button[role="tab"],
-.gsc-comment-box .tabnav-tab,
-.gsc-comment-box [class*="tab"],
-.gsc-comment-box a[role="tab"] {
+/* Tombol Write (Tab Pertama) - Tanpa border bawah */
+.gsc-comment-box button[role="tab"]:first-child,
+.gsc-comment-box .tabnav-tab:first-child,
+.gsc-comment-box [class*="tab"]:first-child,
+.gsc-comment-box a[role="tab"]:first-child {
   border: none !important;
+  border-bottom: none !important;
   border-radius: 0 !important;
   background: transparent !important;
   background-color: transparent !important;
 }
 
-/* BORDER BAWAH TIPIS KHUSUS TOMBOL PREVIEW */
-.gsc-comment-box button[role="tab"]:last-child,
-.gsc-comment-box .tabnav-tab:last-child,
-.gsc-comment-box [class*="tab"]:last-child,
-.gsc-comment-box a[role="tab"]:last-child,
-.gsc-comment-box button[aria-selected="true"]:not(:first-child),
-.gsc-comment-box [aria-selected="true"]:not(:first-child) {
+/* BORDER BAWAH TIPIS KHUSUS TOMBOL PREVIEW (Tab Kedua) */
+.gsc-comment-box button[role="tab"]:nth-child(2),
+.gsc-comment-box .tabnav-tab:nth-child(2),
+.gsc-comment-box [class*="tab"]:nth-child(2),
+.gsc-comment-box a[role="tab"]:nth-child(2) {
+  border: none !important;
   border-bottom: 1.7px solid var(--color-border-default) !important;
-}
-
-.gsc-comment-box button[role="tab"]::before,
-.gsc-comment-box .tabnav-tab::before,
-.gsc-comment-box [class*="tab"]::before {
-  content: none !important;
-  display: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
