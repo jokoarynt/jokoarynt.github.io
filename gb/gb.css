@@ -370,17 +370,21 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Reaksi Utama & Tombol Sign In GitHub */
+/* Tombol Reaksi Utama & Tombol Sign In GitHub (Disamakan Total) */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
 button[aria-label*="reaction"],
 button[aria-label*="Reaction"],
 .gsc-reactions-button,
+a.gsc-social-button,
+button.gsc-social-button,
 a[href*="login"],
 a[href*="github.com/login"],
 .gsc-social-icon-text,
-a[aria-label*="Sign in"] {
+a[aria-label*="Sign in"],
+.gsc-comment-box a[href*="login"],
+.gsc-comment-box button[href*="login"] {
   background-color: #bfbfbf !important;
   border: var(--neo-border) !important;
   color: #000000 !important;
@@ -388,6 +392,11 @@ a[aria-label*="Sign in"] {
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   cursor: pointer !important;
   text-decoration: none !important;
+  font-family: monospace, sans-serif !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 button[aria-label*="Upvote"]:hover,
@@ -396,14 +405,19 @@ button:has(svg.octicon-arrow-up):hover,
 button[aria-label*="reaction"]:hover,
 button[aria-label*="Reaction"]:hover,
 .gsc-reactions-button:hover,
+a.gsc-social-button:hover,
+button.gsc-social-button:hover,
 a[href*="login"]:hover,
 a[href*="github.com/login"]:hover,
 .gsc-social-icon-text:hover,
-a[aria-label*="Sign in"]:hover {
+a[aria-label*="Sign in"]:hover,
+.gsc-comment-box a[href*="login"]:hover,
+.gsc-comment-box button[href*="login"]:hover {
   background-color: #a8a8a8 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
   text-decoration: none !important;
+  color: #000000 !important;
 }
 
 .gsc-reactions-popover button,
