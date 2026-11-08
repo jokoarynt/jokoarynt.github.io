@@ -1,3 +1,4 @@
+gb.css
 /* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
@@ -70,17 +71,6 @@ body, main {
 footer,
 .gsc-homepage-link,
 a[href*="giscus.app"] {
-  display: none !important;
-}
-
-/* Sembunyikan total reaksi dan ikon emoji khusus jika disembunyikan */
-.gsc-comment-box .gsc-reactions,
-.gsc-comment-box .gsc-reactions-summary,
-.gsc-comment-box .gsc-comment-box-reactions,
-.gsc-comment-box-reactions,
-.gsc-comment-box svg.octicon-smiley,
-.gsc-comment-box [aria-label*="reaction"],
-.gsc-comment-box [class*="reaction"] {
   display: none !important;
 }
 
@@ -309,16 +299,23 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-.gsc-reaction-button {
-  background-color: var(--neo-bg) !important;
+/* Tombol Lingkaran Emotion Reaction (Tombol Reaksi/Emoji) Menjadi Ungu */
+.gsc-reaction-button,
+button.gsc-reaction-button,
+.gsc-comment-reactions-button,
+[aria-label*="reaction"],
+button[class*="reaction"] {
+  background-color: var(--neo-accent) !important;
   border: var(--neo-border) !important;
-  color: var(--color-fg-default) !important;
+  color: #000000 !important;
   border-radius: 6px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
 }
 
-.gsc-reaction-button:hover {
-  background-color: var(--neo-accent) !important;
+.gsc-reaction-button:hover,
+button.gsc-reaction-button:hover,
+[aria-label*="reaction"]:hover {
+  background-color: #c5bde8 !important;
   color: #000000 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
