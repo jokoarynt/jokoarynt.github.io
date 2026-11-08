@@ -218,22 +218,26 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN/TRANSPARANKAN BORDER PADA KOTAK M ▾ (MARKDOWN HELPER/TOOLBAR) DI ANTARA TOMBOL SIGN & TEXTAREA */
+/* HILANGKAN BORDER & BACKGROUND PADA KOTAK M ▾ (MARKDOWN HELPER/TOOLBAR/TABS) SECARA MUTLAK */
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
-.gsc-comment-box a[href*="writing-and-formatting"],
-.gsc-comment-box a[href*="markdown"],
-.gsc-comment-box [class*="markdown"],
+.gsc-comment-box .tabnav,
+.gsc-comment-box .gsc-comment-box-tabs,
+.gsc-comment-box header,
 .gsc-comment-box [class*="toolbar"],
-.gsc-comment-box-main markdown-toolbar,
-.gsc-comment-box-main .markdown-toolbar,
-.gsc-comment-box-main [class*="markdown"],
-.gsc-comment-box-main [class*="toolbar"] {
+.gsc-comment-box [class*="tab"],
+.gsc-comment-box [class*="header"],
+.gsc-comment-box a[href*="writing-and-formatting"],
+.gsc-comment-box-main > div {
   border: none !important;
-  border-color: transparent !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
   border-width: 0 !important;
   box-shadow: none !important;
   background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
