@@ -1,4 +1,3 @@
-gb.css
 /* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
@@ -25,14 +24,16 @@ gb.css
 /* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark,
-[data-color-mode="dark"] {
+[data-color-mode="dark"],
+html[data-theme="night"] main,
+html[data-theme="night"] div {
   --color-canvas-default: #1e1e1e !important;
   --color-canvas-subtle: #121212 !important;
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
-  --color-fg-muted: #cccccc !important;
-  --color-fg-subtle: #aaaaaa !important;
+  --color-fg-muted: #ffffff !important; /* Diubah jadi putih agar teks reaksi/header ikut putih */
+  --color-fg-subtle: #ffffff !important;
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
@@ -43,13 +44,12 @@ main.dark,
   --neo-accent: #dcd6f7;
 }
 
-/* Warna teks jumlah reactions di atas form textarea dalam mode gelap */
-[data-color-mode="dark"] .gsc-comment-box .gsc-reactions-count,
-[data-color-mode="dark"] .gsc-comment-box-header,
-[data-color-mode="dark"] .gsc-comment-box .Counter,
-[data-color-mode="dark"] .gsc-comment-box [class*="reaction"],
-main[data-color-mode="dark"] .gsc-comment-box .gsc-reactions-count,
-main[data-color-mode="dark"] .gsc-comment-box-header {
+/* Paksa seluruh teks jumlah reaksi, header, dan counter menjadi putih mutlak dalam mode gelap */
+[data-color-mode="dark"] .gsc-comment-box *,
+main.dark .gsc-comment-box *,
+[data-color-mode="dark"] div[class*="reaction"],
+[data-color-mode="dark"] span[class*="count"],
+[data-color-mode="dark"] .gsc-comment-box-header {
   color: #ffffff !important;
 }
 
