@@ -218,7 +218,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* SET BORDER TRANSPARAN PADA KOTAK M ▾ (MARKDOWN HELPER/TOOLBAR) DI ANTARA TOMBOL SIGN & TEXTAREA */
+/* HILANGKAN/TRANSPARANKAN BORDER PADA KOTAK M ▾ (MARKDOWN HELPER/TOOLBAR) DI ANTARA TOMBOL SIGN & TEXTAREA */
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
 .gsc-comment-box a[href*="writing-and-formatting"],
