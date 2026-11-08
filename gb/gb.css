@@ -20,7 +20,7 @@
   --neo-bg: #ffffff;
   --neo-accent: #dcd6f7;
   
-  /* Warna abu-abu untuk pesan (Light Mode) */
+  /* Warna abu-abu tipis khusus isi pesan (Light Mode) */
   --msg-text-color: #666666;
 }
 
@@ -47,8 +47,8 @@ html[data-theme="night"] div {
   --neo-bg: #1e1e1e !important;
   --neo-accent: #dcd6f7;
   
-  /* Warna abu-abu untuk pesan (Dark Mode) */
-  --msg-text-color: #999999;
+  /* Warna abu-abu tipis khusus isi pesan (Dark Mode) */
+  --msg-text-color: #a0a0a0;
 }
 
 /* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
@@ -291,7 +291,7 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* PAKSA WARNA ABU-ABU PADA ISI PESAN SECARA SPESIFIK & KUAT */
+/* PAKSA WARNA ABU-ABU TIPIS PADA ISI KONTROL DAN TEKS PESAN GISCUS */
 .gsc-comment-text,
 .gsc-comment-text *,
 .markdown-body,
@@ -337,7 +337,6 @@ button[aria-label*="upvote"]:hover,
 button:has(svg.octicon-arrow-up):hover,
 button[aria-label*="reaction"]:hover,
 button[aria-label*="Reaction"]:hover,
-.gsc-caches-button:hover,
 .gsc-reactions-button:hover {
   background-color: #c5bde8 !important;
   transform: translate(1px, 1px) !important;
