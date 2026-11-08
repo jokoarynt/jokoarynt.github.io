@@ -4,11 +4,11 @@
 
 /* Light Mode (Default) */
 :root, main {
-  --color-canvas-default: #dcdcdc !important;  /* Background abu-abu untuk kotak pesan */
-  --color-canvas-subtle: #d0d0d0 !important;  /* Background abu-abu pendukung */
+  --color-canvas-default: #dcdcdc !important;  
+  --color-canvas-subtle: #d0d0d0 !important;  
   --color-border-default: #000000 !important;
   --color-border-muted: #000000 !important;
-  --color-fg-default: #000000 !important;      /* Teks utama wajib hitam */
+  --color-fg-default: #000000 !important;      
   --color-fg-muted: #000000 !important;
   --color-fg-subtle: #000000 !important;
   --color-accent-fg: #000000 !important;
@@ -28,11 +28,11 @@ main.dark,
 html[data-theme="night"] main,
 html[data-theme="night"] body,
 html[data-theme="night"] div {
-  --color-canvas-default: #3a3a3a !important;  /* Background abu-abu untuk dark mode */
+  --color-canvas-default: #3a3a3a !important;  
   --color-canvas-subtle: #2e2e2e !important;  
   --color-border-default: #ffffff !important;
   --color-border-muted: #ffffff !important;
-  --color-fg-default: #000000 !important;      /* Teks tetap hitam */
+  --color-fg-default: #000000 !important;      
   --color-fg-muted: #000000 !important;
   --color-fg-subtle: #000000 !important;
   --color-accent-fg: #ffffff !important;
@@ -88,21 +88,49 @@ a[href*="giscus.app"] {
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: var(--color-canvas-default) !important;
-  border: var(--neo-border) !important;
+  border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: var(--neo-shadow) !important;
+  box-shadow: 3px 3px 0px var(--color-border-default) !important;
   margin-bottom: 20px !important;
-  overflow: visible !important;
+  overflow: hidden !important;
 }
 
-/* Kartu Pesan: Background Abu-abu */
+/* KARTU PESAN: Background Abu-abu & Sudut Menyatu */
 .gsc-comment {
   background-color: var(--color-canvas-default) !important;
-  border: 1.5px solid var(--color-border-default) !important;
+  border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  box-shadow: 3px 3px 0px var(--color-border-default) !important;
   margin-bottom: 20px !important;
-  overflow: visible !important;
+  overflow: hidden !important;
+}
+
+/* Header Kotak Pesan & Balasan: Menyatu dengan Border Body Card */
+.gsc-comment-header,
+.gsc-comment-box-header,
+.timeline-comment-header,
+.gsc-reply .gsc-comment-header,
+.gsc-replies .gsc-comment-header,
+.gsc-comment-replies .gsc-comment-header,
+[class*="reply"] .gsc-comment-header,
+[class*="replies"] .gsc-comment-header {
+  background-color: var(--neo-accent) !important;
+  border-bottom: 2px solid var(--color-border-default) !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  padding: 10px 14px !important;
+  border-top-left-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  margin: 0 !important;
+}
+
+/* Pastikan bodi pesan menyatu sempurna di bawah header tanpa patah */
+.gsc-comment-content,
+.gsc-comment-body,
+.markdown-body {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 12px !important;
 }
 
 /* Textarea & Inputs */
@@ -153,23 +181,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Header Kotak Pesan Utama & Balasan (Diatur Warna Ungu) */
-.gsc-comment-header,
-.gsc-comment-box-header,
-.timeline-comment-header,
-.gsc-reply .gsc-comment-header,
-.gsc-replies .gsc-comment-header,
-.gsc-comment-replies .gsc-comment-header,
-[class*="reply"] .gsc-comment-header,
-[class*="replies"] .gsc-comment-header {
-  background-color: var(--neo-accent) !important;
-  border-bottom: 1.5px solid var(--color-border-default) !important;
-  color: #000000 !important;
-  font-weight: bold !important;
-  padding: 10px 14px !important;
-}
-
-/* ATURAN TIMESTAMP (TETAP NORMAL) */
+/* TIMESTAMP */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -210,7 +222,7 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0.8px #000000 !important;
 }
 
-/* Underline dashed untuk link teks di dalam pesan */
+/* Underline dashed untuk link teks */
 .gsc-comment-text a:not([class]),
 .markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
@@ -218,7 +230,7 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* PAKSA WARNA TEKS DI DALAM PESAN MENJADI HITAM SEPENUHNYA */
+/* TEKS DI DALAM PESAN HITAM */
 .gsc-comment-content,
 .gsc-comment-text,
 .gsc-comment-body,
@@ -232,7 +244,7 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Reaction Popover (Solid & Tidak Tertutupi) pada Komentar */
+/* Reaction Popover */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
