@@ -149,13 +149,18 @@ a[href*="giscus.app"] {
   margin: 0 !important;
 }
 
-/* Pastikan bodi pesan menyatu sempurna di bawah header tanpa patah */
+/* Padding seragam di semua sisi pada bodi pesan dan balasan (replies) */
 .gsc-comment-content,
 .gsc-comment-body,
-.markdown-body {
+.markdown-body,
+.gsc-reply .gsc-comment-content,
+.gsc-replies .gsc-comment-content,
+.gsc-comment-replies .gsc-comment-content,
+[class*="reply"] .gsc-comment-content,
+[class*="replies"] .gsc-comment-content {
   border-top: none !important;
   margin-top: 0 !important;
-  padding-top: 12px !important;
+  padding: 12px 14px !important;
 }
 
 /* Textarea & Inputs */
