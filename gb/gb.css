@@ -199,10 +199,10 @@ button[type="submit"]:hover,
   animation: none !important;
 }
 
-/* ANIMASI LORENG BERJALAN RGB (ZEBRA RGB STRIPES) PADA USERNAME */
-@keyframes rgbZebraStripes {
+/* ANIMASI LORENG BERJALAN RGB DARI KIRI KE KANAN PADA USERNAME */
+@keyframes rgbZebraLeftToRight {
   0% { background-position: 0 0; }
-  100% { background-position: 60px 0; }
+  100% { background-position: -120px 0; }
 }
 
 /* ATURAN TARGET EKSTRIM UNTUK SEMUA ELEMEN NAMA USER / AUTHOR (PESAN UTAMA & BALASAN) */
@@ -250,13 +250,13 @@ button[type="submit"]:hover,
   font-family: monospace, sans-serif !important;
   text-decoration: none !important;
   
-  /* Efek Loreng Berjalan dengan Warna RGB (Merah, Hijau, Biru) */
-  background: linear-gradient(135deg, #ff0000 20%, #00ff00 20%, #00ff00 40%, #0000ff 40%, #0000ff 60%, #ff0000 60%) !important;
-  background-size: 60px 60px !important;
+  /* Gradasi Loreng RGB horizontal */
+  background: linear-gradient(90deg, #ff0000 0%, #ff0000 20%, #00ff00 20%, #00ff00 40%, #0000ff 40%, #0000ff 60%, #ff0000 60%) !important;
+  background-size: 120px 100% !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.3) !important;
-  animation: rgbZebraStripes 1.5s linear infinite !important;
+  animation: rgbZebraLeftToRight 2s linear infinite !important;
 }
 
 /* Underline dashed berjarak tidak mepet teks untuk URL/link di dalam isi pesan */
