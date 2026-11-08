@@ -33,15 +33,18 @@
       border-radius: 12px !important;
     }
 
-    /* Perbaikan agar sudut navbar menyatu dengan border card utama */
-    body.gb #container .navbar {
-      border-top-left-radius: 9px;
-      border-top-right-radius: 9px;
-    }
-
+    /* Perbaikan sudut bawah agar menyatu */
     body.gb #container .bottom-navbar {
       border-bottom-left-radius: 9px;
       border-bottom-right-radius: 9px;
+    }
+
+    /* Perbaikan sudut atas agar menyatu sempurna */
+    body.gb #container .navbar .nav-left > *:first-child {
+      border-top-left-radius: 9px;
+    }
+    body.gb #container .navbar .theme-btn {
+      border-top-right-radius: 9px;
     }
   </style>
 </head>
