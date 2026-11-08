@@ -218,19 +218,16 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN BORDER & BACKGROUND PADA KOTAK M ▾ (TOOLBAR MARKDOWN) SECARA AGGRESIF */
+/* HILANGKAN BORDER PADA TOOLBAR / KOTAK M ▾ DI ANTARA TOMBOL SIGN & TEXTAREA */
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
+.gsc-comment-box .Box-header,
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs,
-.gsc-comment-box header,
 .gsc-comment-box [class*="toolbar"],
-.gsc-comment-box [class*="tab"],
-.gsc-comment-box [class*="header"],
-.gsc-comment-box a[href*="writing-and-formatting"],
-.gsc-comment-box-main > div,
-.gsc-comment-box-main .Box-header,
-.gsc-comment-box-main div[class*="toolbar"] {
+.gsc-comment-box [class*="tabnav"],
+.gsc-comment-box [class*="Box-header"],
+.gsc-comment-box-main > div:first-of-type {
   border: none !important;
   border-top: none !important;
   border-bottom: none !important;
