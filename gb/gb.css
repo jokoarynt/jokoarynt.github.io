@@ -96,15 +96,29 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Kartu Pesan */
+/* Kotak Pesan Utama (Abu-abu Tua) */
 .gsc-comment {
-  background-color: var(--neo-bg) !important;
+  background-color: #2b2b2b !important;
   border: 1.5px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 20px !important;
   color: var(--color-fg-default) !important;
   overflow: visible !important;
+}
+
+/* Kotak Balasan Pesan (Abu-abu Muda) */
+.gsc-reply,
+.gsc-replies,
+.gsc-comment-replies,
+[class*="reply"],
+[class*="replies"] {
+  background-color: #f0f0f0 !important;
+  border: 1.5px solid var(--color-border-default) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  margin-top: 10px !important;
+  color: #000000 !important;
 }
 
 /* Textarea & Inputs */
@@ -155,7 +169,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Header Kotak Pesan Utama & Balasan (Diatur Warna Ungu) */
+/* Header Kotak Pesan Utama & Balasan (Warna Ungu) */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
