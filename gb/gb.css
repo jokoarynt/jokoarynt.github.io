@@ -107,6 +107,16 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
+/* SAMAKAN PADDING & MARGIN KONTAINER BALASAN (REPLIES) DENGAN PESAN UTAMA (REPLY) */
+.gsc-replies,
+.gsc-comment-replies,
+.gsc-reply,
+[class*="reply"],
+[class*="replies"] {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
 /* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
 .gsc-comment > div,
 .gsc-comment-box > div,
