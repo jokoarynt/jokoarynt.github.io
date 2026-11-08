@@ -1,368 +1,181 @@
-/* ==========================================================================
-   Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
-   ========================================================================== */
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="/img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="/style.min.css" rel="stylesheet">
+  <title>Guestbook - Joko Ariyanto</title>
+  <style>
+    body.gb {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0;
+      padding: 24px 10px;
+      box-sizing: border-box;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+    }
 
-/* Light Mode (Default) */
-:root, main {
-  --color-canvas-default: #ebebeb !important;  
-  --color-canvas-subtle: #d0d0d0 !important;  
-  --color-border-default: #000000 !important;
-  --color-border-muted: #000000 !important;
-  --color-fg-default: #000000 !important;      
-  --color-fg-muted: #000000 !important;
-  --color-fg-subtle: #000000 !important;
-  --color-accent-fg: #000000 !important;
-  --color-accent-emphasis: #bfbfbf !important;
-  
-  --neo-border: 1.7px solid #000000;
-  --neo-shadow: 2px 2px 0px #000000;
-  --neo-shadow-hover: 1px 1px 0px #000000;
-  --neo-bg: #e4e4e4;
-  --neo-accent: #bfbfbf;
-}
+    body.gb #container {
+      width: 450px !important;
+      max-width: 92vw !important;
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+      margin: auto auto !important;
+      border: 3px solid var(--border-color, #000000) !important;
+      box-shadow: 5px 5px 0px var(--shadow-color, #000000) !important;
+      border-radius: 12px !important;
+    }
 
-/* Dark Mode (Night Mode) */
-main[data-color-mode="dark"],
-main.dark,
-[data-color-mode="dark"],
-html[data-theme="night"] main,
-html[data-theme="night"] body,
-html[data-theme="night"] div {
-  --color-canvas-default: #3a3a3a !important;  
-  --color-canvas-subtle: #2e2e2e !important;  
-  --color-border-default: #ffffff !important;
-  --color-border-muted: #ffffff !important;
-  --color-fg-default: #000000 !important;      
-  --color-fg-muted: #000000 !important;
-  --color-fg-subtle: #000000 !important;
-  --color-accent-fg: #ffffff !important;
-  --color-accent-emphasis: #bfbfbf !important;
-  
-  --neo-border: 1.7px solid #ffffff;
-  --neo-shadow: 2px 2px 0px #ffffff;
-  --neo-shadow-hover: 1px 1px 0px #ffffff;
-  --neo-bg: #3a3a3a !important;
-  --neo-accent: #bfbfbf;
-}
+    /* Perbaikan sudut atas agar menyatu sempurna */
+    body.gb #container .navbar .nav-left > *:first-child {
+      border-top-left-radius: 9px;
+    }
+    body.gb #container .navbar .theme-btn {
+      border-top-right-radius: 9px;
+    }
 
-/* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
-[data-color-mode="dark"] .gsc-comment-box,
-[data-color-mode="dark"] .gsc-comment-box *,
-[data-color-mode="dark"] .gsc-comment-box-header,
-[data-color-mode="dark"] .gsc-comment-box-header *,
-[data-color-mode="dark"] .gsc-reactions-count,
-[data-color-mode="dark"] [class*="count"],
-main.dark .gsc-comment-box *,
-html[data-theme="night"] .gsc-comment-box * {
-  color: #ffffff !important;
-}
+    /* Perbaikan sudut bawah agar menyatu sempurna */
+    body.gb #container .bottom-navbar {
+      border-bottom-left-radius: 9px;
+      border-bottom-right-radius: 9px;
+    }
 
-body, main {
-  font-family: monospace, sans-serif !important;
-  color: var(--color-fg-default) !important;
-  background: transparent !important;
-}
+    /* Wrapper Giscus dengan margin kiri-kanan responsif */
+    #giscus-wrapper {
+      width: 100%;
+      text-align: left;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
 
-/* Sembunyikan Statistik & Powered by Giscus */
-.gsc-header,
-.gsc-footer,
-footer,
-.gsc-homepage-link,
-a[href*="giscus.app"] {
-  display: none !important;
-}
+    @media (min-width: 768px) {
+      #giscus-wrapper {
+        padding: 0 20px !important;
+      }
+    }
+  </style>
+</head>
+<body class="gb">
+  <div id="container">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="/" class="nav-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Home
+        </a>
+        <button class="nav-btn" id="toolsBtn" onclick="toggleToolsDropdown(event)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.5 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+          Tools &#9662;
+        </button>
+      </div>
+      <div class="nav-line" id="navLine">
+        <span class="marquee-text" id="dateTimeMarquee"></span>
+      </div>
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Change Theme">
+        <svg id="themeIcon" viewBox="0 0 24 24"></svg>
+      </button>
+    </nav>
 
-/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
-.gsc-comment-box .gsc-reactions,
-.gsc-comment-box .gsc-reactions-summary,
-.gsc-comment-box .gsc-comment-box-reactions,
-.gsc-comment-box-reactions,
-.gsc-comment-box svg.octicon-smiley,
-.gsc-comment-box [aria-label*="reaction"],
-.gsc-comment-box [class*="reaction"] {
-  display: none !important;
-}
+    <h1 style="font-size: 2rem; margin: 0 0 0.3rem; font-family: 'Lobster', cursive; font-weight: normal;">Guestbook</h1>
+    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Tinggalkan pesan atau jejak kunjungan Anda!</p>
+    
+    <div id="giscus-wrapper">
+      <script src="https://giscus.app/client.js"
+              data-repo="jokoarynt/jokoarynt.github.io"
+              data-repo-id="R_kgDOU21zaA"
+              data-category="General"
+              data-category-id="DIC_kwDOU21zaM4DKhFr"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="1"
+              data-input-position="top"
+              data-theme="https://joko.my.id/gb/gb.css?v=16"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
 
-/* Kotak Komentar Utama (Form) dengan Warna #ebebeb */
-.gsc-comment-box,
-.color-canvas-default,
-.color-canvas-subtle {
-  background-color: #ebebeb !important;
-  border: 1.7px solid var(--color-border-default) !important;
-  border-radius: 8px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
-  margin-bottom: 5px !important;
-  margin-right: 3px !important;
-  overflow: visible !important;
-}
+    <!-- Menu Bar Bawah (Footer) -->
+    <nav class="bottom-navbar">
+      <div class="nav-left webring-container">
+        <span class="dropdown" id="customDropdown">
+          <button class="drop-btn" id="dropBtn" onclick="toggleDropdown(event)">
+            <span id="dropLabel">Webring</span> <span class="drop-arrow">&#9662;</span>
+          </button>
+        </span>
+        <div id="wrActionButtons" class="fade-anim hidden" style="display: inline-flex; align-items: center; gap: 3px;">
+          <a id="wr-site" class="wr-icon-btn" href="#" target="_blank" title="Webring info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </a>
+          <a id="wr-prev" class="wr-icon-btn" href="#" target="_top" title="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </a>
+          <span id="wr-rnd-wrapper" style="display:inline-flex;">
+            <a id="wr-rnd" class="wr-icon-btn" href="#" target="_top" title="Random">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            </a>
+          </span>
+          <a id="wr-next" class="wr-icon-btn" href="#" target="_top" title="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="nav-right copyright fade-anim" id="copyrightEl">
+        &copy; 2021-<span id="currentYear"></span> [<span id="s"></span>]
+      </div>
+    </nav>
+  </div>
 
-/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
-.gsc-comment {
-  background-color: #ebebeb !important;
-  border: 1.7px solid var(--color-border-default) !important;
-  border-radius: 8px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
-  margin-bottom: 5px !important;
-  margin-right: 3px !important;
-  overflow: visible !important;
-}
+  <!-- Tools Dropdown Menu -->
+  <div class="tools-menu" id="toolsMenu">
+    <a href="#">Converter</a>
+  </div>
 
-/* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
-.gsc-comment > div,
-.gsc-comment-box > div,
-.gsc-comment-content,
-.gsc-comment-box-main,
-.gsc-comment-body,
-.timeline-comment,
-.color-canvas-default > div {
-  border-radius: 8px !important;
-}
+  <!-- Webring Dropdown Menu -->
+  <div class="drop-menu" id="dropMenu">
+    <div class="disabled-item" onclick="changeWebring('0')">Webring</div>
+    <div onclick="changeWebring('1')">Foxwells</div>
+    <div onclick="changeWebring('2')">Kanring</div>
+    <div onclick="changeWebring('3')">No AI</div>
+    <div onclick="changeWebring('4')">Octo Ring</div>
+    <div onclick="changeWebring('5')">Tokukatsu</div>
+    <div onclick="changeWebring('6')">Roboring</div>
+  </div>
 
-/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px */
-@media (max-width: 767px) {
-  .gsc-comment,
-  .gsc-comment-box,
-  .color-canvas-default,
-  .color-canvas-subtle {
-    margin-bottom: 1.25px !important;
-  }
-}
+  <script src="/script.min.js"></script>
+  <script>
+    const originalToggleTheme = window.toggleTheme;
+    window.toggleTheme = function() {
+      if (originalToggleTheme) originalToggleTheme();
+      updateGiscusTheme();
+    };
 
-/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
-.gsc-comment-header,
-.gsc-comment-box-header,
-.timeline-comment-header,
-.gsc-reply .gsc-comment-header,
-.gsc-replies .gsc-comment-header,
-.gsc-comment-replies .gsc-comment-header,
-[class*="reply"] .gsc-comment-header,
-[class*="replies"] .gsc-comment-header {
-  background-color: #bfbfbf !important;
-  border-bottom: 1.7px solid var(--color-border-default) !important;
-  color: #000000 !important;
-  font-weight: bold !important;
-  padding: 10px 14px !important;
-  border-top-left-radius: 7px !important;
-  border-top-right-radius: 7px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-  margin: 0 !important;
-}
+    function updateGiscusTheme() {
+      const isNight = document.documentElement.getAttribute('data-theme') === 'night';
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (iframe) {
+        iframe.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: 'https://joko.my.id/gb/gb.css?v=16'
+            }
+          }
+        }, 'https://giscus.app');
+      }
+    }
 
-/* Padding seragam di semua sisi pada bodi pesan dan balasan (replies) */
-.gsc-comment-content,
-.gsc-comment-body,
-.markdown-body,
-.gsc-reply .gsc-comment-content,
-.gsc-replies .gsc-comment-content,
-.gsc-comment-replies .gsc-comment-content,
-[class*="reply"] .gsc-comment-content,
-[class*="replies"] .gsc-comment-content {
-  border-top: none !important;
-  margin-top: 0 !important;
-  padding: 12px 14px !important;
-}
-
-/* Textarea & Inputs */
-textarea.gsc-comment-box-textarea,
-input.gsc-comment-box-textarea,
-.gsc-comment-box textarea,
-textarea, input {
-  font-family: monospace, sans-serif !important;
-  font-size: 0.85rem !important;
-  color: #000000 !important;
-  background-color: #ffffff !important;
-  border: var(--neo-border) !important;
-  border-radius: 6px !important;
-  box-shadow: none !important;
-  padding: 10px !important;
-}
-
-textarea:focus, input:focus, .gsc-comment-box textarea:focus {
-  outline: none !important;
-  box-shadow: var(--neo-shadow) !important;
-  transform: translate(-1px, -1px) !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-/* Buttons (Submit, Write, dll.) */
-button.gsc-comment-box-write-btn,
-button[type="submit"],
-.gsc-button-primary,
-.gsc-button {
-  font-family: monospace, sans-serif !important;
-  font-weight: bold !important;
-  background-color: #bfbfbf !important;
-  color: #000000 !important;
-  border: var(--neo-border) !important;
-  border-radius: 6px !important;
-  box-shadow: var(--neo-shadow) !important;
-  padding: 6px 14px !important;
-  cursor: pointer !important;
-}
-
-button[type="submit"]:hover,
-.gsc-button-primary:hover,
-.gsc-button:hover {
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
-  background-color: #a8a8a8 !important;
-  color: #000000 !important;
-}
-
-/* Tombol Sign in with GitHub & Link Sign out */
-.gsc- социального-reaction-button,
-a.gsc-header-button,
-button.gsc-header-button,
-a[href*="github.com/login"],
-button:has(.octicon-mark-github),
-.gsc-auth-link,
-a.gsc-comment-box-logout,
-.gsc-comment-box-logout a,
-a[href*="logout"] {
-  font-family: monospace, sans-serif !important;
-  font-weight: bold !important;
-  background-color: #bfbfbf !important;
-  color: #000000 !important;
-  border: 1.7px solid var(--color-border-default) !important;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
-  padding: 6px 14px !important;
-  cursor: pointer !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 6px !important;
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease !important;
-}
-
-.gsc-social-reaction-button:hover,
-a.gsc-header-button:hover,
-button.gsc-header-button:hover,
-a[href*="github.com/login"]:hover,
-button:has(.octicon-mark-github):hover,
-.gsc-auth-link:hover,
-a.gsc-comment-box-logout:hover,
-.gsc-comment-box-logout a:hover,
-a[href*="logout"]:hover {
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
-  background-color: #a8a8a8 !important;
-  color: #000000 !important;
-}
-
-/* TIMESTAMP */
-.gsc-comment-header time,
-.gsc-comment-header a.Link--secondary,
-.gsc-comment-header a[href*="#issuecomment-"],
-.gsc-comment-header a[href*="#discussioncomment-"],
-.timeline-comment-header time,
-.timeline-comment-header a.Link--secondary,
-.timeline-comment-header a[href*="#issuecomment-"],
-.timeline-comment-header a[href*="#discussioncomment-"],
-.gsc-reply time,
-.gsc-replies time,
-.gsc-comment-replies time,
-[class*="reply"] time,
-[class*="replies"] time {
-  font-size: 0.7rem !important;
-  font-weight: 400 !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  color: #333333 !important;
-  -webkit-text-stroke: 0px transparent !important;
-}
-
-/* NAMA USER / AUTHOR */
-.gsc-comment-header a,
-.gsc-comment-author,
-.gsc-comment-header .gsc-comment-author,
-.gsc-comment-header a.author,
-.timeline-comment-header .author,
-.gsc-comment-header a[data-hovercard-type="user"],
-.gsc-comment-header a.Link--primary,
-.gsc-comment-header strong,
-.timeline-comment-header strong {
-  font-size: 1rem !important;
-  font-weight: 900 !important;
-  font-family: monospace, sans-serif !important;
-  color: #000000 !important;
-  text-decoration: none !important;
-  -webkit-text-stroke: 0.8px #000000 !important;
-}
-
-/* Underline dashed untuk link teks */
-.gsc-comment-text a:not([class]),
-.markdown-body a:not([class]) {
-  text-decoration: underline dashed !important;
-  text-decoration-thickness: 1px !important;
-  text-underline-offset: 4px !important;
-}
-
-/* TEKS DI DALAM PESAN HITAM */
-.gsc-comment-content,
-.gsc-comment-text,
-.gsc-comment-body,
-.markdown-body,
-.markdown-body p,
-.markdown-body li,
-.markdown-body blockquote,
-.markdown-body span {
-  color: #000000 !important;
-  font-family: monospace, sans-serif !important;
-  background-color: transparent !important;
-}
-
-/* Reaction Popover */
-.gsc-reactions-popover,
-.gsc-popover,
-div[class*="popover"],
-div[role="tooltip"] {
-  background-image: none !important;
-  background-color: var(--neo-bg) !important;
-  border: var(--neo-border) !important;
-  box-shadow: 3px 3px 0px var(--color-border-default) !important;
-  border-radius: 8px !important;
-  padding: 10px !important;
-  opacity: 1 !important;
-  color: var(--color-fg-default) !important;
-  z-index: 999999 !important;
-  position: absolute !important;
-}
-
-/* Tombol Reaksi Utama (Upvote, dll) */
-button[aria-label*="Upvote"],
-button[aria-label*="upvote"],
-button:has(svg.octicon-arrow-up),
-button[aria-label*="reaction"],
-button[aria-label*="Reaction"],
-.gsc-reactions-button {
-  background-color: #bfbfbf !important;
-  border: var(--neo-border) !important;
-  color: #000000 !important;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
-  cursor: pointer !important;
-}
-
-button[aria-label*="Upvote"]:hover,
-button[aria-label*="upvote"]:hover,
-button:has(svg.octicon-arrow-up):hover,
-button[aria-label*="reaction"]:hover,
-button[aria-label*="Reaction"]:hover,
-.gsc-reactions-button:hover {
-  background-color: #a8a8a8 !important;
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
-}
-
-.gsc-reactions-popover button,
-.gsc-popover button,
-div[class*="popover"] button {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(updateGiscusTheme, 1500);
+    });
+  </script>
+</body>
+</html>
