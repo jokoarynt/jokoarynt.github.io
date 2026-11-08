@@ -34,7 +34,7 @@ html[data-theme="night"] div {
   --color-border-muted: #ffffff !important;
   --color-fg-default: #ffffff !important;
   --color-fg-muted: #ffffff !important;
-  --color-fg-subtle: #ffffff !important;
+  --color-fg-subtle: #b0b0b0 !important;
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #dcd6f7 !important;
   
@@ -107,30 +107,6 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Warna Abu-abu pada Isi Pesan Utama */
-.gsc-comment .gsc-comment-content,
-.gsc-comment .gsc-comment-text {
-  background-color: #888888 !important;
-  color: #ffffff !important;
-  padding: 12px !important;
-  border-radius: 6px !important;
-}
-
-/* Warna Abu-abu Agak Muda pada Isi Pesan Balasan */
-.gsc-reply .gsc-comment-content,
-.gsc-reply .gsc-comment-text,
-.gsc-replies .gsc-comment-content,
-.gsc-replies .gsc-comment-text,
-.gsc-comment-replies .gsc-comment-content,
-.gsc-comment-replies .gsc-comment-text,
-[class*="reply"] .gsc-comment-content,
-[class*="replies"] .gsc-comment-content {
-  background-color: #b0b0b0 !important;
-  color: #000000 !important;
-  padding: 12px !important;
-  border-radius: 6px !important;
-}
-
 /* Textarea & Inputs */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
@@ -179,6 +155,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
+/* Header Kotak Pesan Utama & Balasan (Diatur Warna Ungu) */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
@@ -187,9 +164,9 @@ button[type="submit"]:hover,
 .gsc-comment-replies .gsc-comment-header,
 [class*="reply"] .gsc-comment-header,
 [class*="replies"] .gsc-comment-header {
-  background-color: var(--color-canvas-subtle) !important;
+  background-color: var(--neo-accent) !important;
   border-bottom: 1.5px solid var(--color-border-default) !important;
-  color: var(--color-fg-muted) !important;
+  color: #000000 !important;
   font-weight: bold !important;
   padding: 10px 14px !important;
 }
@@ -218,7 +195,7 @@ button[type="submit"]:hover,
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  color: var(--color-fg-muted) !important;
+  color: #333333 !important;
   -webkit-text-stroke: 0px transparent !important;
 }
 
@@ -265,9 +242,9 @@ button[type="submit"]:hover,
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
-  color: var(--color-fg-default) !important;
+  color: #000000 !important;
   text-decoration: none !important;
-  -webkit-text-stroke: 0.8px var(--color-fg-default) !important;
+  -webkit-text-stroke: 0.8px #000000 !important;
 }
 
 /* KEMBALIKAN TIMESTAMP AGAR TIDAK IKUT MENJADI BOLD / IKUT TERKENA SELEKTOR UNIVERSAL ATAS */
@@ -296,7 +273,7 @@ button[type="submit"]:hover,
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  color: var(--color-fg-muted) !important;
+  color: #333333 !important;
   -webkit-text-stroke: 0px transparent !important;
 }
 
@@ -308,9 +285,11 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
+/* Warna Abu-abu Tipis pada Isi Pesan */
 .gsc-comment-text,
 .gsc-comment-text *,
 .markdown-body {
+  color: var(--color-fg-subtle) !important;
   font-family: monospace, sans-serif !important;
 }
 
