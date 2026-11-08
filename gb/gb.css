@@ -52,7 +52,6 @@ html[data-theme="night"] div {
 [data-color-mode="dark"] .gsc-comment-box-header,
 [data-color-mode="dark"] .gsc-comment-box-header *,
 [data-color-mode="dark"] .gsc-reactions-count,
-[data-color-mode="dark"] [class*="reaction"],
 [data-color-mode="dark"] [class*="count"],
 main.dark .gsc-comment-box *,
 html[data-theme="night"] .gsc-comment-box * {
@@ -299,24 +298,7 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Lingkaran Emotion Reaction (Tombol Reaksi/Emoji) Menjadi Ungu */
-.gsc-reaction-button,
-button.gsc-reaction-button,
-.gsc-comment-reactions-button,
-[aria-label*="reaction"],
-button[class*="reaction"] {
-  background-color: var(--neo-accent) !important;
-  border: var(--neo-border) !important;
-  color: #000000 !important;
+/* Biarkan tombol reaction di dalam popover/komentar kembali normal (tanpa paksaan warna ungu & border kustom) */
+.gsc-reaction-button {
   border-radius: 6px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
-}
-
-.gsc-reaction-button:hover,
-button.gsc-reaction-button:hover,
-[aria-label*="reaction"]:hover {
-  background-color: #c5bde8 !important;
-  color: #000000 !important;
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
 }
