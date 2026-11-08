@@ -15,7 +15,7 @@
   --color-accent-emphasis: #dcd6f7 !important;
   
   --neo-border: 1.7px solid #000000;
-  --neo-shadow: 6px 6px 0px #000000;
+  --neo-shadow: 2px 2px 0px #000000;
   --neo-shadow-hover: 1px 1px 0px #000000;
   --neo-bg: #e4e4e4;
   --neo-accent: #dcd6f7;
@@ -39,7 +39,7 @@ html[data-theme="night"] div {
   --color-accent-emphasis: #dcd6f7 !important;
   
   --neo-border: 1.7px solid #ffffff;
-  --neo-shadow: 6px 6px 0px #ffffff;
+  --neo-shadow: 2px 2px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #3a3a3a !important;
   --neo-accent: #dcd6f7;
@@ -83,27 +83,27 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Shadow Kanan yang Jelas & Sudut Membulat Sempurna */
+/* Kotak Komentar Utama (Form) dengan Shadow Proporsional & Sudut Membulat Sempurna */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: var(--color-canvas-default) !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 6px 6px 0px var(--color-border-default) !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
-  margin-right: 6px !important;
+  margin-right: 3px !important;
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Shadow Kanan Terlihat Jelas & Sudut Kanan Bawah Tidak Lancip */
+/* KARTU PESAN: Shadow Proporsional, Sudut Kanan Bawah Tidak Lancip */
 .gsc-comment {
   background-color: var(--color-canvas-default) !important;
   border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 6px 6px 0px var(--color-border-default) !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
-  margin-right: 6px !important;
+  margin-right: 3px !important;
   overflow: visible !important;
 }
 
@@ -176,7 +176,7 @@ textarea, input {
 textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   outline: none !important;
   box-shadow: var(--neo-shadow) !important;
-  transform: translate(-2px, -2px) !important;
+  transform: translate(-1px, -1px) !important;
   background-color: #ffffff !important;
   color: #000000 !important;
 }
@@ -200,8 +200,8 @@ button[type="submit"],
 button[type="submit"]:hover,
 .gsc-button-primary:hover,
 .gsc-button:hover {
-  transform: translate(2px, 2px) !important;
-  box-shadow: var(--neo-shadow-hover) !important;
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
   background-color: #c5bde8 !important;
   color: #000000 !important;
 }
@@ -277,7 +277,7 @@ div[role="tooltip"] {
   background-image: none !important;
   background-color: var(--neo-bg) !important;
   border: var(--neo-border) !important;
-  box-shadow: 4px 4px 0px var(--color-border-default) !important;
+  box-shadow: 3px 3px 0px var(--color-border-default) !important;
   border-radius: 8px !important;
   padding: 10px !important;
   opacity: 1 !important;
