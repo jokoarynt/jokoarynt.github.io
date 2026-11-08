@@ -91,7 +91,7 @@ a[href*="giscus.app"] {
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 3px 3px 0px var(--color-border-default) !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 5px !important;
   overflow: hidden !important;
 }
 
@@ -101,17 +101,17 @@ a[href*="giscus.app"] {
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 3px 3px 0px var(--color-border-default) !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 5px !important;
   overflow: hidden !important;
 }
 
-/* Margin bottom antar pesan khusus mobile diperkecil menjadi 5px */
+/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 2.5px */
 @media (max-width: 767px) {
   .gsc-comment,
   .gsc-comment-box,
   .color-canvas-default,
   .color-canvas-subtle {
-    margin-bottom: 5px !important;
+    margin-bottom: 2.5px !important;
   }
 }
 
