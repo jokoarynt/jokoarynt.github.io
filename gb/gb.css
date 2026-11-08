@@ -96,9 +96,9 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Kotak Pesan Utama (Abu-abu Tua) */
+/* Kartu Pesan */
 .gsc-comment {
-  background-color: #2b2b2b !important;
+  background-color: var(--neo-bg) !important;
   border: 1.5px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
@@ -107,18 +107,28 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Kotak Balasan Pesan (Abu-abu Muda) */
-.gsc-reply,
-.gsc-replies,
-.gsc-comment-replies,
-[class*="reply"],
-[class*="replies"] {
+/* Warna Abu-abu Tua pada Isi Pesan Utama */
+.gsc-comment .gsc-comment-content,
+.gsc-comment .gsc-comment-text {
+  background-color: #2b2b2b !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+}
+
+/* Warna Abu-abu Muda pada Isi Pesan Balasan */
+.gsc-reply .gsc-comment-content,
+.gsc-reply .gsc-comment-text,
+.gsc-replies .gsc-comment-content,
+.gsc-replies .gsc-comment-text,
+.gsc-comment-replies .gsc-comment-content,
+.gsc-comment-replies .gsc-comment-text,
+[class*="reply"] .gsc-comment-content,
+[class*="replies"] .gsc-comment-content {
   background-color: #f0f0f0 !important;
-  border: 1.5px solid var(--color-border-default) !important;
-  border-radius: 8px !important;
-  padding: 10px !important;
-  margin-top: 10px !important;
   color: #000000 !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
 }
 
 /* Textarea & Inputs */
@@ -169,7 +179,6 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Header Kotak Pesan Utama & Balasan (Warna Ungu) */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
@@ -178,9 +187,9 @@ button[type="submit"]:hover,
 .gsc-comment-replies .gsc-comment-header,
 [class*="reply"] .gsc-comment-header,
 [class*="replies"] .gsc-comment-header {
-  background-color: var(--neo-accent) !important;
+  background-color: var(--color-canvas-subtle) !important;
   border-bottom: 1.5px solid var(--color-border-default) !important;
-  color: #000000 !important;
+  color: var(--color-fg-muted) !important;
   font-weight: bold !important;
   padding: 10px 14px !important;
 }
@@ -209,7 +218,7 @@ button[type="submit"]:hover,
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  color: #333333 !important;
+  color: var(--color-fg-muted) !important;
   -webkit-text-stroke: 0px transparent !important;
 }
 
@@ -256,9 +265,9 @@ button[type="submit"]:hover,
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
-  color: #000000 !important;
+  color: var(--color-fg-default) !important;
   text-decoration: none !important;
-  -webkit-text-stroke: 0.8px #000000 !important;
+  -webkit-text-stroke: 0.8px var(--color-fg-default) !important;
 }
 
 /* KEMBALIKAN TIMESTAMP AGAR TIDAK IKUT MENJADI BOLD / IKUT TERKENA SELEKTOR UNIVERSAL ATAS */
@@ -287,7 +296,7 @@ button[type="submit"]:hover,
   text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  color: #333333 !important;
+  color: var(--color-fg-muted) !important;
   -webkit-text-stroke: 0px transparent !important;
 }
 
@@ -302,7 +311,6 @@ button[type="submit"]:hover,
 .gsc-comment-text,
 .gsc-comment-text *,
 .markdown-body {
-  color: var(--color-fg-default) !important;
   font-family: monospace, sans-serif !important;
 }
 
