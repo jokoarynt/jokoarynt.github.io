@@ -403,7 +403,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* SEMUA ISI PESAN (UTAMA & BALASAN) DIATUR FONT-SIZE 0.875rem                */
+/* ISI PESAN UTAMA: FONT-SIZE 0.875rem                                        */
 /* ========================================================================== */
 .gsc-comment-content,
 .gsc-comment-content *,
@@ -412,16 +412,12 @@ button[type="submit"]:hover,
 .gsc-comment-body,
 .gsc-comment-body *,
 .markdown-body,
-.markdown-body *,
-.gsc-reply .markdown-body,
-.gsc-reply .markdown-body *,
-[class*="reply"] .markdown-body,
-[class*="reply"] .markdown-body * {
+.markdown-body * {
   font-size: 0.875rem !important;
 }
 
 /* ========================================================================== */
-/* KOTAK REACTIONS (PESAN UTAMA & BALASAN): FONT-SIZE 0.875rem & "Sign in" TIPIS */
+/* KOTAK REACTIONS: FONT-SIZE 0.875rem & "Sign in" TIPIS                      */
 /* ========================================================================== */
 .gsc-comment-footer,
 .gsc-comment-footer *,
@@ -454,12 +450,12 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TARGET TEKS JUMLAH REPLIES / BALASAN DI POJOK KANAN BAWAH KE 80%           */
+/* TARGET KHUSUS TOTAL REPLIES DI POJOK KANAN BAWAH KE 80%                   */
 /* ========================================================================== */
-.gsc-comment a.Link--secondary,
-.gsc-comment-footer a,
-.gsc-reply a.Link--secondary,
-[class*="reply"] a.Link--secondary {
+.gsc-comment a.Link--secondary[href*="#comments"],
+.gsc-comment-footer a[href*="#comments"],
+.gsc-reply a.Link--secondary[href*="#comments"],
+[class*="reply"] a.Link--secondary[href*="#comments"] {
   font-size: 80% !important;
 }
 
