@@ -247,10 +247,11 @@ button[type="submit"]:hover,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
   transform: translate(11px, 2.5px) !important;
   margin-bottom: 8px !important;
   width: calc(100% - 22px) !important;
+  position: relative !important;
 }
 
 .gsc-comment-box [role="tablist"] button,
@@ -278,6 +279,8 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 2.5px !important;
   margin: 0 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* Write & Preview di pojok kiri */
@@ -311,10 +314,18 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* ========================================================================== */
-/* OVERRIDE MUTLAK: HAPUS TOTAL EFEK HOVER PADA TOMBOL PREVIEW                 */
-/* Menggunakan selector spesifik untuk menimpa state hover bawaan Giscus/GitHub */
-/* ========================================================================== */
+/* FIX UTAMA: Kunci posisi tombol Preview agar tidak bergeser/pindah ke kanan saat diklik (aktif/selected) */
+.gsc-comment-box [role="tablist"] button[aria-selected="true"],
+.gsc-comment-box [role="tablist"] [role="tab"][aria-selected="true"],
+.gsc-comment-box .tabnav-tab.selected,
+.gsc-comment-box [class*="tab"].selected,
+.gsc-comment-box button.selected,
+.gsc-comment-box a.selected {
+  margin-left: 5px !important;
+  transform: none !important;
+}
+
+/* KUNCI MUTLAK: HAPUS TOTAL EFEK HOVER, ACTIVE, DAN FOCUS PADA TOMBOL PREVIEW SAJA */
 .gsc-comment-box [role="tablist"] button:nth-child(2):hover,
 .gsc-comment-box [role="tablist"] button:nth-child(2):focus,
 .gsc-comment-box [role="tablist"] button:nth-child(2):active,
