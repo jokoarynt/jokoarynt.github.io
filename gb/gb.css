@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Posisi & Efek Hover seperti Tombol Upvote) */
+/* STYLING TOMBOL WRITE & PREVIEW (Efek Hover ke Bawah Murni Tanpa Geser Kiri) */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -291,7 +291,7 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* Efek Hover: Meniru tombol Upvote (bergeser ke kanan-bawah sejauh 1px dan bayangan mengecil) */
+/* Efek Hover murni bergerak ke bawah (sumbu Y positif saja tanpa sumbu X negatif ke kiri) */
 .gsc-comment-box button:hover,
 .gsc-comment-box a:hover,
 .gsc-comment-box [role="tab"]:hover,
@@ -299,8 +299,8 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item:hover,
 .gsc-comment-box [class*="tab"]:hover {
   background-color: #a8a8a8 !important;
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  transform: translateY(1px) !important;
+  box-shadow: 2px 1px 0px #000000 !important;
   text-decoration: none !important;
   color: #000000 !important;
 }
