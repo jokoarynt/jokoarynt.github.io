@@ -297,84 +297,49 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TIMESTAMP & TOTAL REPLIES: DIJAMIN 80% & BERSIH DARI GARIS BAWAH           */
+/* TIMESTAMP & TOTAL REPLIES: DIPAKSA 80% & BERSIH DARI GARIS BAWAH           */
 /* ========================================================================== */
 .gsc-comment-header time,
-.gsc-comment-header a.Link--secondary,
-.gsc-comment-header a[href*="#issuecomment-"],
-.gsc-comment-header a[href*="#discussioncomment-"],
+.gsc-comment-header a,
 .timeline-comment-header time,
-.timeline-comment-header a.Link--secondary,
-.timeline-comment-header a[href*="#issuecomment-"],
-.timeline-comment-header a[href*="#discussioncomment-"],
+.timeline-comment-header a,
 .gsc-reply time,
-.gsc-reply a.Link--secondary,
-.gsc-reply a[href*="#issuecomment-"],
-.gsc-reply a[href*="#discussioncomment-"],
+.gsc-reply a,
 .gsc-replies time,
-.gsc-replies a.Link--secondary,
-.gsc-replies a[href*="#issuecomment-"],
-.gsc-replies a[href*="#discussioncomment-"],
+.gsc-replies a,
 .gsc-comment-replies time,
-.gsc-comment-replies a.Link--secondary,
-.gsc-comment-replies a[href*="#issuecomment-"],
-.gsc-comment-replies a[href*="#discussioncomment-"],
+.gsc-comment-replies a,
 [class*="reply"] time,
-[class*="reply"] a.Link--secondary,
-[class*="reply"] a[href*="#issuecomment-"],
-[class*="reply"] a[href*="#discussioncomment-"],
+[class*="reply"] a,
 [class*="replies"] time,
-[class*="replies"] a.Link--secondary,
-[class*="replies"] a[href*="#issuecomment-"],
-[class*="replies"] a[href*="#discussioncomment-"],
-.gsc-comment-footer a.Link--secondary,
-.gsc-comment-footer a[href*="#comments"],
-.gsc-reply .gsc-comment-footer a,
-[class*="reply"] .gsc-comment-footer a {
+[class*="replies"] a,
+.gsc-comment-footer *,
+.gsc-comment-footer a {
   font-size: 80% !important;
   font-weight: 400 !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  color: #333333 !important;
-  -webkit-text-stroke: 0px transparent !important;
 }
 
-.gsc-comment-header time:hover,
-.gsc-comment-header a.Link--secondary:hover,
-.gsc-comment-header a[href*="#issuecomment-"]:hover,
-.gsc-comment-header a[href*="#discussioncomment-"]:hover,
-.timeline-comment-header time:hover,
-.timeline-comment-header a.Link--secondary:hover,
-.timeline-comment-header a[href*="#issuecomment-"]:hover,
-.timeline-comment-header a[href*="#discussioncomment-"]:hover,
-.gsc-reply time:hover,
-.gsc-reply a.Link--secondary:hover,
-.gsc-reply a[href*="#issuecomment-"]:hover,
-.gsc-reply a[href*="#discussioncomment-"]:hover,
-.gsc-replies time:hover,
-.gsc-replies a.Link--secondary:hover,
-.gsc-replies a[href*="#issuecomment-"]:hover,
-.gsc-replies a[href*="#discussioncomment-"]:hover,
-.gsc-comment-replies time:hover,
-.gsc-comment-replies a.Link--secondary:hover,
-.gsc-comment-replies a[href*="#issuecomment-"]:hover,
-.gsc-comment-replies a[href*="#discussioncomment-"]:hover,
-[class*="reply"] time:hover,
-[class*="reply"] a.Link--secondary:hover,
-[class*="reply"] a[href*="#issuecomment-"]:hover,
-[class*="reply"] a[href*="#discussioncomment-"]:hover,
-[class*="replies"] time:hover,
-[class*="replies"] a.Link--secondary:hover,
-[class*="replies"] a[href*="#issuecomment-"]:hover,
-[class*="replies"] a[href*="#discussioncomment-"]:hover,
-.gsc-comment-footer a.Link--secondary:hover,
-.gsc-comment-footer a[href*="#comments"]:hover {
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+.gsc-comment-header time,
+.gsc-comment-header a.Link--secondary,
+.timeline-comment-header time,
+.timeline-comment-header a.Link--secondary,
+.gsc-reply time,
+.gsc-reply a.Link--secondary,
+.gsc-replies time,
+.gsc-replies a.Link--secondary,
+.gsc-comment-replies time,
+.gsc-comment-replies a.Link--secondary,
+[class*="reply"] time,
+[class*="reply"] a.Link--secondary,
+[class*="replies"] time,
+[class*="replies"] a.Link--secondary,
+.gsc-comment-footer a {
+  color: #333333 !important;
+  -webkit-text-stroke: 0px transparent !important;
 }
 
 /* ========================================================================== */
