@@ -240,13 +240,13 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Posisi, Pemisahan 5px, & Padding 2.5px)    */
+/* STYLING TOMBOL WRITE & PREVIEW (Posisi digeser ke kanan 5px, Padding 2.5px) */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
-  transform: translate(-1px, 4px) !important;
+  transform: translate(4px, 4px) !important;
   margin-bottom: 8px !important;
 }
 
