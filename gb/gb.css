@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE, PREVIEW & AA (POSISI, OFFSET & HAPUS TOTAL HOVER)    */
+/* STYLING TOMBOL WRITE, PREVIEW & AA (POSISI & TANPA EFEK HOVER)              */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -313,7 +313,7 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* KUNCI MUTLAK: HAPUS SEMUA EFEK HOVER, ACTIVE, DAN FOCUS PADA WRITE, PREVIEW, & AA */
+/* HAPUS TOTAL EFEK HOVER, ACTIVE, & FOCUS SECARA MUTLAK */
 .gsc-comment-box [role="tablist"] button:hover,
 .gsc-comment-box [role="tablist"] button:active,
 .gsc-comment-box [role="tablist"] button:focus,
