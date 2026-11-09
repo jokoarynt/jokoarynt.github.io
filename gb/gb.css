@@ -297,7 +297,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TIMESTAMP & TOTAL REPLIES: DIPAKSA 80% & BERSIH DARI GARIS BAWAH           */
+/* TIMESTAMP & TOTAL REPLIES: DISAMAKAN UKURANNYA DAN BERSIH DARI GARIS       */
 /* ========================================================================== */
 .gsc-comment-header time,
 .gsc-comment-header a,
@@ -315,7 +315,7 @@ button[type="submit"]:hover,
 [class*="replies"] a,
 .gsc-comment-footer *,
 .gsc-comment-footer a {
-  font-size: 80% !important;
+  font-size: 12px !important;
   font-weight: 400 !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
