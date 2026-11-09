@@ -240,16 +240,13 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Tanpa Efek Hover / Diam Total)              */
+/* STYLING TOMBOL WRITE & PREVIEW (Posisi Diam, Tanpa Selector Hover Sama Sekali) */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
-  position: relative !important;
-  left: 11px !important;
-  top: 2.5px !important;
-  transform: none !important;
+  transform: translate(11px, 2.5px) !important;
   margin-bottom: 8px !important;
 }
 
@@ -292,36 +289,6 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
   margin-left: 5px !important;
-}
-
-/* Kunci total state hover, active, dan focus agar tombol benar-benar diam statis */
-.gsc-comment-box button:hover,
-.gsc-comment-box a:hover,
-.gsc-comment-box [role="tab"]:hover,
-.gsc-comment-box .tabnav-tab:hover,
-.gsc-comment-box .subnav-item:hover,
-.gsc-comment-box [class*="tab"]:hover,
-.gsc-comment-box button:active,
-.gsc-comment-box a:active,
-.gsc-comment-box [role="tab"]:active,
-.gsc-comment-box .tabnav-tab:active,
-.gsc-comment-box .subnav-item:active,
-.gsc-comment-box [class*="tab"]:active,
-.gsc-comment-box button:focus,
-.gsc-comment-box a:focus,
-.gsc-comment-box [role="tab"]:focus,
-.gsc-comment-box .tabnav-tab:focus,
-.gsc-comment-box .subnav-item:focus,
-.gsc-comment-box [class*="tab"]:focus {
-  background-color: #bfbfbf !important;
-  position: relative !important;
-  top: 0px !important;
-  left: 0px !important;
-  transform: none !important;
-  box-shadow: 2px 2px 0px #000000 !important;
-  text-decoration: none !important;
-  color: #000000 !important;
-  outline: none !important;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
