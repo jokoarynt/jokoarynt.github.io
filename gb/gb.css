@@ -239,16 +239,16 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* STYLE TOMBOL WRITE & PREVIEW SEPERTI TOMBOL UPVOTE */
+/* STYLE TOMBOL WRITE & PREVIEW AGAR SAMA PERSIS DENGAN TOMBOL UPVOTE */
 .gsc-comment-box button[role="tab"],
 .gsc-comment-box .tabnav-tab,
 .gsc-comment-box [class*="tab"],
 .gsc-comment-box a[role="tab"] {
   background-color: #bfbfbf !important;
-  border: var(--neo-border) !important;
+  border: 1.7px solid #000000 !important;
   color: #000000 !important;
   border-radius: 6px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  box-shadow: 2px 2px 0px #000000 !important;
   cursor: pointer !important;
   text-decoration: none !important;
   font-family: monospace, sans-serif !important;
@@ -258,6 +258,7 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 6px 14px !important;
   margin-right: 6px !important;
+  margin-bottom: 8px !important;
 }
 
 .gsc-comment-box button[role="tab"]:hover,
@@ -266,7 +267,7 @@ button[type="submit"]:hover,
 .gsc-comment-box a[role="tab"]:hover {
   background-color: #a8a8a8 !important;
   transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  box-shadow: 1px 1px 0px #000000 !important;
   text-decoration: none !important;
   color: #000000 !important;
 }
