@@ -365,7 +365,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TARGET UTAMA: USERNAME DIJAMIN TEBAL (BOLD) TANPA MENGENAI SIGN IN           */
+/* TARGET UTAMA: USERNAME DIJAMIN 100% TEBAL (BOLD)                           */
 /* ========================================================================== */
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -398,20 +398,43 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TARGET UTAMA: TEKS "Sign in" DI KOTAK REAKSI DIJAMIN NORMAL / TIPIS       */
+/* KOTAK REACTIONS: FONT-SIZE 0.875rem & "Sign in" NORMAL / TIPIS             */
 /* ========================================================================== */
-.gsc-reactions-count a,
-.gsc-comment-content a[href*="login"],
-.gsc-comment-content a[href*="github.com/login"],
-.gsc-comment-body a[href*="login"],
-.gsc-comment-body a[href*="github.com/login"],
+.gsc-comment .gsc-reactions-count,
+.gsc-comment-box .gsc-reactions-count,
+.gsc-reply .gsc-reactions-count,
+[class*="reply"] .gsc-reactions-count,
+.gsc-comment [class*="reactions"],
+.gsc-comment-box [class*="reactions"],
+.gsc-reply [class*="reactions"],
+[class*="reply"] [class*="reactions"],
+.gsc-comment div:has(> a[href*="login"]),
+.gsc-reply div:has(> a[href*="login"]),
+[class*="reply"] div:has(> a[href*="login"]) {
+  font-size: 0.875rem !important;
+}
+
+.gsc-comment .gsc-reactions-count *,
+.gsc-comment-box .gsc-reactions-count *,
+.gsc-reply .gsc-reactions-count *,
+[class*="reply"] .gsc-reactions-count *,
+.gsc-comment [class*="reactions"] *,
+.gsc-comment-box [class*="reactions"] *,
+.gsc-reply [class*="reactions"] *,
+[class*="reply"] [class*="reactions"] * {
+  font-size: 0.875rem !important;
+}
+
+/* Paksa khusus tautan "Sign in" di dalam kotak reactions menjadi tipis & normal */
+.gsc-comment a[href*="login"],
+.gsc-comment a[href*="github.com/login"],
 .gsc-reply a[href*="login"],
 .gsc-reply a[href*="github.com/login"],
 [class*="reply"] a[href*="login"],
 [class*="reply"] a[href*="github.com/login"],
-[class*="reactions"] a[href*="login"],
-[class*="reactions"] a[href*="github.com/login"] {
-  font-size: 0.85rem !important;
+.gsc-reactions-count a,
+[class*="reaction"] a {
+  font-size: 0.875rem !important;
   font-weight: 400 !important;
   -webkit-text-stroke: 0px transparent !important;
   text-stroke: 0px transparent !important;
