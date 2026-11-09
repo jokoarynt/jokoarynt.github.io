@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE, PREVIEW & AA (POSISI, OFFSET & TANPA EFEK HOVER)       */
+/* STYLING TOMBOL WRITE, PREVIEW & AA (POSISI & TANPA EFEK HOVER Sama Sekali)  */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -253,10 +253,14 @@ button[type="submit"]:hover,
   width: calc(100% - 22px) !important;
 }
 
-.gsc-comment-box button,
-.gsc-comment-box a,
-.gsc-comment-box [role="tab"],
+.gsc-comment-box [role="tablist"] button,
+.gsc-comment-box [role="tablist"] a,
+.gsc-comment-box [role="tablist"] [role="tab"],
+.gsc-comment-box .tabnav button,
+.gsc-comment-box .tabnav a,
 .gsc-comment-box .tabnav-tab,
+.gsc-comment-box .gsc-comment-box-tabs button,
+.gsc-comment-box .gsc-comment-box-tabs a,
 .gsc-comment-box .subnav-item,
 .gsc-comment-box [class*="tab"] {
   background-color: #bfbfbf !important;
@@ -279,18 +283,22 @@ button[type="submit"]:hover,
 }
 
 /* Write & Preview di pojok kiri */
-.gsc-comment-box button[role="tab"]:first-child,
+.gsc-comment-box [role="tablist"] button:first-child,
+.gsc-comment-box [role="tablist"] a:first-child,
+.gsc-comment-box [role="tablist"] [role="tab"]:first-child,
+.gsc-comment-box .tabnav button:first-child,
+.gsc-comment-box .tabnav a:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
-.gsc-comment-box [class*="tab"]:first-child,
-.gsc-comment-box a[role="tab"]:first-child {
+.gsc-comment-box [class*="tab"]:first-child {
   margin-left: -12px !important;
 }
 
-.gsc-comment-box button + button,
-.gsc-comment-box a + a,
-.gsc-comment-box [role="tab"] + [role="tab"],
+.gsc-comment-box [role="tablist"] button + button,
+.gsc-comment-box [role="tablist"] a + a,
+.gsc-comment-box [role="tablist"] [role="tab"] + [role="tab"],
+.gsc-comment-box .tabnav button + button,
+.gsc-comment-box .tabnav a + a,
 .gsc-comment-box .tabnav-tab + .tabnav-tab,
-.gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
   margin-left: 5px !important;
 }
@@ -305,24 +313,30 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* HAPUS TOTAL SEMUA EFEK HOVER, ACTIVE, DAN FOCUS (DIAM TOTAL, WARNA & POSISI TETAP KAKU) */
-.gsc-comment-box button:hover,
-.gsc-comment-box a:hover,
-.gsc-comment-box [role="tab"]:hover,
+/* HAPUS TOTAL SEMUA EFEK HOVER, ACTIVE, DAN FOCUS PADA KETIGA TOMBOL TERSEBUT */
+.gsc-comment-box [role="tablist"] button:hover,
+.gsc-comment-box [role="tablist"] button:active,
+.gsc-comment-box [role="tablist"] button:focus,
+.gsc-comment-box [role="tablist"] a:hover,
+.gsc-comment-box [role="tablist"] a:active,
+.gsc-comment-box [role="tablist"] a:focus,
+.gsc-comment-box [role="tablist"] [role="tab"]:hover,
+.gsc-comment-box [role="tablist"] [role="tab"]:active,
+.gsc-comment-box [role="tablist"] [role="tab"]:focus,
+.gsc-comment-box .tabnav button:hover,
+.gsc-comment-box .tabnav button:active,
+.gsc-comment-box .tabnav button:focus,
+.gsc-comment-box .tabnav a:hover,
+.gsc-comment-box .tabnav a:active,
+.gsc-comment-box .tabnav a:focus,
 .gsc-comment-box .tabnav-tab:hover,
-.gsc-comment-box .subnav-item:hover,
-.gsc-comment-box [class*="tab"]:hover,
-.gsc-comment-box button:active,
-.gsc-comment-box a:active,
-.gsc-comment-box [role="tab"]:active,
 .gsc-comment-box .tabnav-tab:active,
-.gsc-comment-box .subnav-item:active,
-.gsc-comment-box [class*="tab"]:active,
-.gsc-comment-box button:focus,
-.gsc-comment-box a:focus,
-.gsc-comment-box [role="tab"]:focus,
 .gsc-comment-box .tabnav-tab:focus,
-.gsc-comment-box .subnav-item:focus,
+.gsc-comment-box .gsc-comment-box-tabs button:hover,
+.gsc-comment-box .gsc-comment-box-tabs button:active,
+.gsc-comment-box .gsc-comment-box-tabs button:focus,
+.gsc-comment-box [class*="tab"]:hover,
+.gsc-comment-box [class*="tab"]:active,
 .gsc-comment-box [class*="tab"]:focus {
   background-color: #bfbfbf !important;
   color: #000000 !important;
@@ -542,7 +556,7 @@ button[aria-label*="Reaction"]:hover,
 a.gsc-social-button:hover,
 button.gsc-social-button:hover,
 .gsc-comment-box a[href*="login"]:hover,
-`button.gsc-comment-box button[href*="login"]:hover`,
+.gsc-comment-box button[href*="login"]:hover,
 .gsc-comment-box a[href*="github.com/login"]:hover,
 .gsc-comment-box .btn:hover,
 .gsc-comment-box-main a[href*="login"]:hover,
