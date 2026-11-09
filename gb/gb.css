@@ -364,7 +364,7 @@ button[type="submit"]:hover,
   box-shadow: none !important;
 }
 
-/* NAMA USER / AUTHOR (HARUS TETAP BOLD) */
+/* NAMA USER / AUTHOR (DIJAMIN TETAP BOLD & TEBAL) */
 .gsc-comment-author,
 .gsc-comment-header .author,
 .timeline-comment-header .author,
@@ -395,14 +395,19 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0.8px #000000 !important;
 }
 
-/* PAKSA TEKS "Sign in" PADA KOTAK REAKSI MENJADI NORMAL */
+/* PAKSA TULISAN "Sign in" DI KOTAK REAKSI MENJADI NORMAL / TIDAK IKUT TEBAL */
 .gsc-reactions-count a,
 [class*="reaction"] a,
 .gsc-comment-box a[href*="login"],
-.gsc-comment-box a[href*="github.com/login"] {
-  font-size: inherit !important;
-  font-weight: normal !important;
+.gsc-comment-box a[href*="github.com/login"],
+.gsc-reply a[href*="login"],
+.gsc-reply a[href*="github.com/login"],
+[class*="reply"] a[href*="login"],
+[class*="reply"] a[href*="github.com/login"] {
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
   -webkit-text-stroke: 0px transparent !important;
+  text-stroke: 0px transparent !important;
 }
 
 /* Underline dashed untuk link teks di dalam isi komentar */
