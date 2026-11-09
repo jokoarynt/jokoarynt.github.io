@@ -296,7 +296,9 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak & atur ke 80% */
+/* ========================================================================== */
+/* TIMESTAMP & TOTAL REPLIES: DIJAMIN 80% & BERSIH DARI GARIS BAWAH           */
+/* ========================================================================== */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -324,7 +326,11 @@ button[type="submit"]:hover,
 [class*="replies"] time,
 [class*="replies"] a.Link--secondary,
 [class*="replies"] a[href*="#issuecomment-"],
-[class*="replies"] a[href*="#discussioncomment-"] {
+[class*="replies"] a[href*="#discussioncomment-"],
+.gsc-comment-footer a.Link--secondary,
+.gsc-comment-footer a[href*="#comments"],
+.gsc-reply .gsc-comment-footer a,
+[class*="reply"] .gsc-comment-footer a {
   font-size: 80% !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -362,7 +368,9 @@ button[type="submit"]:hover,
 [class*="replies"] time:hover,
 [class*="replies"] a.Link--secondary:hover,
 [class*="replies"] a[href*="#issuecomment-"]:hover,
-[class*="replies"] a[href*="#discussioncomment-"]:hover {
+[class*="replies"] a[href*="#discussioncomment-"]:hover,
+.gsc-comment-footer a.Link--secondary:hover,
+.gsc-comment-footer a[href*="#comments"]:hover {
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
@@ -447,16 +455,6 @@ button[type="submit"]:hover,
   font-weight: 400 !important;
   -webkit-text-stroke: 0px transparent !important;
   text-stroke: 0px transparent !important;
-}
-
-/* ========================================================================== */
-/* TARGET KHUSUS TOTAL REPLIES DI POJOK KANAN BAWAH KE 80%                   */
-/* ========================================================================== */
-.gsc-comment a.Link--secondary[href*="#comments"],
-.gsc-comment-footer a[href*="#comments"],
-.gsc-reply a.Link--secondary[href*="#comments"],
-[class*="reply"] a.Link--secondary[href*="#comments"] {
-  font-size: 80% !important;
 }
 
 /* Underline dashed untuk link teks di dalam isi komentar */
