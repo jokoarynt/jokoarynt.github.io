@@ -398,34 +398,27 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* KOTAK REACTIONS: FONT-SIZE 0.875rem & "Sign in" NORMAL / TIPIS             */
+/* KOTAK REACTIONS (PESAN UTAMA & BALASAN): FONT-SIZE 0.875rem & "Sign in" TIPIS */
 /* ========================================================================== */
-.gsc-comment .gsc-reactions-count,
-.gsc-comment-box .gsc-reactions-count,
-.gsc-reply .gsc-reactions-count,
-[class*="reply"] .gsc-reactions-count,
-.gsc-comment [class*="reactions"],
-.gsc-comment-box [class*="reactions"],
-.gsc-reply [class*="reactions"],
-[class*="reply"] [class*="reactions"],
-.gsc-comment div:has(> a[href*="login"]),
-.gsc-reply div:has(> a[href*="login"]),
-[class*="reply"] div:has(> a[href*="login"]) {
+.gsc-comment-footer,
+.gsc-comment-footer *,
+.gsc-reactions,
+.gsc-reactions *,
+.gsc-comment-reactions,
+.gsc-comment-reactions *,
+.gsc-reactions-count,
+.gsc-reactions-count *,
+[class*="reaction"],
+[class*="reaction"] *,
+.gsc-comment div[style*="font-size"],
+.gsc-reply div[style*="font-size"],
+[class*="reply"] div[style*="font-size"] {
   font-size: 0.875rem !important;
 }
 
-.gsc-comment .gsc-reactions-count *,
-.gsc-comment-box .gsc-reactions-count *,
-.gsc-reply .gsc-reactions-count *,
-[class*="reply"] .gsc-reactions-count *,
-.gsc-comment [class*="reactions"] *,
-.gsc-comment-box [class*="reactions"] *,
-.gsc-reply [class*="reactions"] *,
-[class*="reply"] [class*="reactions"] * {
-  font-size: 0.875rem !important;
-}
-
-/* Paksa khusus tautan "Sign in" di dalam kotak reactions menjadi tipis & normal */
+/* Paksa khusus teks/tautan "Sign in" di dalam kotak reaksi agar tetap normal/tipis */
+.gsc-comment-footer a[href*="login"],
+.gsc-comment-footer a[href*="github.com/login"],
 .gsc-comment a[href*="login"],
 .gsc-comment a[href*="github.com/login"],
 .gsc-reply a[href*="login"],
