@@ -240,15 +240,15 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Geser lebih ke bawah dan ke kiri lagi)     */
+/* STYLING TOMBOL WRITE & PREVIEW (Geser sedikit ke bawah dan ke kiri lagi)    */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
   gap: 8px !important;
-  margin-top: 34px !important;
-  margin-left: -6px !important;
+  margin-top: 40px !important;
+  margin-left: -10px !important;
   margin-bottom: 0px !important;
 }
 
@@ -274,7 +274,7 @@ button[type="submit"]:hover,
   padding: 6px 14px !important;
   margin-right: 6px !important;
   margin-left: 0px !important;
-  margin-top: 30px !important;
+  margin-top: 36px !important;
   margin-bottom: 0px !important;
 }
 
