@@ -443,14 +443,28 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Normalisasi teks "Sign in" di dalam Popover Reaksi */
+/* Normalisasi teks dan link "Sign in" di dalam Popover Reaksi */
 .gsc-reactions-popover strong,
+.gsc-reactions-popover a,
 .gsc-popover strong,
+.gsc-popover a,
 div[class*="popover"] strong,
-div[role="tooltip"] strong {
+div[class*="popover"] a,
+div[role="tooltip"] strong,
+div[role="tooltip"] a {
   font-size: 1rem !important;
   font-weight: normal !important;
   -webkit-text-stroke: 0px transparent !important;
+  text-decoration: underline !important;
+  color: var(--color-fg-default, #000000) !important;
+}
+
+.gsc-reactions-popover a:hover,
+.gsc-popover a:hover,
+div[class*="popover"] a:hover,
+div[role="tooltip"] a:hover {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
 }
 
 /* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea (Disamakan Total) */
