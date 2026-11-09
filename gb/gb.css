@@ -239,32 +239,36 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Tombol Write (Tab Pertama) - Bersih tanpa border bawah */
-.gsc-comment-box button[role="tab"]:first-child,
-.gsc-comment-box .tabnav-tab:first-child,
-.gsc-comment-box [class*="tab"]:first-child,
-.gsc-comment-box a[role="tab"]:first-child {
-  border: none !important;
-  border-bottom: none !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  background-color: transparent !important;
+/* STYLE TOMBOL WRITE & PREVIEW SEPERTI TOMBOL UPVOTE */
+.gsc-comment-box button[role="tab"],
+.gsc-comment-box .tabnav-tab,
+.gsc-comment-box [class*="tab"],
+.gsc-comment-box a[role="tab"] {
+  background-color: #bfbfbf !important;
+  border: var(--neo-border) !important;
+  color: #000000 !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-family: monospace, sans-serif !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px 14px !important;
+  margin-right: 6px !important;
 }
 
-/* BERIKAN BORDER BAWAH TIPIS KHUSUS PADA TOMBOL PREVIEW (Tab Kedua) */
-.gsc-comment-box button[role="tab"]:nth-child(2),
-.gsc-comment-box .tabnav-tab:nth-child(2),
-.gsc-comment-box [class*="tab"]:nth-child(2),
-.gsc-comment-box a[role="tab"]:nth-child(2),
-.gsc-comment-box button[role="tab"][aria-selected="true"],
-.gsc-comment-box .tabnav-tab[aria-selected="true"],
-.gsc-comment-box [class*="tab"][aria-selected="true"],
-.gsc-comment-box a[role="tab"][aria-selected="true"] {
-  border: none !important;
-  border-bottom: 1.7px solid var(--color-border-default) !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  background-color: transparent !important;
+.gsc-comment-box button[role="tab"]:hover,
+.gsc-comment-box .tabnav-tab:hover,
+.gsc-comment-box [class*="tab"]:hover,
+.gsc-comment-box a[role="tab"]:hover {
+  background-color: #a8a8a8 !important;
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  text-decoration: none !important;
+  color: #000000 !important;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
