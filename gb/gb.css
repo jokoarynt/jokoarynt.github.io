@@ -240,13 +240,13 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Sejajar rata kiri dengan textarea)         */
+/* STYLING TOMBOL WRITE & PREVIEW (Write digeser ke kiri agar ada jarak)      */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
-  gap: 8px !important;
+  gap: 12px !important;
   transform: translate(-10px, 8px) !important;
   margin-bottom: 8px !important;
 }
@@ -272,6 +272,14 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 6px 14px !important;
   margin: 0 !important;
+}
+
+/* Khusus tombol Write (Tab pertama) digeser ke kiri agar terpisah dari Preview */
+.gsc-comment-box button[role="tab"]:first-child,
+.gsc-comment-box .tabnav-tab:first-child,
+.gsc-comment-box [class*="tab"]:first-child,
+.gsc-comment-box a[role="tab"]:first-child {
+  margin-right: 8px !important;
 }
 
 .gsc-comment-box button:hover,
