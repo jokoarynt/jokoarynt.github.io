@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE, PREVIEW & AA                                         */
+/* STYLING KONTAINER TAB & TOMBOL WRITE/PREVIEW/AA                            */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -283,7 +283,7 @@ button[type="submit"]:hover,
   transition: none !important;
 }
 
-/* Write & Preview di pojok kiri */
+/* Write & Preview di pojok kiri dengan jarak tetap mutlak */
 .gsc-comment-box [role="tablist"] button:first-child,
 .gsc-comment-box [role="tablist"] a:first-child,
 .gsc-comment-box [role="tablist"] [role="tab"]:first-child,
@@ -304,6 +304,22 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
+/* Memastikan tombol Preview TIDAK IKUT BERGESER/PINDAH KETIKA AKTIF/SELECTED */
+.gsc-comment-box [role="tablist"] button:nth-child(2),
+.gsc-comment-box [role="tablist"] a:nth-child(2),
+.gsc-comment-box [role="tablist"] [role="tab"]:nth-child(2),
+.gsc-comment-box .tabnav button:nth-child(2),
+.gsc-comment-box .tabnav a:nth-child(2),
+.gsc-comment-box .tabnav-tab:nth-child(2),
+.gsc-comment-box .gsc-comment-box-tabs button:nth-child(2),
+.gsc-comment-box .gsc-comment-box-tabs a:nth-child(2),
+.gsc-comment-box [class*="tab"]:nth-child(2) {
+  margin-left: 5px !important;
+  transform: none !important;
+  position: static !important;
+  float: none !important;
+}
+
 /* Tombol "Aa" digeser ke kanan (auto + offset 20px) dan diturunkan ke bawah 8px */
 .gsc-comment-box markdown-toolbar button,
 .gsc-comment-box .markdown-toolbar button,
@@ -314,18 +330,7 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* FIX UTAMA: Kunci posisi tombol Preview agar tidak bergeser/pindah ke kanan saat diklik (aktif/selected) */
-.gsc-comment-box [role="tablist"] button[aria-selected="true"],
-.gsc-comment-box [role="tablist"] [role="tab"][aria-selected="true"],
-.gsc-comment-box .tabnav-tab.selected,
-.gsc-comment-box [class*="tab"].selected,
-.gsc-comment-box button.selected,
-.gsc-comment-box a.selected {
-  margin-left: 5px !important;
-  transform: none !important;
-}
-
-/* KUNCI MUTLAK: HAPUS TOTAL EFEK HOVER, ACTIVE, DAN FOCUS PADA TOMBOL PREVIEW SAJA */
+/* KUNCI MUTLAK: HAPUS TOTAL EFEK HOVER, ACTIVE, DAN FOCUS PADA TOMBOL PREVIEW SAJA (POSISI & TAMPILAN TETAP KAKU) */
 .gsc-comment-box [role="tablist"] button:nth-child(2):hover,
 .gsc-comment-box [role="tablist"] button:nth-child(2):focus,
 .gsc-comment-box [role="tablist"] button:nth-child(2):active,
