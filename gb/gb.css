@@ -443,6 +443,16 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
+/* Normalisasi teks "Sign in" di dalam Popover Reaksi */
+.gsc-reactions-popover strong,
+.gsc-popover strong,
+div[class*="popover"] strong,
+div[role="tooltip"] strong {
+  font-size: 1rem !important;
+  font-weight: normal !important;
+  -webkit-text-stroke: 0px transparent !important;
+}
+
 /* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea (Disamakan Total) */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
