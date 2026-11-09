@@ -240,8 +240,17 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* PAKSA STYLING TOMBOL WRITE & PREVIEW SEPERTI TOMBOL UPVOTE                 */
+/* STYLING TOMBOL WRITE & PREVIEW (Diturunkan posisinya mendekati textarea)    */
 /* ========================================================================== */
+.gsc-comment-box [role="tablist"],
+.gsc-comment-box .tabnav,
+.gsc-comment-box .gsc-comment-box-tabs {
+  display: flex !important;
+  gap: 8px !important;
+  margin-top: 14px !important;
+  margin-bottom: 2px !important;
+}
+
 .gsc-comment-box button,
 .gsc-comment-box a,
 .gsc-comment-box [role="tab"],
@@ -263,7 +272,8 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 6px 14px !important;
   margin-right: 6px !important;
-  margin-bottom: 8px !important;
+  margin-top: 10px !important;
+  margin-bottom: 0px !important;
 }
 
 .gsc-comment-box button:hover,
