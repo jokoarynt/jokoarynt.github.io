@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE, PREVIEW & AA (POSISI & TANPA EFEK HOVER)              */
+/* STYLING TOMBOL WRITE, PREVIEW & AA                                         */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -278,8 +278,6 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 2.5px !important;
   margin: 0 !important;
-  transform: none !important;
-  transition: none !important;
 }
 
 /* Write & Preview di pojok kiri */
@@ -313,36 +311,20 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* HAPUS TOTAL EFEK HOVER, ACTIVE, & FOCUS SECARA MUTLAK */
-.gsc-comment-box [role="tablist"] button:hover,
-.gsc-comment-box [role="tablist"] button:active,
-.gsc-comment-box [role="tablist"] button:focus,
-.gsc-comment-box [role="tablist"] a:hover,
-.gsc-comment-box [role="tablist"] a:active,
-.gsc-comment-box [role="tablist"] a:focus,
-.gsc-comment-box [role="tablist"] [role="tab"]:hover,
-.gsc-comment-box [role="tablist"] [role="tab"]:active,
-.gsc-comment-box [role="tablist"] [role="tab"]:focus,
-.gsc-comment-box .tabnav button:hover,
-.gsc-comment-box .tabnav button:active,
-.gsc-comment-box .tabnav button:focus,
-.gsc-comment-box .tabnav a:hover,
-.gsc-comment-box .tabnav a:active,
-.gsc-comment-box .tabnav a:focus,
-.gsc-comment-box .tabnav-tab:hover,
-.gsc-comment-box .tabnav-tab:active,
-.gsc-comment-box .tabnav-tab:focus,
-.gsc-comment-box .gsc-comment-box-tabs button:hover,
-.gsc-comment-box .gsc-comment-box-tabs button:active,
-.gsc-comment-box .gsc-comment-box-tabs button:focus,
-.gsc-comment-box [class*="tab"]:hover,
-.gsc-comment-box [class*="tab"]:active,
-.gsc-comment-box [class*="tab"]:focus {
+/* HAPUS EFEK HOVER KHUSUS PADA TOMBOL PREVIEW SAJA */
+.gsc-comment-box [role="tablist"] button:nth-child(2):hover,
+.gsc-comment-box [role="tablist"] a:nth-child(2):hover,
+.gsc-comment-box [role="tablist"] [role="tab"]:nth-child(2):hover,
+.gsc-comment-box .tabnav button:nth-child(2):hover,
+.gsc-comment-box .tabnav a:nth-child(2):hover,
+.gsc-comment-box .tabnav-tab:nth-child(2):hover,
+.gsc-comment-box .gsc-comment-box-tabs button:nth-child(2):hover,
+.gsc-comment-box .gsc-comment-box-tabs a:nth-child(2):hover,
+.gsc-comment-box [class*="tab"]:nth-child(2):hover {
   background-color: #bfbfbf !important;
   color: #000000 !important;
   box-shadow: 2px 2px 0px #000000 !important;
   transform: none !important;
-  outline: none !important;
 }
 
 /* Kunci posisi khusus tombol "Aa" agar tidak berubah saat di-hover/klik/fokus */
