@@ -311,20 +311,48 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* HAPUS EFEK HOVER KHUSUS PADA TOMBOL PREVIEW SAJA */
+/* ========================================================================== */
+/* OVERRIDE MUTLAK: HAPUS TOTAL EFEK HOVER PADA TOMBOL PREVIEW                 */
+/* Menggunakan selector spesifik untuk menimpa state hover bawaan Giscus/GitHub */
+/* ========================================================================== */
 .gsc-comment-box [role="tablist"] button:nth-child(2):hover,
+.gsc-comment-box [role="tablist"] button:nth-child(2):focus,
+.gsc-comment-box [role="tablist"] button:nth-child(2):active,
 .gsc-comment-box [role="tablist"] a:nth-child(2):hover,
+.gsc-comment-box [role="tablist"] a:nth-child(2):focus,
+.gsc-comment-box [role="tablist"] a:nth-child(2):active,
 .gsc-comment-box [role="tablist"] [role="tab"]:nth-child(2):hover,
+.gsc-comment-box [role="tablist"] [role="tab"]:nth-child(2):focus,
+.gsc-comment-box [role="tablist"] [role="tab"]:nth-child(2):active,
 .gsc-comment-box .tabnav button:nth-child(2):hover,
+.gsc-comment-box .tabnav button:nth-child(2):focus,
+.gsc-comment-box .tabnav button:nth-child(2):active,
 .gsc-comment-box .tabnav a:nth-child(2):hover,
+.gsc-comment-box .tabnav a:nth-child(2):focus,
+.gsc-comment-box .tabnav a:nth-child(2):active,
 .gsc-comment-box .tabnav-tab:nth-child(2):hover,
+.gsc-comment-box .tabnav-tab:nth-child(2):focus,
+.gsc-comment-box .tabnav-tab:nth-child(2):active,
 .gsc-comment-box .gsc-comment-box-tabs button:nth-child(2):hover,
+.gsc-comment-box .gsc-comment-box-tabs button:nth-child(2):focus,
+.gsc-comment-box .gsc-comment-box-tabs button:nth-child(2):active,
 .gsc-comment-box .gsc-comment-box-tabs a:nth-child(2):hover,
-.gsc-comment-box [class*="tab"]:nth-child(2):hover {
+.gsc-comment-box .gsc-comment-box-tabs a:nth-child(2):focus,
+.gsc-comment-box .gsc-comment-box-tabs a:nth-child(2):active,
+.gsc-comment-box [class*="tab"]:nth-child(2):hover,
+.gsc-comment-box [class*="tab"]:nth-child(2):focus,
+.gsc-comment-box [class*="tab"]:nth-child(2):active,
+.gsc-comment-box button[value="preview"]:hover,
+.gsc-comment-box button[value="preview"]:focus,
+.gsc-comment-box button[value="preview"]:active,
+.gsc-comment-box a[value="preview"]:hover,
+.gsc-comment-box a[value="preview"]:focus,
+.gsc-comment-box a[value="preview"]:active {
   background-color: #bfbfbf !important;
   color: #000000 !important;
   box-shadow: 2px 2px 0px #000000 !important;
   transform: none !important;
+  outline: none !important;
 }
 
 /* Kunci posisi khusus tombol "Aa" agar tidak berubah saat di-hover/klik/fokus */
