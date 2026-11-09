@@ -298,8 +298,8 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item:hover,
 .gsc-comment-box [class*="tab"]:hover {
   background-color: #a8a8a8 !important;
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px #000000 !important;
+  transform: translate(0px, 1px) !important;
+  box-shadow: 2px 1px 0px #000000 !important;
   text-decoration: none !important;
   color: #000000 !important;
 }
