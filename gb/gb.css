@@ -281,6 +281,8 @@ button[type="submit"]:hover,
   margin: 0 !important;
   transform: none !important;
   transition: none !important;
+  position: static !important;
+  float: none !important;
 }
 
 /* Write & Preview di pojok kiri dengan jarak tetap mutlak */
@@ -294,17 +296,7 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
-.gsc-comment-box [role="tablist"] button + button,
-.gsc-comment-box [role="tablist"] a + a,
-.gsc-comment-box [role="tablist"] [role="tab"] + [role="tab"],
-.gsc-comment-box .tabnav button + button,
-.gsc-comment-box .tabnav a + a,
-.gsc-comment-box .tabnav-tab + .tabnav-tab,
-.gsc-comment-box [class*="tab"] + [class*="tab"] {
-  margin-left: 5px !important;
-}
-
-/* Memastikan tombol Preview TIDAK IKUT BERGESER/PINDAH KETIKA AKTIF/SELECTED */
+/* Tombol Preview (Anak kedua) dipaksa memiliki margin kiri 5px dan benar-benar diam */
 .gsc-comment-box [role="tablist"] button:nth-child(2),
 .gsc-comment-box [role="tablist"] a:nth-child(2),
 .gsc-comment-box [role="tablist"] [role="tab"]:nth-child(2),
@@ -330,7 +322,7 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* KUNCI MUTLAK: HAPUS TOTAL EFEK HOVER, ACTIVE, DAN FOCUS PADA TOMBOL PREVIEW SAJA (POSISI & TAMPILAN TETAP KAKU) */
+/* KUNCI MUTLAK: MATIKAN TOTAL EFEK HOVER, ACTIVE, DAN FOCUS PADA TOMBOL PREVIEW (AGAR POSISI DAN WARNA KAKU) */
 .gsc-comment-box [role="tablist"] button:nth-child(2):hover,
 .gsc-comment-box [role="tablist"] button:nth-child(2):focus,
 .gsc-comment-box [role="tablist"] button:nth-child(2):active,
@@ -369,6 +361,7 @@ button[type="submit"]:hover,
   box-shadow: 2px 2px 0px #000000 !important;
   transform: none !important;
   outline: none !important;
+  position: static !important;
 }
 
 /* Kunci posisi khusus tombol "Aa" agar tidak berubah saat di-hover/klik/fokus */
