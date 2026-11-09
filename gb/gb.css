@@ -398,6 +398,24 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
+/* SEMUA ISI PESAN (UTAMA & BALASAN) DIATUR FONT-SIZE 0.875rem                */
+/* ========================================================================== */
+.gsc-comment-content,
+.gsc-comment-content *,
+.gsc-comment-text,
+.gsc-comment-text *,
+.gsc-comment-body,
+.gsc-comment-body *,
+.markdown-body,
+.markdown-body *,
+.gsc-reply .markdown-body,
+.gsc-reply .markdown-body *,
+[class*="reply"] .markdown-body,
+[class*="reply"] .markdown-body * {
+  font-size: 0.875rem !important;
+}
+
+/* ========================================================================== */
 /* KOTAK REACTIONS (PESAN UTAMA & BALASAN): FONT-SIZE 0.875rem & "Sign in" TIPIS */
 /* ========================================================================== */
 .gsc-comment-footer,
@@ -409,10 +427,7 @@ button[type="submit"]:hover,
 .gsc-reactions-count,
 .gsc-reactions-count *,
 [class*="reaction"],
-[class*="reaction"] *,
-.gsc-comment div[style*="font-size"],
-.gsc-reply div[style*="font-size"],
-[class*="reply"] div[style*="font-size"] {
+[class*="reaction"] * {
   font-size: 0.875rem !important;
 }
 
@@ -441,7 +456,7 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* TEKS DI DALAM PESAN */
+/* Warna & Font Dasar Pesan */
 .gsc-comment-content,
 .gsc-comment-text,
 .gsc-comment-body,
