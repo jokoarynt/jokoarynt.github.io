@@ -296,7 +296,7 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
+/* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak & atur ke 80% */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -325,7 +325,7 @@ button[type="submit"]:hover,
 [class*="replies"] a.Link--secondary,
 [class*="replies"] a[href*="#issuecomment-"],
 [class*="replies"] a[href*="#discussioncomment-"] {
-  font-size: 0.7rem !important;
+  font-size: 80% !important;
   font-weight: 400 !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
