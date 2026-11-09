@@ -364,30 +364,28 @@ button[type="submit"]:hover,
   box-shadow: none !important;
 }
 
-/* NAMA USER / AUTHOR (DIJAMIN TETAP BOLD / TEBAL) */
-.gsc-comment-header a:not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
-.gsc-reply a:not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
-.gsc-replies a:not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
-[class*="reply"] a:not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
-.gsc-comment-author,
-.gsc-comment-header .author,
+/* ========================================================================== */
+/* TARGET UTAMA: USERNAME DIJAMIN TEBAL (BOLD) TANPA MENGENAI SIGN IN           */
+/* ========================================================================== */
+.gsc-comment-header .gsc-comment-author,
+.gsc-comment-header a.author,
 .timeline-comment-header .author,
 .gsc-comment-header [data-hovercard-type="user"],
 .gsc-comment-header .Link--primary,
 .gsc-comment-header strong,
 .timeline-comment-header strong,
 .gsc-reply .gsc-comment-author,
-.gsc-reply .author,
+.gsc-reply a.author,
 .gsc-reply [data-hovercard-type="user"],
 .gsc-reply .Link--primary,
 .gsc-reply strong,
 .gsc-replies .gsc-comment-author,
-.gsc-replies .author,
+.gsc-replies a.author,
 .gsc-replies [data-hovercard-type="user"],
 .gsc-replies .Link--primary,
 .gsc-replies strong,
 [class*="reply"] .gsc-comment-author,
-[class*="reply"] .author,
+[class*="reply"] a.author,
 [class*="reply"] [data-hovercard-type="user"],
 [class*="reply"] .Link--primary,
 [class*="reply"] strong {
@@ -399,15 +397,20 @@ button[type="submit"]:hover,
   -webkit-text-stroke: 0.8px #000000 !important;
 }
 
-/* PAKSA TULISAN "Sign in" DI KOTAK REAKSI MENJADI NORMAL / TIPIS */
+/* ========================================================================== */
+/* TARGET UTAMA: TEKS "Sign in" DI KOTAK REAKSI DIJAMIN NORMAL / TIPIS       */
+/* ========================================================================== */
 .gsc-reactions-count a,
-[class*="reaction"] a,
-.gsc-comment-box a[href*="login"],
-.gsc-comment-box a[href*="github.com/login"],
+.gsc-comment-content a[href*="login"],
+.gsc-comment-content a[href*="github.com/login"],
+.gsc-comment-body a[href*="login"],
+.gsc-comment-body a[href*="github.com/login"],
 .gsc-reply a[href*="login"],
 .gsc-reply a[href*="github.com/login"],
 [class*="reply"] a[href*="login"],
-[class*="reply"] a[href*="github.com/login"] {
+[class*="reply"] a[href*="github.com/login"],
+[class*="reactions"] a[href*="login"],
+[class*="reactions"] a[href*="github.com/login"] {
   font-size: 0.85rem !important;
   font-weight: 400 !important;
   -webkit-text-stroke: 0px transparent !important;
