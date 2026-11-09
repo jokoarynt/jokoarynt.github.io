@@ -240,15 +240,15 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Diturunkan posisinya mendekati textarea)    */
+/* STYLING TOMBOL WRITE & PREVIEW (Diturunkan lebih dekat ke textarea form)    */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
   gap: 8px !important;
-  margin-top: 14px !important;
-  margin-bottom: 2px !important;
+  margin-top: 22px !important;
+  margin-bottom: 0px !important;
 }
 
 .gsc-comment-box button,
@@ -272,7 +272,7 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 6px 14px !important;
   margin-right: 6px !important;
-  margin-top: 10px !important;
+  margin-top: 16px !important;
   margin-bottom: 0px !important;
 }
 
