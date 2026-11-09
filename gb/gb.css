@@ -2,6 +2,11 @@
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
+/* Atur font-size pada html sebesar 100% */
+html {
+  font-size: 100% !important;
+}
+
 /* Light Mode (Default) */
 :root, main {
   --color-canvas-default: #ebebeb !important;  
@@ -395,24 +400,6 @@ button[type="submit"]:hover,
   color: #000000 !important;
   text-decoration: none !important;
   -webkit-text-stroke: 0.8px #000000 !important;
-}
-
-/* ========================================================================== */
-/* SEMUA ISI PESAN (UTAMA & BALASAN) DIATUR FONT-SIZE 0.875rem                */
-/* ========================================================================== */
-.gsc-comment-content,
-.gsc-comment-content *,
-.gsc-comment-text,
-.gsc-comment-text *,
-.gsc-comment-body,
-.gsc-comment-body *,
-.markdown-body,
-.markdown-body *,
-.gsc-reply .markdown-body,
-.gsc-reply .markdown-body *,
-[class*="reply"] .markdown-body,
-[class*="reply"] .markdown-body * {
-  font-size: 0.875rem !important;
 }
 
 /* ========================================================================== */
