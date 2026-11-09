@@ -454,13 +454,12 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TARGET TEKS JUMLAH REPLIES / BALASAN DIATUR KE 80%                         */
+/* TARGET TEKS JUMLAH REPLIES / BALASAN DI POJOK KANAN BAWAH KE 80%           */
 /* ========================================================================== */
-.gsc-comment-replies-count,
-.gsc-replies-count,
-[class*="replies-count"],
-[class*="reply-count"],
-a[href*="#comments"] {
+.gsc-comment a.Link--secondary,
+.gsc-comment-footer a,
+.gsc-reply a.Link--secondary,
+[class*="reply"] a.Link--secondary {
   font-size: 80% !important;
 }
 
