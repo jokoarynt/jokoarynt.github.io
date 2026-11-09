@@ -296,50 +296,77 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* ========================================================================== */
-/* TIMESTAMP & TOTAL REPLIES: DISAMAKAN UKURANNYA DAN BERSIH DARI GARIS       */
-/* ========================================================================== */
+/* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
 .gsc-comment-header time,
-.gsc-comment-header a,
+.gsc-comment-header a.Link--secondary,
+.gsc-comment-header a[href*="#issuecomment-"],
+.gsc-comment-header a[href*="#discussioncomment-"],
 .timeline-comment-header time,
-.timeline-comment-header a,
+.timeline-comment-header a.Link--secondary,
+.timeline-comment-header a[href*="#issuecomment-"],
+.timeline-comment-header a[href*="#discussioncomment-"],
 .gsc-reply time,
-.gsc-reply a,
+.gsc-reply a.Link--secondary,
+.gsc-reply a[href*="#issuecomment-"],
+.gsc-reply a[href*="#discussioncomment-"],
 .gsc-replies time,
-.gsc-replies a,
+.gsc-replies a.Link--secondary,
+.gsc-replies a[href*="#issuecomment-"],
+.gsc-replies a[href*="#discussioncomment-"],
 .gsc-comment-replies time,
-.gsc-comment-replies a,
+.gsc-comment-replies a.Link--secondary,
+.gsc-comment-replies a[href*="#issuecomment-"],
+.gsc-comment-replies a[href*="#discussioncomment-"],
 [class*="reply"] time,
-[class*="reply"] a,
+[class*="reply"] a.Link--secondary,
+[class*="reply"] a[href*="#issuecomment-"],
+[class*="reply"] a[href*="#discussioncomment-"],
 [class*="replies"] time,
-[class*="replies"] a,
-.gsc-comment-footer *,
-.gsc-comment-footer a {
-  font-size: 12px !important;
+[class*="replies"] a.Link--secondary,
+[class*="replies"] a[href*="#issuecomment-"],
+[class*="replies"] a[href*="#discussioncomment-"] {
+  font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-}
-
-.gsc-comment-header time,
-.gsc-comment-header a.Link--secondary,
-.timeline-comment-header time,
-.timeline-comment-header a.Link--secondary,
-.gsc-reply time,
-.gsc-reply a.Link--secondary,
-.gsc-replies time,
-.gsc-replies a.Link--secondary,
-.gsc-comment-replies time,
-.gsc-comment-replies a.Link--secondary,
-[class*="reply"] time,
-[class*="reply"] a.Link--secondary,
-[class*="replies"] time,
-[class*="replies"] a.Link--secondary,
-.gsc-comment-footer a {
   color: #333333 !important;
   -webkit-text-stroke: 0px transparent !important;
+}
+
+.gsc-comment-header time:hover,
+.gsc-comment-header a.Link--secondary:hover,
+.gsc-comment-header a[href*="#issuecomment-"]:hover,
+.gsc-comment-header a[href*="#discussioncomment-"]:hover,
+.timeline-comment-header time:hover,
+.timeline-comment-header a.Link--secondary:hover,
+.timeline-comment-header a[href*="#issuecomment-"]:hover,
+.timeline-comment-header a[href*="#discussioncomment-"]:hover,
+.gsc-reply time:hover,
+.gsc-reply a.Link--secondary:hover,
+.gsc-reply a[href*="#issuecomment-"]:hover,
+.gsc-reply a[href*="#discussioncomment-"]:hover,
+.gsc-replies time:hover,
+.gsc-replies a.Link--secondary:hover,
+.gsc-replies a[href*="#issuecomment-"]:hover,
+.gsc-replies a[href*="#discussioncomment-"]:hover,
+.gsc-comment-replies time:hover,
+.gsc-comment-replies a.Link--secondary:hover,
+.gsc-comment-replies a[href*="#issuecomment-"]:hover,
+.gsc-comment-replies a[href*="#discussioncomment-"]:hover,
+[class*="reply"] time:hover,
+[class*="reply"] a.Link--secondary:hover,
+[class*="reply"] a[href*="#issuecomment-"]:hover,
+[class*="reply"] a[href*="#discussioncomment-"]:hover,
+[class*="replies"] time:hover,
+[class*="replies"] a.Link--secondary:hover,
+[class*="replies"] a[href*="#issuecomment-"]:hover,
+[class*="replies"] a[href*="#discussioncomment-"]:hover {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 /* ========================================================================== */
@@ -376,21 +403,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* ISI PESAN UTAMA: FONT-SIZE 0.875rem                                        */
-/* ========================================================================== */
-.gsc-comment-content,
-.gsc-comment-content *,
-.gsc-comment-text,
-.gsc-comment-text *,
-.gsc-comment-body,
-.gsc-comment-body *,
-.markdown-body,
-.markdown-body * {
-  font-size: 0.875rem !important;
-}
-
-/* ========================================================================== */
-/* KOTAK REACTIONS: FONT-SIZE 0.875rem & "Sign in" TIPIS                      */
+/* KOTAK REACTIONS (PESAN UTAMA & BALASAN): FONT-SIZE 0.875rem & "Sign in" TIPIS */
 /* ========================================================================== */
 .gsc-comment-footer,
 .gsc-comment-footer *,
