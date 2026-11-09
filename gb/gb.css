@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING KONTAINER TAB & TOMBOL WRITE/PREVIEW/AA                            */
+/* STYLING KONTAINER TAB & TOMBOL WRITE/PREVIEW/AA (TANPA EFEK HOVER SAMA SEKALI) */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -274,6 +274,8 @@ button[type="submit"]:hover,
   justify-content: center !important;
   padding: 2.5px !important;
   margin: 0 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* Kembalikan Write dan Preview di pojok kiri */
@@ -303,7 +305,7 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* HAPUS TOTAL EFEK HOVER, ACTIVE, DAN FOCUS (DIAM TOTAL TANPA PERUBAHAN WARNA/POSISI) */
+/* HAPUS TOTAL SEMUA EFEK HOVER, ACTIVE, DAN FOCUS PADA KETIGA TOMBOL TERSEBUT */
 .gsc-comment-box button:hover,
 .gsc-comment-box a:hover,
 .gsc-comment-box [role="tab"]:hover,
@@ -323,16 +325,13 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item:focus,
 .gsc-comment-box [class*="tab"]:focus {
   background-color: #bfbfbf !important;
-  position: relative !important;
-  top: 0px !important;
-  left: 0px !important;
-  box-shadow: 2px 2px 0px #000000 !important;
-  text-decoration: none !important;
   color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  transform: none !important;
   outline: none !important;
 }
 
-/* Khusus tombol terakhir ("Aa") pertahankan offset translasinya saat berinteraksi */
+/* Paksa khusus tombol "Aa" agar posisinya tetap terkunci di koordinat offset-nya tanpa ikut bergeser/berubah */
 .gsc-comment-box markdown-toolbar button:hover,
 .gsc-comment-box markdown-toolbar button:active,
 .gsc-comment-box markdown-toolbar button:focus,
