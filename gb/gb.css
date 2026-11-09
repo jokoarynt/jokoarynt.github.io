@@ -239,15 +239,29 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* BERIKAN BORDER BAWAH TIPIS SECARA PAKSA PADA TOMBOL WRITE DAN PREVIEW */
-.gsc-comment-box button[role="tab"],
-.gsc-comment-box .tabnav-tab,
-.gsc-comment-box [class*="tab"],
-.gsc-comment-box a[role="tab"] {
+/* Tombol Write (Tab Pertama) - Bersih tanpa border bawah */
+.gsc-comment-box button[role="tab"]:first-child,
+.gsc-comment-box .tabnav-tab:first-child,
+.gsc-comment-box [class*="tab"]:first-child,
+.gsc-comment-box a[role="tab"]:first-child {
+  border: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* BERIKAN BORDER BAWAH TIPIS KHUSUS PADA TOMBOL PREVIEW (Tab Kedua) */
+.gsc-comment-box button[role="tab"]:nth-child(2),
+.gsc-comment-box .tabnav-tab:nth-child(2),
+.gsc-comment-box [class*="tab"]:nth-child(2),
+.gsc-comment-box a[role="tab"]:nth-child(2),
+.gsc-comment-box button[role="tab"][aria-selected="true"],
+.gsc-comment-box .tabnav-tab[aria-selected="true"],
+.gsc-comment-box [class*="tab"][aria-selected="true"],
+.gsc-comment-box a[role="tab"][aria-selected="true"] {
+  border: none !important;
   border-bottom: 1.7px solid var(--color-border-default) !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
   border-radius: 0 !important;
   background: transparent !important;
   background-color: transparent !important;
