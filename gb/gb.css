@@ -240,14 +240,17 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Posisi Tetap, Tombol "Aa" Saja Digeser ke Kanan) */
+/* STYLING KONTAINER TAB & TOMBOL WRITE/PREVIEW/AA                            */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
   transform: translate(11px, 2.5px) !important;
   margin-bottom: 8px !important;
+  width: calc(100% - 22px) !important;
 }
 
 .gsc-comment-box button,
@@ -273,7 +276,7 @@ button[type="submit"]:hover,
   margin: 0 !important;
 }
 
-/* Posisi tombol pertama (Write) */
+/* Kembalikan Write dan Preview di pojok kiri */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
@@ -281,7 +284,6 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) sejauh 5px */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -291,14 +293,43 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* Geser tombol Preview (tombol "Aa") saja secara eksklusif ke kanan */
-.gsc-comment-box button + button,
-.gsc-comment-box a + a,
-.gsc-comment-box [role="tab"] + [role="tab"],
-.gsc-comment-box .tabnav-tab + .tabnav-tab,
-.gsc-comment-box .subnav-item + .subnav-item,
-.gsc-comment-box [class*="tab"] + [class*="tab"] {
+/* Geser tombol "Aa" (toolbar markdown helper/button terakhir) secara otomatis ke pojok kanan */
+.gsc-comment-box markdown-toolbar button,
+.gsc-comment-box .markdown-toolbar button,
+.gsc-comment-box [role="tablist"] > *:last-child,
+.gsc-comment-box .tabnav > *:last-child,
+.gsc-comment-box .gsc-comment-box-tabs > *:last-child {
   margin-left: auto !important;
+}
+
+/* Kunci total state agar tombol tetap diam statis */
+.gsc-comment-box button:hover,
+.gsc-comment-box a:hover,
+.gsc-comment-box [role="tab"]:hover,
+.gsc-comment-box .tabnav-tab:hover,
+.gsc-comment-box .subnav-item:hover,
+.gsc-comment-box [class*="tab"]:hover,
+.gsc-comment-box button:active,
+.gsc-comment-box a:active,
+.gsc-comment-box [role="tab"]:active,
+.gsc-comment-box .tabnav-tab:active,
+.gsc-comment-box .subnav-item:active,
+.gsc-comment-box [class*="tab"]:active,
+.gsc-comment-box button:focus,
+.gsc-comment-box a:focus,
+.gsc-comment-box [role="tab"]:focus,
+.gsc-comment-box .tabnav-tab:focus,
+.gsc-comment-box .subnav-item:focus,
+.gsc-comment-box [class*="tab"]:focus {
+  background-color: #bfbfbf !important;
+  position: relative !important;
+  top: 0px !important;
+  left: 0px !important;
+  transform: none !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  text-decoration: none !important;
+  color: #000000 !important;
+  outline: none !important;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
