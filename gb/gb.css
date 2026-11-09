@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Posisi & Efek Hover Dihapus Total)         */
+/* STYLING TOMBOL WRITE & PREVIEW (Tanpa Blok Hover / Dihapus Total)          */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -289,20 +289,6 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
   margin-left: 5px !important;
-}
-
-/* Efek Hover Dihapus Total (MENGUNCI WARNA, POSISI, DAN SHADOW AGAR TIDAK BERUBAH SAMA SEKALI SAAT DI-HOVER) */
-.gsc-comment-box button:hover,
-.gsc-comment-box a:hover,
-.gsc-comment-box [role="tab"]:hover,
-.gsc-comment-box .tabnav-tab:hover,
-.gsc-comment-box .subnav-item:hover,
-.gsc-comment-box [class*="tab"]:hover {
-  background-color: #bfbfbf !important;
-  transform: none !important;
-  box-shadow: 2px 2px 0px #000000 !important;
-  text-decoration: none !important;
-  color: #000000 !important;
 }
 
 /* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
