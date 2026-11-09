@@ -240,7 +240,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING KONTAINER TAB & TOMBOL WRITE/PREVIEW/AA (TANPA EFEK HOVER SAMA SEKALI) */
+/* STYLING TOMBOL WRITE, PREVIEW & AA (POSISI, OFFSET & TANPA EFEK HOVER)       */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -278,7 +278,7 @@ button[type="submit"]:hover,
   transition: none !important;
 }
 
-/* Kembalikan Write dan Preview di pojok kiri */
+/* Write & Preview di pojok kiri */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
@@ -305,7 +305,7 @@ button[type="submit"]:hover,
   transform: translate(20px, 8px) !important;
 }
 
-/* HAPUS TOTAL SEMUA EFEK HOVER, ACTIVE, DAN FOCUS PADA KETIGA TOMBOL TERSEBUT */
+/* HAPUS TOTAL SEMUA EFEK HOVER, ACTIVE, DAN FOCUS (DIAM TOTAL, WARNA & POSISI TETAP KAKU) */
 .gsc-comment-box button:hover,
 .gsc-comment-box a:hover,
 .gsc-comment-box [role="tab"]:hover,
@@ -331,7 +331,7 @@ button[type="submit"]:hover,
   outline: none !important;
 }
 
-/* Paksa khusus tombol "Aa" agar posisinya tetap terkunci di koordinat offset-nya tanpa ikut bergeser/berubah */
+/* Kunci posisi khusus tombol "Aa" agar tidak berubah saat di-hover/klik/fokus */
 .gsc-comment-box markdown-toolbar button:hover,
 .gsc-comment-box markdown-toolbar button:active,
 .gsc-comment-box markdown-toolbar button:focus,
@@ -542,7 +542,7 @@ button[aria-label*="Reaction"]:hover,
 a.gsc-social-button:hover,
 button.gsc-social-button:hover,
 .gsc-comment-box a[href*="login"]:hover,
-.gsc-comment-box button[href*="login"]:hover,
+`button.gsc-comment-box button[href*="login"]:hover`,
 .gsc-comment-box a[href*="github.com/login"]:hover,
 .gsc-comment-box .btn:hover,
 .gsc-comment-box-main a[href*="login"]:hover,
