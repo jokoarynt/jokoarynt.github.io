@@ -240,14 +240,14 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Write digeser lebih jauh ke kiri agar sejajar) */
+/* STYLING TOMBOL WRITE & PREVIEW (Geser ke kanan 5px dari posisi sebelumnya)  */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
   gap: 12px !important;
-  transform: translate(-16px, 8px) !important;
+  transform: translate(-11px, 8px) !important;
   margin-bottom: 8px !important;
 }
 
@@ -274,7 +274,6 @@ button[type="submit"]:hover,
   margin: 0 !important;
 }
 
-/* Khusus tombol Write (Tab pertama) diberikan tambahan margin negatif agar posisinya semakin ke kiri */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
