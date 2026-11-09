@@ -293,14 +293,14 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* Tombol "Aa" digeser ke kanan tambahan 20px */
+/* Tombol "Aa" digeser ke kanan (auto + offset 20px) dan diturunkan ke bawah 4px */
 .gsc-comment-box markdown-toolbar button,
 .gsc-comment-box .markdown-toolbar button,
 .gsc-comment-box [role="tablist"] > *:last-child,
 .gsc-comment-box .tabnav > *:last-child,
 .gsc-comment-box .gsc-comment-box-tabs > *:last-child {
   margin-left: auto !important;
-  transform: translateX(20px) !important;
+  transform: translate(20px, 4px) !important;
 }
 
 /* Kunci total state agar tombol tetap diam statis */
@@ -326,7 +326,7 @@ button[type="submit"]:hover,
   position: relative !important;
   top: 0px !important;
   left: 0px !important;
-  transform: translateX(20px) !important;
+  transform: translate(20px, 4px) !important;
   box-shadow: 2px 2px 0px #000000 !important;
   text-decoration: none !important;
   color: #000000 !important;
