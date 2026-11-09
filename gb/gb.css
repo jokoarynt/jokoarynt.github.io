@@ -240,14 +240,14 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Jarak aman dari textarea, digeser ke kiri)   */
+/* STYLING TOMBOL WRITE & PREVIEW (Sejajar rata kiri dengan textarea)         */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
   gap: 8px !important;
-  transform: translate(-4px, 4px) !important;
+  transform: translate(-10px, 8px) !important;
   margin-bottom: 8px !important;
 }
 
