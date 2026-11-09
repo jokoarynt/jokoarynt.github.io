@@ -239,11 +239,15 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* STYLE TOMBOL WRITE & PREVIEW AGAR SAMA PERSIS DENGAN TOMBOL UPVOTE */
-.gsc-comment-box button[role="tab"],
+/* ========================================================================== */
+/* PAKSA STYLING TOMBOL WRITE & PREVIEW SEPERTI TOMBOL UPVOTE                 */
+/* ========================================================================== */
+.gsc-comment-box button,
+.gsc-comment-box a,
+.gsc-comment-box [role="tab"],
 .gsc-comment-box .tabnav-tab,
-.gsc-comment-box [class*="tab"],
-.gsc-comment-box a[role="tab"] {
+.gsc-comment-box .subnav-item,
+.gsc-comment-box [class*="tab"] {
   background-color: #bfbfbf !important;
   border: 1.7px solid #000000 !important;
   color: #000000 !important;
@@ -253,6 +257,7 @@ button[type="submit"]:hover,
   text-decoration: none !important;
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
+  font-size: 0.85rem !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -261,10 +266,12 @@ button[type="submit"]:hover,
   margin-bottom: 8px !important;
 }
 
-.gsc-comment-box button[role="tab"]:hover,
+.gsc-comment-box button:hover,
+.gsc-comment-box a:hover,
+.gsc-comment-box [role="tab"]:hover,
 .gsc-comment-box .tabnav-tab:hover,
-.gsc-comment-box [class*="tab"]:hover,
-.gsc-comment-box a[role="tab"]:hover {
+.gsc-comment-box .subnav-item:hover,
+.gsc-comment-box [class*="tab"]:hover {
   background-color: #a8a8a8 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px #000000 !important;
