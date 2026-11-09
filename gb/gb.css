@@ -240,13 +240,13 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Posisi & Pemisahan Mutlak dengan Sibling +) */
+/* STYLING TOMBOL WRITE & PREVIEW (Posisi & Pemisahan Mutlak 4px)             */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
-  transform: translate(-1px, 5px) !important;
+  transform: translate(-1px, 4px) !important;
   margin-bottom: 8px !important;
 }
 
@@ -281,14 +281,14 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
-/* PEMISAH MUTLAK: Tombol kedua (Preview) yang berada tepat setelah tombol pertama dipaksa berjarak 8px */
+/* PEMISAH MUTLAK: Tombol kedua (Preview) diposisikan berjarak 4px dari tombol Write */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
 .gsc-comment-box .tabnav-tab + .tabnav-tab,
 .gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
-  margin-left: 8px !important;
+  margin-left: 4px !important;
 }
 
 .gsc-comment-box button:hover,
