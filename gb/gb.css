@@ -240,13 +240,13 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Diturunkan 2px ke bawah)                   */
+/* STYLING TOMBOL WRITE & PREVIEW (Jarak antar tombol diperlebar 5px)          */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
-  gap: 12px !important;
+  gap: 17px !important;
   transform: translate(-1px, 5px) !important;
   margin-bottom: 8px !important;
 }
