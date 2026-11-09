@@ -392,10 +392,10 @@ button[type="submit"]:hover,
 [class*="replies"] a[data-hovercard-type="user"],
 [class*="replies"] a.Link--primary,
 [class*="replies"] strong,
-.gsc-comment-header a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary),
-.gsc-reply a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary),
-.gsc-replies a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary),
-[class*="reply"] a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary) {
+.gsc-comment-header a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
+.gsc-reply a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
+.gsc-replies a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]),
+[class*="reply"] a:not(time):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]):not(.Link--secondary):not([href*="login"]):not([href*="github.com/login"]) {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
