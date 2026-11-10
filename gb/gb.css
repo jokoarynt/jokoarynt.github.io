@@ -564,7 +564,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* GESER TOMBOL SIGN IN WITH GITHUB KE ATAS MENDEKATI TOMBOL MARKDOWN         */
+/* GESER TOMBOL SIGN IN WITH GITHUB KE ATAS MENGGUNAKAN TRANSFORM TRANSLATEY  */
 /* ========================================================================== */
 .gsc-comment-box a[href*="login"],
 .gsc-comment-box button[href*="login"],
@@ -572,7 +572,7 @@ div[class*="popover"] button {
 .gsc-comment-box-main a[href*="login"],
 .gsc-comment-box-main a[href*="github.com/login"],
 .gsc-social-button {
-  margin-top: -55px !important;
+  transform: translateY(-90px) !important; /* Sesuaikan nilai minus-nya jika kurang/lebih */
   position: relative !important;
   z-index: 10 !important;
 }
