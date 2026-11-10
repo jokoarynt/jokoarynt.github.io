@@ -1,4 +1,4 @@
-/* ========================================================================== */
+/* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
@@ -286,7 +286,7 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:100px */
+/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:120px */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -294,7 +294,7 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
   margin-left: 5px !important;
-  margin-right: 100px !important;
+  margin-right: 120px !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
