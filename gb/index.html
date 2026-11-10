@@ -2,180 +2,51 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="icon" href="/img/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <link href="/style.min.css" rel="stylesheet">
-  <title>Guestbook - Joko Ariyanto</title>
-  <style>
-    body.gb {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 0;
-      padding: 24px 10px;
-      box-sizing: border-box;
-      overflow-y: auto !important;
-      overflow-x: hidden !important;
-    }
-
-    body.gb #container {
-      width: 450px !important;
-      max-width: 92vw !important;
-      height: auto !important;
-      max-height: none !important;
-      overflow: visible !important;
-      margin: auto auto !important;
-      border: 3px solid var(--border-color, #000000) !important;
-      box-shadow: 5px 5px 0px var(--shadow-color, #000000) !important;
-      border-radius: 12px !important;
-    }
-
-    /* Perbaikan sudut atas agar menyatu sempurna */
-    body.gb #container .navbar .nav-left > *:first-child {
-      border-top-left-radius: 9px;
-    }
-    body.gb #container .navbar .theme-btn {
-      border-top-right-radius: 9px;
-    }
-
-    /* Perbaikan sudut bawah agar menyatu sempurna */
-    body.gb #container .bottom-navbar {
-      border-bottom-left-radius: 9px;
-      border-bottom-right-radius: 9px;
-    }
-
-    /* Wrapper Giscus dengan margin kiri-kanan responsif */
-    #giscus-wrapper {
-      width: 100%;
-      text-align: left;
-      box-sizing: border-box;
-      padding: 0 5px;
-    }
-
-    @media (min-width: 768px) {
-      #giscus-wrapper {
-        padding: 0 20px !important;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo-Brutalist Guestbook</title>
 </head>
-<body class="gb">
-  <div id="container">
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="/" class="nav-link">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-          Home
-        </a>
-        <button class="nav-btn" id="toolsBtn" onclick="toggleToolsDropdown(event)">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.5 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
-          Tools &#9662;
-        </button>
-      </div>
-      <div class="nav-line" id="navLine">
-        <span class="marquee-text" id="dateTimeMarquee"></span>
-      </div>
-      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Change Theme">
-        <svg id="themeIcon" viewBox="0 0 24 24"></svg>
-      </button>
-    </nav>
+<body>
 
-    <h1 style="font-size: 2rem; margin: 0 0 0.3rem; font-family: 'Lobster', cursive; font-weight: normal;">Guestbook</h1>
-    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Tinggalkan pesan atau jejak kunjungan Anda!</p>
-    
-    <div id="giscus-wrapper">
-      <script src="https://giscus.app/client.js"
-              data-repo="jokoarynt/jokoarynt.github.io"
-              data-repo-id="R_kgDOU21zaA"
-              data-category="General"
-              data-category-id="DIC_kwDOU21zaM4DKhFr"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="1"
-              data-input-position="top"
-              data-theme="https://joko.my.id/gb/gb.css?v=16"
-              data-lang="en"
-              crossorigin="anonymous"
-              async>
-      </script>
-    </div>
+  <!-- Kontainer Giscus -->
+  <script src="https://giscus.app/client.js"
+        data-repo="NAMA_USER_GITHUB/NAMA_REPO_GITHUB"
+        data-repo-id="R_kgDOME_ID_ANDA"
+        data-category="Announcements"
+        data-category-id="DIC__ID_ANDA"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="https://joko.my.id/gb.css"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+  </script>
 
-    <!-- Menu Bar Bawah (Footer) -->
-    <nav class="bottom-navbar">
-      <div class="nav-left webring-container">
-        <span class="dropdown" id="customDropdown">
-          <button class="drop-btn" id="dropBtn" onclick="toggleDropdown(event)">
-            <span id="dropLabel">Webring</span> <span class="drop-arrow">&#9662;</span>
-          </button>
-        </span>
-        <div id="wrActionButtons" class="fade-anim hidden" style="display: inline-flex; align-items: center; gap: 3px;">
-          <a id="wr-site" class="wr-icon-btn" href="#" target="_blank" title="Webring info">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </a>
-          <a id="wr-prev" class="wr-icon-btn" href="#" target="_top" title="Previous">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-          </a>
-          <span id="wr-rnd-wrapper" style="display:inline-flex;">
-            <a id="wr-rnd" class="wr-icon-btn" href="#" target="_top" title="Random">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
-            </a>
-          </span>
-          <a id="wr-next" class="wr-icon-btn" href="#" target="_top" title="Next">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="nav-right copyright fade-anim" id="copyrightEl">
-        &copy; 2021-<span id="currentYear"></span> [<span id="s"></span>]
-      </div>
-    </nav>
-  </div>
-
-  <!-- Tools Dropdown Menu -->
-  <div class="tools-menu" id="toolsMenu">
-    <a href="#">Converter</a>
-  </div>
-
-  <!-- Webring Dropdown Menu -->
-  <div class="drop-menu" id="dropMenu">
-    <div class="disabled-item" onclick="changeWebring('0')">Webring</div>
-    <div onclick="changeWebring('1')">Foxwells</div>
-    <div onclick="changeWebring('2')">Kanring</div>
-    <div onclick="changeWebring('3')">No AI</div>
-    <div onclick="changeWebring('4')">Octo Ring</div>
-    <div onclick="changeWebring('5')">Tokukatsu</div>
-    <div onclick="changeWebring('6')">Roboring</div>
-  </div>
-
-  <script src="/script.min.js"></script>
+  <!-- Skrip JavaScript Pengaman untuk Memaksa Toolbar "Aa" ke Pojok Kanan -->
   <script>
-    const originalToggleTheme = window.toggleTheme;
-    window.toggleTheme = function() {
-      if (originalToggleTheme) originalToggleTheme();
-      updateGiscusTheme();
-    };
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new MutationObserver((mutations, obs) => {
+        // Menangkap elemen toolbar markdown Giscus secara presisi
+        const toolbar = document.querySelector('.gsc-comment-box markdown-toolbar, .gsc-comment-box .markdown-toolbar, .gsc-comment-box [aria-label*="formatting" i]');
+        
+        if (toolbar) {
+          // Memaksa posisi absolute menempel ke pojok kanan atas form komentar
+          toolbar.style.setProperty("position", "absolute", "important");
+          toolbar.style.setProperty("right", "12px", "important");
+          toolbar.style.setProperty("top", "12px", "important");
+          toolbar.style.setProperty("margin", "0", "important");
+          toolbar.style.setProperty("z-index", "10", "important");
+        }
+      });
 
-    function updateGiscusTheme() {
-      const isNight = document.documentElement.getAttribute('data-theme') === 'night';
-      const iframe = document.querySelector('iframe.giscus-frame');
-      if (iframe) {
-        iframe.contentWindow.postMessage({
-          giscus: {
-            setConfig: {
-              theme: 'https://joko.my.id/gb/gb.css?v=16'
-            }
-          }
-        }, 'https://giscus.app');
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(updateGiscusTheme, 1500);
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
     });
   </script>
+
 </body>
 </html>
