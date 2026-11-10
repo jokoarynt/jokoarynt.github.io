@@ -251,6 +251,7 @@ button[type="submit"]:hover,
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
+  width: 100% !important;
   transform: translate(11px, 2.5px) !important;
   margin-bottom: 8px !important;
 }
@@ -286,7 +287,7 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) untuk Mobile (margin-right: 110px) */
+/* Pemisah tombol kedua (Preview) untuk Mobile */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -297,8 +298,14 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) khusus untuk Desktop (menggunakan margin-left: auto agar mentok ke kanan) */
+/* Pemisah tombol kedua (Preview) khusus Desktop agar mentok ke kanan */
 @media (min-width: 768px) {
+  .gsc-comment-box [role="tablist"],
+  .gsc-comment-box .tabnav,
+  .gsc-comment-box .gsc-comment-box-tabs {
+    padding-right: 25px !important;
+  }
+  
   .gsc-comment-box button + button,
   .gsc-comment-box a + a,
   .gsc-comment-box [role="tab"] + [role="tab"],
@@ -306,7 +313,7 @@ button[type="submit"]:hover,
   .gsc-comment-box .subnav-item + .subnav-item,
   .gsc-comment-box [class*="tab"] + [class*="tab"] {
     margin-left: auto !important;
-    margin-right: 0 !important;
+    margin-right: 15px !important;
   }
 }
 
