@@ -564,7 +564,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* GESER HANYA TOMBOL SIGN IN WITH GITHUB DI BAWAH TEXTAREA KE ATAS 20PX      */
+/* GESER HANYA TOMBOL SIGN IN WITH GITHUB KE ATAS MENDEKATI TOMBOL MARKDOWN   */
 /* ========================================================================== */
 .gsc-comment-box a[href*="login"],
 .gsc-comment-box button[href*="login"],
@@ -572,5 +572,5 @@ div[class*="popover"] button {
 .gsc-comment-box-main a[href*="login"],
 .gsc-comment-box-main a[href*="github.com/login"] {
   position: relative !important;
-  top: -20px !important;
+  top: -135px !important;
 }
