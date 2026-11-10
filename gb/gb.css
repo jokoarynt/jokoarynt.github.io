@@ -375,7 +375,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TARGET UTAMA: USERNAME DIJAMIN 100% TEBAL (BOLD)                           */
+/* TARGET UTAMA: USERNAME (PESAN UTAMA & BALASAN) 100% TEBAL (BOLD)           */
 /* ========================================================================== */
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
@@ -398,7 +398,17 @@ button[type="submit"]:hover,
 [class*="reply"] a.author,
 [class*="reply"] [data-hovercard-type="user"],
 [class*="reply"] .Link--primary,
-[class*="reply"] strong {
+[class*="reply"] strong,
+.gsc-comment-replies .gsc-comment-author,
+.gsc-comment-replies a.author,
+.gsc-comment-replies [data-hovercard-type="user"],
+.gsc-comment-replies .Link--primary,
+.gsc-comment-replies strong,
+[class*="replies"] .gsc-comment-author,
+[class*="replies"] a.author,
+[class*="replies"] [data-hovercard-type="user"],
+[class*="replies"] .Link--primary,
+[class*="replies"] strong {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
