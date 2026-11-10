@@ -573,13 +573,13 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* PENGATURAN MARGIN KIRI TOMBOL "Aa" (RESPONSIF: DESKTOP & CLAMP)             */
+/* PENGATURAN MARGIN KIRI TOMBOL "Aa" (DIATUR KE 0px)                         */
 /* ========================================================================== */
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
 .gsc-comment-box [aria-label*="formatting" i],
 .gsc-comment-box [class*="toolbar"] {
-  margin-left: 250px !important;
+  margin-left: 0px !important;
 }
 
 @media (max-width: 1024px) {
@@ -587,6 +587,6 @@ div[class*="popover"] button {
   .gsc-comment-box .markdown-toolbar,
   .gsc-comment-box [aria-label*="formatting" i],
   .gsc-comment-box [class*="toolbar"] {
-    margin-left: clamp(10px, 15vw, 250px) !important;
+    margin-left: 0px !important;
   }
 }
