@@ -99,6 +99,7 @@ a[href*="giscus.app"] {
   margin-bottom: 5px !important;
   margin-right: 3px !important;
   overflow: visible !important;
+  position: relative !important; /* Dijadikan acuan untuk tombol absolute */
 }
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
@@ -564,13 +565,15 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* GESER HANYA TOMBOL SIGN IN WITH GITHUB KE ATAS MENDEKATI TOMBOL MARKDOWN   */
+/* GESER TOMBOL SIGN IN WITH GITHUB MENGGUNAKAN POSITION ABSOLUTE             */
 /* ========================================================================== */
 .gsc-comment-box a[href*="login"],
 .gsc-comment-box button[href*="login"],
 .gsc-comment-box a[href*="github.com/login"],
 .gsc-comment-box-main a[href*="login"],
 .gsc-comment-box-main a[href*="github.com/login"] {
-  position: relative !important;
-  top: -135px !important;
+  position: absolute !important;
+  top: 45px !important;    /* Atur nilai ini jika ingin naik/turun posisinya */
+  right: 15px !important;   /* Mengatur posisi ke sebelah kanan dekat tombol M */
+  z-index: 10 !important;
 }
