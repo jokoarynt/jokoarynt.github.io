@@ -1,4 +1,4 @@
-/* ========================================================================== */
+/* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
@@ -99,7 +99,6 @@ a[href*="giscus.app"] {
   margin-bottom: 5px !important;
   margin-right: 3px !important;
   overflow: visible !important;
-  position: relative !important; /* Dijadikan acuan untuk tombol absolute */
 }
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
@@ -565,15 +564,15 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* GESER TOMBOL SIGN IN WITH GITHUB MENGGUNAKAN POSITION ABSOLUTE             */
+/* GESER TOMBOL SIGN IN WITH GITHUB KE ATAS MENDEKATI TOMBOL MARKDOWN         */
 /* ========================================================================== */
 .gsc-comment-box a[href*="login"],
 .gsc-comment-box button[href*="login"],
 .gsc-comment-box a[href*="github.com/login"],
 .gsc-comment-box-main a[href*="login"],
-.gsc-comment-box-main a[href*="github.com/login"] {
-  position: absolute !important;
-  top: 45px !important;    /* Atur nilai ini jika ingin naik/turun posisinya */
-  right: 15px !important;   /* Mengatur posisi ke sebelah kanan dekat tombol M */
+.gsc-comment-box-main a[href*="github.com/login"],
+.gsc-social-button {
+  margin-top: -55px !important;
+  position: relative !important;
   z-index: 10 !important;
 }
