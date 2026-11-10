@@ -245,7 +245,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW (Tanpa Blok Hover / Dihapus Total)          */
+/* STYLING TOMBOL WRITE & PREVIEW                                             */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -375,8 +375,9 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* TARGET UTAMA: USERNAME (PESAN UTAMA & BALASAN) 100% TEBAL (BOLD)           */
+/* 1. ATURAN UTAMA: SEMUA USERNAME (PESAN UTAMA & BALASAN) TEBAL (BOLD)       */
 /* ========================================================================== */
+.gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
 .gsc-comment-header a.author,
 .timeline-comment-header .author,
@@ -409,12 +410,10 @@ button[type="submit"]:hover,
 [class*="replies"] [data-hovercard-type="user"],
 [class*="replies"] .Link--primary,
 [class*="replies"] strong,
-.timeline-comment-header a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
-.gsc-comment-header a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
-.gsc-reply a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
-.gsc-replies a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
-[class*="reply"] a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
-[class*="replies"] a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]) {
+.gsc-reply a[href*="github.com/"],
+.gsc-replies a[href*="github.com/"],
+[class*="reply"] a[href*="github.com/"],
+[class*="replies"] a[href*="github.com/"] {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
@@ -424,22 +423,8 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* KOTAK REACTIONS (PESAN UTAMA & BALASAN): FONT-SIZE 0.875rem & "Sign in" TIPIS */
+/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)            */
 /* ========================================================================== */
-.gsc-comment-footer,
-.gsc-comment-footer *:not([class*="count"]),
-.gsc-reactions,
-.gsc-reactions *,
-.gsc-comment-reactions,
-.gsc-comment-reactions *,
-.gsc-reactions-count,
-.gsc-reactions-count *,
-[class*="reaction"],
-[class*="reaction"] * {
-  font-size: 0.875rem !important;
-}
-
-/* Paksa khusus teks/tautan "Sign in" di dalam kotak reaksi agar tetap normal/tipis */
 .gsc-comment-footer a[href*="login"],
 .gsc-comment-footer a[href*="github.com/login"],
 .gsc-comment a[href*="login"],
@@ -448,6 +433,8 @@ button[type="submit"]:hover,
 .gsc-reply a[href*="github.com/login"],
 [class*="reply"] a[href*="login"],
 [class*="reply"] a[href*="github.com/login"],
+[class*="replies"] a[href*="login"],
+[class*="replies"] a[href*="github.com/login"],
 .gsc-reactions-count a,
 [class*="reaction"] a {
   font-size: 0.875rem !important;
@@ -495,7 +482,7 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea (Disamakan Total) */
+/* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
