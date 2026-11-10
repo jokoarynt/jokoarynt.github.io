@@ -543,7 +543,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* RESET STYLE TOMBOL MARKDOWN M & GESER KE ATAS 5PX                          */
+/* RESET STYLE TOMBOL MARKDOWN M & SETTING MARGIN-BOTTOM KE 0/NEGATIF         */
 /* ========================================================================== */
 .gsc-comment-box a[href*="markdown"],
 .gsc-comment-box a[href*="github.com/articles"],
@@ -561,10 +561,11 @@ div[class*="popover"] button {
   font-size: inherit !important;
   position: relative !important;
   top: -5px !important;
+  margin-bottom: -35px !important; /* Menarik ruang kosong di bawah tombol M */
 }
 
 /* ========================================================================== */
-/* GESER TOMBOL SIGN IN WITH GITHUB KE ATAS MENGGUNAKAN TRANSFORM TRANSLATEY  */
+/* GESER TOMBOL SIGN IN WITH GITHUB KE ATAS MENDEKATI TOMBOL MARKDOWN         */
 /* ========================================================================== */
 .gsc-comment-box a[href*="login"],
 .gsc-comment-box button[href*="login"],
@@ -572,7 +573,7 @@ div[class*="popover"] button {
 .gsc-comment-box-main a[href*="login"],
 .gsc-comment-box-main a[href*="github.com/login"],
 .gsc-social-button {
-  transform: translateY(-90px) !important; /* Sesuaikan nilai minus-nya jika kurang/lebih */
+  margin-top: -65px !important;
   position: relative !important;
   z-index: 10 !important;
 }
