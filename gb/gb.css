@@ -543,7 +543,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* RESET STYLE TOMBOL MARKDOWN M (PANAH KE BAWAH)                             */
+/* RESET STYLE TOMBOL MARKDOWN M & GESER KE ATAS 5PX                          */
 /* ========================================================================== */
 .gsc-comment-box a[href*="markdown"],
 .gsc-comment-box a[href*="github.com/articles"],
@@ -559,4 +559,6 @@ div[class*="popover"] button {
   color: inherit !important;
   font-weight: normal !important;
   font-size: inherit !important;
+  position: relative !important;
+  top: -5px !important;
 }
