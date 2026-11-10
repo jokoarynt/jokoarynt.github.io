@@ -225,12 +225,7 @@ button[type="submit"]:hover,
 
 /* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA */
 .gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
-.gsc-comment-box markdown-toolbar,
-.gsc-comment-box .markdown-toolbar,
 .gsc-comment-box .Box-header,
-.gsc-comment-box .tabnav,
-.gsc-comment-box .gsc-comment-box-tabs,
-.gsc-comment-box [class*="toolbar"],
 .gsc-comment-box [class*="tabnav"],
 .gsc-comment-box [class*="Box-header"] {
   border: none !important;
@@ -244,8 +239,14 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
+/* SEMBUNYIKAN TOMBOL "Aa" (MARKDOWN TOOLBAR / FORMATTING BUTTONS) */
+.gsc-comment-box markdown-toolbar,
+.gsc-comment-box .markdown-toolbar {
+  display: none !important;
+}
+
 /* ========================================================================== */
-/* SEMPURNAKAN / SEMBUNYIKAN TOMBOL "Aa" (WRITE BUTTON)                       */
+/* STYLING TOMBOL WRITE & PREVIEW (DIBIARKAN MUNCUL)                          */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -278,22 +279,25 @@ button[type="submit"]:hover,
   margin: 0 !important;
 }
 
-/* Sembunyikan tombol "Aa" (Write) secara total */
+/* Posisi tombol pertama (Write) */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
 .gsc-comment-box a[role="tab"]:first-child {
-  display: none !important;
+  display: inline-flex !important;
+  margin-left: -12px !important;
 }
 
-/* Tombol Preview (yang tadinya tombol kedua) */
+/* Pemisah antar tombol Write dan Preview */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
 .gsc-comment-box .tabnav-tab + .tabnav-tab,
 .gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
-  margin-left: 0 !important;
+  display: inline-flex !important;
+  margin-left: 5px !important;
+  margin-right: 0 !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
