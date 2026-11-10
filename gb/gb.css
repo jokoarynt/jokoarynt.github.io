@@ -245,29 +245,17 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW & TOMBOL "Aa" (MARKDOWN HELP)             */
+/* STYLING TOMBOL WRITE & PREVIEW (KEMBALI KE POSISI SEMULA)                */
 /* ========================================================================== */
-
-/* Ubah kontainer pembungkus tab dan tombol Aa menjadi flex dengan space-between */
-.gsc-comment-box-main > div:has([role="tablist"]),
-.gsc-comment-box-main > div:has(.tabnav),
-.gsc-comment-box-header,
-.gsc-comment-box [class*="header"] {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  width: 100% !important;
-  transform: none !important;
-  margin-bottom: 8px !important;
-  padding: 0 4px !important;
-}
-
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
   align-items: center !important;
-  margin-bottom: 0 !important;
+  width: 100% !important;
+  transform: translate(11px, 2.5px) !important;
+  margin-bottom: 8px !important;
+  padding-right: 25px !important;
 }
 
 .gsc-comment-box button,
@@ -289,19 +277,19 @@ button[type="submit"]:hover,
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 2.5px 8px !important;
+  padding: 2.5px !important;
   margin: 0 !important;
 }
 
-/* Posisi tombol pertama (Write) tanpa margin negatif */
+/* Posisi tombol pertama (Write) */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
 .gsc-comment-box a[role="tab"]:first-child {
-  margin-left: 0 !important;
+  margin-left: -12px !important;
 }
 
-/* Pemisah tombol kedua (Preview) sejauh 5px */
+/* Pemisah mutlak tombol kedua (Preview) sejauh 5px */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -329,9 +317,8 @@ button[type="submit"]:hover,
   font-weight: normal !important;
   font-size: inherit !important;
   margin-left: auto !important;
-  margin-right: 2px !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: -12px !important;
+  margin-bottom: -20px !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
