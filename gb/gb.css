@@ -245,7 +245,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW                                             */
+/* STYLING TOMBOL WRITE & PREVIEW (DIKEMBALIKAN SEPERTI SEMULA)                */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -255,11 +255,12 @@ button[type="submit"]:hover,
   margin-bottom: 8px !important;
 }
 
-.gsc-comment-box [role="tablist"] button,
-.gsc-comment-box [role="tablist"] a,
-.gsc-comment-box [role="tablist"] [role="tab"],
-.gsc-comment-box .tabnav .tabnav-tab,
-.gsc-comment-box .gsc-comment-box-tabs [class*="tab"] {
+.gsc-comment-box button:not(markdown-toolbar button):not(.markdown-toolbar button):not([class*="toolbar"] button),
+.gsc-comment-box a:not(markdown-toolbar a):not(.markdown-toolbar a),
+.gsc-comment-box [role="tab"],
+.gsc-comment-box .tabnav-tab,
+.gsc-comment-box .subnav-item,
+.gsc-comment-box [class*="tab"]:not([class*="toolbar"] [class*="tab"]) {
   background-color: #bfbfbf !important;
   border: 1.7px solid #000000 !important;
   color: #000000 !important;
@@ -278,26 +279,31 @@ button[type="submit"]:hover,
 }
 
 /* Posisi tombol pertama (Write) */
-.gsc-comment-box [role="tablist"] button[role="tab"]:first-child,
-.gsc-comment-box [role="tablist"] .tabnav-tab:first-child,
-.gsc-comment-box [role="tablist"] [class*="tab"]:first-child {
+.gsc-comment-box button[role="tab"]:first-child,
+.gsc-comment-box .tabnav-tab:first-child,
+.gsc-comment-box [class*="tab"]:first-child,
+.gsc-comment-box a[role="tab"]:first-child {
   margin-left: -12px !important;
 }
 
 /* Pemisah mutlak tombol kedua (Preview) sejauh 5px */
-.gsc-comment-box [role="tablist"] button + button,
-.gsc-comment-box [role="tablist"] [role="tab"] + [role="tab"],
-.gsc-comment-box [role="tablist"] .tabnav-tab + .tabnav-tab {
+.gsc-comment-box button + button,
+.gsc-comment-box a + a,
+.gsc-comment-box [role="tab"] + [role="tab"],
+.gsc-comment-box .tabnav-tab + .tabnav-tab,
+.gsc-comment-box .subnav-item + .subnav-item,
+.gsc-comment-box [class*="tab"] + [class*="tab"] {
   margin-left: 5px !important;
 }
 
 /* ========================================================================== */
-/* HAPUS TOTAL STYLE TOMBOL M⬇️ (MARKDOWN TOOLBAR) AGAR BENAR-BENAR POLOS     */
+/* TOMBOL MARKDOWN / M⬇️ (DIBUAT POLOS TANPA STYLE)                            */
 /* ========================================================================== */
 .gsc-comment-box markdown-toolbar button,
 .gsc-comment-box .markdown-toolbar button,
 .gsc-comment-box [class*="toolbar"] button,
-.gsc-comment-box md-select,
+.gsc-comment-box markdown-toolbar md-select,
+.gsc-comment-box .markdown-toolbar md-select,
 .gsc-comment-box [class*="toolbar"] md-select {
   background: transparent !important;
   background-color: transparent !important;
