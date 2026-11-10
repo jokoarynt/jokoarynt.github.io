@@ -297,7 +297,7 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) khusus untuk Desktop (margin-right: 500px) */
+/* Pemisah mutlak tombol kedua (Preview) khusus untuk Desktop (menggunakan margin-left: auto agar mentok ke kanan) */
 @media (min-width: 768px) {
   .gsc-comment-box button + button,
   .gsc-comment-box a + a,
@@ -305,7 +305,8 @@ button[type="submit"]:hover,
   .gsc-comment-box .tabnav-tab + .tabnav-tab,
   .gsc-comment-box .subnav-item + .subnav-item,
   .gsc-comment-box [class*="tab"] + [class*="tab"] {
-    margin-right: 500px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
   }
 }
 
