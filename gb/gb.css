@@ -296,7 +296,7 @@ button[type="submit"]:hover,
   margin-left: 5px !important;
 }
 
-/* TIMESTAMP - Membersihkan semua bentuk underline/garis bawah secara mutlak */
+/* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -324,7 +324,10 @@ button[type="submit"]:hover,
 [class*="replies"] time,
 [class*="replies"] a.Link--secondary,
 [class*="replies"] a[href*="#issuecomment-"],
-[class*="replies"] a[href*="#discussioncomment-"] {
+[class*="replies"] a[href*="#discussioncomment-"],
+.gsc-comment-footer [class*="count"],
+.gsc-comment-footer span:not(.gsc-reactions-button),
+[class*="reply-count"] {
   font-size: 0.7rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -362,7 +365,9 @@ button[type="submit"]:hover,
 [class*="replies"] time:hover,
 [class*="replies"] a.Link--secondary:hover,
 [class*="replies"] a[href*="#issuecomment-"]:hover,
-[class*="replies"] a[href*="#discussioncomment-"]:hover {
+[class*="replies"] a[href*="#discussioncomment-"]:hover,
+.gsc-comment-footer [class*="count"]:hover,
+.gsc-comment-footer span:not(.gsc-reactions-button):hover {
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
@@ -406,7 +411,7 @@ button[type="submit"]:hover,
 /* KOTAK REACTIONS (PESAN UTAMA & BALASAN): FONT-SIZE 0.875rem & "Sign in" TIPIS */
 /* ========================================================================== */
 .gsc-comment-footer,
-.gsc-comment-footer *,
+.gsc-comment-footer *:not([class*="count"]),
 .gsc-reactions,
 .gsc-reactions *,
 .gsc-comment-reactions,
