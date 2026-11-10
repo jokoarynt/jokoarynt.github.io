@@ -245,13 +245,12 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW                                             */
+/* SEMPURNAKAN / SEMBUNYIKAN TOMBOL "Aa" (WRITE BUTTON)                       */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
 .gsc-comment-box .gsc-comment-box-tabs {
   display: flex !important;
-  width: 100% !important;
   transform: translate(11px, 2.5px) !important;
   margin-bottom: 8px !important;
 }
@@ -279,42 +278,22 @@ button[type="submit"]:hover,
   margin: 0 !important;
 }
 
-/* Posisi tombol pertama (Write) */
+/* Sembunyikan tombol "Aa" (Write) secara total */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
 .gsc-comment-box a[role="tab"]:first-child {
-  margin-left: -12px !important;
+  display: none !important;
 }
 
-/* Pemisah tombol kedua (Preview) untuk Mobile */
+/* Tombol Preview (yang tadinya tombol kedua) */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
 .gsc-comment-box .tabnav-tab + .tabnav-tab,
 .gsc-comment-box .subnav-item + .subnav-item,
 .gsc-comment-box [class*="tab"] + [class*="tab"] {
-  margin-left: 5px !important;
-  margin-right: 110px !important;
-}
-
-/* Pemisah tombol kedua (Preview) khusus Desktop agar mentok ke kanan */
-@media (min-width: 768px) {
-  .gsc-comment-box [role="tablist"],
-  .gsc-comment-box .tabnav,
-  .gsc-comment-box .gsc-comment-box-tabs {
-    padding-right: 25px !important;
-  }
-  
-  .gsc-comment-box button + button,
-  .gsc-comment-box a + a,
-  .gsc-comment-box [role="tab"] + [role="tab"],
-  .gsc-comment-box .tabnav-tab + .tabnav-tab,
-  .gsc-comment-box .subnav-item + .subnav-item,
-  .gsc-comment-box [class*="tab"] + [class*="tab"] {
-    margin-left: auto !important;
-    margin-right: 15px !important;
-  }
+  margin-left: 0 !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
