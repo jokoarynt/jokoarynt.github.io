@@ -409,12 +409,12 @@ button[type="submit"]:hover,
 [class*="replies"] [data-hovercard-type="user"],
 [class*="replies"] .Link--primary,
 [class*="replies"] strong,
-.timeline-comment-header a:not(.Link--secondary):not([href*="login"]),
-.gsc-comment-header a:not(.Link--secondary):not([href*="login"]),
-.gsc-reply a:not(.Link--secondary):not([href*="login"]),
-.gsc-replies a:not(.Link--secondary):not([href*="login"]),
-[class*="reply"] a:not(.Link--secondary):not([href*="login"]),
-[class*="replies"] a:not(.Link--secondary):not([href*="login"]) {
+.timeline-comment-header a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
+.gsc-comment-header a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
+.gsc-reply a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
+.gsc-replies a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
+[class*="reply"] a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]),
+[class*="replies"] a:not(.Link--secondary):not([href*="login"]):not([href*="#issuecomment-"]):not([href*="#discussioncomment-"]) {
   font-size: 1rem !important;
   font-weight: 900 !important;
   font-family: monospace, sans-serif !important;
