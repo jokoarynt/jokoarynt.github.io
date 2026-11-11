@@ -297,13 +297,22 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* SEMBUNYIKAN TOMBOL "Aa" */
+/* SEMBUNYIKAN TOTAL TOMBOL "Aa" */
 .gsc-comment-box [role="tab"]:nth-child(3),
 .gsc-comment-box button:nth-of-type(3),
 .gsc-comment-box button:nth-child(3),
-.gsc-comment-box .tabnav-tab:nth-child(3) {
+.gsc-comment-box .tabnav-tab:nth-child(3),
+.gsc-comment-box [aria-label*="formatting"],
+.gsc-comment-box [aria-label*="Markdown"] {
   display: none !important;
   visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important.
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  pointer-events: none !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
