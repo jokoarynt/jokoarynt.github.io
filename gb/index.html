@@ -97,7 +97,7 @@
               data-reactions-enabled="1"
               data-emit-metadata="1"
               data-input-position="top"
-              data-theme="https://joko.my.id/gb/style.css?v=16"
+              data-theme="https://joko.my.id/gb/gb.css"
               data-lang="en"
               crossorigin="anonymous"
               async>
@@ -166,7 +166,7 @@
         iframe.contentWindow.postMessage({
           giscus: {
             setConfig: {
-              theme: 'https://joko.my.id/gb/stylfe.css?v=16'
+              theme: 'https://joko.my.id/gb/gb.css'
             }
           }
         }, 'https://giscus.app');
@@ -175,24 +175,6 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(updateGiscusTheme, 1500);
-
-      // Skrip untuk menyembunyikan tombol "Aa" (Markdown help) di dalam iframe Giscus
-      const hideMarkdownButton = () => {
-        const giscusFrame = document.querySelector('iframe.giscus-frame');
-        if (giscusFrame) {
-          try {
-            const frameDoc = giscusFrame.contentDocument || giscusFrame.contentWindow.document;
-            if (frameDoc) {
-              const mdLink = frameDoc.querySelector('a[href*="markdown"], a[href*="syntax"], .markdown-support-link, [aria-label*="formatting" i]');
-              if (mdLink) {
-                let targetEl = mdLink.closest('div') || mdLink;
-                targetEl.style.display = 'none';
-              }
-            }
-          } catch (e) {}
-        }
-      };
-      setInterval(hideMarkdownButton, 1000);
     });
   </script>
 </body>
