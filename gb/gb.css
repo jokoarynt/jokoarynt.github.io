@@ -88,11 +88,16 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan Tombol "Aa" (Formatting / Markdown Toolbar Toggle) */
+/* ========================================================================== */
+/* SEMPURNAKAN PENGHILANGAN TOMBOL "Aa" (Formatting / Markdown Toolbar Toggle)  */
+/* ========================================================================== */
 .gsc-comment-box button[aria-label*="Formatting" i],
 .gsc-comment-box button[aria-label*="formatting" i],
 .gsc-comment-box [aria-label*="Toggle formatting toolbar" i],
-.gsc-comment-box .toolbar-item[aria-label*="Formatting" i] {
+.gsc-comment-box markdown-toolbar button,
+.gsc-comment-box .markdown-toolbar button,
+.gsc-comment-box toolbar-button,
+.gsc-comment-box [class*="toolbar"] button {
   display: none !important;
 }
 
