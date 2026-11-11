@@ -544,26 +544,27 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* PENGATURAN MUTLAK: SEMBUNYIKAN TOTAL TOMBOL/LINK "Aa" (MARKDOWN HELP)      */
+/* PENANGANAN AGRESIF: SEMBUNYIKAN TOTAL TOMBOL/LINK "Aa" / MARKDOWN HELP      */
 /* ========================================================================== */
+.gsc-comment-box markdown-toolbar a,
+.gsc-comment-box .markdown-toolbar a,
+.gsc-comment-box a[href*="help"],
+.gsc-comment-box a[href*="syntax"],
 .gsc-comment-box a[href*="markdown"],
-.gsc-comment-box a[href*="github.com/articles"],
-.gsc-comment-box a[href*="docs.github.com"],
-.gsc-comment-box a[href*="basic-writing-and-formatting-syntax"],
-.gsc-comment-box [aria-label*="markdown" i],
-.gsc-comment-box [aria-label*="formatting" i],
+.gsc-comment-box a[href*="formatting"],
+.gsc-comment-box [aria-label*="Formatting" i],
+.gsc-comment-box [aria-label*="Markdown" i],
+.gsc-comment-box [aria-label*="help" i],
 .gsc-comment-box .markdown-support-link,
-.gsc-comment-box .sr-only,
-.gsc-comment-box div:has(> a[href*="markdown"]),
-.gsc-comment-box div:has(> a[href*="docs.github.com"]) {
+.gsc-comment-box .tooltipped,
+.gsc-comment-box svg.octicon-question,
+.gsc-comment-box span:has(> a[href*="markdown"]) {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
-  height: 0 !important;
   width: 0 !important;
+  height: 0 !important;
   overflow: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
   pointer-events: none !important;
 }
 
