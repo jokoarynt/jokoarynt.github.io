@@ -108,13 +108,14 @@ a[href*="giscus.app"] {
   background-color: #ebebeb !important;
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 6px 3px 0px var(--color-border-default) !important;
-  margin-bottom: 5px !important;
-  width: calc(100% - 8px) !important;
+  box-shadow: 2.5px 2.5px 0px var(--color-border-default) !important;
+  margin-bottom: 4px !important;
+  width: calc(100% - 8px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
   margin-left: 0px !important;
   margin-right: auto !important;
   overflow: visible !important;
 }
+
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
