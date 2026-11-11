@@ -106,9 +106,9 @@ a[href*="giscus.app"] {
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: #ebebeb !important;
-  border: 3px solid var(--color-border-default) !important;
+  border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  box-shadow: 2px 3px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
   margin-right: 3px !important;
   overflow: visible !important;
