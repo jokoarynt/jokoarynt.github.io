@@ -101,12 +101,12 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Warna #ebebeb */
+/* Kotak Komentar Utama (Form) dengan Warna #ebebeb - Border dinaikkan jadi 3px */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: #ebebeb !important;
-  border: 1.7px solid var(--color-border-default) !important;
+  border: 3px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
@@ -114,15 +114,20 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
+/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional - Border disamakan jadi 3px */
 .gsc-comment {
   background-color: #ebebeb !important;
-  border: 1.7px solid var(--color-border-default) !important;
+  border: 3px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
   margin-right: 3px !important;
   overflow: visible !important;
+}
+
+/* Bersihkan border elemen internal di dalam kartu pesan agar ketebalannya konsisten */
+.gsc-comment div:not(.gsc-comment-content):not(.gsc-comment-body):not(.gsc-comment-header) {
+  border: none !important;
 }
 
 /* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
@@ -168,7 +173,7 @@ a[href*="giscus.app"] {
 [class*="reply"] .gsc-comment-header,
 [class*="replies"] .gsc-comment-header {
   background-color: #bfbfbf !important;
-  border-bottom: 1.7px solid var(--color-border-default) !important;
+  border-bottom: 3px solid var(--color-border-default) !important;
   color: #000000 !important;
   font-weight: bold !important;
   padding: 10px 14px !important;
