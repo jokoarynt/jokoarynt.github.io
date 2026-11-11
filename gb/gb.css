@@ -297,21 +297,6 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* BERIKAN STYLE UNDERLINE TEGAS PADA TOMBOL "Aa" (Tombol ke-3) */
-.gsc-comment-box [role="tab"]:nth-child(3),
-.gsc-comment-box button:nth-of-type(3),
-.gsc-comment-box button:nth-child(3),
-.gsc-comment-box .tabnav-tab:nth-child(3) {
-  display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  text-decoration: underline !important;
-  text-decoration-color: #000000 !important;
-  text-decoration-style: solid !important;
-  text-decoration-thickness: 2px !important;
-  border-bottom: 2.5px solid #000000 !important;
-}
-
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
@@ -586,4 +571,21 @@ div[class*="popover"] button {
 .gsc-comment-box-main a[href*="github.com/login"],
 .gsc-social-button {
   margin-top: 0px !important;
+}
+
+/* ========================================================================== */
+/* KHUSUS: STYLE UNDERLINE & BORDER PADA TOMBOL "Aa" (Diletakkan Paling Bawah)  */
+/* ========================================================================== */
+.gsc-comment-box [role="tab"]:nth-child(3),
+.gsc-comment-box button:nth-of-type(3),
+.gsc-comment-box button:nth-child(3),
+.gsc-comment-box .tabnav-tab:nth-child(3) {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #000000 !important;
+  text-decoration-style: solid !important;
+  text-decoration-thickness: 2px !important;
+  border-bottom: 2.5px solid #000000 !important;
 }
