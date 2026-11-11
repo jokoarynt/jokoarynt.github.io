@@ -88,6 +88,14 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
+/* Sembunyikan Tombol "Aa" (Formatting / Markdown Toolbar Toggle) */
+.gsc-comment-box button[aria-label*="Formatting" i],
+.gsc-comment-box button[aria-label*="formatting" i],
+.gsc-comment-box [aria-label*="Toggle formatting toolbar" i],
+.gsc-comment-box .toolbar-item[aria-label*="Formatting" i] {
+  display: none !important;
+}
+
 /* Kotak Komentar Utama (Form) dengan Warna #ebebeb */
 .gsc-comment-box,
 .color-canvas-default,
@@ -544,28 +552,24 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* PENANGANAN AGRESIF: SEMBUNYIKAN TOTAL TOMBOL/LINK "Aa" / MARKDOWN HELP      */
+/* PENGATURAN MARGIN: TOMBOL MARKDOWN & SIGN IN WITH GITHUB                   */
 /* ========================================================================== */
-.gsc-comment-box markdown-toolbar a,
-.gsc-comment-box .markdown-toolbar a,
-.gsc-comment-box a[href*="help"],
-.gsc-comment-box a[href*="syntax"],
 .gsc-comment-box a[href*="markdown"],
-.gsc-comment-box a[href*="formatting"],
-.gsc-comment-box [aria-label*="Formatting" i],
-.gsc-comment-box [aria-label*="Markdown" i],
-.gsc-comment-box [aria-label*="help" i],
-.gsc-comment-box .markdown-support-link,
-.gsc-comment-box .tooltipped,
-.gsc-comment-box svg.octicon-question,
-.gsc-comment-box span:has(> a[href*="markdown"]) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
+.gsc-comment-box a[href*="github.com/articles"],
+.gsc-comment-box a[href*="docs.github.com"],
+.gsc-comment-box [aria-label*="markdown" i],
+.gsc-comment-box [aria-label*="formatting" i],
+.gsc-comment-box .markdown-support-link {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: initial !important;
+  color: inherit !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  margin-top: -12px !important;
+  margin-bottom: -20px !important;
 }
 
 .gsc-comment-box a[href*="login"],
