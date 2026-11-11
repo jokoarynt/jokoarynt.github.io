@@ -297,23 +297,17 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* SEMBUNYIKAN TOTAL TOMBOL "Aa" DAN TOMBOL KETIGA KE ATAS SECARA MUTLAK */
-.gsc-comment-box [role="tablist"] > *:nth-child(n+3),
-.gsc-comment-box .tabnav > *:nth-child(n+3),
-.gsc-comment-box .gsc-comment-box-tabs > *:nth-child(n+3),
-.gsc-comment-box button:nth-of-type(n+3),
-.gsc-comment-box [role="tab"]:nth-of-type(n+3),
-.gsc-comment-box [aria-label*="formatting"],
-.gsc-comment-box [aria-label*="Markdown"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  pointer-events: none !important;
+/* BERIKAN STYLE UNDERLINE PADA TOMBOL "Aa" (Tombol ke-3) */
+.gsc-comment-box [role="tab"]:nth-child(3),
+.gsc-comment-box button:nth-of-type(3),
+.gsc-comment-box button:nth-child(3),
+.gsc-comment-box .tabnav-tab:nth-child(3) {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.7px !important;
+  text-underline-offset: 3px !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
