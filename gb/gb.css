@@ -1,4 +1,4 @@
-pxx* ==========================================================================
+/* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
@@ -109,13 +109,20 @@ a[href*="giscus.app"] {
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2.5px 2.5px 0px var(--color-border-default) !important;
-  margin-bottom: -50px !important;
-  width: calc(100% - 2px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
+  margin-bottom: 5px !important;
+  width: calc(100% - 4px) !important;
   margin-left: 0px !important;
   margin-right: auto !important;
   overflow: visible !important;
 }
 
+/* Menarik kontainer daftar komentar agar merapat dengan kotak form */
+.gsc-timeline,
+.gsc-comment-box + div,
+.color-canvas-default + div,
+main .color-canvas-default:not(.gsc-comment-box) {
+  margin-top: -22px !important;
+}
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
@@ -146,6 +153,13 @@ a[href*="giscus.app"] {
   .color-canvas-default,
   .color-canvas-subtle {
     margin-bottom: 1.25px !important;
+  }
+
+  .gsc-timeline,
+  .gsc-comment-box + div,
+  .color-canvas-default + div,
+  main .color-canvas-default:not(.gsc-comment-box) {
+    margin-top: -26px !important;
   }
 }
 
