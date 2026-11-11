@@ -110,7 +110,7 @@ a[href*="giscus.app"] {
   border-radius: 8px !important;
   box-shadow: 2.5px 2.5px 0px var(--color-border-default) !important;
   margin-bottom: 4px !important;
-  width: calc(100% - 8px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
+  width: calc(100% - 2.5px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
   margin-left: 0px !important;
   margin-right: auto !important;
   overflow: visible !important;
