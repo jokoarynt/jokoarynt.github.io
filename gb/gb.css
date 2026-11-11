@@ -310,7 +310,7 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
+/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.75rem (12px) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -342,7 +342,7 @@ button[type="submit"]:hover,
 .gsc-comment-footer [class*="count"],
 .gsc-comment-footer span:not(.gsc-reactions-button),
 [class*="reply-count"] {
-  font-size: 75% !important;
+  font-size: 0.75rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
