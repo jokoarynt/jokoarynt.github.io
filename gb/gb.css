@@ -19,7 +19,7 @@ html {
   --color-accent-fg: #000000 !important;
   --color-accent-emphasis: #bfbfbf !important;
   
-  --neo-border: 2px solid #000000;
+  --neo-border: 1.7px solid #000000;
   --neo-shadow: 2px 2px 0px #000000;
   --neo-shadow-hover: 1px 1px 0px #000000;
   --neo-bg: #e4e4e4;
@@ -43,7 +43,7 @@ html[data-theme="night"] div {
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #bfbfbf !important;
   
-  --neo-border: 2px solid #ffffff;
+  --neo-border: 1.7px solid #ffffff;
   --neo-shadow: 2px 2px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #3a3a3a !important;
@@ -117,7 +117,7 @@ a[href*="giscus.app"] {
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
   background-color: #ebebeb !important;
-  border: 2px solid var(--color-border-default) !important;
+  border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
@@ -168,7 +168,7 @@ a[href*="giscus.app"] {
 [class*="reply"] .gsc-comment-header,
 [class*="replies"] .gsc-comment-header {
   background-color: #bfbfbf !important;
-  border-bottom: 2px solid var(--color-border-default) !important;
+  border-bottom: 1.7px solid var(--color-border-default) !important;
   color: #000000 !important;
   font-weight: bold !important;
   padding: 10px 14px !important;
