@@ -574,27 +574,35 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* KHUSUS: GARIS BAWAH (UNDERLINE) DI TOMBOL "Aa" (Tombol ke-3)               */
+/* MUTLAK: PENYELEKSI UNDERLINE UNTUK TOMBOL "Aa"                             */
 /* ========================================================================== */
 .gsc-comment-box [role="tab"]:nth-child(3),
 .gsc-comment-box button:nth-of-type(3),
 .gsc-comment-box button:nth-child(3),
-.gsc-comment-box .tabnav-tab:nth-child(3) {
+.gsc-comment-box .tabnav-tab:nth-child(3),
+.gsc-comment-box [aria-label*="formatting"],
+.gsc-comment-box [aria-label*="Markdown"],
+.gsc-comment-box a[href*="markdown"] {
   display: inline-flex !important;
   visibility: visible !important;
   opacity: 1 !important;
-  position: relative !important;
+  text-decoration: underline !important;
+  text-decoration-line: underline !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: #000000 !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 2px !important;
 }
 
-.gsc-comment-box [role="tab"]:nth-child(3)::after,
-.gsc-comment-box button:nth-of-type(3)::after,
-.gsc-comment-box button:nth-child(3)::after,
-.gsc-comment-box .tabnav-tab:nth-child(3)::after {
-  content: "" !important;
-  position: absolute !important;
-  bottom: 3px !important;
-  left: 6px !important;
-  right: 6px !important;
-  height: 2px !important;
-  background-color: #000000 !important;
+/* Target langsung teks internal / SVG di dalam tombol Aa */
+.gsc-comment-box [role="tab"]:nth-child(3) *,
+.gsc-comment-box button:nth-of-type(3) *,
+.gsc-comment-box button:nth-child(3) *,
+.gsc-comment-box .tabnav-tab:nth-child(3) *,
+.gsc-comment-box [aria-label*="formatting"] *,
+.gsc-comment-box [aria-label*="Markdown"] * {
+  text-decoration: underline !important;
+  text-decoration-line: underline !important;
+  text-decoration-color: #000000 !important;
+  text-decoration-thickness: 2px !important;
 }
