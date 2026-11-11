@@ -342,7 +342,7 @@ button[type="submit"]:hover,
 .gsc-comment-footer [class*="count"],
 .gsc-comment-footer span:not(.gsc-reactions-button),
 [class*="reply-count"] {
-  font-size: 75% !important;
+  font-size: 80% !important;
   font-weight: 400 !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
