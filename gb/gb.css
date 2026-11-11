@@ -101,7 +101,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Warna #ebebeb - Border diatur 2px */
+/* Kotak Komentar Utama (Form) dengan Warna #ebebeb - Border 2px */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
@@ -114,7 +114,7 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional - Border diatur 2px */
+/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional - Border 2px */
 .gsc-comment {
   background-color: #ebebeb !important;
   border: 2px solid var(--color-border-default) !important;
@@ -125,8 +125,8 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Bersihkan border elemen internal di dalam kartu pesan agar ketebalannya konsisten */
-.gsc-comment div:not(.gsc-comment-content):not(.gsc-comment-body):not(.gsc-comment-header) {
+/* Bersihkan border elemen internal di dalam kartu pesan, kecuali bagian replies */
+.gsc-comment div:not(.gsc-comment-content):not(.gsc-comment-body):not(.gsc-comment-header):not(.gsc-replies):not(.gsc-reply):not([class*="reply"]):not([class*="replies"]) {
   border: none !important;
 }
 
@@ -151,19 +151,20 @@ a[href*="giscus.app"] {
   }
 }
 
-/* PADDING & MARGIN PADA PESAN BALASAN (REPLIES) */
+/* PADDING & BORDER PEMBATAS PADA PESAN BALASAN (REPLIES) */
 .gsc-replies,
 .gsc-comment-replies,
 .gsc-reply,
 [class*="reply"],
 [class*="replies"] {
-  margin-top: 4px !important;
+  margin-top: 6px !important;
   margin-bottom: 4px !important;
-  padding-top: 2px !important;
+  padding-top: 6px !important;
   padding-bottom: 0 !important;
+  border-top: 2px solid var(--color-border-default) !important;
 }
 
-/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf - Border diatur 2px */
+/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf - Border 2px */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
@@ -484,7 +485,7 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Reaction Popover */
+/* Reaction Popover & Kotak Reaksi */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
@@ -553,12 +554,14 @@ button.gsc-social-button:hover,
   color: #000000 !important;
 }
 
+/* Kembalikan border untuk tombol di dalam popover reactions */
 .gsc-reactions-popover button,
 .gsc-popover button,
 div[class*="popover"] button {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  background-color: #bfbfbf !important;
+  border: 2px solid var(--color-border-default) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  border-radius: 4px !important;
 }
 
 /* ========================================================================== */
