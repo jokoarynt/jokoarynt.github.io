@@ -1,4 +1,4 @@
-* ==========================================================================
+pxx* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
@@ -109,7 +109,7 @@ a[href*="giscus.app"] {
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2.5px 2.5px 0px var(--color-border-default) !important;
-  margin-bottom: -30px !important;
+  margin-bottom: -50px !important;
   width: calc(100% - 2px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
   margin-left: 0px !important;
   margin-right: auto !important;
