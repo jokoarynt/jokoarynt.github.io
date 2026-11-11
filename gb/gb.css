@@ -283,11 +283,11 @@ button[type="submit"]:hover,
   text-decoration: none !important;
   font-family: monospace, sans-serif !important;
   font-weight: normal !important;
-  font-size: 0.8rem !important;
+  font-size: 0.775rem !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 2.5px !important;
+  padding: 2.25px !important;
   margin: 0 !important;
 }
 
