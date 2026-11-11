@@ -19,7 +19,7 @@ html {
   --color-accent-fg: #000000 !important;
   --color-accent-emphasis: #bfbfbf !important;
   
-  --neo-border: 2px solid #000000;
+  --neo-border: 1.7px solid #000000;
   --neo-shadow: 2px 2px 0px #000000;
   --neo-shadow-hover: 1px 1px 0px #000000;
   --neo-bg: #e4e4e4;
@@ -43,7 +43,7 @@ html[data-theme="night"] div {
   --color-accent-fg: #ffffff !important;
   --color-accent-emphasis: #bfbfbf !important;
   
-  --neo-border: 2px solid #ffffff;
+  --neo-border: 1.7px solid #ffffff;
   --neo-shadow: 2px 2px 0px #ffffff;
   --neo-shadow-hover: 1px 1px 0px #ffffff;
   --neo-bg: #3a3a3a !important;
@@ -101,12 +101,12 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Warna #ebebeb - Border 2px */
+/* Kotak Komentar Utama (Form) dengan Warna #ebebeb */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
   background-color: #ebebeb !important;
-  border: 2px solid var(--color-border-default) !important;
+  border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
@@ -114,20 +114,15 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional - Border 2px */
+/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
   background-color: #ebebeb !important;
-  border: 2px solid var(--color-border-default) !important;
+  border: 1.7px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   margin-bottom: 5px !important;
   margin-right: 3px !important;
   overflow: visible !important;
-}
-
-/* Bersihkan border elemen internal di dalam kartu pesan, kecuali bagian replies */
-.gsc-comment div:not(.gsc-comment-content):not(.gsc-comment-body):not(.gsc-comment-header):not(.gsc-replies):not(.gsc-reply):not([class*="reply"]):not([class*="replies"]) {
-  border: none !important;
 }
 
 /* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
@@ -151,20 +146,19 @@ a[href*="giscus.app"] {
   }
 }
 
-/* PADDING & BORDER PEMBATAS PADA PESAN BALASAN (REPLIES) */
+/* PADDING & MARGIN PADA PESAN BALASAN (REPLIES) */
 .gsc-replies,
 .gsc-comment-replies,
 .gsc-reply,
 [class*="reply"],
 [class*="replies"] {
-  margin-top: 6px !important;
+  margin-top: 4px !important;
   margin-bottom: 4px !important;
-  padding-top: 6px !important;
+  padding-top: 2px !important;
   padding-bottom: 0 !important;
-  border-top: 2px solid var(--color-border-default) !important;
 }
 
-/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf - Border 2px */
+/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
@@ -174,7 +168,7 @@ a[href*="giscus.app"] {
 [class*="reply"] .gsc-comment-header,
 [class*="replies"] .gsc-comment-header {
   background-color: #bfbfbf !important;
-  border-bottom: 2px solid var(--color-border-default) !important;
+  border-bottom: 1.7px solid var(--color-border-default) !important;
   color: #000000 !important;
   font-weight: bold !important;
   padding: 10px 14px !important;
@@ -281,7 +275,7 @@ button[type="submit"]:hover,
 .gsc-comment-box .subnav-item,
 .gsc-comment-box [class*="tab"] {
   background-color: #bfbfbf !important;
-  border: 2px solid #000 !important;
+  border: 1px solid #000 !important;
   color: #000 !important;
   border-radius: 6px !important;
   box-shadow: 1px 1px 0px #000000 !important;
@@ -485,7 +479,7 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Reaction Popover & Kotak Reaksi */
+/* Reaction Popover */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
@@ -554,14 +548,12 @@ button.gsc-social-button:hover,
   color: #000000 !important;
 }
 
-/* Kembalikan border untuk tombol di dalam popover reactions */
 .gsc-reactions-popover button,
 .gsc-popover button,
 div[class*="popover"] button {
-  background-color: #bfbfbf !important;
-  border: 2px solid var(--color-border-default) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
-  border-radius: 4px !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* ========================================================================== */
