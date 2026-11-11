@@ -297,7 +297,7 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* BERIKAN STYLE UNDERLINE PADA TOMBOL "Aa" (Tombol ke-3) */
+/* BERIKAN STYLE UNDERLINE TEGAS PADA TOMBOL "Aa" (Tombol ke-3) */
 .gsc-comment-box [role="tab"]:nth-child(3),
 .gsc-comment-box button:nth-of-type(3),
 .gsc-comment-box button:nth-child(3),
@@ -306,8 +306,10 @@ button[type="submit"]:hover,
   visibility: visible !important;
   opacity: 1 !important;
   text-decoration: underline !important;
-  text-decoration-thickness: 1.7px !important;
-  text-underline-offset: 3px !important;
+  text-decoration-color: #000000 !important;
+  text-decoration-style: solid !important;
+  text-decoration-thickness: 2px !important;
+  border-bottom: 2.5px solid #000000 !important;
 }
 
 /* TIMESTAMP & REPLY COUNTER - Ukuran dan gaya disamakan secara mutlak */
