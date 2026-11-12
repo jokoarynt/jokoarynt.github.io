@@ -1,4 +1,4 @@
-/* ==========================================================================
+pxx* ==========================================================================
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
@@ -109,20 +109,13 @@ a[href*="giscus.app"] {
   border: 2px solid var(--color-border-default) !important;
   border-radius: 8px !important;
   box-shadow: 2.5px 2.5px 0px var(--color-border-default) !important;
-  margin-bottom: 2.5px !important; /* Dibuat setengah (2.5px) dari margin antar pesan (5px) */
-  width: calc(100% - 4px) !important;
+  margin-bottom: -50px !important;
+  width: calc(100% - 2px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
   margin-left: 0px !important;
   margin-right: auto !important;
   overflow: visible !important;
 }
 
-/* Reset margin kontainer */
-.gsc-timeline,
-.gsc-comment-box + div,
-.color-canvas-default + div,
-main .color-canvas-default:not(.gsc-comment-box) {
-  margin-top: 0px !important;
-}
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
@@ -146,16 +139,13 @@ main .color-canvas-default:not(.gsc-comment-box) {
   border-radius: 8px !important;
 }
 
-/* Margin bottom antar pesan khusus mobile */
+/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px */
 @media (max-width: 767px) {
   .gsc-comment,
+  .gsc-comment-box,
   .color-canvas-default,
   .color-canvas-subtle {
     margin-bottom: 1.25px !important;
-  }
-  
-  .gsc-comment-box {
-    margin-bottom: 0.625px !important; /* Setengah dari 1.25px untuk mobile */
   }
 }
 
