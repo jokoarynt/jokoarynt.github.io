@@ -116,12 +116,12 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Atur jarak persis 5px agar sama dengan margin-bottom antar pesan */
+/* Atur jarak agar tipis (1px) dan sama persis dengan jarak antar pesan */
 .gsc-timeline,
 .gsc-comment-box + div,
 .color-canvas-default + div,
 main .color-canvas-default:not(.gsc-comment-box) {
-  margin-top: 5px !important;
+  margin-top: 1px !important;
 }
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
@@ -159,7 +159,7 @@ main .color-canvas-default:not(.gsc-comment-box) {
   .gsc-comment-box + div,
   .color-canvas-default + div,
   main .color-canvas-default:not(.gsc-comment-box) {
-    margin-top: 1.25px !important;
+    margin-top: 1px !important;
   }
 }
 
