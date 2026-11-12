@@ -503,6 +503,7 @@ button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
 button[aria-label*="reaction"],
 button[aria-label*="Reaction"],
+.gsc-reactions-button,
 .gsc-social-button,
 a.gsc-social-button,
 button.gsc-social-button,
@@ -526,21 +527,11 @@ button.gsc-social-button,
   justify-content: center !important;
 }
 
-/* KHUSUS TOMBOL REAKSI YANG ANDA TANDAI (BACKGROUND & FONT JADI #000) */
-.gsc-reactions-button,
-.gsc-reactions-button *,
-.gsc-reactions-button button,
-.gsc-reactions-button span,
-.gsc-reactions-button div {
-  background-color: #000000 !important;
-  color: #000000 !important;
-}
-
-/* Paksa isi teks/angka di dalam tombol reaksi tersebut menjadi warna putih agar kontras dengan background hitam */
+/* HANYA MENGUBAH WARNA FONT/TEKS DI DALAM TOMBOL REAKSI YANG ANDA TANDAI MENJADI #000 (BACKGROUND TETAP #bfbfbf) */
 .gsc-reactions-button *,
 .gsc-reactions-button span,
 .gsc-reactions-button button {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 button[aria-label*="Upvote"]:hover,
@@ -548,6 +539,7 @@ button[aria-label*="upvote"]:hover,
 button:has(svg.octicon-arrow-up):hover,
 button[aria-label*="reaction"]:hover,
 button[aria-label*="Reaction"]:hover,
+.gsc-reactions-button:hover,
 .gsc-social-button:hover,
 a.gsc-social-button:hover,
 button.gsc-social-button:hover,
@@ -562,10 +554,6 @@ button.gsc-social-button:hover,
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
   text-decoration: none !important;
   color: #000000 !important;
-}
-
-.gsc-reactions-button:hover {
-  background-color: #222222 !important;
 }
 
 .gsc-reactions-popover button,
