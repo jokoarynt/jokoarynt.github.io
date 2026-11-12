@@ -608,3 +608,26 @@ html[data-theme="night"] .gsc-reactions-count,
 html[data-theme="night"] .gsc-reactions > h4 {
   color: #bfbfbf !important;
 }
+
+/* ========================================================================== */
+/* WARNA FONT HITAM (#000000) UNTUK TOMBOL REACTIONS                          */
+/* ========================================================================== */
+.gsc-reactions-button,
+.gsc-reactions-button *,
+.gsc-reactions-button span,
+.gsc-direct-reaction-button,
+.gsc-direct-reaction-button *,
+.gsc-reactions-menu-button,
+.gsc-reactions-menu-button *,
+button[aria-label*="reaction" i],
+button[aria-label*="reaction" i] *,
+button[aria-label*="Upvote" i],
+button[aria-label*="Upvote" i] *,
+[data-color-mode="dark"] .gsc-reactions-button,
+[data-color-mode="dark"] .gsc-reactions-button *,
+[data-color-mode="dark"] .gsc-direct-reaction-button,
+[data-color-mode="dark"] .gsc-direct-reaction-button *,
+html[data-theme="night"] .gsc-reactions-button,
+html[data-theme="night"] .gsc-reactions-button * {
+  color: #000000 !important;
+}
