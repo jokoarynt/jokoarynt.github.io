@@ -222,7 +222,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
 }
 
 /* ========================================================================== */
-/* KHUSUS TOMBOL "Comment" (HIJAU) DAN "Sign out" (MERAH)                     */
+/* KHUSUS TOMBOL "Comment" (HIJAU) DAN "Sign out" FULL MERAH                 */
 /* ========================================================================== */
 
 /* Tombol Comment / Submit (Hijau) */
@@ -249,13 +249,17 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Tombol Sign Out (Merah) */
+/* Tombol Sign Out (Full Merah, mencakup elemen di dalam dan link/button-nya) */
 button[aria-label*="Sign out"],
 a[href*="logout"],
 button[class*="logout"],
 .gsc-social-button[href*="logout"],
-[class*="sign-out"] {
-  background-color: #ff4d4f !important; /* Warna Merah */
+[class*="sign-out"],
+.gsc-comment-box a[href*="logout"],
+.gsc-comment-box button[href*="logout"],
+.gsc-comment-box a[href*="github.com/logout"] {
+  background-color: #ff4d4f !important; /* Warna Merah Full */
+  background-image: none !important;
   color: #000000 !important;
   border: var(--neo-border) !important;
   border-radius: 6px !important;
@@ -264,7 +268,8 @@ button[class*="logout"],
 
 button[aria-label*="Sign out"]:hover,
 a[href*="logout"]:hover,
-button[class*="logout"]:hover {
+button[class*="logout"]:hover,
+.gsc-comment-box a[href*="logout"]:hover {
   background-color: #d9363e !important; /* Merah lebih gelap saat hover */
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
@@ -472,7 +477,7 @@ button[class*="logout"]:hover {
 }
 
 /* ========================================================================== */
-/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_20](start_span)[span_20](end_span)   */
+/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_20](start_span)[span_20](end_span)  */
 /* ========================================================================== */
 .gsc-comment-footer a[href*="login"],
 .gsc-comment-footer a[href*="github.com/login"],
@@ -531,22 +536,20 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea[span_24](start_span)[span_24](end_span) */
+/* Tombol Reaksi Utama di Bawah Form Textarea[span_24](start_span)[span_24](end_span) */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
 button[aria-label*="reaction"],
 button[aria-label*="Reaction"],
 .gsc-reactions-button,
-.gsc-social-button,
-a.gsc-social-button,
-button.gsc-social-button,
+.gsc-social-button:not([href*="logout"]),
+a.gsc-social-button:not([href*="logout"]),
+button.gsc-social-button:not([href*="logout"]),
 .gsc-comment-box a[href*="login"],
 .gsc-comment-box button[href*="login"],
 .gsc-comment-box a[href*="github.com/login"],
-.gsc-comment-box .btn,
-.gsc-comment-box-main a[href*="login"],
-.gsc-comment-box-main a[href*="github.com/login"] {
+.gsc-comment-box .btn:not(.gsc-comment-box-write-btn):not([href*="logout"]) {
   background-color: #bfbfbf !important;
   border: var(--neo-border) !important;
   color: #000000 !important;
@@ -573,9 +576,7 @@ button.gsc-social-button:hover,
 .gsc-comment-box a[href*="login"]:hover,
 .gsc-comment-box button[href*="login"]:hover,
 .gsc-comment-box a[href*="github.com/login"]:hover,
-.gsc-comment-box .btn:hover,
-.gsc-comment-box-main a[href*="login"]:hover,
-.gsc-comment-box-main a[href*="github.com/login"]:hover {
+.gsc-comment-box .btn:hover {
   background-color: #a8a8a8 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
