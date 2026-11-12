@@ -50,19 +50,12 @@ html[data-theme="night"] div {
   --neo-accent: #bfbfbf;
 }
 
-/* ATURAN: WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM MENJADI #bfbfbf */
-.gsc-reactions-count,
-.gsc-comment-box .gsc-reactions-count,
-[class*="reactions-count"] {
-  color: #bfbfbf !important;
-}
-
-/* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH (Kecuali total reactions yang di-override di atas jika diperlukan, atau biarkan sesuai kebutuhan) */
+/* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
 [data-color-mode="dark"] .gsc-comment-box,
 [data-color-mode="dark"] .gsc-comment-box *,
 [data-color-mode="dark"] .gsc-comment-box-header,
 [data-color-mode="dark"] .gsc-comment-box-header *,
-[data-color-mode="dark"] [class*="count"]:not(.gsc-reactions-count),
+[data-color-mode="dark"] [class*="count"]:not([class*="reactions-count"]):not([class*="comments-count"]),
 main.dark .gsc-comment-box *,
 html[data-theme="night"] .gsc-comment-box * {
   color: #ffffff !important;
@@ -83,7 +76,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru (jika tidak ingin ditampilkan ganda) */
+/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
 .gsc-comment-box .gsc-reactions,
 .gsc-comment-box .gsc-reactions-summary,
 .gsc-comment-box .gsc-comment-box-reactions,
@@ -116,11 +109,12 @@ a[href*="giscus.app"] {
   border-radius: 8px !important;
   box-shadow: 2.5px 2.5px 0px var(--color-border-default) !important;
   margin-bottom: -50px !important;
-  width: calc(100% - 2px) !important; 
+  width: calc(100% - 2px) !important; /* Kurangi sedikit lebarnya agar sisa ruang dipakai shadow */
   margin-left: 0px !important;
   margin-right: auto !important;
   overflow: visible !important;
 }
+
 
 /* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
@@ -144,7 +138,7 @@ a[href*="giscus.app"] {
   border-radius: 8px !important;
 }
 
-/* Margin bottom antar pesan khusus mobile */
+/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px */
 @media (max-width: 767px) {
   .gsc-comment,
   .gsc-comment-box,
@@ -299,6 +293,7 @@ button[type="submit"]:hover,
   margin: 0 !important;
 }
 
+/* Posisi tombol pertama (Write) */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
@@ -306,6 +301,7 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
+/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:110px */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -316,7 +312,7 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* TIMESTAMP & REPLY COUNTER */
+/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.6875rem (11px) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -345,7 +341,7 @@ button[type="submit"]:hover,
 [class*="replies"] a.Link--secondary,
 [class*="replies"] a[href*="#issuecomment-"],
 [class*="replies"] a[href*="#discussioncomment-"],
-.gsc-comment-footer [class*="count"],
+.gsc-comment-footer [class*="count"]:not(.gsc-comments-count):not(.gsc-reactions-count),
 .gsc-comment-footer span:not(.gsc-reactions-button),
 [class*="reply-count"] {
   font-size: 0.6875rem !important;
@@ -590,4 +586,20 @@ div[class*="popover"] button {
 .gsc-comment-box-main a[href*="github.com/login"],
 .gsc-social-button {
   margin-top: 0px !important;
+}
+
+/* ========================================================================== */
+/* ATURAN MUTLAK: WARNA TEKS TOTAL REACTIONS / COMMENTS COUNT DI ATAS FORM   */
+/* ========================================================================== */
+main .gsc-comments-count,
+.gsc-comments-count,
+.gsc-reactions-count,
+.gsc-comment-box .gsc-reactions-count,
+[class*="reactions-count"],
+[class*="comments-count"],
+[data-color-mode="dark"] .gsc-comments-count,
+[data-color-mode="dark"] .gsc-reactions-count,
+html[data-theme="night"] .gsc-comments-count,
+html[data-theme="night"] .gsc-reactions-count {
+  color: #bfbfbf !important;
 }
