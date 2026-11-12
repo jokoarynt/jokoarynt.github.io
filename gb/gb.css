@@ -212,12 +212,17 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: #000000 !important;
 }
 
-/* Buttons[span_15](start_span)[span_15](end_span) */
+/* Buttons & Tombol "Write a reply[span_15](start_span)"[span_15](end_span) */
 button.gsc-comment-box-write-btn,
 .gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
-.gsc-button {
+.gsc-button,
+.gsc-comment-box-button,
+.gsc-comment-box-textarea-buttons button,
+button[aria-label*="reply" i],
+[class*="reply-btn"],
+[class*="write-reply"] {
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
   background-color: #bfbfbf !important;
