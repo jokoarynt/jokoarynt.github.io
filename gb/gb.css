@@ -189,34 +189,19 @@ a[href*="giscus.app"] {
   padding-top: 12px !important;
 }
 
-/* Textarea & Inputs (Font-size textarea / "Write a reply" diatur ke 0.6875rem) */
+/* Textarea & Inputs (Sesudah diklik / aktif tetap normal 0.85rem)[span_13](start_span)[span_13](end_span) */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
 .gsc-comment-box textarea,
-.gsc-reply-box textarea,
-.gsc-comment-replies textarea,
-[class*="reply"] textarea,
-[class*="replies"] textarea,
 textarea, input {
   font-family: monospace, sans-serif !important;
-  font-size: 0.6875rem !important;
+  font-size: 0.85rem !important;
   color: #000000 !important;
   background-color: #ffffff !important;
   border: var(--neo-border) !important;
   border-radius: 6px !important;
   box-shadow: none !important;
   padding: 10px !important;
-}
-
-/* Placeholder textarea "Write a reply" */
-textarea::placeholder,
-input::placeholder,
-.gsc-comment-box textarea::placeholder,
-.gsc-reply-box textarea::placeholder,
-[class*="reply"] textarea::placeholder {
-  font-size: 0.6875rem !important;
-  color: #000000 !important;
-  opacity: 1 !important;
 }
 
 textarea:focus, input:focus, .gsc-comment-box textarea:focus {
@@ -227,9 +212,17 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
   color: #000000 !important;
 }
 
-/* Buttons[span_13](start_span)[span_13](end_span) */
+/* KHUSUS: Tombol "Write a reply" SEBELUM diklik diatur font-size menjadi 0.6875rem */
+.gsc-comment button:not([aria-label*="Upvote"]):not([aria-label*="upvote"]):not([aria-label*="reaction"]):not([aria-label*="Reaction"]),
+.gsc-comment .btn,
+.gsc-comment-footer button,
+.gsc-comment [class*="reply-btn"],
+.gsc-comment [class*="write-btn"] {
+  font-size: 0.6875rem !important;
+}
+
+/* Buttons[span_14](start_span)[span_14](end_span) */
 button.gsc-comment-box-write-btn,
-.gsc-comment-box-write-btn,
 button[type="submit"],
 .gsc-button-primary,
 .gsc-button {
@@ -253,7 +246,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA[span_14](start_span)[span_14](end_span) */
+/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA[span_15](start_span)[span_15](end_span) */
 .gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
@@ -275,7 +268,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW[span_15](start_span)[span_15](end_span)                                   */
+/* STYLING TOMBOL WRITE & PREVIEW[span_16](start_span)[span_16](end_span)                                             */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -308,7 +301,7 @@ button[type="submit"]:hover,
   margin: 0 !important;
 }
 
-/* Posisi tombol pertama (Write)[span_16](start_span)[span_16](end_span) */
+/* Posisi tombol pertama (Write)[span_17](start_span)[span_17](end_span) */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
@@ -316,7 +309,7 @@ button[type="submit"]:hover,
   margin-left: -12px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:110px[span_17](start_span)[span_17](end_span) */
+/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:110px[span_18](start_span)[span_18](end_span) */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -327,7 +320,7 @@ button[type="submit"]:hover,
   margin-right: 110px !important;
 }
 
-/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.6875rem (11px)[span_18](start_span)[span_18](end_span) */
+/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.6875rem (11px)[span_19](start_span)[span_19](end_span) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -406,7 +399,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* 1. ATURAN UTAMA: SEMUA USERNAME (PESAN UTAMA & BALASAN) TEBAL (BOLD)[span_19](start_span)[span_19](end_span) */
+/* 1. ATURAN UTAMA: SEMUA USERNAME (PESAN UTAMA & BALASAN) TEBAL (BOLD)[span_20](start_span)[span_20](end_span)       */
 /* ========================================================================== */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
@@ -454,7 +447,7 @@ button[type="submit"]:hover,
 }
 
 /* ========================================================================== */
-/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_20](start_span)[span_20](end_span)  */
+/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_21](start_span)[span_21](end_span) */
 /* ========================================================================== */
 .gsc-comment-footer a[href*="login"],
 .gsc-comment-footer a[href*="github.com/login"],
@@ -474,7 +467,7 @@ button[type="submit"]:hover,
   text-stroke: 0px transparent !important;
 }
 
-/* Underline dashed untuk link teks di dalam isi komentar[span_21](start_span)[span_21](end_span) */
+/* Underline dashed untuk link teks di dalam isi komentar[span_22](start_span)[span_22](end_span) */
 .gsc-comment-text a:not([class]),
 .markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
@@ -482,7 +475,7 @@ button[type="submit"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* Warna & Font Dasar Pesan[span_22](start_span)[span_22](end_span) */
+/* Warna & Font Dasar Pesan[span_23](start_span)[span_23](end_span) */
 .gsc-comment-content,
 .gsc-comment-text,
 .gsc-comment-body,
@@ -496,7 +489,7 @@ button[type="submit"]:hover,
   background-color: transparent !important;
 }
 
-/* Reaction Popover[span_23](start_span)[span_23](end_span) */
+/* Reaction Popover[span_24](start_span)[span_24](end_span) */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
@@ -513,7 +506,7 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea[span_24](start_span)[span_24](end_span) */
+/* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea[span_25](start_span)[span_25](end_span) */
 button[aria-label*="Upvote"],
 button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
@@ -574,7 +567,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* PENGATURAN MARGIN: TOMBOL MARKDOWN & SIGN IN WITH GITHUB[span_25](start_span)[span_25](end_span)          */
+/* PENGATURAN MARGIN: TOMBOL MARKDOWN & SIGN IN WITH GITHUB[span_26](start_span)[span_26](end_span)          */
 /* ========================================================================== */
 .gsc-comment-box a[href*="markdown"],
 .gsc-comment-box a[href*="github.com/articles"],
@@ -604,7 +597,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)[span_26](start_span)[span_26](end_span)           */
+/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)[span_27](start_span)[span_27](end_span)           */
 /* ========================================================================== */
 .gsc-reactions-count,
 .gsc-reactions-count *,
