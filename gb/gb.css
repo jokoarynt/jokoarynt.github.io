@@ -204,4 +204,409 @@ textarea, input {
   padding: 10px !important;
 }
 
-textarea:focus, input:focus, .gsc-comment-
+textarea:focus, input:focus, .gsc-comment-box textarea:focus {
+  outline: none !important;
+  box-shadow: var(--neo-shadow) !important;
+  transform: translate(-1px, -1px) !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Buttons */
+button.gsc-comment-box-write-btn,
+.gsc-comment-box-write-btn,
+button[type="submit"],
+.gsc-button-primary,
+.gsc-button {
+  font-family: monospace, sans-serif !important;
+  font-weight: bold !important;
+  background-color: #bfbfbf !important;
+  color: #000000 !important;
+  border: var(--neo-border) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--neo-shadow) !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  font-size: 0.6875rem !important;
+}
+
+button[type="submit"]:hover,
+.gsc-button-primary:hover,
+.gsc-button:hover {
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  background-color: #a8a8a8 !important;
+  color: #000000 !important;
+}
+
+/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA */
+.gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
+.gsc-comment-box markdown-toolbar,
+.gsc-comment-box .markdown-toolbar,
+.gsc-comment-box .Box-header,
+.gsc-comment-box .tabnav,
+.gsc-comment-box .gsc-comment-box-tabs,
+.gsc-comment-box [class*="toolbar"],
+.gsc-comment-box [class*="tabnav"],
+.gsc-comment-box [class*="Box-header"] {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* ========================================================================== */
+/* STYLING TOMBOL WRITE & PREVIEW                                             */
+/* ========================================================================== */
+.gsc-comment-box [role="tablist"],
+.gsc-comment-box .tabnav,
+.gsc-comment-box .gsc-comment-box-tabs {
+  display: flex !important;
+  transform: translate(11px, 2.5px) !important;
+  margin-bottom: 8px !important;
+}
+
+.gsc-comment-box button,
+.gsc-comment-box a,
+.gsc-comment-box [role="tab"],
+.gsc-comment-box .tabnav-tab,
+.gsc-comment-box .subnav-item,
+.gsc-comment-box [class*="tab"] {
+  background-color: #bfbfbf !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+  border-radius: 6px !important;
+  box-shadow: 1px 1px 0px #000000 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-family: monospace, sans-serif !important;
+  font-weight: normal !important;
+  font-size: 0.75rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1px 3.25px !important;
+  margin: 0 !important;
+}
+
+/* Posisi tombol pertama (Write) */
+.gsc-comment-box button[role="tab"]:first-child,
+.gsc-comment-box .tabnav-tab:first-child,
+.gsc-comment-box [class*="tab"]:first-child,
+.gsc-comment-box a[role="tab"]:first-child {
+  margin-left: -12px !important;
+}
+
+/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:110px */
+.gsc-comment-box button + button,
+.gsc-comment-box a + a,
+.gsc-comment-box [role="tab"] + [role="tab"],
+.gsc-comment-box .tabnav-tab + .tabnav-tab,
+.gsc-comment-box .subnav-item + .subnav-item,
+.gsc-comment-box [class*="tab"] + [class*="tab"] {
+  margin-left: 5px !important;
+  margin-right: 110px !important;
+}
+
+/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.6875rem (11px) */
+.gsc-comment-header time,
+.gsc-comment-header a.Link--secondary,
+.gsc-comment-header a[href*="#issuecomment-"],
+.gsc-comment-header a[href*="#discussioncomment-"],
+.timeline-comment-header time,
+.timeline-comment-header a.Link--secondary,
+.timeline-comment-header a[href*="#issuecomment-"],
+.timeline-comment-header a[href*="#discussioncomment-"],
+.gsc-reply time,
+.gsc-reply a.Link--secondary,
+.gsc-reply a[href*="#issuecomment-"],
+.gsc-reply a[href*="#discussioncomment-"],
+.gsc-replies time,
+.gsc-replies a.Link--secondary,
+.gsc-replies a[href*="#issuecomment-"],
+.gsc-replies a[href*="#discussioncomment-"],
+.gsc-comment-replies time,
+.gsc-comment-replies a.Link--secondary,
+.gsc-comment-replies a[href*="#issuecomment-"],
+.gsc-comment-replies a[href*="#discussioncomment-"],
+[class*="reply"] time,
+[class*="reply"] a.Link--secondary,
+[class*="reply"] a[href*="#issuecomment-"],
+[class*="reply"] a[href*="#discussioncomment-"],
+[class*="replies"] time,
+[class*="replies"] a.Link--secondary,
+[class*="replies"] a[href*="#issuecomment-"],
+[class*="replies"] a[href*="#discussioncomment-"],
+.gsc-comment-footer [class*="count"],
+.gsc-comment-footer span:not(.gsc-reactions-button),
+[class*="reply-count"] {
+  font-size: 0.6875rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  color: #333333 !important;
+  -webkit-text-stroke: 0px transparent !important;
+}
+
+.gsc-comment-header time:hover,
+.gsc-comment-header a.Link--secondary:hover,
+.gsc-comment-header a[href*="#issuecomment-"]:hover,
+.gsc-comment-header a[href*="#discussioncomment-"]:hover,
+.timeline-comment-header time:hover,
+.timeline-comment-header a.Link--secondary:hover,
+.timeline-comment-header a[href*="#issuecomment-"]:hover,
+.timeline-comment-header a[href*="#discussioncomment-"]:hover,
+.gsc-reply time:hover,
+.gsc-reply a.Link--secondary:hover,
+.gsc-reply a[href*="#issuecomment-"]:hover,
+.gsc-reply a[href*="#discussioncomment-"]:hover,
+.gsc-replies time:hover,
+.gsc-replies a.Link--secondary:hover,
+.gsc-replies a[href*="#issuecomment-"]:hover,
+.gsc-replies a[href*="#discussioncomment-"]:hover,
+.gsc-comment-replies time:hover,
+.gsc-comment-replies a.Link--secondary:hover,
+.gsc-comment-replies a[href*="#issuecomment-"]:hover,
+.gsc-comment-replies a[href*="#discussioncomment-"]:hover,
+[class*="reply"] time:hover,
+[class*="reply"] a.Link--secondary:hover,
+[class*="reply"] a[href*="#issuecomment-"]:hover,
+[class*="reply"] a[href*="#discussioncomment-"]:hover,
+[class*="replies"] time:hover,
+[class*="replies"] a.Link--secondary:hover,
+[class*="replies"] a[href*="#issuecomment-"]:hover,
+[class*="replies"] a[href*="#discussioncomment-"]:hover,
+.gsc-comment-footer [class*="count"]:hover,
+.gsc-comment-footer span:not(.gsc-reactions-button):hover {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* ========================================================================== */
+/* 1. ATURAN UTAMA: SEMUA USERNAME (PESAN UTAMA & BALASAN) TEBAL (BOLD)       */
+/* ========================================================================== */
+.gsc-comment-author,
+.gsc-comment-header .gsc-comment-author,
+.gsc-comment-header a.author,
+.timeline-comment-header .author,
+.gsc-comment-header [data-hovercard-type="user"],
+.gsc-comment-header .Link--primary,
+.gsc-comment-header strong,
+.timeline-comment-header strong,
+.gsc-reply .gsc-comment-author,
+.gsc-reply a.author,
+.gsc-reply [data-hovercard-type="user"],
+.gsc-reply .Link--primary,
+.gsc-reply strong,
+.gsc-replies .gsc-comment-author,
+.gsc-replies a.author,
+.gsc-replies [data-hovercard-type="user"],
+.gsc-replies .Link--primary,
+.gsc-replies strong,
+.gsc-comment-replies .gsc-comment-author,
+.gsc-comment-replies a.author,
+.gsc-comment-replies [data-hovercard-type="user"],
+.gsc-comment-replies .Link--primary,
+.gsc-comment-replies strong,
+[class*="reply"] .gsc-comment-author,
+[class*="reply"] a.author,
+[class*="reply"] [data-hovercard-type="user"],
+[class*="reply"] .Link--primary,
+[class*="reply"] strong,
+[class*="replies"] .gsc-comment-author,
+[class*="replies"] a.author,
+[class*="replies"] [data-hovercard-type="user"],
+[class*="replies"] .Link--primary,
+[class*="replies"] strong,
+.gsc-reply a[href*="github.com/"],
+.gsc-replies a[href*="github.com/"],
+[class*="reply"] a[href*="github.com/"],
+[class*="replies"] a[href*="github.com/"] {
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  font-family: monospace, sans-serif !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+  -webkit-text-stroke: 0.8px #000000 !important;
+}
+
+/* ========================================================================== */
+/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)            */
+/* ========================================================================== */
+.gsc-comment-footer a[href*="login"],
+.gsc-comment-footer a[href*="github.com/login"],
+.gsc-comment a[href*="login"],
+.gsc-comment a[href*="github.com/login"],
+.gsc-reply a[href*="login"],
+.gsc-reply a[href*="github.com/login"],
+[class*="reply"] a[href*="login"],
+[class*="reply"] a[href*="github.com/login"],
+[class*="replies"] a[href*="login"],
+[class*="replies"] a[href*="github.com/login"],
+.gsc-reactions-count a,
+[class*="reaction"] a {
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  -webkit-text-stroke: 0px transparent !important;
+  text-stroke: 0px transparent !important;
+}
+
+/* Underline dashed untuk link teks di dalam isi komentar */
+.gsc-comment-text a:not([class]),
+.markdown-body a:not([class]) {
+  text-decoration: underline dashed !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 4px !important;
+}
+
+/* Warna & Font Dasar Pesan */
+.gsc-comment-content,
+.gsc-comment-text,
+.gsc-comment-body,
+.markdown-body,
+.markdown-body p,
+.markdown-body li,
+.markdown-body blockquote,
+.markdown-body span {
+  color: #000000 !important;
+  font-family: monospace, sans-serif !important;
+  background-color: transparent !important;
+}
+
+/* Reaction Popover */
+.gsc-reactions-popover,
+.gsc-popover,
+div[class*="popover"],
+div[role="tooltip"] {
+  background-image: none !important;
+  background-color: var(--neo-bg) !important;
+  border: var(--neo-border) !important;
+  box-shadow: 3px 3px 0px var(--color-border-default) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  opacity: 1 !important;
+  color: var(--color-fg-default) !important;
+  z-index: 999999 !important;
+  position: absolute !important;
+}
+
+/* Tombol Reaksi Utama & Tombol Sign In GitHub di Bawah Form Textarea */
+button[aria-label*="Upvote"],
+button[aria-label*="upvote"],
+button:has(svg.octicon-arrow-up),
+button[aria-label*="reaction"],
+button[aria-label*="Reaction"],
+.gsc-reactions-button,
+.gsc-social-button,
+a.gsc-social-button,
+button.gsc-social-button,
+.gsc-comment-box a[href*="login"],
+.gsc-comment-box button[href*="login"],
+.gsc-comment-box a[href*="github.com/login"],
+.gsc-comment-box .btn,
+.gsc-comment-box-main a[href*="login"],
+.gsc-comment-box-main a[href*="github.com/login"] {
+  background-color: #bfbfbf !important;
+  border: var(--neo-border) !important;
+  color: #000000 !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0px var(--color-border-default) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-family: monospace, sans-serif !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+button[aria-label*="Upvote"]:hover,
+button[aria-label*="upvote"]:hover,
+button:has(svg.octicon-arrow-up):hover,
+button[aria-label*="reaction"]:hover,
+button[aria-label*="Reaction"]:hover,
+.gsc-reactions-button:hover,
+.gsc-social-button:hover,
+a.gsc-social-button:hover,
+button.gsc-social-button:hover,
+.gsc-comment-box a[href*="login"]:hover,
+.gsc-comment-box button[href*="login"]:hover,
+.gsc-comment-box a[href*="github.com/login"]:hover,
+.gsc-comment-box .btn:hover,
+.gsc-comment-box-main a[href*="login"]:hover,
+.gsc-comment-box-main a[href*="github.com/login"]:hover {
+  background-color: #a8a8a8 !important;
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px var(--color-border-default) !important;
+  text-decoration: none !important;
+  color: #000000 !important;
+}
+
+.gsc-reactions-popover button,
+.gsc-popover button,
+div[class*="popover"] button {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ========================================================================== */
+/* PENGATURAN MARGIN: TOMBOL MARKDOWN & SIGN IN WITH GITHUB                   */
+/* ========================================================================== */
+.gsc-comment-box a[href*="markdown"],
+.gsc-comment-box a[href*="github.com/articles"],
+.gsc-comment-box a[href*="docs.github.com"],
+.gsc-comment-box [aria-label*="markdown" i],
+.gsc-comment-box [aria-label*="formatting" i],
+.gsc-comment-box .markdown-support-link {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: initial !important;
+  color: inherit !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  margin-top: -12px !important;
+  margin-bottom: -20px !important;
+}
+
+.gsc-comment-box a[href*="login"],
+.gsc-comment-box button[href*="login"],
+.gsc-comment-box a[href*="github.com/login"],
+.gsc-comment-box-main a[href*="login"],
+.gsc-comment-box-main a[href*="github.com/login"],
+.gsc-social-button {
+  margin-top: 0px !important;
+}
+
+/* ========================================================================== */
+/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)                    */
+/* ========================================================================== */
+.gsc-reactions-count,
+.gsc-reactions-count *,
+.gsc-reactions > h4,
+.gsc-reactions > div:first-child,
+.gsc-reactions .color-fg-muted,
+.gsc-reactions .color-text-secondary,
+.gsc-header .gsc-reactions-count,
+.gsc-main > .gsc-reactions h4,
+.gsc-main > .gsc-reactions span,
+.gsc-main > .gsc-reactions a,
+[data-color-mode="dark"] .gsc-reactions-count,
+[data-color-mode="dark"] .gsc-reactions-count *,
+[data-color-mode="dark"] .gsc-reactions > h4,
+[data-color-mode="dark"] .gsc-reactions .color-fg-muted,
+html[data-theme="night"] .gsc-reactions-count,
+html[data-theme="night"] .gsc-reactions > h4 {
+  color: #bfbfbf !important;
+}
