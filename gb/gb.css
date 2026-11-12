@@ -222,10 +222,10 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
 }
 
 /* ========================================================================== */
-/* KHUSUS TOMBOL "Comment" (HIJAU) DAN "Sign out" FULL MERAH                 */
+/* KHUSUS TOMBOL "Comment" (HIJAU FULL) DAN "Sign out" (MERAH FULL)           */
 /* ========================================================================== */
 
-/* Tombol Comment / Submit (Hijau) */
+/* Tombol Comment / Submit (Hijau Full) */
 button[type="submit"],
 .gsc-button-primary,
 .gsc-button {
@@ -240,6 +240,13 @@ button[type="submit"],
   cursor: pointer !important;
 }
 
+button[type="submit"] *,
+.gsc-button-primary *,
+.gsc-button * {
+  background-color: transparent !important;
+  color: #000000 !important;
+}
+
 button[type="submit"]:hover,
 .gsc-button-primary:hover,
 .gsc-button:hover {
@@ -249,7 +256,7 @@ button[type="submit"]:hover,
   color: #000000 !important;
 }
 
-/* Tombol Sign Out (Full Merah, mencakup elemen di dalam dan link/button-nya) */
+/* Tombol Sign Out (Merah Full, mencakup semua elemen anak di dalamnya) */
 button[aria-label*="Sign out"],
 a[href*="logout"],
 button[class*="logout"],
@@ -264,6 +271,18 @@ button[class*="logout"],
   border: var(--neo-border) !important;
   border-radius: 6px !important;
   box-shadow: var(--neo-shadow) !important;
+}
+
+button[aria-label*="Sign out"] *,
+a[href*="logout"] *,
+button[class*="logout"] *,
+.gsc-social-button[href*="logout"] *,
+[class*="sign-out"] *,
+.gsc-comment-box a[href*="logout"] *,
+.gsc-comment-box button[href*="logout"] *,
+.gsc-comment-box a[href*="github.com/logout"] * {
+  background-color: transparent !important;
+  color: #000000 !important;
 }
 
 button[aria-label*="Sign out"]:hover,
@@ -477,7 +496,7 @@ button[class*="logout"]:hover,
 }
 
 /* ========================================================================== */
-/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_20](start_span)[span_20](end_span)  */
+/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_20](start_span)[span_20](end_span)   */
 /* ========================================================================== */
 .gsc-comment-footer a[href*="login"],
 .gsc-comment-footer a[href*="github.com/login"],
