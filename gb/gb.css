@@ -2,12 +2,12 @@
    Giscus Custom Theme - Neo-Brutalist Style (joko.my.id)
    ========================================================================== */
 
-/* Atur font-size pada html sebesar 100%[span_0](start_span)[span_0](end_span) */
+/* Atur font-size pada html sebesar 100% */
 html {
   font-size: 100% !important;
 }
 
-/* Light Mode (Default)[span_1](start_span)[span_1](end_span) */
+/* Light Mode (Default) */
 :root, main {
   --color-canvas-default: #ebebeb !important;  
   --color-canvas-subtle: #d0d0d0 !important;  
@@ -26,7 +26,7 @@ html {
   --neo-accent: #bfbfbf;
 }
 
-/* Dark Mode (Night Mode)[span_2](start_span)[span_2](end_span) */
+/* Dark Mode (Night Mode) */
 main[data-color-mode="dark"],
 main.dark,
 [data-color-mode="dark"],
@@ -50,7 +50,7 @@ html[data-theme="night"] div {
   --neo-accent: #bfbfbf;
 }
 
-/* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH[span_3](start_span)[span_3](end_span) */
+/* ATURAN MUTLAK: WAKTU MODE GELAP, PAKSA SEMUA TEKS HEADER/COUNTER DI ATAS TEXTAREA MENJADI PUTIH */
 [data-color-mode="dark"] .gsc-comment-box,
 [data-color-mode="dark"] .gsc-comment-box *,
 [data-color-mode="dark"] .gsc-comment-box-header,
@@ -67,7 +67,7 @@ body, main {
   background: transparent !important;
 }
 
-/* Sembunyikan Statistik & Powered by Giscus[span_4](start_span)[span_4](end_span) */
+/* Sembunyikan Statistik & Powered by Giscus */
 .gsc-header,
 .gsc-footer,
 footer,
@@ -76,7 +76,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru[span_5](start_span)[span_5](end_span) */
+/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
 .gsc-comment-box .gsc-reactions,
 .gsc-comment-box .gsc-reactions-summary,
 .gsc-comment-box .gsc-comment-box-reactions,
@@ -100,7 +100,7 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Kotak Komentar Utama (Form) dengan Warna #ebebeb[span_6](start_span)[span_6](end_span) */
+/* Kotak Komentar Utama (Form) dengan Warna #ebebeb */
 .gsc-comment-box,
 .color-canvas-default,
 .color-canvas-subtle {
@@ -115,7 +115,7 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional[span_7](start_span)[span_7](end_span) */
+/* KARTU PESAN: Warna #ebebeb, Sudut Membulat, Shadow Proporsional */
 .gsc-comment {
   background-color: #ebebeb !important;
   border: 1px solid var(--color-border-default) !important;
@@ -126,7 +126,7 @@ a[href*="giscus.app"] {
   overflow: visible !important;
 }
 
-/* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut[span_8](start_span)[span_8](end_span) */
+/* Memaksa seluruh elemen pembungkus di dalam kartu pesan agar mengikuti lengkungan sudut */
 .gsc-comment > div,
 .gsc-comment-box > div,
 .gsc-comment-content,
@@ -137,7 +137,7 @@ a[href*="giscus.app"] {
   border-radius: 8px !important;
 }
 
-/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px[span_9](start_span)[span_9](end_span) */
+/* Margin bottom antar pesan khusus mobile dikurangi setengah lagi menjadi 1.25px */
 @media (max-width: 767px) {
   .gsc-comment,
   .gsc-comment-box,
@@ -147,7 +147,7 @@ a[href*="giscus.app"] {
   }
 }
 
-/* PADDING & MARGIN PADA PESAN BALASAN (REPLIES)[span_10](start_span)[span_10](end_span) */
+/* PADDING & MARGIN PADA PESAN BALASAN (REPLIES) */
 .gsc-replies,
 .gsc-comment-replies,
 .gsc-reply,
@@ -159,7 +159,7 @@ a[href*="giscus.app"] {
   padding-bottom: 0 !important;
 }
 
-/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf[span_11](start_span)[span_11](end_span) */
+/* Header Kotak Pesan & Balasan: Diubah menjadi warna #bfbfbf */
 .gsc-comment-header,
 .gsc-comment-box-header,
 .timeline-comment-header,
@@ -180,7 +180,7 @@ a[href*="giscus.app"] {
   margin: 0 !important;
 }
 
-/* Pastikan bodi pesan menyatu sempurna di bawah header tanpa patah[span_12](start_span)[span_12](end_span) */
+/* Pastikan bodi pesan menyatu sempurna di bawah header tanpa patah */
 .gsc-comment-content,
 .gsc-comment-body,
 .markdown-body {
@@ -189,7 +189,7 @@ a[href*="giscus.app"] {
   padding-top: 12px !important;
 }
 
-/* Textarea & Inputs (Sesudah diklik / aktif tetap normal 0.85rem)[span_13](start_span)[span_13](end_span) */
+/* Textarea & Inputs (Sesudah diklik / aktif tetap normal 0.85rem) */
 textarea.gsc-comment-box-textarea,
 input.gsc-comment-box-textarea,
 .gsc-comment-box textarea,
@@ -222,7 +222,7 @@ textarea:focus, input:focus, .gsc-comment-box textarea:focus {
 }
 
 /* ========================================================================== */
-/* KHUSUS TOMBOL "Comment" (HIJAU FULL) DAN "Sign out" (MERAH FULL)           */
+/* KHUSUS TOMBOL "Comment" (HIJAU FULL), "Sign out" (MERAH FULL) & REAKSI      */
 /* ========================================================================== */
 
 /* Tombol Comment / Submit (Hijau Full) */
@@ -295,7 +295,20 @@ button[class*="logout"]:hover,
   color: #000000 !important;
 }
 
-/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA[span_14](start_span)[span_14](end_span) */
+/* Mengubah warna font/teks pada tombol reaksi (termasuk tombol emoji/dislike) menjadi #000 */
+button[aria-label*="reaction"],
+button[aria-label*="Reaction"],
+.gsc-reactions-button,
+.gsc-reactions-button *,
+button[aria-label*="Upvote"],
+button[aria-label*="upvote"],
+button:has(svg.octicon-arrow-up),
+.gsc-reactions-button span,
+.gsc-reactions-button count {
+  color: #000000 !important;
+}
+
+/* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA */
 .gsc-comment-box div:not(.gsc-comment-box-textarea):not(.gsc-comment-box-main),
 .gsc-comment-box markdown-toolbar,
 .gsc-comment-box .markdown-toolbar,
@@ -317,7 +330,7 @@ button[class*="logout"]:hover,
 }
 
 /* ========================================================================== */
-/* STYLING TOMBOL WRITE & PREVIEW[span_15](start_span)[span_15](end_span)                                   */
+/* STYLING TOMBOL WRITE & PREVIEW                                   */
 /* ========================================================================== */
 .gsc-comment-box [role="tablist"],
 .gsc-comment-box .tabnav,
@@ -350,7 +363,7 @@ button[class*="logout"]:hover,
   margin: 0 !important;
 }
 
-/* Posisi tombol pertama (Write)[span_16](start_span)[span_16](end_span) */
+/* Posisi tombol pertama (Write) */
 .gsc-comment-box button[role="tab"]:first-child,
 .gsc-comment-box .tabnav-tab:first-child,
 .gsc-comment-box [class*="tab"]:first-child,
@@ -358,7 +371,7 @@ button[class*="logout"]:hover,
   margin-left: -12px !important;
 }
 
-/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:110px[span_17](start_span)[span_17](end_span) */
+/* Pemisah mutlak tombol kedua (Preview) sejauh 5px dan penambahan margin-right:110px */
 .gsc-comment-box button + button,
 .gsc-comment-box a + a,
 .gsc-comment-box [role="tab"] + [role="tab"],
@@ -369,7 +382,7 @@ button[class*="logout"]:hover,
   margin-right: 110px !important;
 }
 
-/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.6875rem (11px)[span_18](start_span)[span_18](end_span) */
+/* TIMESTAMP & REPLY COUNTER - Ukuran font total replies diatur ke 0.6875rem (11px) */
 .gsc-comment-header time,
 .gsc-comment-header a.Link--secondary,
 .gsc-comment-header a[href*="#issuecomment-"],
@@ -448,7 +461,7 @@ button[class*="logout"]:hover,
 }
 
 /* ========================================================================== */
-/* 1. ATURAN UTAMA: SEMUA USERNAME (PESAN UTAMA & BALASAN) TEBAL (BOLD)[span_19](start_span)[span_19](end_span) */
+/* 1. ATURAN UTAMA: SEMUA USERNAME (PESAN UTAMA & BALASAN) TEBAL (BOLD) */
 /* ========================================================================== */
 .gsc-comment-author,
 .gsc-comment-header .gsc-comment-author,
@@ -496,7 +509,7 @@ button[class*="logout"]:hover,
 }
 
 /* ========================================================================== */
-/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)[span_20](start_span)[span_20](end_span)   */
+/* 2. ATURAN UTAMA: TEKS LINK "Sign in" PAKSA TETAP TIPIS (NORMAL)   */
 /* ========================================================================== */
 .gsc-comment-footer a[href*="login"],
 .gsc-comment-footer a[href*="github.com/login"],
@@ -516,7 +529,7 @@ button[class*="logout"]:hover,
   text-stroke: 0px transparent !important;
 }
 
-/* Underline dashed untuk link teks di dalam isi komentar[span_21](start_span)[span_21](end_span) */
+/* Underline dashed untuk link teks di dalam isi komentar */
 .gsc-comment-text a:not([class]),
 .markdown-body a:not([class]) {
   text-decoration: underline dashed !important;
@@ -524,7 +537,7 @@ button[class*="logout"]:hover,
   text-underline-offset: 4px !important;
 }
 
-/* Warna & Font Dasar Pesan[span_22](start_span)[span_22](end_span) */
+/* Warna & Font Dasar Pesan */
 .gsc-comment-content,
 .gsc-comment-text,
 .gsc-comment-body,
@@ -538,7 +551,7 @@ button[class*="logout"]:hover,
   background-color: transparent !important;
 }
 
-/* Reaction Popover[span_23](start_span)[span_23](end_span) */
+/* Reaction Popover */
 .gsc-reactions-popover,
 .gsc-popover,
 div[class*="popover"],
@@ -555,54 +568,6 @@ div[role="tooltip"] {
   position: absolute !important;
 }
 
-/* Tombol Reaksi Utama di Bawah Form Textarea[span_24](start_span)[span_24](end_span) */
-button[aria-label*="Upvote"],
-button[aria-label*="upvote"],
-button:has(svg.octicon-arrow-up),
-button[aria-label*="reaction"],
-button[aria-label*="Reaction"],
-.gsc-reactions-button,
-.gsc-social-button:not([href*="logout"]),
-a.gsc-social-button:not([href*="logout"]),
-button.gsc-social-button:not([href*="logout"]),
-.gsc-comment-box a[href*="login"],
-.gsc-comment-box button[href*="login"],
-.gsc-comment-box a[href*="github.com/login"],
-.gsc-comment-box .btn:not(.gsc-comment-box-write-btn):not([href*="logout"]) {
-  background-color: #bfbfbf !important;
-  border: var(--neo-border) !important;
-  color: #000000 !important;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px 0px var(--color-border-default) !important;
-  cursor: pointer !important;
-  text-decoration: none !important;
-  font-family: monospace, sans-serif !important;
-  font-weight: bold !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-button[aria-label*="Upvote"]:hover,
-button[aria-label*="upvote"]:hover,
-button:has(svg.octicon-arrow-up):hover,
-button[aria-label*="reaction"]:hover,
-button[aria-label*="Reaction"]:hover,
-.gsc-reactions-button:hover,
-.gsc-social-button:hover,
-a.gsc-social-button:hover,
-button.gsc-social-button:hover,
-.gsc-comment-box a[href*="login"]:hover,
-.gsc-comment-box button[href*="login"]:hover,
-.gsc-comment-box a[href*="github.com/login"]:hover,
-.gsc-comment-box .btn:hover {
-  background-color: #a8a8a8 !important;
-  transform: translate(1px, 1px) !important;
-  box-shadow: 1px 1px 0px var(--color-border-default) !important;
-  text-decoration: none !important;
-  color: #000000 !important;
-}
-
 .gsc-reactions-popover button,
 .gsc-popover button,
 div[class*="popover"] button {
@@ -612,7 +577,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* PENGATURAN MARGIN: TOMBOL MARKDOWN & SIGN IN WITH GITHUB[span_25](start_span)[span_25](end_span)         */
+/* PENGATURAN MARGIN: TOMBOL MARKDOWN & SIGN IN WITH GITHUB         */
 /* ========================================================================== */
 .gsc-comment-box a[href*="markdown"],
 .gsc-comment-box a[href*="github.com/articles"],
@@ -642,7 +607,7 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)[span_26](start_span)[span_26](end_span)          */
+/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)          */
 /* ========================================================================== */
 .gsc-reactions-count,
 .gsc-reactions-count *,
