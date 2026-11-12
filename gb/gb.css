@@ -527,13 +527,6 @@ button.gsc-social-button,
   justify-content: center !important;
 }
 
-/* HANYA MENGUBAH WARNA FONT/TEKS DI DALAM TOMBOL REAKSI YANG ANDA TANDAI MENJADI #000 (BACKGROUND TETAP #bfbfbf) */
-.gsc-reactions-button *,
-.gsc-reactions-button span,
-.gsc-reactions-button button {
-  color: #000000 !important;
-}
-
 button[aria-label*="Upvote"]:hover,
 button[aria-label*="upvote"]:hover,
 button:has(svg.octicon-arrow-up):hover,
@@ -595,23 +588,30 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)                    */
+/* WARNA FONT TOMBOL TOTAL REACTIONS DI ATAS KOTAK FORM (#000)                */
 /* ========================================================================== */
+.gsc-reactions,
+.gsc-reactions *,
 .gsc-reactions-count,
 .gsc-reactions-count *,
 .gsc-reactions > h4,
 .gsc-reactions > div:first-child,
-.gsc-reactions .color-fg-muted,
-.gsc-reactions .color-text-secondary,
+.gsc-reactions button,
+.gsc-reactions span,
+.gsc-reactions a,
 .gsc-header .gsc-reactions-count,
 .gsc-main > .gsc-reactions h4,
 .gsc-main > .gsc-reactions span,
 .gsc-main > .gsc-reactions a,
+[data-color-mode="dark"] .gsc-reactions,
+[data-color-mode="dark"] .gsc-reactions *,
 [data-color-mode="dark"] .gsc-reactions-count,
 [data-color-mode="dark"] .gsc-reactions-count *,
 [data-color-mode="dark"] .gsc-reactions > h4,
 [data-color-mode="dark"] .gsc-reactions .color-fg-muted,
+html[data-theme="night"] .gsc-reactions,
+html[data-theme="night"] .gsc-reactions *,
 html[data-theme="night"] .gsc-reactions-count,
 html[data-theme="night"] .gsc-reactions > h4 {
-  color: #bfbfbf !important;
+  color: #000000 !important;
 }
