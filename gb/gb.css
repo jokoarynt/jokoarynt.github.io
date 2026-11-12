@@ -504,7 +504,6 @@ button:has(svg.octicon-arrow-up),
 button[aria-label*="reaction"],
 button[aria-label*="Reaction"],
 .gsc-reactions-button,
-.gsc-reactions-button *,
 .gsc-social-button,
 a.gsc-social-button,
 button.gsc-social-button,
@@ -526,6 +525,12 @@ button.gsc-social-button,
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+/* Khusus tombol reaksi yang Anda tandai agar teks/angkanya menjadi #000 */
+.gsc-reactions-button,
+.gsc-reactions-button * {
+  color: #000000 !important;
 }
 
 button[aria-label*="Upvote"]:hover,
