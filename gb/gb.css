@@ -219,8 +219,8 @@ button[type="submit"],
 .gsc-button {
   font-family: monospace, sans-serif !important;
   font-weight: bold !important;
-  background-color: #bfbfbf !important;
-  color: #000000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
   border: var(--neo-border) !important;
   border-radius: 6px !important;
   box-shadow: var(--neo-shadow) !important;
@@ -233,8 +233,8 @@ button[type="submit"]:hover,
 .gsc-button:hover {
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
-  background-color: #a8a8a8 !important;
-  color: #000000 !important;
+  background-color: #222222 !important;
+  color: #ffffff !important;
 }
 
 /* HILANGKAN SEMUA BORDER KOTAK UTAMA TOOLBAR DI ATAS TEXTAREA */
@@ -275,9 +275,9 @@ button[type="submit"]:hover,
 .gsc-comment-box .tabnav-tab,
 .gsc-comment-box .subnav-item,
 .gsc-comment-box [class*="tab"] {
-  background-color: #bfbfbf !important;
+  background-color: #000000 !important;
   border: 1px solid #000 !important;
-  color: #000 !important;
+  color: #ffffff !important;
   border-radius: 6px !important;
   box-shadow: 1px 1px 0px #000000 !important;
   cursor: pointer !important;
@@ -513,9 +513,9 @@ button.gsc-social-button,
 .gsc-comment-box .btn,
 .gsc-comment-box-main a[href*="login"],
 .gsc-comment-box-main a[href*="github.com/login"] {
-  background-color: #bfbfbf !important;
+  background-color: #000000 !important;
   border: var(--neo-border) !important;
-  color: #000000 !important;
+  color: #ffffff !important;
   border-radius: 6px !important;
   box-shadow: 2px 2px 0px var(--color-border-default) !important;
   cursor: pointer !important;
@@ -542,11 +542,11 @@ button.gsc-social-button:hover,
 .gsc-comment-box .btn:hover,
 .gsc-comment-box-main a[href*="login"]:hover,
 .gsc-comment-box-main a[href*="github.com/login"]:hover {
-  background-color: #a8a8a8 !important;
+  background-color: #222222 !important;
   transform: translate(1px, 1px) !important;
   box-shadow: 1px 1px 0px var(--color-border-default) !important;
   text-decoration: none !important;
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 .gsc-reactions-popover button,
