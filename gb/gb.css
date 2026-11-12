@@ -76,10 +76,14 @@ a[href*="giscus.app"] {
   display: none !important;
 }
 
-/* Sembunyikan ikon emoji khusus di atas form textarea baru (tapi biarkan teks/counter reaction tetap tampil) */
+/* Sembunyikan total reaksi dan ikon emoji khusus di atas form textarea baru */
+.gsc-comment-box .gsc-reactions,
+.gsc-comment-box .gsc-reactions-summary,
+.gsc-comment-box .gsc-comment-box-reactions,
+.gsc-comment-box-reactions,
 .gsc-comment-box svg.octicon-smiley,
 .gsc-comment-box [aria-label*="reaction"],
-.gsc-comment-box [class*="reaction"]:not(.gsc-reactions):not(.gsc-reactions-count):not(.gsc-reactions-summary) {
+.gsc-comment-box [class*="reaction"] {
   display: none !important;
 }
 
@@ -499,6 +503,7 @@ button[aria-label*="upvote"],
 button:has(svg.octicon-arrow-up),
 button[aria-label*="reaction"],
 button[aria-label*="Reaction"],
+.gsc-reactions-button,
 .gsc-social-button,
 a.gsc-social-button,
 button.gsc-social-button,
@@ -527,6 +532,7 @@ button[aria-label*="upvote"]:hover,
 button:has(svg.octicon-arrow-up):hover,
 button[aria-label*="reaction"]:hover,
 button[aria-label*="Reaction"]:hover,
+.gsc-reactions-button:hover,
 .gsc-social-button:hover,
 a.gsc-social-button:hover,
 button.gsc-social-button:hover,
@@ -582,33 +588,23 @@ div[class*="popover"] button {
 }
 
 /* ========================================================================== */
-/* 1. Teks link "1 reaction" di atas form diubah menjadi #bfbfbf              */
-/* 2. Tombol reaksi (yang ada ikon jempol di bawahnya) font-nya diubah ke #000 */
+/* WARNA TEKS TOTAL REACTIONS DI ATAS KOTAK FORM (#bfbfbf)                    */
 /* ========================================================================== */
 .gsc-reactions-count,
-.gsc-reactions-count a,
-.gsc-reactions-count span,
 .gsc-reactions-count *,
+.gsc-reactions > h4,
+.gsc-reactions > div:first-child,
 .gsc-reactions .color-fg-muted,
 .gsc-reactions .color-text-secondary,
 .gsc-header .gsc-reactions-count,
 .gsc-main > .gsc-reactions h4,
 .gsc-main > .gsc-reactions span,
-.gsc-main > .gsc-reactions a {
+.gsc-main > .gsc-reactions a,
+[data-color-mode="dark"] .gsc-reactions-count,
+[data-color-mode="dark"] .gsc-reactions-count *,
+[data-color-mode="dark"] .gsc-reactions > h4,
+[data-color-mode="dark"] .gsc-reactions .color-fg-muted,
+html[data-theme="night"] .gsc-reactions-count,
+html[data-theme="night"] .gsc-reactions > h4 {
   color: #bfbfbf !important;
-}
-
-.gsc-reactions-button,
-.gsc-reactions-button *,
-.gsc-reactions-button span,
-.gsc-reactions-button button,
-.gsc-reactions-button div {
-  color: #000000 !important;
-}
-
-[data-color-mode="dark"] .gsc-reactions-button,
-[data-color-mode="dark"] .gsc-reactions-button *,
-html[data-theme="night"] .gsc-reactions-button,
-html[data-theme="night"] .gsc-reactions-button * {
-  color: #000000 !important;
 }
